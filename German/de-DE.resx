@@ -335,6 +335,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ANZEIGE // AUDIO // STEUERUNG</value>
   <comment>DISPLAY // AUDIO // CONTROLS</comment>
 </data>
+<data name="MainMenu.Row.Codex.Caption" xml:space="preserve">
+  <value>FELDREFERENZ // {KEY} IM SPIEL</value>
+  <comment>FIELD REFERENCE // {KEY} IN GAME</comment>
+</data>
 <data name="MainMenu.Row.JoinGame.Caption" xml:space="preserve">
   <value>MIT SERVER VERBINDEN</value>
   <comment>CONNECT TO SERVER</comment>
@@ -7568,7 +7572,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>~ROUND</comment>
 </data>
 <data name="DeadOverlay.NotFollowingHeading" xml:space="preserve">
-  <value>FOLGT NICHT</value>
+  <value>FOLGE KEINEM</value>
   <comment>NOT FOLLOWING</comment>
 </data>
 <data name="DeadOverlay.DeadHeading" xml:space="preserve">
@@ -8076,7 +8080,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>XENOMORPHS KILLED</comment>
 </data>
 <data name="EorScreen.StatHugsTaken" xml:space="preserve">
-  <value>ERHALTENE GESICHTSKLAMMERER</value>
+  <value>FACEHUGGER GEFANGEN</value>
   <comment>FACEHUGS TAKEN</comment>
 </data>
 <data name="EorScreen.StatCadesBuilt" xml:space="preserve">
@@ -8084,7 +8088,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>BARRICADES BUILT</comment>
 </data>
 <data name="EorScreen.StatSlotJackpots" xml:space="preserve">
-  <value>GEWONNENE AUTOMATEN-JACKPOTS</value>
+  <value>GEWONNENE JACKPOTS</value>
   <comment>SLOT JACKPOTS WON</comment>
 </data>
 <data name="EorScreen.StatClosetSeconds" xml:space="preserve">
