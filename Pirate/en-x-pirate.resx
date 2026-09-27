@@ -7708,11 +7708,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>OBSERVE</comment>
 </data>
 <data name="DeadOverlay.PrevLabel" xml:space="preserve">
-  <value>&lt; PREV</value>
+  <value>&lt; PORT</value>
   <comment>&lt; PREV</comment>
 </data>
 <data name="DeadOverlay.NextLabel" xml:space="preserve">
-  <value>NEXT &gt;</value>
+  <value>STARBOARD &gt;</value>
   <comment>NEXT &gt;</comment>
 </data>
 <data name="DeadOverlay.RespawnDisabledLabel" xml:space="preserve">
@@ -79200,7 +79200,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>ANOMALY CONTAINMENT</comment>
 </data>
 <data name="DeadOverlay.DetachHint" xml:space="preserve">
-  <value>MOVE TO DETACH</value>
+  <value>MOVE TO CUT LOOSE</value>
   <comment>MOVE TO DETACH</comment>
 </data>
 </root>
