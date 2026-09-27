@@ -3692,19 +3692,19 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>INTENT</comment>
 </data>
 <data name="IntentUi.Chip.Help" xml:space="preserve">
-  <value>HELP</value>
+  <value>PARLAY</value>
   <comment>HELP</comment>
 </data>
 <data name="IntentUi.Chip.Disarm" xml:space="preserve">
-  <value>DISARM</value>
+  <value>UNHAND</value>
   <comment>DISARM</comment>
 </data>
 <data name="IntentUi.Chip.Grab" xml:space="preserve">
-  <value>GRAB</value>
+  <value>HOOK</value>
   <comment>GRAB</comment>
 </data>
 <data name="IntentUi.Chip.Harm" xml:space="preserve">
-  <value>HARM</value>
+  <value>SCUTTLE</value>
   <comment>HARM</comment>
 </data>
 <data name="PaperDollUi.Title" xml:space="preserve">
