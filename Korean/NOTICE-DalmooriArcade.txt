@@ -1,0 +1,33 @@
+Dalmoori Arcade
+===============
+
+A merged pixel font combining:
+
+1. Press Start 2P (Latin, Greek, Cyrillic, symbols)
+   Copyright 2012 The Press Start 2P Project Authors (cody@zone38.net),
+   with Reserved Font Name "Press Start 2P".
+   License: SIL Open Font License 1.1 (see licenses/OFL-PressStart2P.txt)
+
+2. dalmoori (Hangul syllables U+AC00-D7A3, compatibility jamo U+3131-318E)
+   Copyright 2020 RanolP and contributors
+   https://github.com/RanolP/dalmoori-font
+   License: Apache License 2.0 (see licenses/APACHE-2.0-dalmoori.txt)
+
+Modifications made to dalmoori glyphs
+-------------------------------------
+- Rescaled from 64 UPM to 1000 UPM (1 pixel: 8 units -> 125 units).
+- Shifted up by 125 units (1 pixel) to share Press Start 2P's 8x8 cell.
+- Glyph shapes are otherwise unchanged (pixel-for-pixel identical).
+- Only Hangul syllables and compatibility jamo were taken; dalmoori's
+  Latin glyphs were not used.
+- Merged into a copy of Press Start 2P and renamed "Dalmoori Arcade"
+  (the name "Press Start 2P" is reserved under its license).
+
+Licensing of this merged font
+-----------------------------
+As a Modified Version of Press Start 2P, this font is distributed under
+the SIL Open Font License 1.1. The dalmoori portions remain subject to the
+Apache License 2.0 notice requirements above. Keep this NOTICE and the
+licenses/ folder with the font when redistributing.
+
+dalmoori is provided "AS IS", without warranties or conditions of any kind.
