@@ -979,6 +979,30 @@ The file is looked up beside this language file first, then under the game's Con
   <value>No pasa nada.</value>
   <comment>Nothing happens.</comment>
 </data>
+<data name="Chat.ElevatorDepart" xml:space="preserve">
+  <value>El ascensor zumba y se pone en marcha.</value>
+  <comment>The elevator hums and starts to move.</comment>
+</data>
+<data name="Chat.ElevatorArrive" xml:space="preserve">
+  <value>El ascensor llega con un «ding».</value>
+  <comment>The elevator arrives with a ping.</comment>
+</data>
+<data name="Chat.ElevatorBusy" xml:space="preserve">
+  <value>El ascensor está ocupado.</value>
+  <comment>The elevator is busy.</comment>
+</data>
+<data name="Chat.ElevatorNoPower" xml:space="preserve">
+  <value>No pasa nada.</value>
+  <comment>Nothing happens.</comment>
+</data>
+<data name="Chat.ElevatorCrush" xml:space="preserve">
+  <value>¡El ascensor aplasta a {TARGET}!</value>
+  <comment>The {TARGET} is crushed by the elevator!</comment>
+</data>
+<data name="Chat.DoorCrush" xml:space="preserve">
+  <value>¡Se cierra {USED} y aplasta a {TARGET}!</value>
+  <comment>The {TARGET} is crushed by the {USED}!</comment>
+</data>
 <data name="Chat.GestationCough" xml:space="preserve">
   <value>{ACTOR} tose.</value>
   <comment>{ACTOR} coughs.</comment>
@@ -1710,6 +1734,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HoverVerbLabels.PortGenApcLink" xml:space="preserve">
   <value>conectar generador</value>
   <comment>connect generator</comment>
+</data>
+<data name="HoverVerbLabels.ElevatorCall" xml:space="preserve">
+  <value>llamar al ascensor</value>
+  <comment>call elevator</comment>
+</data>
+<data name="HoverVerbLabels.ElevatorWindow" xml:space="preserve">
+  <value>panel del ascensor</value>
+  <comment>elevator panel</comment>
+</data>
+<data name="HoverVerbLabels.ElevatorSelect" xml:space="preserve">
+  <value>elegir planta</value>
+  <comment>select level</comment>
 </data>
 <data name="HoverVerbLabels.VendorRefillRefill" xml:space="preserve">
   <value>rellenar</value>
@@ -6947,6 +6983,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>TRANSPARENCIA DEL HUD</value>
   <comment>HUD TRANSPARENCY</comment>
 </data>
+<data name="Settings.WindowOpacityLabel" xml:space="preserve">
+  <value>TRANSP. DE VENTANAS</value>
+  <comment>WINDOW TRANSPARENCY</comment>
+</data>
 <data name="Settings.ScopeReticleLabel" xml:space="preserve">
   <value>ANCHO DE LA RETÍCULA</value>
   <comment>SCOPE CROSSHAIR WIDTH</comment>
@@ -7811,6 +7851,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ESCALERAS</value>
   <comment>STAIR</comment>
 </data>
+<data name="WorldMap.LegendElevatorLabel" xml:space="preserve">
+  <value>ASCENSOR</value>
+  <comment>ELEVATOR</comment>
+</data>
 <data name="WorldMap.LegendYouLabel" xml:space="preserve">
   <value>TÚ</value>
   <comment>YOU</comment>
@@ -8274,6 +8318,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EorScreen.CauseUnmade" xml:space="preserve">
   <value>DESHECHO</value>
   <comment>UNMADE</comment>
+</data>
+<data name="EorScreen.CauseCrushed" xml:space="preserve">
+  <value>APLASTADO</value>
+  <comment>CRUSHED</comment>
 </data>
 <data name="EorScreen.CauseOther" xml:space="preserve">
   <value>OTRO</value>
@@ -9162,6 +9210,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Section.Items.Tools" xml:space="preserve">
   <value>HERRAMIENTAS</value>
   <comment>TOOLS</comment>
+</data>
+<data name="Codex.Group.Medical.Conditions.Lethal" xml:space="preserve">
+  <value>LETALES</value>
+  <comment>LETHAL</comment>
 </data>
 <data name="Codex.Group.Medical.Treatments.SurgicalTools" xml:space="preserve">
   <value>INSTRUMENTAL QUIRÚRGICO</value>
@@ -10259,6 +10311,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>MUERTO</value>
   <comment>DEAD</comment>
 </data>
+<data name="CrewMonitor.StateOffline" xml:space="preserve">
+  <value>SIN SEÑAL</value>
+  <comment>OFFLINE</comment>
+</data>
 <data name="CrewMonitor.NoCarriers" xml:space="preserve">
   <value>SIN PORTADORES</value>
   <comment>NO CARRIERS</comment>
@@ -10422,6 +10478,74 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Weapons.AtModeWielded" xml:space="preserve">
   <value>EN {MODE}, EMPUÑADA: LA COLUMNA BASE DE LA VENTANA DE EXAMINAR</value>
   <comment>AT {MODE}, WIELDED: THE EXAMINE WINDOW'S BASE COLUMN</comment>
+</data>
+<data name="ElevatorUi.HeaderLine" xml:space="preserve">
+  <value>ASCENSOR</value>
+  <comment>ELEVATOR</comment>
+</data>
+<data name="ElevatorUi.SubLine" xml:space="preserve">
+  <value>CONTROL DE CABINA // {MAP}</value>
+  <comment>CARRIAGE CONTROL // {MAP}</comment>
+</data>
+<data name="ElevatorUi.LevelsSection" xml:space="preserve">
+  <value>PLANTAS</value>
+  <comment>LEVELS</comment>
+</data>
+<data name="ElevatorUi.LevelLabel" xml:space="preserve">
+  <value>PLANTA {N}</value>
+  <comment>LEVEL {N}</comment>
+</data>
+<data name="ElevatorUi.HereChip" xml:space="preserve">
+  <value>AQUÍ</value>
+  <comment>HERE</comment>
+</data>
+<data name="ElevatorUi.GoChip" xml:space="preserve">
+  <value>IR</value>
+  <comment>GO</comment>
+</data>
+<data name="ElevatorUi.CallingChip" xml:space="preserve">
+  <value>LLAMANDO</value>
+  <comment>CALLING</comment>
+</data>
+<data name="ElevatorUi.ArrivingLine" xml:space="preserve">
+  <value>LLEGA EN {WHOLE},{FRAC}S</value>
+  <comment>ARRIVING IN {WHOLE}.{FRAC}S</comment>
+</data>
+<data name="ElevatorUi.ClosingLine" xml:space="preserve">
+  <value>CERRANDO PUERTAS</value>
+  <comment>DOORS CLOSING</comment>
+</data>
+<data name="ElevatorUi.RechargingLine" xml:space="preserve">
+  <value>RECARGANDO {WHOLE},{FRAC}S</value>
+  <comment>RECHARGING {WHOLE}.{FRAC}S</comment>
+</data>
+<data name="ElevatorUi.ReadyHint" xml:space="preserve">
+  <value>ELIGE UNA PLANTA PARA LLAMAR A LA CABINA</value>
+  <comment>SELECT A LEVEL TO CALL THE CARRIAGE</comment>
+</data>
+<data name="ElevatorUi.LockedHint" xml:space="preserve">
+  <value>CONTROLES BLOQUEADOS MIENTRAS LA CABINA SE MUEVE</value>
+  <comment>CONTROLS LOCKED WHILE THE CARRIAGE MOVES</comment>
+</data>
+<data name="ElevatorUi.RechargingHint" xml:space="preserve">
+  <value>CONTROLES BLOQUEADOS MIENTRAS LA CABINA SE RECARGA</value>
+  <comment>CONTROLS LOCKED WHILE THE CARRIAGE RECHARGES</comment>
+</data>
+<data name="ElevatorUi.FootLevelLine" xml:space="preserve">
+  <value>CABINA: PLANTA {N}</value>
+  <comment>CARRIAGE: LEVEL {N}</comment>
+</data>
+<data name="ElevatorUi.InTransitWord" xml:space="preserve">
+  <value>EN MARCHA</value>
+  <comment>IN TRANSIT</comment>
+</data>
+<data name="ElevatorUi.RechargingWord" xml:space="preserve">
+  <value>RECARGANDO</value>
+  <comment>RECHARGING</comment>
+</data>
+<data name="ElevatorUi.ReadyWord" xml:space="preserve">
+  <value>LISTO</value>
+  <comment>READY</comment>
 </data>
 <data name="Def.Crate.DisplayName" xml:space="preserve">
   <value>caja</value>
@@ -12163,6 +12287,26 @@ The file is looked up beside this language file first, then under the game's Con
   <value>coger</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Test.Thermal.Off.Verb.PickUp" xml:space="preserve">
+  <value>coger</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.Thermal.Off.Verb.Toggle" xml:space="preserve">
+  <value>encender</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Test.Thermal.On.Verb.PickUp" xml:space="preserve">
+  <value>coger</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.Thermal.On.Verb.Toggle" xml:space="preserve">
+  <value>apagar</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Test.Thermal.Empty.Verb.PickUp" xml:space="preserve">
+  <value>coger</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Test.Helmet.Garb.DisplayName" xml:space="preserve">
   <value>test garb helmet</value>
   <comment>test garb helmet</comment>
@@ -13086,6 +13230,34 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Structure.Stair.Marker.DisplayName" xml:space="preserve">
   <value>unión de escalera</value>
   <comment>stair join</comment>
+</data>
+<data name="Def.Structure.Elevator.Marker.DisplayName" xml:space="preserve">
+  <value>ascensor</value>
+  <comment>elevator</comment>
+</data>
+<data name="Def.Structure.Elevator.Button.Level.DisplayName" xml:space="preserve">
+  <value>botón del ascensor</value>
+  <comment>elevator button</comment>
+</data>
+<data name="Def.Structure.Elevator.Button.Level.NoPower.DisplayName" xml:space="preserve">
+  <value>botón del ascensor</value>
+  <comment>elevator button</comment>
+</data>
+<data name="Def.Structure.Elevator.Button.Level.Busy.DisplayName" xml:space="preserve">
+  <value>botón del ascensor</value>
+  <comment>elevator button</comment>
+</data>
+<data name="Def.Structure.Elevator.Button.Carriage.DisplayName" xml:space="preserve">
+  <value>panel del ascensor</value>
+  <comment>elevator panel</comment>
+</data>
+<data name="Def.Structure.Elevator.Button.Carriage.NoPower.DisplayName" xml:space="preserve">
+  <value>panel del ascensor</value>
+  <comment>elevator panel</comment>
+</data>
+<data name="Def.Structure.Elevator.Button.Carriage.Busy.DisplayName" xml:space="preserve">
+  <value>panel del ascensor</value>
+  <comment>elevator panel</comment>
 </data>
 <data name="Def.Structure.Ledge.Marker.DisplayName" xml:space="preserve">
   <value>cornisa</value>
@@ -74683,6 +74855,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>coger</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Clothing.TigEmber.DisplayName" xml:space="preserve">
+  <value>gafas de imagen térmica TIG-2 'Ember'</value>
+  <comment>TIG-2 'Ember' thermal imaging goggles</comment>
+</data>
+<data name="Def.Clothing.TigEmber.Verb.PickUp" xml:space="preserve">
+  <value>coger</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Clothing.TigEmber.Verb.Toggle" xml:space="preserve">
+  <value>encender</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Clothing.TigEmber.On.DisplayName" xml:space="preserve">
+  <value>gafas de imagen térmica TIG-2 'Ember'</value>
+  <comment>TIG-2 'Ember' thermal imaging goggles</comment>
+</data>
+<data name="Def.Clothing.TigEmber.On.Verb.PickUp" xml:space="preserve">
+  <value>coger</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Clothing.TigEmber.On.Verb.Toggle" xml:space="preserve">
+  <value>apagar</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Clothing.TigEmber.Empty.DisplayName" xml:space="preserve">
+  <value>gafas de imagen térmica TIG-2 'Ember'</value>
+  <comment>TIG-2 'Ember' thermal imaging goggles</comment>
+</data>
+<data name="Def.Clothing.TigEmber.Empty.Verb.PickUp" xml:space="preserve">
+  <value>coger</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.TestingJanibucketWatered.DisplayName" xml:space="preserve">
   <value>cubo de limpieza</value>
   <comment>janitorial bucket</comment>
@@ -75610,6 +75814,90 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Item.Device.CrewMonitor.Empty.Verb.PickUp" xml:space="preserve">
   <value>coger</value>
   <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.PalmTree.DisplayName" xml:space="preserve">
+  <value>palmera</value>
+  <comment>palm tree</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.PalmTree0.DisplayName" xml:space="preserve">
+  <value>palmera</value>
+  <comment>palm tree</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.PalmTree1.DisplayName" xml:space="preserve">
+  <value>palmera</value>
+  <comment>palm tree</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Pandanus.DisplayName" xml:space="preserve">
+  <value>pandano</value>
+  <comment>pandanus</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Pandanus0.DisplayName" xml:space="preserve">
+  <value>pandano</value>
+  <comment>pandanus</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Pandanus1.DisplayName" xml:space="preserve">
+  <value>pandano</value>
+  <comment>pandanus</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Banana.DisplayName" xml:space="preserve">
+  <value>platanera</value>
+  <comment>banana tree</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Banana0.DisplayName" xml:space="preserve">
+  <value>platanera</value>
+  <comment>banana tree</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Banana1.DisplayName" xml:space="preserve">
+  <value>platanera</value>
+  <comment>banana tree</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Hibiscus.DisplayName" xml:space="preserve">
+  <value>hibisco</value>
+  <comment>hibiscus</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Hibiscus0.DisplayName" xml:space="preserve">
+  <value>hibisco</value>
+  <comment>hibiscus</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Hibiscus1.DisplayName" xml:space="preserve">
+  <value>hibisco</value>
+  <comment>hibiscus</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Fern.DisplayName" xml:space="preserve">
+  <value>helecho</value>
+  <comment>fern</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Fern0.DisplayName" xml:space="preserve">
+  <value>helecho</value>
+  <comment>fern</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.Fern1.DisplayName" xml:space="preserve">
+  <value>helecho</value>
+  <comment>fern</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.ElephantEar.DisplayName" xml:space="preserve">
+  <value>oreja de elefante</value>
+  <comment>elephant ear</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.ElephantEar0.DisplayName" xml:space="preserve">
+  <value>oreja de elefante</value>
+  <comment>elephant ear</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.ElephantEar1.DisplayName" xml:space="preserve">
+  <value>oreja de elefante</value>
+  <comment>elephant ear</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.CoastalGrass.DisplayName" xml:space="preserve">
+  <value>hierba costera</value>
+  <comment>coastal grass</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.CoastalGrass0.DisplayName" xml:space="preserve">
+  <value>hierba costera</value>
+  <comment>coastal grass</comment>
+</data>
+<data name="Def.Obj.Structure.Flora.Tropical.CoastalGrass1.DisplayName" xml:space="preserve">
+  <value>hierba costera</value>
+  <comment>coastal grass</comment>
 </data>
 <data name="StackFamily.cuppa joes lidded cups" xml:space="preserve">
   <value>vasos de Cuppa Joe's con tapa</value>
