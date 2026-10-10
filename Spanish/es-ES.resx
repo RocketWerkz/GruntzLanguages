@@ -6891,10 +6891,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>RESOLUCIÓN</value>
   <comment>RESOLUTION</comment>
 </data>
-<data name="Settings.RefreshRateLabel" xml:space="preserve">
-  <value>FRECUENCIA DE REFRESCO</value>
-  <comment>REFRESH RATE</comment>
-</data>
 <data name="Settings.FrameQueueLimitLabel" xml:space="preserve">
   <value>FOTOGRAMAS EN COLA</value>
   <comment>FRAMES QUEUED AHEAD</comment>
@@ -7010,6 +7006,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Settings.ResolutionFormat" xml:space="preserve">
   <value>{WIDTH} x {HEIGHT}</value>
   <comment>{WIDTH} x {HEIGHT}</comment>
+</data>
+<data name="Settings.NativeModeFormat" xml:space="preserve">
+  <value>{WIDTH} x {HEIGHT} @ {RATE} HZ (NATIVA)</value>
+  <comment>{WIDTH} x {HEIGHT} @ {RATE} HZ (NATIVE)</comment>
+</data>
+<data name="Settings.CustomResolutionFormat" xml:space="preserve">
+  <value>{WIDTH} x {HEIGHT} (PERSONALIZADA)</value>
+  <comment>{WIDTH} x {HEIGHT} (CUSTOM)</comment>
 </data>
 <data name="Settings.Tab.Controls" xml:space="preserve">
   <value>CONTROLES</value>
