@@ -6,12 +6,12 @@ A merged pixel font combining:
 1. Press Start 2P (Latin, Greek, Cyrillic, symbols)
    Copyright 2012 The Press Start 2P Project Authors (cody@zone38.net),
    with Reserved Font Name "Press Start 2P".
-   License: SIL Open Font License 1.1 (see licenses/OFL-PressStart2P.txt)
+   License: SIL Open Font License 1.1 (see OFL-PressStart2P.txt)
 
 2. dalmoori (Hangul syllables U+AC00-D7A3, compatibility jamo U+3131-318E)
    Copyright 2020 RanolP and contributors
    https://github.com/RanolP/dalmoori-font
-   License: Apache License 2.0 (see licenses/APACHE-2.0-dalmoori.txt)
+   License: Apache License 2.0 (see APACHE-2.0-dalmoori.txt)
 
 Modifications made to dalmoori glyphs
 -------------------------------------
@@ -27,7 +27,8 @@ Licensing of this merged font
 -----------------------------
 As a Modified Version of Press Start 2P, this font is distributed under
 the SIL Open Font License 1.1. The dalmoori portions remain subject to the
-Apache License 2.0 notice requirements above. Keep this NOTICE and the
-licenses/ folder with the font when redistributing.
+Apache License 2.0 notice requirements above. Keep this NOTICE,
+OFL-PressStart2P.txt and APACHE-2.0-dalmoori.txt with the font when
+redistributing.
 
 dalmoori is provided "AS IS", without warranties or conditions of any kind.
