@@ -4,7 +4,8 @@ The contents of the braces themselves needs to be preserved, but they may freely
 The comment field includes the default english string at the time of file generation so is useful for determining when a string has changed.
 The filename is used for the locale Code according to ISO 639-1. By default the language name is taken from this. To override this, enter an entry for 'Language'.
 The 'FontMain' and 'FontSecondary' values are special entries naming a font file (.ttf) that replaces the game's pixel font (FontMain) or its text font (FontSecondary) while this language is active, for scripts the defaults do not cover.
-The file is looked up beside this language file first, then under the game's Content/Fonts. Leave both empty to keep the game's fonts.--><root>
+The file is looked up beside this language file first, then under the game's Content/Fonts. Leave both empty to keep the game's fonts.
+'FontScale' multiplies the interface scale while this language is active, for scripts whose glyphs need more room (1.15 draws everything 15% larger). Leave it empty for 1.--><root>
   <!-- 
   Microsoft ResX Schema 
 
@@ -126,6 +127,9 @@ The file is looked up beside this language file first, then under the game's Con
   <value></value>
 </data>
 <data name="FontSecondary" xml:space="preserve">
+  <value></value>
+</data>
+<data name="FontScale" xml:space="preserve">
   <value></value>
 </data>
 <data name="Language" xml:space="preserve">
@@ -792,8 +796,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Defibrillation failed. Vital signs are too weak: repair the damage and try again.</comment>
 </data>
 <data name="Chat.Cpr" xml:space="preserve">
-  <value>{ACTOR} делает искусственное дыхание: {TARGET}.</value>
-  <comment>{ACTOR} performs CPR on the {TARGET}.</comment>
+  <value>Компрессия грудной клетки: успешно</value>
+  <comment>Chest compression successful</comment>
+</data>
+<data name="Chat.CprTooFast" xml:space="preserve">
+  <value>Компрессия не удалась: слишком быстро</value>
+  <comment>Chest compression failed: too fast</comment>
+</data>
+<data name="Chat.CprTooFarGone" xml:space="preserve">
+  <value>Компрессия не удалась: уже не спасти</value>
+  <comment>Chest compression failed: too far gone</comment>
 </data>
 <data name="Chat.SuturePass" xml:space="preserve">
   <value>{ACTOR} зашивает часть ран.</value>
@@ -1347,6 +1359,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>СИСТЕМА</value>
   <comment>NOTICE</comment>
 </data>
+<data name="Chat.KindNpc" xml:space="preserve">
+  <value>NPC</value>
+  <comment>NPC</comment>
+</data>
 <data name="Chat.GhostMoans" xml:space="preserve">
   <value>{NAME} стонет: «{TEXT}»</value>
   <comment>{NAME} moans "{TEXT}"</comment>
@@ -1768,6 +1784,10 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>controls</comment>
 </data>
 <data name="HoverVerbLabels.ChemMasterWindow" xml:space="preserve">
+  <value>управление</value>
+  <comment>controls</comment>
+</data>
+<data name="HoverVerbLabels.ChemHeaterWindow" xml:space="preserve">
   <value>управление</value>
   <comment>controls</comment>
 </data>
@@ -3157,6 +3177,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Moodlet.Hint.None" xml:space="preserve">
   <value></value>
+  <comment></comment>
 </data>
 <data name="Moodlet.Hint.Burning.Severe" xml:space="preserve">
   <value>Остановитесь, ложитесь, катайтесь по земле</value>
@@ -4028,6 +4049,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="EquipSlotsUi.Reason.None" xml:space="preserve">
   <value></value>
+  <comment></comment>
 </data>
 <data name="StorageUi.Reason.BlockedOrNotAllowed" xml:space="preserve">
   <value>сюда не помещается</value>
@@ -4071,6 +4093,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="StorageUi.Reason.None" xml:space="preserve">
   <value></value>
+  <comment></comment>
 </data>
 <data name="StorageUi.Hint.HoldsACanister" xml:space="preserve">
   <value>содержит баллон</value>
@@ -4305,7 +4328,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>NO OCCUPANT</comment>
 </data>
 <data name="SleeperRowText.State.Dead" xml:space="preserve">
-  <value>*ГИБЕЛЬ*</value>
+  <value>*НЕТ ПУЛЬСА*</value>
   <comment>*DEAD*</comment>
 </data>
 <data name="SleeperRowText.State.Critical" xml:space="preserve">
@@ -4588,6 +4611,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value> ко времени дефибрилляции</value>
   <comment> Defib time</comment>
 </data>
+<data name="TraitChips.Unit.CprGain" xml:space="preserve">
+  <value> к продлению срока реанимации за компрессию</value>
+  <comment> Revive time per compression</comment>
+</data>
+<data name="TraitChips.Unit.CprTime" xml:space="preserve">
+  <value> ко времени СЛР</value>
+  <comment> CPR time</comment>
+</data>
+<data name="TraitChips.Unit.BulletDamage" xml:space="preserve">
+  <value> к урону пулями</value>
+  <comment> Bullet damage</comment>
+</data>
 <data name="TraitChips.Unit.MovementSpeedWhileWet" xml:space="preserve">
   <value> к скорости при промокании</value>
   <comment> Movement speed while wet</comment>
@@ -4659,6 +4694,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="TraitChips.Marker.FiremanCarryUnit" xml:space="preserve">
   <value> Вы взваливаете лежащего себе на спину и двигаетесь в полную скорость</value>
   <comment> Loads a lying person onto your back and moves at full pace</comment>
+</data>
+<data name="TraitChips.Marker.Multilingual" xml:space="preserve">
+  <value>ПОЛИГЛОТ</value>
+  <comment>MULTILINGUAL</comment>
+</data>
+<data name="TraitChips.Marker.SpeaksUnit" xml:space="preserve">
+  <value> Понимает {LANGUAGE} язык на слух</value>
+  <comment> Understands {LANGUAGE} when spoken</comment>
 </data>
 <data name="ContextMenu.Row.Follow" xml:space="preserve">
   <value>следить</value>
@@ -6740,6 +6783,162 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ЗАРЯД {PERCENT}%</value>
   <comment>CHARGE {PERCENT}%</comment>
 </data>
+<data name="ChemHeater.HeaderFallback" xml:space="preserve">
+  <value>ХИМНАГРЕВАТЕЛЬ</value>
+  <comment>CHEMICAL HEATER</comment>
+</data>
+<data name="ChemHeater.UnitLine" xml:space="preserve">
+  <value>ТЕПЛООБМЕННЫЙ БЛОК TX-4 // W-Y ХИМИЧЕСКИЕ СИСТЕМЫ</value>
+  <comment>THERMAL EXCHANGE UNIT TX-4 // W-Y CHEMICAL SYSTEMS</comment>
+</data>
+<data name="ChemHeater.StatusSection" xml:space="preserve">
+  <value>СТАТУС</value>
+  <comment>STATUS</comment>
+</data>
+<data name="ChemHeater.SetPointSection" xml:space="preserve">
+  <value>ЦЕЛЕВАЯ ТЕМПЕРАТУРА</value>
+  <comment>SET POINT</comment>
+</data>
+<data name="ChemHeater.BeakerSection" xml:space="preserve">
+  <value>МЕНЗУРКА</value>
+  <comment>BEAKER</comment>
+</data>
+<data name="ChemHeater.PowerKey" xml:space="preserve">
+  <value>ПИТАНИЕ</value>
+  <comment>POWER</comment>
+</data>
+<data name="ChemHeater.MixtureKey" xml:space="preserve">
+  <value>СМЕСЬ</value>
+  <comment>MIXTURE</comment>
+</data>
+<data name="ChemHeater.TargetKey" xml:space="preserve">
+  <value>ЦЕЛЬ</value>
+  <comment>TARGET</comment>
+</data>
+<data name="ChemHeater.StepKey" xml:space="preserve">
+  <value>ШАГ</value>
+  <comment>STEP</comment>
+</data>
+<data name="ChemHeater.StepSubtitle" xml:space="preserve">
+  <value>ШАГ {DEGREES}°C</value>
+  <comment>STEP {DEGREES} C</comment>
+</data>
+<data name="ChemHeater.RunLabel" xml:space="preserve">
+  <value>ПУСК</value>
+  <comment>RUN</comment>
+</data>
+<data name="ChemHeater.HoldLabel" xml:space="preserve">
+  <value>СТОП</value>
+  <comment>HOLD</comment>
+</data>
+<data name="ChemHeater.PowerOnLine" xml:space="preserve">
+  <value>ВКЛ. // {WATTS} ВТ</value>
+  <comment>ON // {WATTS} W</comment>
+</data>
+<data name="ChemHeater.Degrees" xml:space="preserve">
+  <value>{DEGREES}°C</value>
+  <comment>{DEGREES} C</comment>
+</data>
+<data name="ChemHeater.NoReading" xml:space="preserve">
+  <value>--</value>
+  <comment>--</comment>
+</data>
+<data name="ChemHeater.Rising" xml:space="preserve">
+  <value>РАСТЁТ НА {DEGREES}°C ЗА ЦИКЛ</value>
+  <comment>RISING {DEGREES} C PER CYCLE</comment>
+</data>
+<data name="ChemHeater.Falling" xml:space="preserve">
+  <value>ПАДАЕТ НА {DEGREES}°C ЗА ЦИКЛ</value>
+  <comment>FALLING {DEGREES} C PER CYCLE</comment>
+</data>
+<data name="ChemHeater.Drifting" xml:space="preserve">
+  <value>СТРЕМИТСЯ К {DEGREES}°C</value>
+  <comment>DRIFTING TOWARD {DEGREES} C</comment>
+</data>
+<data name="ChemHeater.Steady" xml:space="preserve">
+  <value>СТАБИЛЬНО</value>
+  <comment>STEADY</comment>
+</data>
+<data name="ChemHeater.Heating" xml:space="preserve">
+  <value>НАГРЕВ</value>
+  <comment>HEATING</comment>
+</data>
+<data name="ChemHeater.Chilling" xml:space="preserve">
+  <value>ОХЛАЖДЕНИЕ</value>
+  <comment>CHILLING</comment>
+</data>
+<data name="ChemHeater.Holding" xml:space="preserve">
+  <value>ОЖИДАНИЕ</value>
+  <comment>HOLDING</comment>
+</data>
+<data name="ChemHeater.AtSetPoint" xml:space="preserve">
+  <value>ЦЕЛЬ ДОСТИГНУТА</value>
+  <comment>AT SET POINT</comment>
+</data>
+<data name="ChemHeater.NoPower" xml:space="preserve">
+  <value>НЕТ ПИТАНИЯ</value>
+  <comment>NO POWER</comment>
+</data>
+<data name="ChemHeater.BandLine" xml:space="preserve">
+  <value>{DEGREES}°C // {BAND}</value>
+  <comment>{DEGREES} C // {BAND}</comment>
+</data>
+<data name="ChemHeater.Hot" xml:space="preserve">
+  <value>НАГРЕТА</value>
+  <comment>HOT</comment>
+</data>
+<data name="ChemHeater.Chilled" xml:space="preserve">
+  <value>ОХЛАЖДЕНА</value>
+  <comment>CHILLED</comment>
+</data>
+<data name="ChemHeater.Ambient" xml:space="preserve">
+  <value>КОМНАТНАЯ</value>
+  <comment>AMBIENT</comment>
+</data>
+<data name="ChemHeater.BoilingOff" xml:space="preserve">
+  <value>ВЫКИПАЕТ</value>
+  <comment>BOILING OFF</comment>
+</data>
+<data name="ChemHeater.NoBeaker" xml:space="preserve">
+  <value>НЕТ МЕНЗУРКИ</value>
+  <comment>NO BEAKER</comment>
+</data>
+<data name="ChemHeater.EtaLine" xml:space="preserve">
+  <value>ДО ЦЕЛИ ЦИКЛОВ: {CYCLES} // 1 ЦИКЛ = {SECONDS} С</value>
+  <comment>SET POINT IN {CYCLES} CYCLES // 1 CYCLE = {SECONDS} S</comment>
+</data>
+<data name="ChemHeater.HoldingAtLine" xml:space="preserve">
+  <value>СМЕСЬ УДЕРЖИВАЕТСЯ ПРИ {DEGREES}°C</value>
+  <comment>HOLDING THE MIXTURE AT {DEGREES} C</comment>
+</data>
+<data name="ChemHeater.ExchangeOffLine" xml:space="preserve">
+  <value>ТЕПЛООБМЕН ВЫКЛЮЧЕН // ЦЕЛЬ НЕ ДЕЙСТВУЕТ</value>
+  <comment>EXCHANGE OFF // SET POINT IGNORED</comment>
+</data>
+<data name="ChemHeater.WaitingFor" xml:space="preserve">
+  <value>НУЖНО {DEGREES}°C // {NAME}</value>
+  <comment>WAITING FOR {DEGREES} C // {NAME}</comment>
+</data>
+<data name="ChemHeater.Reacting" xml:space="preserve">
+  <value>РЕАКЦИЯ // {NAME}</value>
+  <comment>REACTING // {NAME}</comment>
+</data>
+<data name="ChemHeater.EmptySocketLine" xml:space="preserve">
+  <value>ПУСТО - ПОСТАВЬТЕ МЕНЗУРКУ НА АППАРАТ</value>
+  <comment>NONE - USE A BEAKER ON THE MACHINE</comment>
+</data>
+<data name="ChemHeater.NoBeakerLine" xml:space="preserve">
+  <value>МЕНЗУРКА НЕ УСТАНОВЛЕНА</value>
+  <comment>NO BEAKER SEATED</comment>
+</data>
+<data name="ChemHeater.EmptyMixLine" xml:space="preserve">
+  <value>МЕНЗУРКА ПУСТА</value>
+  <comment>BEAKER IS EMPTY</comment>
+</data>
+<data name="ChemHeater.WattsFootLine" xml:space="preserve">
+  <value>ПИТАНИЕ {WATTS} ВТ</value>
+  <comment>POWER {WATTS} W</comment>
+</data>
 <data name="MassSpec.HeaderLine" xml:space="preserve">
   <value>МАСС-СПЕКТРОМЕТР</value>
   <comment>MASS SPECTROMETER</comment>
@@ -7572,6 +7771,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>РЕТРО-КУРСОР</value>
   <comment>RETRO CURSOR</comment>
 </data>
+<data name="Settings.HideDeadNpcHudLabel" xml:space="preserve">
+  <value>СКРЫТЬ HUD ТРУПОВ NPC</value>
+  <comment>HIDE DEAD NPC HUD</comment>
+</data>
 <data name="Settings.CursorScaleLabel" xml:space="preserve">
   <value>МАСШТАБ КУРСОРА</value>
   <comment>CURSOR SCALE</comment>
@@ -7665,7 +7868,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>NAME</comment>
 </data>
 <data name="CharacterSetup.RandomNameLabel" xml:space="preserve">
-  <value>СЛУЧАЙНО</value>
+  <value>СЛУЧ. ИМЯ</value>
   <comment>RANDOM</comment>
 </data>
 <data name="CharacterSetup.NameRefusalLine" xml:space="preserve">
@@ -7673,7 +7876,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>ENTER A FIRST AND LAST NAME</comment>
 </data>
 <data name="CharacterSetup.RandomizeLabel" xml:space="preserve">
-  <value>СЛУЧАЙНО</value>
+  <value>СЛУЧ. ОБЛИК</value>
   <comment>RANDOMIZE</comment>
 </data>
 <data name="CharacterSetup.BodyLabel" xml:space="preserve">
@@ -8384,9 +8587,21 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ВЕРНУТЬСЯ</value>
   <comment>RETURN</comment>
 </data>
+<data name="DeadOverlay.VisionGhostLabel" xml:space="preserve">
+  <value>ПРИЗРАК</value>
+  <comment>GHOST</comment>
+</data>
 <data name="DeadOverlay.ObserveLabel" xml:space="preserve">
   <value>НАБЛЮДАТЬ</value>
   <comment>OBSERVE</comment>
+</data>
+<data name="DeadOverlay.VisionNvgLabel" xml:space="preserve">
+  <value>ПНВ</value>
+  <comment>NVG</comment>
+</data>
+<data name="DeadOverlay.VisionHealthLabel" xml:space="preserve">
+  <value>ЗДОРОВЬЕ</value>
+  <comment>HEALTH</comment>
 </data>
 <data name="DeadOverlay.PrevLabel" xml:space="preserve">
   <value>&lt; ПРЕД.</value>
@@ -8416,9 +8631,9 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Покинув тело, вы всё ещё можете быть реанимированы.</value>
   <comment>You can still be revived while released.</comment>
 </data>
-<data name="DeadOverlay.ObserveEnabledTip" xml:space="preserve">
-  <value>Снимите эффект призрачного экрана, чтобы видеть чётко.</value>
-  <comment>Lift the ghost screen effect to watch clearly.</comment>
+<data name="DeadOverlay.VisionTip" xml:space="preserve">
+  <value>Смена обзора: ПРИЗРАК, НАБЛЮДАТЬ без эффекта призрака, ПНВ (ночное видение) или ЗДОРОВЬЕ с медицинским HUD.</value>
+  <comment>Cycle the view: GHOST, OBSERVE without the ghost effect, NVG night vision, or HEALTH with a medical HUD.</comment>
 </data>
 <data name="DeadOverlay.ObserveLockedTip" xml:space="preserve">
   <value>Доступно, когда вас уже нельзя реанимировать.</value>
@@ -8511,6 +8726,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="WorldMap.LegendAnomalyLabel" xml:space="preserve">
   <value>АНОМАЛИЯ</value>
   <comment>ANOMALY</comment>
+</data>
+<data name="WorldMap.LegendEastLabel" xml:space="preserve">
+  <value>ВОСТОК</value>
+  <comment>EAST</comment>
 </data>
 <data name="WorldMap.LegendWaveLabel" xml:space="preserve">
   <value>ВОЛНА</value>
@@ -8661,12 +8880,12 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>ROUND COMPLETE</comment>
 </data>
 <data name="EorScreen.ColonyLostLine" xml:space="preserve">
-  <value>НИ ОДИН ОПЕРАТИВНИК НЕ ЭВАКУИРОВАН // КОЛОНИЯ ПОТЕРЯНА</value>
-  <comment>NO OPERATORS EXTRACTED // THE COLONY IS LOST</comment>
+  <value>НИКТО НЕ ЭВАКУИРОВАН</value>
+  <comment>NO OPERATORS EXTRACTED</comment>
 </data>
 <data name="EorScreen.AnomalyOverrunLine" xml:space="preserve">
-  <value>АНОМАЛИЯ ЗАХВАТИЛА КОЛОНИЮ // ВЫЖИВШИЕ ЭВАКУИРОВАНЫ</value>
-  <comment>THE ANOMALY OVERRAN THE COLONY // SURVIVORS EXTRACTED</comment>
+  <value>КОЛОНИЯ ЗАХВАЧЕНА // ВЫЖИВШИЕ ЭВАКУИРОВАНЫ</value>
+  <comment>COLONY OVERRUN // SURVIVORS EXTRACTED</comment>
 </data>
 <data name="EorScreen.OperativesLostLine" xml:space="preserve">
   <value>ВСЕ ОПЕРАТИВНИКИ ПОТЕРЯНЫ</value>
@@ -8674,15 +8893,15 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="EorScreen.AnomalyContainedLine" xml:space="preserve">
   <value>АНОМАЛИЯ СДЕРЖАНА // КОЛОНИЯ ЗАЩИЩЕНА</value>
-  <comment>THE ANOMALY WAS CONTAINED // COLONY SECURED</comment>
+  <comment>ANOMALY CONTAINED // COLONY SECURED</comment>
 </data>
 <data name="EorScreen.AnomalyContainedNoExtractionLine" xml:space="preserve">
   <value>АНОМАЛИЯ СДЕРЖАНА // НИКТО НЕ ЭВАКУИРОВАН</value>
-  <comment>THE ANOMALY WAS CONTAINED // NOBODY EXTRACTED</comment>
+  <comment>ANOMALY CONTAINED // NOBODY EXTRACTED</comment>
 </data>
 <data name="EorScreen.ExtractedVerdictLine" xml:space="preserve">
-  <value>ЭВАКУИРОВАНО: {EXTRACTED} ИЗ {TOTAL} // КОЛОНИЯ ПОМНИТ</value>
-  <comment>{EXTRACTED} OF {TOTAL} OPERATORS EXTRACTED // THE COLONY REMEMBERS</comment>
+  <value>ЭВАКУИРОВАНО: {EXTRACTED} ИЗ {TOTAL}</value>
+  <comment>{EXTRACTED} OF {TOTAL} OPERATORS EXTRACTED</comment>
 </data>
 <data name="EorScreen.MetaLine" xml:space="preserve">
   <value>{MODE} // {MAP} // ВРЕМЯ РАУНДА {TIME} // ОТБИТО ВОЛН: {WAVES}</value>
@@ -8792,6 +9011,58 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ГОЛОС ОТДАН // ЗАКРЫТИЕ ЧЕРЕЗ {SECONDS} С</value>
   <comment>VOTE CAST // CLOSES IN {SECONDS}S</comment>
 </data>
+<data name="EorScreen.SatisfactionQuestion" xml:space="preserve">
+  <value>ВАМ ПОНРАВИЛСЯ РАУНД?</value>
+  <comment>DID YOU ENJOY THE ROUND?</comment>
+</data>
+<data name="EorScreen.SatisfactionYes" xml:space="preserve">
+  <value>ДА</value>
+  <comment>YES</comment>
+</data>
+<data name="EorScreen.SatisfactionNo" xml:space="preserve">
+  <value>НЕТ</value>
+  <comment>NO</comment>
+</data>
+<data name="EorScreen.SatisfactionNoTipHeader" xml:space="preserve">
+  <value>ГОЛОСУЙТЕ ПРОТИВ, ЕСЛИ РАУНД БЫЛ ПЛОХИМ</value>
+  <comment>VOTE NO IF THE ROUND WAS BAD</comment>
+</data>
+<data name="EorScreen.SatisfactionNoTipBody" xml:space="preserve">
+  <value>СКУЧНЫМ, СЛОМАННЫМ ИЛИ ПУСТОЙ ТРАТОЙ ВРЕМЕНИ. GRUNTZ СТРЕМИТСЯ К ДОСТОВЕРНОМУ БОЮ: ЗДЕСЬ НИКТО НЕ ГЕРОЙ, И ВЫ УМРЁТЕ. ПРОИГРЫВАТЬ ВЕСЕЛО.</value>
+  <comment>DULL, BROKEN, OR A WASTE OF YOUR TIME. GRUNTZ AIMS FOR AUTHENTIC COMBAT: NOBODY HERE IS THE HERO, AND YOU ARE GOING TO DIE. LOSING IS FUN.</comment>
+</data>
+<data name="EorScreen.SatisfactionYesTip" xml:space="preserve">
+  <value>ГОЛОС МОЖНО ИЗМЕНИТЬ ДО КОНЦА ГОЛОСОВАНИЯ.</value>
+  <comment>YOU CAN CHANGE YOUR VOTE UNTIL VOTING CLOSES.</comment>
+</data>
+<data name="EorScreen.SatisfactionClosesLabel" xml:space="preserve">
+  <value>ГОЛОСОВАНИЕ ЗАКОНЧИТСЯ ЧЕРЕЗ</value>
+  <comment>VOTING CLOSES IN</comment>
+</data>
+<data name="EorScreen.SatisfactionCastLabel" xml:space="preserve">
+  <value>ГОЛОС УЧТЁН // КОНЕЦ ЧЕРЕЗ</value>
+  <comment>VOTE CAST // CLOSES IN</comment>
+</data>
+<data name="EorScreen.SatisfactionClosedLine" xml:space="preserve">
+  <value>ГОЛОСОВАНИЕ ЗАКРЫТО</value>
+  <comment>VOTING CLOSED</comment>
+</data>
+<data name="EorScreen.SatisfactionPercentLine" xml:space="preserve">
+  <value>{PERCENT}%</value>
+  <comment>{PERCENT}%</comment>
+</data>
+<data name="EorScreen.SatisfactionNoResult" xml:space="preserve">
+  <value>--</value>
+  <comment>--</comment>
+</data>
+<data name="EorScreen.SatisfactionVotesLine" xml:space="preserve">
+  <value>ГОЛОСОВ: {VOTES}</value>
+  <comment>{VOTES} VOTES</comment>
+</data>
+<data name="EorScreen.SatisfactionShortLine" xml:space="preserve">
+  <value>ПРОГОЛОСОВАЛИ: {VOTES} ИЗ {PLAYERS} // НУЖНО {NEEDED}</value>
+  <comment>{VOTES} OF {PLAYERS} VOTED // NEED {NEEDED}</comment>
+</data>
 <data name="EorScreen.FooterArchiveLine" xml:space="preserve">
   <value>РАУНД ОТПРАВЛЕН В АРХИВ // СЕТЬ КОЛОНИИ W-Y // СЛЕДУЮЩАЯ ОПЕРАЦИЯ ОЖИДАЕТСЯ</value>
   <comment>ROUND ARCHIVED // W-Y COLONY NET // NEXT OPERATION PENDING</comment>
@@ -8892,6 +9163,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>УДАРЫ МОЛНИИ</value>
   <comment>STRUCK BY LIGHTNING</comment>
 </data>
+<data name="EorScreen.StatHeadshots" xml:space="preserve">
+  <value>ПОПАДАНИЙ В ГОЛОВУ</value>
+  <comment>HEADSHOTS LANDED</comment>
+</data>
+<data name="EorScreen.StatEastKilled" xml:space="preserve">
+  <value>УБИТО СОЛДАТ ВОСТОКА</value>
+  <comment>EAST SOLDIERS KILLED</comment>
+</data>
 <data name="EorScreen.StatUnknown" xml:space="preserve">
   <value>~НЕИЗВЕСТНАЯ СТАТИСТИКА</value>
   <comment>~UNKNOWN STAT</comment>
@@ -8905,7 +9184,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>LOST</comment>
 </data>
 <data name="EorScreen.StatusDied" xml:space="preserve">
-  <value>ГИБЕЛЬ</value>
+  <value>СМЕРТЬ</value>
   <comment>DIED</comment>
 </data>
 <data name="EorScreen.StatusUnknown" xml:space="preserve">
@@ -8963,6 +9242,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EorScreen.CauseAlcohol" xml:space="preserve">
   <value>ОТРАВЛЕНИЕ</value>
   <comment>POISONED</comment>
+</data>
+<data name="EorScreen.CauseDecapitated" xml:space="preserve">
+  <value>ОБЕЗГЛАВЛИВАНИЕ</value>
+  <comment>DECAPITATED</comment>
+</data>
+<data name="EorScreen.CauseGibbed" xml:space="preserve">
+  <value>РАЗРЫВ НА КУСКИ</value>
+  <comment>GIBBED</comment>
 </data>
 <data name="EorScreen.CauseOther" xml:space="preserve">
   <value>ДРУГОЕ</value>
@@ -9401,7 +9688,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>ROLE</comment>
 </data>
 <data name="Codex.Col.Special" xml:space="preserve">
-  <value>ОСОБЕННОСТИ</value>
+  <value>ОСОБОЕ</value>
   <comment>SPECIAL</comment>
 </data>
 <data name="Codex.Col.Strength" xml:space="preserve">
@@ -9535,6 +9822,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.NoHeat" xml:space="preserve">
   <value>НЕТ. НИЧТО НЕ ТРЕБУЕТ НАГРЕВА</value>
   <comment>NONE. NOTHING NEEDS HEATING</comment>
+</data>
+<data name="Codex.HeatAbove" xml:space="preserve">
+  <value>{DEGREES}°C И ВЫШЕ</value>
+  <comment>{DEGREES} C OR ABOVE</comment>
+</data>
+<data name="Codex.HeatBelow" xml:space="preserve">
+  <value>{DEGREES}°C И НИЖЕ</value>
+  <comment>{DEGREES} C OR BELOW</comment>
+</data>
+<data name="Codex.HeatBetween" xml:space="preserve">
+  <value>ОТ {LOW} ДО {HIGH}°C</value>
+  <comment>{LOW} TO {HIGH} C</comment>
 </data>
 <data name="Codex.ThisMix" xml:space="preserve">
   <value>ЭТА СМЕСЬ</value>
@@ -9952,6 +10251,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>РЕАГЕНТЫ</value>
   <comment>REAGENTS</comment>
 </data>
+<data name="Codex.Section.Chemistry.Effects" xml:space="preserve">
+  <value>ЭФФЕКТЫ</value>
+  <comment>EFFECTS</comment>
+</data>
 <data name="Codex.Section.Chemistry.Glassware" xml:space="preserve">
   <value>СТЕКЛОТАРА</value>
   <comment>GLASSWARE</comment>
@@ -10085,11 +10388,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>OTHER</comment>
 </data>
 <data name="Codex.Property.Neogenetic" xml:space="preserve">
-  <value>ЛЕЧИТ ТРАВМЫ ВСЕХ КОНЕЧНОСТЕЙ</value>
+  <value>ЛЕЧИТ ТРАВМЫ ВСЕГО ТЕЛА</value>
   <comment>MENDS BRUTE ON EVERY LIMB</comment>
 </data>
 <data name="Codex.Property.Anticorrosive" xml:space="preserve">
-  <value>ЛЕЧИТ ОЖОГИ ВСЕХ КОНЕЧНОСТЕЙ</value>
+  <value>ЛЕЧИТ ОЖОГИ ВСЕГО ТЕЛА</value>
   <comment>MENDS BURN ON EVERY LIMB</comment>
 </data>
 <data name="Codex.Property.Antitoxic" xml:space="preserve">
@@ -10145,7 +10448,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>STOPS EXTERNAL BLEEDING</comment>
 </data>
 <data name="Codex.Property.Bonemending" xml:space="preserve">
-  <value>СРАЩИВАЕТ КОСТИ, В ШИНЕ БЫСТРЕЕ</value>
+  <value>СРАЩИВАЕТ ПЕРЕЛОМЫ</value>
   <comment>KNITS A FRACTURE, FASTER UNDER A SPLINT</comment>
 </data>
 <data name="Codex.Property.Toxic" xml:space="preserve">
@@ -10169,7 +10472,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>HYDRATES</comment>
 </data>
 <data name="Codex.Property.Veinmending" xml:space="preserve">
-  <value>ЛЕЧИТ ВНУТРЕННИЕ КРОВОТЕЧЕНИЯ</value>
+  <value>ЛЕЧИТ ВНУТР. КРОВОТЕЧЕНИЕ</value>
   <comment>CURES INTERNAL BLEEDING OVER TIME</comment>
 </data>
 <data name="Codex.Property.Stimulant" xml:space="preserve">
@@ -10185,7 +10488,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>BLUNTS RADIATION</comment>
 </data>
 <data name="Codex.Property.Alcoholic" xml:space="preserve">
-  <value>ОПЬЯНЯЕТ, ХМЕЛЬ ПРИТУПЛЯЕТ БОЛЬ</value>
+  <value>ОПЬЯНЯЕТ, ПРИТУПЛЯЕТ БОЛЬ</value>
   <comment>INTOXICATES, DULLS PAIN BY DRUNKENNESS</comment>
 </data>
 <data name="Codex.Property.Focusing" xml:space="preserve">
@@ -11257,7 +11560,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>{NAME} DOWN</comment>
 </data>
 <data name="CrewMonitor.EventDead" xml:space="preserve">
-  <value>{NAME}: ГИБЕЛЬ</value>
+  <value>{NAME}: НЕТ ПУЛЬСА</value>
   <comment>{NAME} DEAD</comment>
 </data>
 <data name="CrewMonitor.EventLost" xml:space="preserve">
@@ -11285,7 +11588,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>DOWN</comment>
 </data>
 <data name="CrewMonitor.StateDead" xml:space="preserve">
-  <value>ГИБЕЛЬ</value>
+  <value>НЕТ ПУЛЬСА</value>
   <comment>DEAD</comment>
 </data>
 <data name="CrewMonitor.StateOffline" xml:space="preserve">
@@ -11305,7 +11608,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>~PLAYER {ID}</comment>
 </data>
 <data name="CrewMonitor.Deceased" xml:space="preserve">
-  <value>ГИБЕЛЬ</value>
+  <value>НЕТ ПРИЗНАКОВ ЖИЗНИ</value>
   <comment>DECEASED</comment>
 </data>
 <data name="CrewMonitor.SameDeck" xml:space="preserve">
@@ -11373,7 +11676,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>NET</comment>
 </data>
 <data name="CrewMonitor.AlarmDownDead" xml:space="preserve">
-  <value>РАН./ГИБЕЛИ</value>
+  <value>РАН./СМЕРТИ</value>
   <comment>DOWN + DEAD</comment>
 </data>
 <data name="CrewMonitor.AlarmAnyChange" xml:space="preserve">
@@ -12084,6 +12387,134 @@ The file is looked up beside this language file first, then under the game's Con
   <value>{FEET} ФТ</value>
   <comment>{FEET} FT</comment>
 </data>
+<data name="NewPlayer.Title" xml:space="preserve">
+  <value>НОВИЧОК</value>
+  <comment>NEW PLAYER</comment>
+</data>
+<data name="NewPlayer.Flavor" xml:space="preserve">
+  <value>Помогите новичкам освоиться.</value>
+  <comment>Help new players get started.</comment>
+</data>
+<data name="Crown.Ecg.Title" xml:space="preserve">
+  <value>МОЖНО РЕАНИМИРОВАТЬ</value>
+  <comment>REVIVABLE</comment>
+</data>
+<data name="Crown.Ecg.Flavor" xml:space="preserve">
+  <value>Дефибриллятор или СЛР, пока не поздно.</value>
+  <comment>Shock or CPR before the window closes.</comment>
+</data>
+<data name="Crown.Dnr.Title" xml:space="preserve">
+  <value>НЕ РЕАНИМИРОВАТЬ</value>
+  <comment>DO NOT RESUSCITATE</comment>
+</data>
+<data name="Crown.Dnr.Flavor" xml:space="preserve">
+  <value>В теле никого не осталось. Реанимация не поможет.</value>
+  <comment>Nobody is home. A revive will not take.</comment>
+</data>
+<data name="Crown.Heart.Title" xml:space="preserve">
+  <value>СЕРДЦЕ ПОВРЕЖДЕНО</value>
+  <comment>HEART DAMAGED</comment>
+</data>
+<data name="Crown.Heart.Flavor" xml:space="preserve">
+  <value>Сначала восстановите сердце, иначе разряд не поможет.</value>
+  <comment>Repair the heart before a shock will take.</comment>
+</data>
+<data name="Crown.Skull.Title" xml:space="preserve">
+  <value>НЕОБРАТИМАЯ СМЕРТЬ</value>
+  <comment>PERMANENTLY DEAD</comment>
+</data>
+<data name="Crown.Skull.Flavor" xml:space="preserve">
+  <value>Реанимация невозможна.</value>
+  <comment>Beyond revival.</comment>
+</data>
+<data name="Crown.Shrapnel.Title" xml:space="preserve">
+  <value>ОСКОЛКИ</value>
+  <comment>SHRAPNEL</comment>
+</data>
+<data name="Crown.Shrapnel.Flavor" xml:space="preserve">
+  <value>В теле застряли осколки. Их нужно извлечь.</value>
+  <comment>Embedded fragments. Have them removed.</comment>
+</data>
+<data name="Crown.Enemy.Title" xml:space="preserve">
+  <value>ВРАГ</value>
+  <comment>HOSTILE</comment>
+</data>
+<data name="Crown.Enemy.Flavor" xml:space="preserve">
+  <value>Не на вашей стороне.</value>
+  <comment>Not on your side.</comment>
+</data>
+<data name="Crown.Corpsman.Title" xml:space="preserve">
+  <value>МЕДИК</value>
+  <comment>CORPSMAN</comment>
+</data>
+<data name="Crown.Corpsman.Flavor" xml:space="preserve">
+  <value>Не даёт отделению погибнуть. Убейте его первым.</value>
+  <comment>Keeps his squad alive. Drop him first.</comment>
+</data>
+<data name="HealthBar.Light.Title" xml:space="preserve">
+  <value>ЛЁГКОЕ РАНЕНИЕ</value>
+  <comment>LIGHTLY WOUNDED</comment>
+</data>
+<data name="HealthBar.Light.Flavor" xml:space="preserve">
+  <value>Держится на ногах. Хватит перевязки.</value>
+  <comment>Walking wounded. A patch will do.</comment>
+</data>
+<data name="HealthBar.Wounded.Title" xml:space="preserve">
+  <value>РАНЕНИЕ</value>
+  <comment>WOUNDED</comment>
+</data>
+<data name="HealthBar.Wounded.Flavor" xml:space="preserve">
+  <value>Нужно лечение до следующего натиска.</value>
+  <comment>Needs treatment before the next push.</comment>
+</data>
+<data name="HealthBar.Badly.Title" xml:space="preserve">
+  <value>ТЯЖЁЛОЕ РАНЕНИЕ</value>
+  <comment>BADLY WOUNDED</comment>
+</data>
+<data name="HealthBar.Badly.Flavor" xml:space="preserve">
+  <value>Вот-вот свалится. Лечите немедленно.</value>
+  <comment>Close to dropping. Treat them now.</comment>
+</data>
+<data name="HealthBar.Failing.Title" xml:space="preserve">
+  <value>ЕЛЕ ДЕРЖИТСЯ</value>
+  <comment>FAILING</comment>
+</data>
+<data name="HealthBar.Failing.Flavor" xml:space="preserve">
+  <value>Едва стоит на ногах. Срочно к медику.</value>
+  <comment>Barely standing. Get them to a medic.</comment>
+</data>
+<data name="HealthBar.Critical.Title" xml:space="preserve">
+  <value>КРИТИЧЕСКОЕ СОСТОЯНИЕ</value>
+  <comment>CRITICAL</comment>
+</data>
+<data name="HealthBar.Critical.Flavor" xml:space="preserve">
+  <value>Умирает. Срочно стабилизируйте.</value>
+  <comment>Dying. Stabilize them now.</comment>
+</data>
+<data name="ContentWarning.Title" xml:space="preserve">
+  <value>Предупреждение о содержании</value>
+  <comment>Content Warning</comment>
+</data>
+<data name="ContentWarning.OkayLabel" xml:space="preserve">
+  <value>ПОНЯТНО</value>
+  <comment>OKAY</comment>
+</data>
+<data name="ContentWarning.DisableLabel" xml:space="preserve">
+  <value>ОТКЛЮЧИТЬ</value>
+  <comment>DISABLE</comment>
+</data>
+<data name="ContentWarning.Themes" xml:space="preserve">
+  <value>Gruntz не предназначена для детей любого возраста. Игра затрагивает мрачные темы и содержит натуралистичные изображения боевых действий, насилия, крови, увечий и употребления наркотиков.</value>
+  <comment>Gruntz is not appropriate for children of any age. It explores dark themes and contains graphic depictions of combat, violence, blood, gore, and drug use.</comment>
+</data>
+<data name="ContentWarning.Photosensitivity" xml:space="preserve">
+  <value>В игре есть интенсивные звуковые и визуальные эффекты, в том числе яркие вспышки и стробоскопические эффекты, которые могут быть опасны для игроков со светочувствительностью.</value>
+  <comment>The game features intense audio and visual effects, including bright flashing lights and strobing effects that may affect photosensitive players.</comment>
+</data>
+<data name="ContentWarning.RealWorld" xml:space="preserve">
+  <value>В реальном мире азартные игры, наркотики, алкоголь и война ломают жизни.</value>
+  <comment>In the real world, gambling, drugs, alcohol, and combat destroy lives.</comment>
+</data>
 <data name="Def.Crate.DisplayName" xml:space="preserve">
   <value>ящик</value>
   <comment>crate</comment>
@@ -12155,6 +12586,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.TestCutFence.Broken.DisplayName" xml:space="preserve">
   <value>тест. режущая ограда</value>
   <comment>test cut fence</comment>
+</data>
+<data name="Def.TestHoverObstacle.DisplayName" xml:space="preserve">
+  <value>тестовое препятствие для ховера</value>
+  <comment>test hover obstacle</comment>
 </data>
 <data name="Def.TestYieldStructure.DisplayName" xml:space="preserve">
   <value>тест. добыч. конструкция</value>
@@ -14252,6 +14687,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>тестовая лестница</value>
   <comment>test ladder</comment>
 </data>
+<data name="Def.TestBreakLadder.DisplayName" xml:space="preserve">
+  <value>тестовая разрушаемая лестница</value>
+  <comment>test breakable ladder</comment>
+</data>
+<data name="Def.TestBrokenLadder.DisplayName" xml:space="preserve">
+  <value>тестовая сломанная лестница</value>
+  <comment>test broken ladder</comment>
+</data>
 <data name="Def.TestBreakCrate.DisplayName" xml:space="preserve">
   <value>тестовый ломкий ящик</value>
   <comment>test break crate</comment>
@@ -14535,10 +14978,6 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Character.Anomaly.Behemoth.Wave.DisplayName" xml:space="preserve">
   <value>бехемот</value>
   <comment>behemoth</comment>
-</data>
-<data name="Def.Character.Anomaly.Skitter.Thrall.DisplayName" xml:space="preserve">
-  <value>прислужник</value>
-  <comment>thrall</comment>
 </data>
 <data name="Def.Character.Anomaly.Venator.DisplayName" xml:space="preserve">
   <value>венатор</value>
@@ -15007,6 +15446,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Fence.Slim.Upp.Door.Broken.DisplayName" xml:space="preserve">
   <value>калитка</value>
   <comment>fence door</comment>
+</data>
+<data name="Def.Obj.Effect.Decal.Hybrisa.Floorprops.Grate2.DisplayName" xml:space="preserve">
+  <value>металлическая решётка</value>
+  <comment>solid metal grate</comment>
 </data>
 <data name="Def.debug_light.DisplayName" xml:space="preserve">
   <value>отладочная лампа</value>
@@ -33357,48 +33800,48 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.DisplayName" xml:space="preserve">
-  <value>магазин NP92 (9x18 мм Макаров)</value>
-  <comment>NP92 magazine (9x18mm Makarov)</comment>
+  <value>магазин Type 92 (9x18 мм Макаров)</value>
+  <comment>Type 92 magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Empty.DisplayName" xml:space="preserve">
-  <value>магазин NP92 (9x18 мм Макаров)</value>
-  <comment>NP92 magazine (9x18mm Makarov)</comment>
+  <value>магазин Type 92 (9x18 мм Макаров)</value>
+  <comment>Type 92 magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.DisplayName" xml:space="preserve">
-  <value>магазин NPZ92 (9x18 мм Макаров)</value>
-  <comment>NPZ92 magazine (9x18mm Makarov)</comment>
+  <value>магазин Type 92-S (9x18 мм Макаров)</value>
+  <comment>Type 92-S magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.Empty.DisplayName" xml:space="preserve">
-  <value>магазин NPZ92 (9x18 мм Макаров)</value>
-  <comment>NPZ92 magazine (9x18mm Makarov)</comment>
+  <value>магазин Type 92-S (9x18 мм Макаров)</value>
+  <comment>Type 92-S magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.DisplayName" xml:space="preserve">
-  <value>магазин NPZ92 (транкв., 9x18 мм Макаров)</value>
-  <comment>NPZ92 tranq magazine (9x18mm Makarov)</comment>
+  <value>магазин Type 92-S (транкв., 9x18 мм Макаров)</value>
+  <comment>Type 92-S tranq magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.Empty.DisplayName" xml:space="preserve">
-  <value>магазин NPZ92 (транкв., 9x18 мм Макаров)</value>
-  <comment>NPZ92 tranq magazine (9x18mm Makarov)</comment>
+  <value>магазин Type 92-S (транкв., 9x18 мм Макаров)</value>
+  <comment>Type 92-S tranq magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -33486,7 +33929,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.DisplayName" xml:space="preserve">
   <value>магазин Type 74 (ударные, 7.62x25 мм Токарев)</value>
-  <comment>High Impact Type 74 magazine (7.62x25mm Tokarev)</comment>
+  <comment>Type 74 high impact magazine (7.62x25mm Tokarev)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -33494,7 +33937,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.Empty.DisplayName" xml:space="preserve">
   <value>магазин Type 74 (ударные, 7.62x25 мм Токарев)</value>
-  <comment>High Impact Type 74 magazine (7.62x25mm Tokarev)</comment>
+  <comment>Type 74 high impact magazine (7.62x25mm Tokarev)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -33629,8 +34072,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pkp.DisplayName" xml:space="preserve">
-  <value>патронный короб QYJ-72 (7.62x54mmR)</value>
-  <comment>QYJ-72 ammo box (7.62x54mmR)</comment>
+  <value>патронный короб Type 67</value>
+  <comment>Type 67 ammo box</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pkp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -33861,32 +34304,32 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.DisplayName" xml:space="preserve">
-  <value>скорозарядник ZHNK-72 (7.62x38mmR)</value>
-  <comment>ZHNK-72 speed loader (7.62x38mmR)</comment>
+  <value>скорозарядник Type 72</value>
+  <comment>Type 72 speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Empty.DisplayName" xml:space="preserve">
-  <value>скорозарядник ZHNK-72 (7.62x38mmR)</value>
-  <comment>ZHNK-72 speed loader (7.62x38mmR)</comment>
+  <value>скорозарядник Type 72</value>
+  <comment>Type 72 speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.DisplayName" xml:space="preserve">
-  <value>осколочный скорозарядник ZHNK-72 (7.62x38mmR)</value>
-  <comment>ZHNK-72 shrapnel-shot speed loader (7.62x38mmR)</comment>
+  <value>осколочный скорозарядник Type 72</value>
+  <comment>Type 72 shrapnel speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.Empty.DisplayName" xml:space="preserve">
-  <value>осколочный скорозарядник ZHNK-72 (7.62x38mmR)</value>
-  <comment>ZHNK-72 shrapnel-shot speed loader (7.62x38mmR)</comment>
+  <value>осколочный скорозарядник Type 72</value>
+  <comment>Type 72 shrapnel speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -35462,7 +35905,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.DisplayName" xml:space="preserve">
   <value>спиральный магазин Type 64 (7.62x19 мм)</value>
-  <comment>Type 64 Helical Magazine (7.62x19mm)</comment>
+  <comment>Type 64 helical magazine (7.62x19mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -35470,7 +35913,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.Empty.DisplayName" xml:space="preserve">
   <value>спиральный магазин Type 64 (7.62x19 мм)</value>
-  <comment>Type 64 Helical Magazine (7.62x19mm)</comment>
+  <comment>Type 64 helical magazine (7.62x19mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -35749,16 +36192,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.DisplayName" xml:space="preserve">
-  <value>коробчатый магазин Type-19 (7.62x25 мм)</value>
-  <comment>Type-19 stick magazine (7.62x25mm)</comment>
+  <value>коробчатый магазин Type 19 (7.62x25 мм)</value>
+  <comment>Type 19 stick magazine (7.62x25mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.Empty.DisplayName" xml:space="preserve">
-  <value>коробчатый магазин Type-19 (7.62x25 мм)</value>
-  <comment>Type-19 stick magazine (7.62x25mm)</comment>
+  <value>коробчатый магазин Type 19 (7.62x25 мм)</value>
+  <comment>Type 19 stick magazine (7.62x25mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -35921,6 +36364,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>M42A incendiary magazine (10x28mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Sniper.Incendiary.Empty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.DisplayName" xml:space="preserve">
+  <value>магазин Type 88 (7.62x54mmR)</value>
+  <comment>Type 88 magazine (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.Empty.DisplayName" xml:space="preserve">
+  <value>магазин Type 88 (7.62x54mmR)</value>
+  <comment>Type 88 magazine (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -37225,8 +37684,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Card.Id.Dogtag.Upp.DisplayName" xml:space="preserve">
-  <value>жетон СПН</value>
-  <comment>UPP dog tag</comment>
+  <value>жетоны ВНА</value>
+  <comment>PAVN dog tags</comment>
 </data>
 <data name="Def.Obj.Item.Card.Id.Dogtag.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -37649,16 +38108,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.DisplayName" xml:space="preserve">
-  <value>нашивка СПН</value>
-  <comment>UPP patch</comment>
+  <value>нашивка ВНА</value>
+  <comment>PAVN patch</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.Alt.DisplayName" xml:space="preserve">
-  <value>нашивка СПН</value>
-  <comment>UPP patch</comment>
+  <value>нашивка ВНА</value>
+  <comment>PAVN patch</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.Alt.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -38456,6 +38915,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Gloves.Marine.Veteran.Upp.DisplayName" xml:space="preserve">
+  <value>перчатки ВНА</value>
+  <comment>PAVN gloves</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Gloves.Marine.Veteran.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Gloves.Swat.DisplayName" xml:space="preserve">
   <value>перчатки SWAT</value>
   <comment>SWAT Gloves</comment>
@@ -38501,6 +38968,14 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>bear pelt hat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Bearpelt.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Beret.ArmyBeret.DisplayName" xml:space="preserve">
+  <value>берет резервиста ВНА</value>
+  <comment>PAVN reservist beret</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Beret.ArmyBeret.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -39952,33 +40427,97 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.DisplayName" xml:space="preserve">
+  <value>полевой шлем Type 4</value>
+  <comment>Type 4 field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Open.DisplayName" xml:space="preserve">
+  <value>полевой шлем Type 4</value>
+  <comment>Type 4 field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.DisplayName" xml:space="preserve">
+  <value>боевой шлем Type 82</value>
+  <comment>Type 82 combat helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.Open.DisplayName" xml:space="preserve">
+  <value>боевой шлем Type 82</value>
+  <comment>Type 82 combat helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.DisplayName" xml:space="preserve">
+  <value>полевой шлем Type 4-V</value>
+  <comment>Type 4-V field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.Open.DisplayName" xml:space="preserve">
+  <value>полевой шлем Type 4-V</value>
+  <comment>Type 4-V field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.DisplayName" xml:space="preserve">
-  <value>шлем пожарного T-20</value>
-  <comment>T-20 firefighter helmet</comment>
+  <value>шлем пожарного Type 20</value>
+  <comment>Type 20 fire helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.Open.DisplayName" xml:space="preserve">
-  <value>шлем пожарного T-20</value>
-  <comment>T-20 firefighter helmet</comment>
+  <value>шлем пожарного Type 20</value>
+  <comment>Type 20 fire helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.DisplayName" xml:space="preserve">
+  <value>тяжёлый шлем Type 7</value>
+  <comment>Type 7 heavy helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.Open.DisplayName" xml:space="preserve">
+  <value>тяжёлый шлем Type 7</value>
+  <comment>Type 7 heavy helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.DisplayName" xml:space="preserve">
-  <value>композитный шлем CCC5-L</value>
-  <comment>CCC5-L composite helmet</comment>
+  <value>композитный шлем Type 55</value>
+  <comment>Type 55 composite helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.Open.DisplayName" xml:space="preserve">
-  <value>композитный шлем CCC5-L</value>
-  <comment>CCC5-L composite helmet</comment>
+  <value>композитный шлем Type 55</value>
+  <comment>Type 55 composite helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -40184,11 +40723,43 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.DisplayName" xml:space="preserve">
+  <value>полевая кепка ВНА</value>
+  <comment>PAVN field cap</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Beret.DisplayName" xml:space="preserve">
+  <value>берет ВНА</value>
+  <comment>PAVN beret</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Beret.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.DisplayName" xml:space="preserve">
+  <value>фуражка ВНА</value>
+  <comment>PAVN peaked cap</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.Police.DisplayName" xml:space="preserve">
-  <value>фуражка UL3 PaP</value>
-  <comment>UL3 PaP peaked cap</comment>
+  <value>полицейская фуражка ВНА</value>
+  <comment>PAVN police peaked cap</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.Police.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Ushanka.DisplayName" xml:space="preserve">
+  <value>зимняя шапка ВНА</value>
+  <comment>PAVN winter cap</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Ushanka.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -40456,6 +41027,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Mask.Gas.Pmc.Upp.DisplayName" xml:space="preserve">
+  <value>балаклава ВНА</value>
+  <comment>PAVN balaclava</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Mask.Gas.Pmc.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Mask.Gas.Swat.DisplayName" xml:space="preserve">
   <value>маска SWAT</value>
   <comment>SWAT mask</comment>
@@ -40465,8 +41044,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Mask.Gas.UppPfb.DisplayName" xml:space="preserve">
-  <value>противогаз ShMB/4</value>
-  <comment>ShMB/4 gasmask</comment>
+  <value>противогаз ВНА</value>
+  <comment>PAVN gas mask</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Mask.Gas.UppPfb.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -40760,19 +41339,51 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.DisplayName" xml:space="preserve">
+  <value>берцы ВНА</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Open.DisplayName" xml:space="preserve">
+  <value>берцы ВНА</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.DisplayName" xml:space="preserve">
-  <value>военные берцы</value>
-  <comment>military combat boots</comment>
+  <value>берцы ВНА</value>
+  <comment>PAVN combat boots</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.Open.DisplayName" xml:space="preserve">
-  <value>военные берцы</value>
-  <comment>military combat boots</comment>
+  <value>берцы ВНА</value>
+  <comment>PAVN combat boots</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.DisplayName" xml:space="preserve">
+  <value>берцы ВНА</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.Open.DisplayName" xml:space="preserve">
+  <value>берцы ВНА</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -41257,16 +41868,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.DisplayName" xml:space="preserve">
-  <value>куртка формы PaP</value>
-  <comment>PaP uniform jacket</comment>
+  <value>полицейская куртка ВНА</value>
+  <comment>PAVN police jacket</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.Open.DisplayName" xml:space="preserve">
-  <value>куртка формы PaP</value>
-  <comment>PaP uniform jacket</comment>
+  <value>полицейская куртка ВНА</value>
+  <comment>PAVN police jacket</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42040,9 +42651,73 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.DisplayName" xml:space="preserve">
+  <value>противоосколочный жилет Type 5</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Open.DisplayName" xml:space="preserve">
+  <value>противоосколочный жилет Type 5</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Open.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.DisplayName" xml:space="preserve">
+  <value>противоосколочный жилет Type 5</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Open.DisplayName" xml:space="preserve">
+  <value>противоосколочный жилет Type 5</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.DisplayName" xml:space="preserve">
+  <value>противоосколочный жилет Type 5</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.Open.DisplayName" xml:space="preserve">
+  <value>противоосколочный жилет Type 5</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B80</value>
-  <comment>6B80 personal body armor</comment>
+  <value>бронежилет Type 80</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42053,8 +42728,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B80</value>
-  <comment>6B80 personal body armor</comment>
+  <value>бронежилет Type 80</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42065,8 +42740,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B80</value>
-  <comment>6B80 personal body armor</comment>
+  <value>бронежилет Type 80</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42077,8 +42752,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B80</value>
-  <comment>6B80 personal body armor</comment>
+  <value>бронежилет Type 80</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42089,24 +42764,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B80</value>
-  <comment>6B80 personal body armor</comment>
+  <value>бронежилет Type 80</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B80</value>
-  <comment>6B80 personal body armor</comment>
+  <value>бронежилет Type 80</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B75</value>
-  <comment>6B75 personal body armour</comment>
+  <value>бронежилет Type 75</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42117,8 +42792,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B75</value>
-  <comment>6B75 personal body armour</comment>
+  <value>бронежилет Type 75</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42129,8 +42804,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B75</value>
-  <comment>6B75 personal body armour</comment>
+  <value>бронежилет Type 75</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42141,8 +42816,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B75</value>
-  <comment>6B75 personal body armour</comment>
+  <value>бронежилет Type 75</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42153,24 +42828,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B75</value>
-  <comment>6B75 personal body armour</comment>
+  <value>бронежилет Type 75</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B75</value>
-  <comment>6B75 personal body armour</comment>
+  <value>бронежилет Type 75</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B70</value>
-  <comment>6B70 personal body armour</comment>
+  <value>бронежилет Type 70</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42181,8 +42856,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B70</value>
-  <comment>6B70 personal body armour</comment>
+  <value>бронежилет Type 70</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42193,8 +42868,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B70</value>
-  <comment>6B70 personal body armour</comment>
+  <value>бронежилет Type 70</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42205,8 +42880,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B70</value>
-  <comment>6B70 personal body armour</comment>
+  <value>бронежилет Type 70</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42217,24 +42892,216 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B70</value>
-  <comment>6B70 personal body armour</comment>
+  <value>бронежилет Type 70</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.Open.DisplayName" xml:space="preserve">
-  <value>бронежилет 6B70</value>
-  <comment>6B70 personal body armour</comment>
+  <value>бронежилет Type 70</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.DisplayName" xml:space="preserve">
+  <value>броня коммандос Type 5</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.DisplayName" xml:space="preserve">
+  <value>броня коммандос Type 5</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.DisplayName" xml:space="preserve">
+  <value>броня коммандос Type 5</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.DisplayName" xml:space="preserve">
+  <value>броня коммандос Type 5</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.DisplayName" xml:space="preserve">
+  <value>броня коммандос Type 5</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Open.DisplayName" xml:space="preserve">
+  <value>броня коммандос Type 5</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.DisplayName" xml:space="preserve">
+  <value>тяжёлая броня Type 7</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Open.DisplayName" xml:space="preserve">
+  <value>тяжёлая броня Type 7</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Open.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.DisplayName" xml:space="preserve">
+  <value>тяжёлая броня Type 7</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Open.DisplayName" xml:space="preserve">
+  <value>тяжёлая броня Type 7</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.DisplayName" xml:space="preserve">
+  <value>тяжёлая броня Type 7</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.Open.DisplayName" xml:space="preserve">
+  <value>тяжёлая броня Type 7</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.DisplayName" xml:space="preserve">
+  <value>офицерская куртка ВНА</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Open.DisplayName" xml:space="preserve">
+  <value>офицерская куртка ВНА</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Open.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.DisplayName" xml:space="preserve">
+  <value>офицерская куртка ВНА</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Open.DisplayName" xml:space="preserve">
+  <value>офицерская куртка ВНА</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.DisplayName" xml:space="preserve">
+  <value>офицерская куртка ВНА</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.Open.DisplayName" xml:space="preserve">
+  <value>офицерская куртка ВНА</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.DisplayName" xml:space="preserve">
-  <value>тактический жилет CCC5-L</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>жилет коммандос Type 55</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42245,8 +43112,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Open.DisplayName" xml:space="preserve">
-  <value>тактический жилет CCC5-L</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>жилет коммандос Type 55</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42257,8 +43124,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.DisplayName" xml:space="preserve">
-  <value>тактический жилет CCC5-L</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>жилет коммандос Type 55</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42269,8 +43136,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.Open.DisplayName" xml:space="preserve">
-  <value>тактический жилет CCC5-L</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>жилет коммандос Type 55</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -42281,18 +43148,82 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.DisplayName" xml:space="preserve">
-  <value>тактический жилет CCC5-L</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>жилет коммандос Type 55</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.Open.DisplayName" xml:space="preserve">
-  <value>тактический жилет CCC5-L</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>жилет коммандос Type 55</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.DisplayName" xml:space="preserve">
+  <value>жилет поддержки Type 6</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Open.DisplayName" xml:space="preserve">
+  <value>жилет поддержки Type 6</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Open.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.DisplayName" xml:space="preserve">
+  <value>жилет поддержки Type 6</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Open.DisplayName" xml:space="preserve">
+  <value>жилет поддержки Type 6</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.DisplayName" xml:space="preserve">
+  <value>жилет поддержки Type 6</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.Open.DisplayName" xml:space="preserve">
+  <value>жилет поддержки Type 6</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -43449,8 +44380,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.DisplayName" xml:space="preserve">
-  <value>противопожарная куртка T-20</value>
-  <comment>T-20 fire response coat</comment>
+  <value>противопожарная куртка Type 20</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -43461,8 +44392,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Open.DisplayName" xml:space="preserve">
-  <value>противопожарная куртка T-20</value>
-  <comment>T-20 fire response coat</comment>
+  <value>противопожарная куртка Type 20</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -43473,8 +44404,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.DisplayName" xml:space="preserve">
-  <value>противопожарная куртка T-20</value>
-  <comment>T-20 fire response coat</comment>
+  <value>противопожарная куртка Type 20</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -43485,8 +44416,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.Open.DisplayName" xml:space="preserve">
-  <value>противопожарная куртка T-20</value>
-  <comment>T-20 fire response coat</comment>
+  <value>противопожарная куртка Type 20</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -43497,16 +44428,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.DisplayName" xml:space="preserve">
-  <value>противопожарная куртка T-20</value>
-  <comment>T-20 fire response coat</comment>
+  <value>противопожарная куртка Type 20</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.Open.DisplayName" xml:space="preserve">
-  <value>противопожарная куртка T-20</value>
-  <comment>T-20 fire response coat</comment>
+  <value>противопожарная куртка Type 20</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -46121,16 +47052,96 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.DisplayName" xml:space="preserve">
-  <value>полевая форма СПН</value>
-  <comment>UPP fatigues</comment>
+  <value>полевая форма ВНА</value>
+  <comment>PAVN fatigues</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.DisplayName" xml:space="preserve">
+  <value>полевая форма ВНА для джунглей</value>
+  <comment>PAVN jungle fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.Alt.DisplayName" xml:space="preserve">
+  <value>песочная полевая форма ВНА</value>
+  <comment>PAVN tan fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.Alt.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi1.DisplayName" xml:space="preserve">
+  <value>оранжевый рабочий комбинезон ВНА</value>
+  <comment>PAVN orange worker overalls</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi1.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi2.DisplayName" xml:space="preserve">
+  <value>песочный рабочий комбинезон ВНА</value>
+  <comment>PAVN tan worker overalls</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi2.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi3.DisplayName" xml:space="preserve">
+  <value>рабочая рубашка и брюки ВНА</value>
+  <comment>PAVN worker shirt and pants</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi3.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi4.DisplayName" xml:space="preserve">
+  <value>рабочий жилет и брюки ВНА</value>
+  <comment>PAVN worker vest and pants</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi4.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi5.DisplayName" xml:space="preserve">
+  <value>шахтёрский комбинезон ВНА</value>
+  <comment>PAVN mining overalls</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi5.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Engi.DisplayName" xml:space="preserve">
+  <value>полевая форма инженера ВНА</value>
+  <comment>PAVN engineer fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Engi.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Medic.DisplayName" xml:space="preserve">
+  <value>полевая форма медика ВНА</value>
+  <comment>PAVN medic fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Medic.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Officer.DisplayName" xml:space="preserve">
+  <value>полевая форма офицера ВНА</value>
+  <comment>PAVN officer fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Officer.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Pap.DisplayName" xml:space="preserve">
-  <value>повседневная форма PaP</value>
-  <comment>PaP service uniform</comment>
+  <value>повседневная форма ВНА</value>
+  <comment>PAVN service uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Pap.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -46913,16 +47924,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.DisplayName" xml:space="preserve">
-  <value>ключ шифрования радио СПН</value>
-  <comment>UPP Radio Encryption Key</comment>
+  <value>ключ шифрования ВНА</value>
+  <comment>PAVN encryption key</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.Kdo.DisplayName" xml:space="preserve">
-  <value>ключ шифрования коммандос СПН</value>
-  <comment>UPP Kommando Radio Encryption Key</comment>
+  <value>ключ шифрования коммандос ВНА</value>
+  <comment>PAVN commando encryption key</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.Kdo.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -47793,16 +48804,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.DisplayName" xml:space="preserve">
-  <value>осколочная граната Type 6</value>
-  <comment>Type 6 shrapnel grenade</comment>
+  <value>граната Type 6</value>
+  <comment>Type 6 grenade</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.Armed.DisplayName" xml:space="preserve">
-  <value>осколочная граната Type 6</value>
-  <comment>Type 6 shrapnel grenade</comment>
+  <value>граната Type 6</value>
+  <comment>Type 6 grenade</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.Armed.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -47869,6 +48880,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>improvised phosphorus bomb</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Clf.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.DisplayName" xml:space="preserve">
+  <value>зажигательная граната Type 8</value>
+  <comment>Type 8 incendiary grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.Armed.DisplayName" xml:space="preserve">
+  <value>зажигательная граната Type 8</value>
+  <comment>Type 8 incendiary grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.Armed.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -55136,6 +56163,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.DisplayName" xml:space="preserve">
+  <value>боевой рюкзак Type 3</value>
+  <comment>Type 3 combat pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.Open.DisplayName" xml:space="preserve">
+  <value>боевой рюкзак Type 3</value>
+  <comment>Type 3 combat pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Backpack.Marine.DisplayName" xml:space="preserve">
   <value>облегчённый рюкзак IMP</value>
   <comment>lightweight IMP backpack</comment>
@@ -55168,6 +56211,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.DisplayName" xml:space="preserve">
+  <value>сварочный ранец Type 3-E</value>
+  <comment>Type 3-E welderpack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.Open.DisplayName" xml:space="preserve">
+  <value>сварочный ранец Type 3-E</value>
+  <comment>Type 3-E welderpack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Backpack.Marine.Grenadepack.DisplayName" xml:space="preserve">
   <value>сумка для гранат USCM IMP M63A1</value>
   <comment>USCM IMP M63A1 grenade satchel</comment>
@@ -55181,6 +56240,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>USCM IMP M63A1 grenade satchel</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Backpack.Marine.Grenadepack.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.DisplayName" xml:space="preserve">
+  <value>рюкзак медика ВНА</value>
+  <comment>PAVN corpsman pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.Open.DisplayName" xml:space="preserve">
+  <value>рюкзак медика ВНА</value>
+  <comment>PAVN corpsman pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -55664,9 +56739,25 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.DisplayName" xml:space="preserve">
+  <value>поясная кобура Type 47</value>
+  <comment>Type 47 holster rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.Open.DisplayName" xml:space="preserve">
+  <value>поясная кобура Type 47</value>
+  <comment>Type 47 holster rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.DisplayName" xml:space="preserve">
   <value>поясная кобура Type 47-S</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -55674,7 +56765,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.Open.DisplayName" xml:space="preserve">
   <value>поясная кобура Type 47-S</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -55682,7 +56773,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.DisplayName" xml:space="preserve">
   <value>поясная кобура Type 47-S</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -55690,7 +56781,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.Open.DisplayName" xml:space="preserve">
   <value>поясная кобура Type 47-S</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -55741,6 +56832,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>M804 heavygunner storage rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Marine.M2c.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.DisplayName" xml:space="preserve">
+  <value>разгрузка Type 41</value>
+  <comment>Type 41 load rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.Open.DisplayName" xml:space="preserve">
+  <value>разгрузка Type 41</value>
+  <comment>Type 41 load rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -55808,33 +56915,49 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.DisplayName" xml:space="preserve">
+  <value>поясная сумка спасателя Type 41</value>
+  <comment>Type 41 lifesaver bag</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.Open.DisplayName" xml:space="preserve">
+  <value>поясная сумка спасателя Type 41</value>
+  <comment>Type 41 lifesaver bag</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.DisplayName" xml:space="preserve">
-  <value>разгрузка для патронов 6B80</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>разгрузка для патронов Type 80</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Open.DisplayName" xml:space="preserve">
-  <value>разгрузка для патронов 6B80</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>разгрузка для патронов Type 80</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.DisplayName" xml:space="preserve">
-  <value>разгрузка для патронов 6B80</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>разгрузка для патронов Type 80</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.Open.DisplayName" xml:space="preserve">
-  <value>разгрузка для патронов 6B80</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>разгрузка для патронов Type 80</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -56937,24 +58060,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.DisplayName" xml:space="preserve">
-  <value>упаковка ИРП UPP</value>
-  <comment>UPP IRP ration pack</comment>
+  <value>сухпаёк ВНА</value>
+  <comment>PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Torn.DisplayName" xml:space="preserve">
-  <value>упаковка ИРП UPP</value>
-  <comment>UPP IRP ration pack</comment>
+  <value>сухпаёк ВНА</value>
+  <comment>PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Torn.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Open.DisplayName" xml:space="preserve">
-  <value>упаковка ИРП UPP</value>
-  <comment>UPP IRP ration pack</comment>
+  <value>сухпаёк ВНА</value>
+  <comment>PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -62169,7 +63292,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Lit.DisplayName" xml:space="preserve">
@@ -62185,7 +63308,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.High.DisplayName" xml:space="preserve">
@@ -62201,7 +63324,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.High.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.High.Lit.DisplayName" xml:space="preserve">
@@ -62217,7 +63340,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.High.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Medium.DisplayName" xml:space="preserve">
@@ -62233,7 +63356,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Medium.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Medium.Lit.DisplayName" xml:space="preserve">
@@ -62249,7 +63372,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Medium.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Low.DisplayName" xml:space="preserve">
@@ -62265,7 +63388,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Low.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Low.Lit.DisplayName" xml:space="preserve">
@@ -62281,7 +63404,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Low.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Empty.DisplayName" xml:space="preserve">
@@ -62293,7 +63416,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Empty.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.DisplayName" xml:space="preserve">
@@ -62309,7 +63432,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Lit.DisplayName" xml:space="preserve">
@@ -62325,7 +63448,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.High.DisplayName" xml:space="preserve">
@@ -62341,7 +63464,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.High.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.High.Lit.DisplayName" xml:space="preserve">
@@ -62357,7 +63480,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.High.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Medium.DisplayName" xml:space="preserve">
@@ -62373,7 +63496,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Medium.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Medium.Lit.DisplayName" xml:space="preserve">
@@ -62389,7 +63512,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Medium.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Low.DisplayName" xml:space="preserve">
@@ -62405,7 +63528,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Low.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Low.Lit.DisplayName" xml:space="preserve">
@@ -62421,7 +63544,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Low.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Empty.DisplayName" xml:space="preserve">
@@ -62433,7 +63556,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Hugetank.Empty.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.DisplayName" xml:space="preserve">
@@ -62449,7 +63572,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Lit.DisplayName" xml:space="preserve">
@@ -62465,7 +63588,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.High.DisplayName" xml:space="preserve">
@@ -62481,7 +63604,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.High.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.High.Lit.DisplayName" xml:space="preserve">
@@ -62497,7 +63620,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.High.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Medium.DisplayName" xml:space="preserve">
@@ -62513,7 +63636,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Medium.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Medium.Lit.DisplayName" xml:space="preserve">
@@ -62529,7 +63652,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Medium.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Low.DisplayName" xml:space="preserve">
@@ -62545,7 +63668,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Low.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Low.Lit.DisplayName" xml:space="preserve">
@@ -62561,7 +63684,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Low.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Empty.DisplayName" xml:space="preserve">
@@ -62573,7 +63696,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Screen.Empty.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.DisplayName" xml:space="preserve">
@@ -62589,7 +63712,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Lit.DisplayName" xml:space="preserve">
@@ -62605,7 +63728,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.High.DisplayName" xml:space="preserve">
@@ -62621,7 +63744,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.High.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.High.Lit.DisplayName" xml:space="preserve">
@@ -62637,7 +63760,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.High.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Medium.DisplayName" xml:space="preserve">
@@ -62653,7 +63776,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Medium.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Medium.Lit.DisplayName" xml:space="preserve">
@@ -62669,7 +63792,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Medium.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Low.DisplayName" xml:space="preserve">
@@ -62685,7 +63808,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Low.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Low.Lit.DisplayName" xml:space="preserve">
@@ -62701,7 +63824,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Low.Lit.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Empty.DisplayName" xml:space="preserve">
@@ -62713,7 +63836,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldingtool.Simple.Empty.Family" xml:space="preserve">
-  <value>сварочники</value>
+  <value>сварочные аппараты</value>
   <comment>welders</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Weldpack.DisplayName" xml:space="preserve">
@@ -63417,8 +64540,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Trash.UppMre.DisplayName" xml:space="preserve">
-  <value>раскрошенный ИРП UPP</value>
-  <comment>crumbled UPP IRP</comment>
+  <value>смятая упаковка сухпайка ВНА</value>
+  <comment>crumpled PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Trash.UppMre.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -64241,48 +65364,48 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.DisplayName" xml:space="preserve">
-  <value>пистолет NP92</value>
-  <comment>NP92 pistol</comment>
+  <value>пистолет Type 92</value>
+  <comment>Type 92 pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Empty.DisplayName" xml:space="preserve">
-  <value>пистолет NP92</value>
-  <comment>NP92 pistol</comment>
+  <value>пистолет Type 92</value>
+  <comment>Type 92 pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.DisplayName" xml:space="preserve">
-  <value>пистолет NPZ92</value>
-  <comment>NPZ92 pistol</comment>
+  <value>пистолет Type 92-S</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Empty.DisplayName" xml:space="preserve">
-  <value>пистолет NPZ92</value>
-  <comment>NPZ92 pistol</comment>
+  <value>пистолет Type 92-S</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.DisplayName" xml:space="preserve">
-  <value>пистолет NPZ92</value>
-  <comment>NPZ92 pistol</comment>
+  <value>пистолет Type 92-S</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.Empty.DisplayName" xml:space="preserve">
-  <value>пистолет NPZ92</value>
-  <comment>NPZ92 pistol</comment>
+  <value>пистолет Type 92-S</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -64449,8 +65572,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pkp.DisplayName" xml:space="preserve">
-  <value>единый пулемёт QYJ-72</value>
-  <comment>QYJ-72 General Purpose Machine Gun</comment>
+  <value>пулемёт Type 67</value>
+  <comment>Type 67 machine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pkp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -64713,16 +65836,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.DisplayName" xml:space="preserve">
-  <value>револьвер ZHNK-72</value>
-  <comment>ZHNK-72 revolver</comment>
+  <value>револьвер Type 72</value>
+  <comment>Type 72 revolver</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.Shrapnel.DisplayName" xml:space="preserve">
-  <value>револьвер ZHNK-72</value>
-  <comment>ZHNK-72 revolver</comment>
+  <value>револьвер Type 72</value>
+  <comment>Type 72 revolver</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.Shrapnel.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -64737,7 +65860,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка AK-47</value>
+  <value>автомат AK-47</value>
   <comment>AK-47 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.Verb.PickUp" xml:space="preserve">
@@ -64745,7 +65868,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка AK-47</value>
+  <value>автомат AK-47</value>
   <comment>AK-47 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.Empty.Verb.PickUp" xml:space="preserve">
@@ -64753,7 +65876,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.Tactical.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка AK-47</value>
+  <value>автомат AK-47</value>
   <comment>AK-47 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.Tactical.Verb.PickUp" xml:space="preserve">
@@ -64761,7 +65884,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.Tactical.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка AK-47</value>
+  <value>автомат AK-47</value>
   <comment>AK-47 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Ak47.Tactical.Empty.Verb.PickUp" xml:space="preserve">
@@ -65898,7 +67021,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.DisplayName" xml:space="preserve">
   <value>винтовка меткого стрелка Type 88</value>
-  <comment>Type 88 designated marksman rifle</comment>
+  <comment>Type 88 marksman rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -65906,7 +67029,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.Empty.DisplayName" xml:space="preserve">
   <value>винтовка меткого стрелка Type 88</value>
-  <comment>Type 88 designated marksman rifle</comment>
+  <comment>Type 88 marksman rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -65969,176 +67092,176 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.DisplayName" xml:space="preserve">
-  <value>импульсный карабин Type 71</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>карабин Type 71</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Empty.DisplayName" xml:space="preserve">
-  <value>импульсный карабин Type 71</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>карабин Type 71</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.DisplayName" xml:space="preserve">
-  <value>импульсный карабин 'Commando' Type 71</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>карабин коммандос Type 71</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Empty.DisplayName" xml:space="preserve">
-  <value>импульсный карабин 'Commando' Type 71</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>карабин коммандос Type 71</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.DisplayName" xml:space="preserve">
-  <value>импульсный карабин 'Commando' Type 71</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>карабин коммандос Type 71</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.Empty.DisplayName" xml:space="preserve">
-  <value>импульсный карабин 'Commando' Type 71</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>карабин коммандос Type 71</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.DisplayName" xml:space="preserve">
-  <value>импульсный карабин 'Commando' Type 71</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>карабин коммандос Type 71</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.Empty.DisplayName" xml:space="preserve">
-  <value>импульсный карабин 'Commando' Type 71</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>карабин коммандос Type 71</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.DisplayName" xml:space="preserve">
-  <value>импульсный карабин Type 71</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>карабин Type 71</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.Empty.DisplayName" xml:space="preserve">
-  <value>импульсный карабин Type 71</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>карабин Type 71</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71-F</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>автомат с огнемётом Type 71-F</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71-F</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>автомат с огнемётом Type 71-F</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71-F</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>автомат с огнемётом Type 71-F</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71-F</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>автомат с огнемётом Type 71-F</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка Type 71</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>автомат Type 71</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -66538,7 +67661,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.DisplayName" xml:space="preserve">
   <value>пистолет-пулемёт Type 64</value>
-  <comment>Type 64 Submachinegun</comment>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -66546,7 +67669,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Empty.DisplayName" xml:space="preserve">
   <value>пистолет-пулемёт Type 64</value>
-  <comment>Type 64 Submachinegun</comment>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -66554,7 +67677,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.DisplayName" xml:space="preserve">
   <value>пистолет-пулемёт Type 64</value>
-  <comment>Type 64 Submachinegun</comment>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -66562,7 +67685,7 @@ The file is looked up beside this language file first, then under the game's Con
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.Empty.DisplayName" xml:space="preserve">
   <value>пистолет-пулемёт Type 64</value>
-  <comment>Type 64 Submachinegun</comment>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -66969,32 +68092,32 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.DisplayName" xml:space="preserve">
-  <value>пистолет-пулемёт Type-19</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>пистолет-пулемёт Type 19</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.Empty.DisplayName" xml:space="preserve">
-  <value>пистолет-пулемёт Type-19</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>пистолет-пулемёт Type 19</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.DisplayName" xml:space="preserve">
-  <value>пистолет-пулемёт Type-19</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>пистолет-пулемёт Type 19</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.Empty.DisplayName" xml:space="preserve">
-  <value>пистолет-пулемёт Type-19</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>пистолет-пулемёт Type 19</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -73412,6 +74535,70 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.1.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.1.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.2.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.2.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.3.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.3.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.4.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.4.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.5.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.5.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.6.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.6.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.7.DisplayName" xml:space="preserve">
+  <value>горсть бронебойных снайперских патронов (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.7.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.AmmoHandful.Es7Slug.DisplayName" xml:space="preserve">
   <value>горсть электростатических жаканов (20g)</value>
   <comment>handful of electrostatic solid slugs (20g)</comment>
@@ -73869,7 +75056,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>magazine box (AK-47 HEAP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Ak47.Incendiary.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (БФ AK-47 x 10)</value>
+  <value>ящик магазинов (зажиг. AK-47 x 10)</value>
   <comment>magazine box (AK-47 incendiary x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Ak47.Incendiary.Verb.PickUp" xml:space="preserve">
@@ -73877,7 +75064,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Ak47.Incendiary.Empty.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (БФ AK-47 x 10)</value>
+  <value>ящик магазинов (зажиг. AK-47 x 10)</value>
   <comment>magazine box (AK-47 incendiary x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Ak47.Incendiary.Empty.Verb.PickUp" xml:space="preserve">
@@ -73885,7 +75072,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Ak47.Incendiary.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (БФ AK-47 x 10)</value>
+  <value>ящик магазинов (зажиг. AK-47 x 10)</value>
   <comment>magazine box (AK-47 incendiary x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Ap.DisplayName" xml:space="preserve">
@@ -75209,24 +76396,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>box of TWE ORP rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.DisplayName" xml:space="preserve">
-  <value>коробка армейских пайков СПН</value>
-  <comment>box of UPP military rations</comment>
+  <value>коробка пайков ВНА</value>
+  <comment>box of PAVN rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Empty.DisplayName" xml:space="preserve">
-  <value>коробка армейских пайков СПН</value>
-  <comment>box of UPP military rations</comment>
+  <value>коробка пайков ВНА</value>
+  <comment>box of PAVN rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Deployed.DisplayName" xml:space="preserve">
-  <value>коробка армейских пайков СПН</value>
-  <comment>box of UPP military rations</comment>
+  <value>коробка пайков ВНА</value>
+  <comment>box of PAVN rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Wy.DisplayName" xml:space="preserve">
   <value>коробка фирменных пайков W-Y</value>
@@ -75849,104 +77036,104 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>magazine box (SU-6 x 16)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type19 x 12)</value>
-  <comment>magazine box (Type19 x 12)</comment>
+  <value>ящик магазинов (Type 19 x 12)</value>
+  <comment>magazine box (Type 19 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Empty.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type19 x 12)</value>
-  <comment>magazine box (Type19 x 12)</comment>
+  <value>ящик магазинов (Type 19 x 12)</value>
+  <comment>magazine box (Type 19 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type19 x 12)</value>
-  <comment>magazine box (Type19 x 12)</comment>
+  <value>ящик магазинов (Type 19 x 12)</value>
+  <comment>magazine box (Type 19 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type64 Bizon x 10)</value>
-  <comment>magazine box (Type64 Bizon x 10)</comment>
+  <value>ящик магазинов (Type 64 x 10)</value>
+  <comment>magazine box (Type 64 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Empty.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type64 Bizon x 10)</value>
-  <comment>magazine box (Type64 Bizon x 10)</comment>
+  <value>ящик магазинов (Type 64 x 10)</value>
+  <comment>magazine box (Type 64 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type64 Bizon x 10)</value>
-  <comment>magazine box (Type64 Bizon x 10)</comment>
+  <value>ящик магазинов (Type 64 x 10)</value>
+  <comment>magazine box (Type 64 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type71 x 10)</value>
-  <comment>magazine box (Type71 x 10)</comment>
+  <value>ящик магазинов (Type 71 x 10)</value>
+  <comment>magazine box (Type 71 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Empty.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type71 x 10)</value>
-  <comment>magazine box (Type71 x 10)</comment>
+  <value>ящик магазинов (Type 71 x 10)</value>
+  <comment>magazine box (Type 71 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (Type71 x 10)</value>
-  <comment>magazine box (Type71 x 10)</comment>
+  <value>ящик магазинов (Type 71 x 10)</value>
+  <comment>magazine box (Type 71 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (ББ Type71 x 10)</value>
-  <comment>magazine box (Type71 AP x 10)</comment>
+  <value>ящик магазинов (ББ Type 71 x 10)</value>
+  <comment>magazine box (Type 71 AP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Empty.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (ББ Type71 x 10)</value>
-  <comment>magazine box (Type71 AP x 10)</comment>
+  <value>ящик магазинов (ББ Type 71 x 10)</value>
+  <comment>magazine box (Type 71 AP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (ББ Type71 x 10)</value>
-  <comment>magazine box (Type71 AP x 10)</comment>
+  <value>ящик магазинов (ББ Type 71 x 10)</value>
+  <comment>magazine box (Type 71 AP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (БФ Type71 x 10)</value>
-  <comment>magazine box (Type71 HEAP x 10)</comment>
+  <value>ящик магазинов (БФ Type 71 x 10)</value>
+  <comment>magazine box (Type 71 HEAP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Empty.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (БФ Type71 x 10)</value>
-  <comment>magazine box (Type71 HEAP x 10)</comment>
+  <value>ящик магазинов (БФ Type 71 x 10)</value>
+  <comment>magazine box (Type 71 HEAP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик магазинов (БФ Type71 x 10)</value>
-  <comment>magazine box (Type71 HEAP x 10)</comment>
+  <value>ящик магазинов (БФ Type 71 x 10)</value>
+  <comment>magazine box (Type 71 HEAP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type73.DisplayName" xml:space="preserve">
   <value>ящик магазинов (Type 73 x 16)</value>
@@ -76049,24 +77236,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>magazine box (XM51 x 8)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.DisplayName" xml:space="preserve">
-  <value>ящик скорозарядников (ZhNK-72 x 12)</value>
-  <comment>speed loaders box (ZhNK-72 x 12)</comment>
+  <value>ящик скорозарядников (Type 72 x 12)</value>
+  <comment>speed loaders box (Type 72 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Empty.DisplayName" xml:space="preserve">
-  <value>ящик скорозарядников (ZhNK-72 x 12)</value>
-  <comment>speed loaders box (ZhNK-72 x 12)</comment>
+  <value>ящик скорозарядников (Type 72 x 12)</value>
+  <comment>speed loaders box (Type 72 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик скорозарядников (ZhNK-72 x 12)</value>
-  <comment>speed loaders box (ZhNK-72 x 12)</comment>
+  <value>ящик скорозарядников (Type 72 x 12)</value>
+  <comment>speed loaders box (Type 72 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Rounds.DisplayName" xml:space="preserve">
   <value>ящик винтовочных патронов (10x24 мм)</value>
@@ -76936,6 +78123,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.DisplayName" xml:space="preserve">
+  <value>тактический фонарь (герметичный)</value>
+  <comment>Rail flashlight (sealed)</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.Verb.Toggle" xml:space="preserve">
+  <value>включить фонарь</value>
+  <comment>light on</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.Verb.Toggle.State" xml:space="preserve">
+  <value>фонарь выкл.</value>
+  <comment>light off</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.DisplayName" xml:space="preserve">
+  <value>тактический фонарь (герметичный)</value>
+  <comment>Rail flashlight (sealed)</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.Verb.Toggle" xml:space="preserve">
+  <value>выключить фонарь</value>
+  <comment>light off</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.Verb.Toggle.State" xml:space="preserve">
+  <value>фонарь вкл.</value>
+  <comment>light on</comment>
+</data>
 <data name="Def.Obj.Effect.Decal.TileDamage.Damaged1.DisplayName" xml:space="preserve">
   <value>изрытый пол</value>
   <comment>cratered floor</comment>
@@ -77408,6 +78627,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>переносной генератор</value>
   <comment>portable generator</comment>
 </data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.DisplayName" xml:space="preserve">
+  <value>химический нагреватель</value>
+  <comment>chemical heater</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.Off.DisplayName" xml:space="preserve">
+  <value>химический нагреватель</value>
+  <comment>chemical heater</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.Off.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.Loaded.DisplayName" xml:space="preserve">
+  <value>химический нагреватель</value>
+  <comment>chemical heater</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.Loaded.Verb.Toggle" xml:space="preserve">
+  <value>выключить</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.Loaded.Off.DisplayName" xml:space="preserve">
+  <value>химический нагреватель</value>
+  <comment>chemical heater</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.ChemHeater.Loaded.Off.Verb.Toggle" xml:space="preserve">
+  <value>включить</value>
+  <comment>turn on</comment>
+</data>
 <data name="Def.Obj.Item.Device.GeigerCounter.DisplayName" xml:space="preserve">
   <value>счётчик Гейгера</value>
   <comment>geiger counter</comment>
@@ -77559,6 +78810,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Largecrate.Machine.ChemMaster.DisplayName" xml:space="preserve">
   <value>ящик ChemMaster</value>
   <comment>ChemMaster crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.ChemHeater.Descending.DisplayName" xml:space="preserve">
+  <value>ящик химнагревателя</value>
+  <comment>chemical heater crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.ChemHeater.DisplayName" xml:space="preserve">
+  <value>ящик химнагревателя</value>
+  <comment>chemical heater crate</comment>
 </data>
 <data name="Def.Obj.Structure.Largecrate.Machine.ChemDispenser.Descending.DisplayName" xml:space="preserve">
   <value>ящик химраздатчика</value>
@@ -78068,6 +79327,66 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Character.Human.East.DisplayName" xml:space="preserve">
+  <value>стрелок Востока</value>
+  <comment>East rifleman</comment>
+</data>
+<data name="Def.Character.Human.East.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Wave.DisplayName" xml:space="preserve">
+  <value>стрелок Востока</value>
+  <comment>East rifleman</comment>
+</data>
+<data name="Def.Character.Human.East.Wave.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Wave.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Rifleman.DisplayName" xml:space="preserve">
+  <value>стрелок Востока</value>
+  <comment>East rifleman</comment>
+</data>
+<data name="Def.Character.Human.East.Rifleman.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Rifleman.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Leader.DisplayName" xml:space="preserve">
+  <value>командир отделения Востока</value>
+  <comment>East squad leader</comment>
+</data>
+<data name="Def.Character.Human.East.Leader.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Leader.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Corpsman.DisplayName" xml:space="preserve">
+  <value>медик Востока</value>
+  <comment>East corpsman</comment>
+</data>
+<data name="Def.Character.Human.East.Corpsman.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Corpsman.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
 <data name="StackFamily.TestPlank" xml:space="preserve">
   <value>тестовые доски</value>
   <comment>TestPlank</comment>
@@ -78309,7 +79628,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>LAST STAND</comment>
 </data>
 <data name="Honor.LastStand.Flavor" xml:space="preserve">
-  <value>последняя гибель, удерживая позицию</value>
+  <value>погибнуть позже всех, удерживая позицию</value>
   <comment>died last holding the line</comment>
 </data>
 <data name="Honor.GlassBones.Name" xml:space="preserve">
@@ -78431,6 +79750,30 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Honor.LightningRod.Flavor" xml:space="preserve">
   <value>больше всего ударов молнии</value>
   <comment>struck by lightning the most times</comment>
+</data>
+<data name="Honor.Headhunter.Name" xml:space="preserve">
+  <value>ОХОТНИК ЗА ГОЛОВАМИ</value>
+  <comment>HEADHUNTER</comment>
+</data>
+<data name="Honor.Headhunter.Flavor" xml:space="preserve">
+  <value>больше всего попаданий в голову, не меньше сотни</value>
+  <comment>most headshots landed, a hundred at the least</comment>
+</data>
+<data name="Honor.BodyCount.Name" xml:space="preserve">
+  <value>ГОРА ТРУПОВ</value>
+  <comment>BODY COUNT</comment>
+</data>
+<data name="Honor.BodyCount.Flavor" xml:space="preserve">
+  <value>больше всего убитых солдат Востока, не меньше полутора сотен</value>
+  <comment>most east soldiers killed, a hundred and fifty at the least</comment>
+</data>
+<data name="Honor.Warlord.Name" xml:space="preserve">
+  <value>ВОЕВОДА</value>
+  <comment>WARLORD</comment>
+</data>
+<data name="Honor.Warlord.Flavor" xml:space="preserve">
+  <value>больше всего убитых солдат Востока, не меньше пятисот</value>
+  <comment>most east soldiers killed, five hundred at the least</comment>
 </data>
 <data name="Trait.Veteran.Name" xml:space="preserve">
   <value>Ветеран</value>
@@ -78679,6 +80022,26 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Trait.HeavyDrinker.Flavor" xml:space="preserve">
   <value>Выпито столько, что точно знает, сколько ещё влезет.</value>
   <comment>Has put away enough to know exactly how much more they can take.</comment>
+</data>
+<data name="Trait.EastConscript.Name" xml:space="preserve">
+  <value>Призывник</value>
+  <comment>Conscript</comment>
+</data>
+<data name="Trait.EastConscript.Flavor" xml:space="preserve">
+  <value>Призыв, месяц муштры — и винтовку в руки. Стреляет выше цели и бьёт слабо.</value>
+  <comment>Drafted, drilled for a month and handed a rifle. Shoots high and hits soft.</comment>
+</data>
+<data name="Trait.SpeaksEast.Name" xml:space="preserve">
+  <value>Полиглот</value>
+  <comment>Multilingual</comment>
+</data>
+<data name="Trait.SpeaksEast.Flavor" xml:space="preserve">
+  <value>Где-то по дороге довелось выучить язык противника. Когда враг кричит, вы знаете, что он сейчас сделает.</value>
+  <comment>Picked up the language somewhere along the way. When the other side shouts, you know what they are about to do.</comment>
+</data>
+<data name="Language.East.Name" xml:space="preserve">
+  <value>восточный</value>
+  <comment>East</comment>
 </data>
 <data name="Emote.Warcry.GetSome" xml:space="preserve">
   <value>НУ, ПОЛУЧАЙ!</value>
@@ -79199,6 +80562,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Reagent.CarbonDioxide.Name" xml:space="preserve">
   <value>Углекислый газ</value>
   <comment>Carbon Dioxide</comment>
+</data>
+<data name="Reagent.FirefightingFoam.Name" xml:space="preserve">
+  <value>Огнетушащая пена</value>
+  <comment>Firefighting Foam</comment>
 </data>
 <data name="Reagent.Blood.ONeg.Name" xml:space="preserve">
   <value>Кровь O-</value>
@@ -80697,8 +82064,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Ketamine</comment>
 </data>
 <data name="Reagent.Ketamine.Advice" xml:space="preserve">
-  <value>ослабляет подавление под огнём; большая доза усыпляет пациента</value>
-  <comment>blunts suppression under fire; a heavy dose puts the patient under</comment>
+  <value>ослабляет подавление под огнём и ускоряет шаг; большая доза усыпляет пациента</value>
+  <comment>blunts suppression under fire and quickens the step; a heavy dose puts the patient under</comment>
 </data>
 <data name="Condition.Fracture.DisplayName" xml:space="preserve">
   <value>перелом</value>
@@ -81348,6 +82715,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>каждый реагент в организме выполняет одну задачу: что он лечит, где его порог передозировки и как быстро он усваивается.</value>
   <comment>each reagent has one job in a body: what it treats, its overdose line, and how fast it metabolises</comment>
 </data>
+<data name="Guide.Section.Chemistry.Effects" xml:space="preserve">
+  <value>что реагент делает в организме: по странице на каждый эффект, со всеми реагентами, которые его дают, и меткой, которую он зажигает.</value>
+  <comment>what a reagent does once it is in a body: one page per effect, listing every reagent that carries it and the chip it lights</comment>
+</data>
 <data name="Guide.Section.Chemistry.Glassware" xml:space="preserve">
   <value>мензурки, флаконы, таблетки и инъекторы хранят реагенты и переносят их; реакция идёт только в открытой посуде.</value>
   <comment>beakers, bottles, pills and injectors hold and carry reagents; a reaction only fires in open glassware</comment>
@@ -81469,8 +82840,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Medic</comment>
 </data>
 <data name="Loadout.Marine.Guard.Medic.Name" xml:space="preserve">
-  <value>~охрана медика</value>
+  <value>~охранник-медик</value>
   <comment>~corpsman guard</comment>
+</data>
+<data name="Loadout.Marine.Guard.Rifleman.Name" xml:space="preserve">
+  <value>~охранник-стрелок</value>
+  <comment>~rifleman guard</comment>
+</data>
+<data name="Loadout.Marine.Guard.Marksman.Name" xml:space="preserve">
+  <value>~охранник-снайпер</value>
+  <comment>~marksman guard</comment>
 </data>
 <data name="Loadout.Marine.Rifleman.Name" xml:space="preserve">
   <value>Стрелок</value>
@@ -81587,6 +82966,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Loadout.Anomaly.Marine.Pyro.Name" xml:space="preserve">
   <value>Огнемётчик</value>
   <comment>Flamer</comment>
+</data>
+<data name="Loadout.East.Rifleman.Name" xml:space="preserve">
+  <value>Стрелок Востока</value>
+  <comment>East rifleman</comment>
+</data>
+<data name="Loadout.East.Corpsman.Name" xml:space="preserve">
+  <value>Медик Востока</value>
+  <comment>East corpsman</comment>
 </data>
 <data name="Intro.CAPE.Title" xml:space="preserve">
   <value>CAPE RIVER</value>
@@ -81724,6 +83111,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ВЫЖИВШИЕ ДОЛЖНЫ ДОБРАТЬСЯ ДО ТОЧКИ ЭВАКУАЦИИ // ФАЗА ЭВАКУАЦИИ ДЛИТСЯ {ExtractionMinutes} МИН.</value>
   <comment>SURVIVORS MUST REACH THE EXTRACTION SITE // THE EXTRACTION PHASE LASTS {ExtractionMinutes} MINUTES</comment>
 </data>
+<data name="Modifier.PeoplesArmy.Label" xml:space="preserve">
+  <value>НАРОДНАЯ АРМИЯ</value>
+  <comment>PEOPLE'S ARMY</comment>
+</data>
+<data name="Modifier.PeoplesArmy.Tooltip" xml:space="preserve">
+  <value>НАРОДНАЯ АРМИЯ ВОСТОКА НАСТУПАЕТ НА КОЛОНИЮ // ВЗВОДЫ ВЕДУТ ПОИСК ПРОТИВНИКА // ФАЗА ШТУРМА ДЛИТСЯ {WaveAssaultMinutes} МИН.</value>
+  <comment>THE EAST PEOPLE'S ARMY ADVANCES ON THE COLONY // PLATOONS PATROL TO CONTACT // THE WAVE ASSAULT PHASE LASTS {WaveAssaultMinutes} MINUTES</comment>
+</data>
 <data name="Mode.Extended.DisplayName" xml:space="preserve">
   <value>Песочница</value>
   <comment>Extended</comment>
@@ -81747,5 +83142,9 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Mode.Anomaly.Phase.Containment.Label" xml:space="preserve">
   <value>СДЕРЖИВАНИЕ АНОМАЛИИ</value>
   <comment>ANOMALY CONTAINMENT</comment>
+</data>
+<data name="Mode.Incursion.DisplayName" xml:space="preserve">
+  <value>Вторжение</value>
+  <comment>Incursion</comment>
 </data>
 </root>
