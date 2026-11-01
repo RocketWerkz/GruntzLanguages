@@ -1359,6 +1359,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>NOTICE</value>
   <comment>NOTICE</comment>
 </data>
+<data name="Chat.KindNpc" xml:space="preserve">
+  <value>NPC</value>
+  <comment>NPC</comment>
+</data>
 <data name="Chat.GhostMoans" xml:space="preserve">
   <value>{NAME} moans "{TEXT}"</value>
   <comment>{NAME} moans "{TEXT}"</comment>
@@ -4691,6 +4695,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value> Loads a lying person onto your back and moves at full pace</value>
   <comment> Loads a lying person onto your back and moves at full pace</comment>
 </data>
+<data name="TraitChips.Marker.Multilingual" xml:space="preserve">
+  <value>MULTILINGUAL</value>
+  <comment>MULTILINGUAL</comment>
+</data>
+<data name="TraitChips.Marker.SpeaksUnit" xml:space="preserve">
+  <value> Understands {LANGUAGE} when spoken</value>
+  <comment> Understands {LANGUAGE} when spoken</comment>
+</data>
 <data name="ContextMenu.Row.Follow" xml:space="preserve">
   <value>follow</value>
   <comment>follow</comment>
@@ -7759,6 +7771,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>RETRO CURSOR</value>
   <comment>RETRO CURSOR</comment>
 </data>
+<data name="Settings.HideDeadNpcHudLabel" xml:space="preserve">
+  <value>HIDE DEAD NPC HUD</value>
+  <comment>HIDE DEAD NPC HUD</comment>
+</data>
 <data name="Settings.CursorScaleLabel" xml:space="preserve">
   <value>CURSOR SCALE</value>
   <comment>CURSOR SCALE</comment>
@@ -9147,6 +9163,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>STRUCK BY LIGHTNING</value>
   <comment>STRUCK BY LIGHTNING</comment>
 </data>
+<data name="EorScreen.StatHeadshots" xml:space="preserve">
+  <value>HEADSHOTS LANDED</value>
+  <comment>HEADSHOTS LANDED</comment>
+</data>
+<data name="EorScreen.StatEastKilled" xml:space="preserve">
+  <value>EAST SOLDIERS KILLED</value>
+  <comment>EAST SOLDIERS KILLED</comment>
+</data>
 <data name="EorScreen.StatUnknown" xml:space="preserve">
   <value>~UNKNOWN STAT</value>
   <comment>~UNKNOWN STAT</comment>
@@ -9218,6 +9242,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EorScreen.CauseAlcohol" xml:space="preserve">
   <value>POISONED</value>
   <comment>POISONED</comment>
+</data>
+<data name="EorScreen.CauseDecapitated" xml:space="preserve">
+  <value>DECAPITATED</value>
+  <comment>DECAPITATED</comment>
+</data>
+<data name="EorScreen.CauseGibbed" xml:space="preserve">
+  <value>GIBBED</value>
+  <comment>GIBBED</comment>
 </data>
 <data name="EorScreen.CauseOther" xml:space="preserve">
   <value>OTHER</value>
@@ -12402,6 +12434,22 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Crown.Shrapnel.Flavor" xml:space="preserve">
   <value>Embedded fragments. Have them removed.</value>
   <comment>Embedded fragments. Have them removed.</comment>
+</data>
+<data name="Crown.Enemy.Title" xml:space="preserve">
+  <value>HOSTILE</value>
+  <comment>HOSTILE</comment>
+</data>
+<data name="Crown.Enemy.Flavor" xml:space="preserve">
+  <value>Not on your side.</value>
+  <comment>Not on your side.</comment>
+</data>
+<data name="Crown.Corpsman.Title" xml:space="preserve">
+  <value>CORPSMAN</value>
+  <comment>CORPSMAN</comment>
+</data>
+<data name="Crown.Corpsman.Flavor" xml:space="preserve">
+  <value>Keeps his squad alive. Drop him first.</value>
+  <comment>Keeps his squad alive. Drop him first.</comment>
 </data>
 <data name="HealthBar.Light.Title" xml:space="preserve">
   <value>LIGHTLY WOUNDED</value>
@@ -33752,48 +33800,48 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.DisplayName" xml:space="preserve">
-  <value>NP92 magazine (9x18mm Makarov)</value>
-  <comment>NP92 magazine (9x18mm Makarov)</comment>
+  <value>Type 92 magazine (9x18mm Makarov)</value>
+  <comment>Type 92 magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Empty.DisplayName" xml:space="preserve">
-  <value>NP92 magazine (9x18mm Makarov)</value>
-  <comment>NP92 magazine (9x18mm Makarov)</comment>
+  <value>Type 92 magazine (9x18mm Makarov)</value>
+  <comment>Type 92 magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.DisplayName" xml:space="preserve">
-  <value>NPZ92 magazine (9x18mm Makarov)</value>
-  <comment>NPZ92 magazine (9x18mm Makarov)</comment>
+  <value>Type 92-S magazine (9x18mm Makarov)</value>
+  <comment>Type 92-S magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.Empty.DisplayName" xml:space="preserve">
-  <value>NPZ92 magazine (9x18mm Makarov)</value>
-  <comment>NPZ92 magazine (9x18mm Makarov)</comment>
+  <value>Type 92-S magazine (9x18mm Makarov)</value>
+  <comment>Type 92-S magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Suppressed.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.DisplayName" xml:space="preserve">
-  <value>NPZ92 tranq magazine (9x18mm Makarov)</value>
-  <comment>NPZ92 tranq magazine (9x18mm Makarov)</comment>
+  <value>Type 92-S tranq magazine (9x18mm Makarov)</value>
+  <comment>Type 92-S tranq magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.Empty.DisplayName" xml:space="preserve">
-  <value>NPZ92 tranq magazine (9x18mm Makarov)</value>
-  <comment>NPZ92 tranq magazine (9x18mm Makarov)</comment>
+  <value>Type 92-S tranq magazine (9x18mm Makarov)</value>
+  <comment>Type 92-S tranq magazine (9x18mm Makarov)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.Np92.Tranq.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -33880,16 +33928,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.DisplayName" xml:space="preserve">
-  <value>High Impact Type 74 magazine (7.62x25mm Tokarev)</value>
-  <comment>High Impact Type 74 magazine (7.62x25mm Tokarev)</comment>
+  <value>Type 74 high impact magazine (7.62x25mm Tokarev)</value>
+  <comment>Type 74 high impact magazine (7.62x25mm Tokarev)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.Empty.DisplayName" xml:space="preserve">
-  <value>High Impact Type 74 magazine (7.62x25mm Tokarev)</value>
-  <comment>High Impact Type 74 magazine (7.62x25mm Tokarev)</comment>
+  <value>Type 74 high impact magazine (7.62x25mm Tokarev)</value>
+  <comment>Type 74 high impact magazine (7.62x25mm Tokarev)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pistol.T73Impact.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -34024,8 +34072,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pkp.DisplayName" xml:space="preserve">
-  <value>QYJ-72 ammo box (7.62x54mmR)</value>
-  <comment>QYJ-72 ammo box (7.62x54mmR)</comment>
+  <value>Type 67 ammo box</value>
+  <comment>Type 67 ammo box</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Pkp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -34256,32 +34304,32 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.DisplayName" xml:space="preserve">
-  <value>ZHNK-72 speed loader (7.62x38mmR)</value>
-  <comment>ZHNK-72 speed loader (7.62x38mmR)</comment>
+  <value>Type 72 speed loader</value>
+  <comment>Type 72 speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Empty.DisplayName" xml:space="preserve">
-  <value>ZHNK-72 speed loader (7.62x38mmR)</value>
-  <comment>ZHNK-72 speed loader (7.62x38mmR)</comment>
+  <value>Type 72 speed loader</value>
+  <comment>Type 72 speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.DisplayName" xml:space="preserve">
-  <value>ZHNK-72 shrapnel-shot speed loader (7.62x38mmR)</value>
-  <comment>ZHNK-72 shrapnel-shot speed loader (7.62x38mmR)</comment>
+  <value>Type 72 shrapnel speed loader</value>
+  <comment>Type 72 shrapnel speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.Empty.DisplayName" xml:space="preserve">
-  <value>ZHNK-72 shrapnel-shot speed loader (7.62x38mmR)</value>
-  <comment>ZHNK-72 shrapnel-shot speed loader (7.62x38mmR)</comment>
+  <value>Type 72 shrapnel speed loader</value>
+  <comment>Type 72 shrapnel speed loader</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Revolver.Upp.Shrapnel.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -35856,16 +35904,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.DisplayName" xml:space="preserve">
-  <value>Type 64 Helical Magazine (7.62x19mm)</value>
-  <comment>Type 64 Helical Magazine (7.62x19mm)</comment>
+  <value>Type 64 helical magazine (7.62x19mm)</value>
+  <comment>Type 64 helical magazine (7.62x19mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.Empty.DisplayName" xml:space="preserve">
-  <value>Type 64 Helical Magazine (7.62x19mm)</value>
-  <comment>Type 64 Helical Magazine (7.62x19mm)</comment>
+  <value>Type 64 helical magazine (7.62x19mm)</value>
+  <comment>Type 64 helical magazine (7.62x19mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Bizon.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -36144,16 +36192,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.DisplayName" xml:space="preserve">
-  <value>Type-19 stick magazine (7.62x25mm)</value>
-  <comment>Type-19 stick magazine (7.62x25mm)</comment>
+  <value>Type 19 stick magazine (7.62x25mm)</value>
+  <comment>Type 19 stick magazine (7.62x25mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.Empty.DisplayName" xml:space="preserve">
-  <value>Type-19 stick magazine (7.62x25mm)</value>
-  <comment>Type-19 stick magazine (7.62x25mm)</comment>
+  <value>Type 19 stick magazine (7.62x25mm)</value>
+  <comment>Type 19 stick magazine (7.62x25mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Smg.Pps43.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -36316,6 +36364,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>M42A incendiary magazine (10x28mm)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.Sniper.Incendiary.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.DisplayName" xml:space="preserve">
+  <value>Type 88 magazine (7.62x54mmR)</value>
+  <comment>Type 88 magazine (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.Empty.DisplayName" xml:space="preserve">
+  <value>Type 88 magazine (7.62x54mmR)</value>
+  <comment>Type 88 magazine (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Sniper.Svd.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -37620,8 +37684,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Card.Id.Dogtag.Upp.DisplayName" xml:space="preserve">
-  <value>UPP dog tag</value>
-  <comment>UPP dog tag</comment>
+  <value>PAVN dog tags</value>
+  <comment>PAVN dog tags</comment>
 </data>
 <data name="Def.Obj.Item.Card.Id.Dogtag.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -38044,16 +38108,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.DisplayName" xml:space="preserve">
-  <value>UPP patch</value>
-  <comment>UPP patch</comment>
+  <value>PAVN patch</value>
+  <comment>PAVN patch</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.Alt.DisplayName" xml:space="preserve">
-  <value>UPP patch</value>
-  <comment>UPP patch</comment>
+  <value>PAVN patch</value>
+  <comment>PAVN patch</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Upp.Alt.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -38851,6 +38915,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Gloves.Marine.Veteran.Upp.DisplayName" xml:space="preserve">
+  <value>PAVN gloves</value>
+  <comment>PAVN gloves</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Gloves.Marine.Veteran.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Gloves.Swat.DisplayName" xml:space="preserve">
   <value>SWAT Gloves</value>
   <comment>SWAT Gloves</comment>
@@ -38896,6 +38968,14 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>bear pelt hat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Bearpelt.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Beret.ArmyBeret.DisplayName" xml:space="preserve">
+  <value>PAVN reservist beret</value>
+  <comment>PAVN reservist beret</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Beret.ArmyBeret.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -40347,33 +40427,97 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.DisplayName" xml:space="preserve">
+  <value>Type 4 field helmet</value>
+  <comment>Type 4 field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Open.DisplayName" xml:space="preserve">
+  <value>Type 4 field helmet</value>
+  <comment>Type 4 field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.DisplayName" xml:space="preserve">
+  <value>Type 82 combat helmet</value>
+  <comment>Type 82 combat helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.Open.DisplayName" xml:space="preserve">
+  <value>Type 82 combat helmet</value>
+  <comment>Type 82 combat helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Army.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.DisplayName" xml:space="preserve">
+  <value>Type 4-V field helmet</value>
+  <comment>Type 4-V field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.Open.DisplayName" xml:space="preserve">
+  <value>Type 4-V field helmet</value>
+  <comment>Type 4-V field helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Engi.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.DisplayName" xml:space="preserve">
-  <value>T-20 firefighter helmet</value>
-  <comment>T-20 firefighter helmet</comment>
+  <value>Type 20 fire helmet</value>
+  <comment>Type 20 fire helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.Open.DisplayName" xml:space="preserve">
-  <value>T-20 firefighter helmet</value>
-  <comment>T-20 firefighter helmet</comment>
+  <value>Type 20 fire helmet</value>
+  <comment>Type 20 fire helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Firefighter.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy helmet</value>
+  <comment>Type 7 heavy helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.Open.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy helmet</value>
+  <comment>Type 7 heavy helmet</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.DisplayName" xml:space="preserve">
-  <value>CCC5-L composite helmet</value>
-  <comment>CCC5-L composite helmet</comment>
+  <value>Type 55 composite helmet</value>
+  <comment>Type 55 composite helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.Open.DisplayName" xml:space="preserve">
-  <value>CCC5-L composite helmet</value>
-  <comment>CCC5-L composite helmet</comment>
+  <value>Type 55 composite helmet</value>
+  <comment>Type 55 composite helmet</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Helmet.Marine.Veteran.UPP.Heavy.SOFHelmet.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -40579,11 +40723,43 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.DisplayName" xml:space="preserve">
+  <value>PAVN field cap</value>
+  <comment>PAVN field cap</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Beret.DisplayName" xml:space="preserve">
+  <value>PAVN beret</value>
+  <comment>PAVN beret</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Beret.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.DisplayName" xml:space="preserve">
+  <value>PAVN peaked cap</value>
+  <comment>PAVN peaked cap</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.Police.DisplayName" xml:space="preserve">
-  <value>UL3 PaP peaked cap</value>
-  <comment>UL3 PaP peaked cap</comment>
+  <value>PAVN police peaked cap</value>
+  <comment>PAVN police peaked cap</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Uppcap.Peaked.Police.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Ushanka.DisplayName" xml:space="preserve">
+  <value>PAVN winter cap</value>
+  <comment>PAVN winter cap</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Head.Uppcap.Ushanka.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -40851,6 +41027,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Mask.Gas.Pmc.Upp.DisplayName" xml:space="preserve">
+  <value>PAVN balaclava</value>
+  <comment>PAVN balaclava</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Mask.Gas.Pmc.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Mask.Gas.Swat.DisplayName" xml:space="preserve">
   <value>SWAT mask</value>
   <comment>SWAT mask</comment>
@@ -40860,8 +41044,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Mask.Gas.UppPfb.DisplayName" xml:space="preserve">
-  <value>ShMB/4 gasmask</value>
-  <comment>ShMB/4 gasmask</comment>
+  <value>PAVN gas mask</value>
+  <comment>PAVN gas mask</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Mask.Gas.UppPfb.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -41155,19 +41339,51 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.DisplayName" xml:space="preserve">
+  <value>PAVN combat boots</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Open.DisplayName" xml:space="preserve">
+  <value>PAVN combat boots</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.DisplayName" xml:space="preserve">
-  <value>military combat boots</value>
-  <comment>military combat boots</comment>
+  <value>PAVN combat boots</value>
+  <comment>PAVN combat boots</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.Open.DisplayName" xml:space="preserve">
-  <value>military combat boots</value>
-  <comment>military combat boots</comment>
+  <value>PAVN combat boots</value>
+  <comment>PAVN combat boots</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Black.Knife.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.DisplayName" xml:space="preserve">
+  <value>PAVN combat boots</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.Open.DisplayName" xml:space="preserve">
+  <value>PAVN combat boots</value>
+  <comment>PAVN combat boots</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Shoes.Marine.Upp.Knife.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -41652,16 +41868,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.DisplayName" xml:space="preserve">
-  <value>PaP uniform jacket</value>
-  <comment>PaP uniform jacket</comment>
+  <value>PAVN police jacket</value>
+  <comment>PAVN police jacket</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.Open.DisplayName" xml:space="preserve">
-  <value>PaP uniform jacket</value>
-  <comment>PaP uniform jacket</comment>
+  <value>PAVN police jacket</value>
+  <comment>PAVN police jacket</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.CMB.Pap.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42435,9 +42651,73 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.DisplayName" xml:space="preserve">
+  <value>Type 5 flak vest</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Open.DisplayName" xml:space="preserve">
+  <value>Type 5 flak vest</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.DisplayName" xml:space="preserve">
+  <value>Type 5 flak vest</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Open.DisplayName" xml:space="preserve">
+  <value>Type 5 flak vest</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.DisplayName" xml:space="preserve">
+  <value>Type 5 flak vest</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.Open.DisplayName" xml:space="preserve">
+  <value>Type 5 flak vest</value>
+  <comment>Type 5 flak vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.DisplayName" xml:space="preserve">
-  <value>6B80 personal body armor</value>
-  <comment>6B80 personal body armor</comment>
+  <value>Type 80 body armor</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42448,8 +42728,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Open.DisplayName" xml:space="preserve">
-  <value>6B80 personal body armor</value>
-  <comment>6B80 personal body armor</comment>
+  <value>Type 80 body armor</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42460,8 +42740,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.DisplayName" xml:space="preserve">
-  <value>6B80 personal body armor</value>
-  <comment>6B80 personal body armor</comment>
+  <value>Type 80 body armor</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42472,8 +42752,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.Open.DisplayName" xml:space="preserve">
-  <value>6B80 personal body armor</value>
-  <comment>6B80 personal body armor</comment>
+  <value>Type 80 body armor</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42484,24 +42764,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.DisplayName" xml:space="preserve">
-  <value>6B80 personal body armor</value>
-  <comment>6B80 personal body armor</comment>
+  <value>Type 80 body armor</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.Open.DisplayName" xml:space="preserve">
-  <value>6B80 personal body armor</value>
-  <comment>6B80 personal body armor</comment>
+  <value>Type 80 body armor</value>
+  <comment>Type 80 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.DisplayName" xml:space="preserve">
-  <value>6B75 personal body armour</value>
-  <comment>6B75 personal body armour</comment>
+  <value>Type 75 body armor</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42512,8 +42792,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Open.DisplayName" xml:space="preserve">
-  <value>6B75 personal body armour</value>
-  <comment>6B75 personal body armour</comment>
+  <value>Type 75 body armor</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42524,8 +42804,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.DisplayName" xml:space="preserve">
-  <value>6B75 personal body armour</value>
-  <comment>6B75 personal body armour</comment>
+  <value>Type 75 body armor</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42536,8 +42816,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.Open.DisplayName" xml:space="preserve">
-  <value>6B75 personal body armour</value>
-  <comment>6B75 personal body armour</comment>
+  <value>Type 75 body armor</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42548,24 +42828,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.DisplayName" xml:space="preserve">
-  <value>6B75 personal body armour</value>
-  <comment>6B75 personal body armour</comment>
+  <value>Type 75 body armor</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.Open.DisplayName" xml:space="preserve">
-  <value>6B75 personal body armour</value>
-  <comment>6B75 personal body armour</comment>
+  <value>Type 75 body armor</value>
+  <comment>Type 75 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Alt.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.DisplayName" xml:space="preserve">
-  <value>6B70 personal body armour</value>
-  <comment>6B70 personal body armour</comment>
+  <value>Type 70 body armor</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42576,8 +42856,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Open.DisplayName" xml:space="preserve">
-  <value>6B70 personal body armour</value>
-  <comment>6B70 personal body armour</comment>
+  <value>Type 70 body armor</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42588,8 +42868,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.DisplayName" xml:space="preserve">
-  <value>6B70 personal body armour</value>
-  <comment>6B70 personal body armour</comment>
+  <value>Type 70 body armor</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42600,8 +42880,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.Open.DisplayName" xml:space="preserve">
-  <value>6B70 personal body armour</value>
-  <comment>6B70 personal body armour</comment>
+  <value>Type 70 body armor</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42612,24 +42892,216 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.DisplayName" xml:space="preserve">
-  <value>6B70 personal body armour</value>
-  <comment>6B70 personal body armour</comment>
+  <value>Type 70 body armor</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.Open.DisplayName" xml:space="preserve">
-  <value>6B70 personal body armour</value>
-  <comment>6B70 personal body armour</comment>
+  <value>Type 70 body armor</value>
+  <comment>Type 70 body armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Army.Simple.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.DisplayName" xml:space="preserve">
+  <value>Type 5 commando armor</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.DisplayName" xml:space="preserve">
+  <value>Type 5 commando armor</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.DisplayName" xml:space="preserve">
+  <value>Type 5 commando armor</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.DisplayName" xml:space="preserve">
+  <value>Type 5 commando armor</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.DisplayName" xml:space="preserve">
+  <value>Type 5 commando armor</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Open.DisplayName" xml:space="preserve">
+  <value>Type 5 commando armor</value>
+  <comment>Type 5 commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy armor</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Open.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy armor</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy armor</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Open.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy armor</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy armor</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.Open.DisplayName" xml:space="preserve">
+  <value>Type 7 heavy armor</value>
+  <comment>Type 7 heavy armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Heavy.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.DisplayName" xml:space="preserve">
+  <value>PAVN officer jacket</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Open.DisplayName" xml:space="preserve">
+  <value>PAVN officer jacket</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.DisplayName" xml:space="preserve">
+  <value>PAVN officer jacket</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Open.DisplayName" xml:space="preserve">
+  <value>PAVN officer jacket</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.DisplayName" xml:space="preserve">
+  <value>PAVN officer jacket</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.Open.DisplayName" xml:space="preserve">
+  <value>PAVN officer jacket</value>
+  <comment>PAVN officer jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Officer.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.DisplayName" xml:space="preserve">
-  <value>CCC5-L tactical vest</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>Type 55 commando vest</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42640,8 +43112,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Open.DisplayName" xml:space="preserve">
-  <value>CCC5-L tactical vest</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>Type 55 commando vest</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42652,8 +43124,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.DisplayName" xml:space="preserve">
-  <value>CCC5-L tactical vest</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>Type 55 commando vest</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42664,8 +43136,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.Open.DisplayName" xml:space="preserve">
-  <value>CCC5-L tactical vest</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>Type 55 commando vest</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -42676,18 +43148,82 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.DisplayName" xml:space="preserve">
-  <value>CCC5-L tactical vest</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>Type 55 commando vest</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.Open.DisplayName" xml:space="preserve">
-  <value>CCC5-L tactical vest</value>
-  <comment>CCC5-L tactical vest</comment>
+  <value>Type 55 commando vest</value>
+  <comment>Type 55 commando vest</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.SOFArmor.Empty.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.DisplayName" xml:space="preserve">
+  <value>Type 6 support vest</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Open.DisplayName" xml:space="preserve">
+  <value>Type 6 support vest</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn on</value>
+  <comment>turn on</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.DisplayName" xml:space="preserve">
+  <value>Type 6 support vest</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Open.DisplayName" xml:space="preserve">
+  <value>Type 6 support vest</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Lit.Open.Verb.Toggle" xml:space="preserve">
+  <value>turn off</value>
+  <comment>turn off</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.DisplayName" xml:space="preserve">
+  <value>Type 6 support vest</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.Open.DisplayName" xml:space="preserve">
+  <value>Type 6 support vest</value>
+  <comment>Type 6 support vest</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Support.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -43844,8 +44380,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.DisplayName" xml:space="preserve">
-  <value>T-20 fire response coat</value>
-  <comment>T-20 fire response coat</comment>
+  <value>Type 20 fire coat</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -43856,8 +44392,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Open.DisplayName" xml:space="preserve">
-  <value>T-20 fire response coat</value>
-  <comment>T-20 fire response coat</comment>
+  <value>Type 20 fire coat</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -43868,8 +44404,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.DisplayName" xml:space="preserve">
-  <value>T-20 fire response coat</value>
-  <comment>T-20 fire response coat</comment>
+  <value>Type 20 fire coat</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -43880,8 +44416,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.Open.DisplayName" xml:space="preserve">
-  <value>T-20 fire response coat</value>
-  <comment>T-20 fire response coat</comment>
+  <value>Type 20 fire coat</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -43892,16 +44428,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.DisplayName" xml:space="preserve">
-  <value>T-20 fire response coat</value>
-  <comment>T-20 fire response coat</comment>
+  <value>Type 20 fire coat</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.Open.DisplayName" xml:space="preserve">
-  <value>T-20 fire response coat</value>
-  <comment>T-20 fire response coat</comment>
+  <value>Type 20 fire coat</value>
+  <comment>Type 20 fire coat</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Light.Vest.FireLight.Upp.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -46516,16 +47052,96 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.DisplayName" xml:space="preserve">
-  <value>UPP fatigues</value>
-  <comment>UPP fatigues</comment>
+  <value>PAVN fatigues</value>
+  <comment>PAVN fatigues</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.DisplayName" xml:space="preserve">
+  <value>PAVN jungle fatigues</value>
+  <comment>PAVN jungle fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.Alt.DisplayName" xml:space="preserve">
+  <value>PAVN tan fatigues</value>
+  <comment>PAVN tan fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Army.Alt.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi1.DisplayName" xml:space="preserve">
+  <value>PAVN orange worker overalls</value>
+  <comment>PAVN orange worker overalls</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi1.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi2.DisplayName" xml:space="preserve">
+  <value>PAVN tan worker overalls</value>
+  <comment>PAVN tan worker overalls</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi2.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi3.DisplayName" xml:space="preserve">
+  <value>PAVN worker shirt and pants</value>
+  <comment>PAVN worker shirt and pants</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi3.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi4.DisplayName" xml:space="preserve">
+  <value>PAVN worker vest and pants</value>
+  <comment>PAVN worker vest and pants</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi4.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi5.DisplayName" xml:space="preserve">
+  <value>PAVN mining overalls</value>
+  <comment>PAVN mining overalls</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Civi5.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Engi.DisplayName" xml:space="preserve">
+  <value>PAVN engineer fatigues</value>
+  <comment>PAVN engineer fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Engi.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Medic.DisplayName" xml:space="preserve">
+  <value>PAVN medic fatigues</value>
+  <comment>PAVN medic fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Medic.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Officer.DisplayName" xml:space="preserve">
+  <value>PAVN officer fatigues</value>
+  <comment>PAVN officer fatigues</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Officer.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Pap.DisplayName" xml:space="preserve">
-  <value>PaP service uniform</value>
-  <comment>PaP service uniform</comment>
+  <value>PAVN service uniform</value>
+  <comment>PAVN service uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.UPP.Pap.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -47308,16 +47924,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.DisplayName" xml:space="preserve">
-  <value>UPP Radio Encryption Key</value>
-  <comment>UPP Radio Encryption Key</comment>
+  <value>PAVN encryption key</value>
+  <comment>PAVN encryption key</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.Kdo.DisplayName" xml:space="preserve">
-  <value>UPP Kommando Radio Encryption Key</value>
-  <comment>UPP Kommando Radio Encryption Key</comment>
+  <value>PAVN commando encryption key</value>
+  <comment>PAVN commando encryption key</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.Upp.Kdo.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -48188,16 +48804,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.DisplayName" xml:space="preserve">
-  <value>Type 6 shrapnel grenade</value>
-  <comment>Type 6 shrapnel grenade</comment>
+  <value>Type 6 grenade</value>
+  <comment>Type 6 grenade</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.Armed.DisplayName" xml:space="preserve">
-  <value>Type 6 shrapnel grenade</value>
-  <comment>Type 6 shrapnel grenade</comment>
+  <value>Type 6 grenade</value>
+  <comment>Type 6 grenade</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.HighExplosive.Upp.Armed.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -48264,6 +48880,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>improvised phosphorus bomb</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Clf.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.DisplayName" xml:space="preserve">
+  <value>Type 8 incendiary grenade</value>
+  <comment>Type 8 incendiary grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.Armed.DisplayName" xml:space="preserve">
+  <value>Type 8 incendiary grenade</value>
+  <comment>Type 8 incendiary grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Phosphorus.Upp.Armed.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -55531,6 +56163,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.DisplayName" xml:space="preserve">
+  <value>Type 3 combat pack</value>
+  <comment>Type 3 combat pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.Open.DisplayName" xml:space="preserve">
+  <value>Type 3 combat pack</value>
+  <comment>Type 3 combat pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Lightpack.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Backpack.Marine.DisplayName" xml:space="preserve">
   <value>lightweight IMP backpack</value>
   <comment>lightweight IMP backpack</comment>
@@ -55563,6 +56211,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.DisplayName" xml:space="preserve">
+  <value>Type 3-E welderpack</value>
+  <comment>Type 3-E welderpack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.Open.DisplayName" xml:space="preserve">
+  <value>Type 3-E welderpack</value>
+  <comment>Type 3-E welderpack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Engineerpack.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Backpack.Marine.Grenadepack.DisplayName" xml:space="preserve">
   <value>USCM IMP M63A1 grenade satchel</value>
   <comment>USCM IMP M63A1 grenade satchel</comment>
@@ -55576,6 +56240,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>USCM IMP M63A1 grenade satchel</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Backpack.Marine.Grenadepack.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.DisplayName" xml:space="preserve">
+  <value>PAVN corpsman pack</value>
+  <comment>PAVN corpsman pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.Open.DisplayName" xml:space="preserve">
+  <value>PAVN corpsman pack</value>
+  <comment>PAVN corpsman pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -56059,33 +56739,49 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.DisplayName" xml:space="preserve">
+  <value>Type 47 holster rig</value>
+  <comment>Type 47 holster rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.Open.DisplayName" xml:space="preserve">
+  <value>Type 47 holster rig</value>
+  <comment>Type 47 holster rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Gun.Type47.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.DisplayName" xml:space="preserve">
-  <value>Type 47-S pistol holster rig</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <value>Type 47-S holster rig</value>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.Open.DisplayName" xml:space="preserve">
-  <value>Type 47-S pistol holster rig</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <value>Type 47-S holster rig</value>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.DisplayName" xml:space="preserve">
-  <value>Type 47-S pistol holster rig</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <value>Type 47-S holster rig</value>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.Open.DisplayName" xml:space="preserve">
-  <value>Type 47-S pistol holster rig</value>
-  <comment>Type 47-S pistol holster rig</comment>
+  <value>Type 47-S holster rig</value>
+  <comment>Type 47-S holster rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Gun.Type47.SOFBelt.T73.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -56136,6 +56832,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>M804 heavygunner storage rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Marine.M2c.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.DisplayName" xml:space="preserve">
+  <value>Type 41 load rig</value>
+  <comment>Type 41 load rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.Open.DisplayName" xml:space="preserve">
+  <value>Type 41 load rig</value>
+  <comment>Type 41 load rig</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Marine.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -56203,33 +56915,49 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.DisplayName" xml:space="preserve">
+  <value>Type 41 lifesaver bag</value>
+  <comment>Type 41 lifesaver bag</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.Open.DisplayName" xml:space="preserve">
+  <value>Type 41 lifesaver bag</value>
+  <comment>Type 41 lifesaver bag</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Belt.Medical.Lifesaver.Upp.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.DisplayName" xml:space="preserve">
-  <value>6B80 pattern ammo rig</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>Type 80 ammo rig</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Open.DisplayName" xml:space="preserve">
-  <value>6B80 pattern ammo rig</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>Type 80 ammo rig</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.DisplayName" xml:space="preserve">
-  <value>6B80 pattern ammo rig</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>Type 80 ammo rig</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.Open.DisplayName" xml:space="preserve">
-  <value>6B80 pattern ammo rig</value>
-  <comment>6B80 pattern ammo rig</comment>
+  <value>Type 80 ammo rig</value>
+  <comment>Type 80 ammo rig</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Belt.Security.Brown.Full.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -57332,24 +58060,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.DisplayName" xml:space="preserve">
-  <value>UPP IRP ration pack</value>
-  <comment>UPP IRP ration pack</comment>
+  <value>PAVN ration pack</value>
+  <comment>PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Torn.DisplayName" xml:space="preserve">
-  <value>UPP IRP ration pack</value>
-  <comment>UPP IRP ration pack</comment>
+  <value>PAVN ration pack</value>
+  <comment>PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Torn.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Open.DisplayName" xml:space="preserve">
-  <value>UPP IRP ration pack</value>
-  <comment>UPP IRP ration pack</comment>
+  <value>PAVN ration pack</value>
+  <comment>PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Mre.Upp.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -63812,8 +64540,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Trash.UppMre.DisplayName" xml:space="preserve">
-  <value>crumbled UPP IRP</value>
-  <comment>crumbled UPP IRP</comment>
+  <value>crumpled PAVN ration pack</value>
+  <comment>crumpled PAVN ration pack</comment>
 </data>
 <data name="Def.Obj.Item.Trash.UppMre.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -64636,48 +65364,48 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.DisplayName" xml:space="preserve">
-  <value>NP92 pistol</value>
-  <comment>NP92 pistol</comment>
+  <value>Type 92 pistol</value>
+  <comment>Type 92 pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Empty.DisplayName" xml:space="preserve">
-  <value>NP92 pistol</value>
-  <comment>NP92 pistol</comment>
+  <value>Type 92 pistol</value>
+  <comment>Type 92 pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.DisplayName" xml:space="preserve">
-  <value>NPZ92 pistol</value>
-  <comment>NPZ92 pistol</comment>
+  <value>Type 92-S pistol</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Empty.DisplayName" xml:space="preserve">
-  <value>NPZ92 pistol</value>
-  <comment>NPZ92 pistol</comment>
+  <value>Type 92-S pistol</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.DisplayName" xml:space="preserve">
-  <value>NPZ92 pistol</value>
-  <comment>NPZ92 pistol</comment>
+  <value>Type 92-S pistol</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.Empty.DisplayName" xml:space="preserve">
-  <value>NPZ92 pistol</value>
-  <comment>NPZ92 pistol</comment>
+  <value>Type 92-S pistol</value>
+  <comment>Type 92-S pistol</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pistol.Np92.Suppressed.Tranq.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -64844,8 +65572,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pkp.DisplayName" xml:space="preserve">
-  <value>QYJ-72 General Purpose Machine Gun</value>
-  <comment>QYJ-72 General Purpose Machine Gun</comment>
+  <value>Type 67 machine gun</value>
+  <comment>Type 67 machine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Pkp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -65108,16 +65836,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.DisplayName" xml:space="preserve">
-  <value>ZHNK-72 revolver</value>
-  <comment>ZHNK-72 revolver</comment>
+  <value>Type 72 revolver</value>
+  <comment>Type 72 revolver</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.Shrapnel.DisplayName" xml:space="preserve">
-  <value>ZHNK-72 revolver</value>
-  <comment>ZHNK-72 revolver</comment>
+  <value>Type 72 revolver</value>
+  <comment>Type 72 revolver</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Revolver.Upp.Shrapnel.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -66292,16 +67020,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.DisplayName" xml:space="preserve">
-  <value>Type 88 designated marksman rifle</value>
-  <comment>Type 88 designated marksman rifle</comment>
+  <value>Type 88 marksman rifle</value>
+  <comment>Type 88 marksman rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.Empty.DisplayName" xml:space="preserve">
-  <value>Type 88 designated marksman rifle</value>
-  <comment>Type 88 designated marksman rifle</comment>
+  <value>Type 88 marksman rifle</value>
+  <comment>Type 88 marksman rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Sniper.Svd.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -66364,176 +67092,176 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse carbine</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>Type 71 carbine</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse carbine</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>Type 71 carbine</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.DisplayName" xml:space="preserve">
-  <value>Type 71 'Commando' pulse carbine</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>Type 71 commando carbine</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 'Commando' pulse carbine</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>Type 71 commando carbine</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.DisplayName" xml:space="preserve">
-  <value>Type 71 'Commando' pulse carbine</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>Type 71 commando carbine</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 'Commando' pulse carbine</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>Type 71 commando carbine</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Deathsquad.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.DisplayName" xml:space="preserve">
-  <value>Type 71 'Commando' pulse carbine</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>Type 71 commando carbine</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 'Commando' pulse carbine</value>
-  <comment>Type 71 'Commando' pulse carbine</comment>
+  <value>Type 71 commando carbine</value>
+  <comment>Type 71 commando carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Commando.Proc.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse carbine</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>Type 71 carbine</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse carbine</value>
-  <comment>Type 71 pulse carbine</comment>
+  <value>Type 71 carbine</value>
+  <comment>Type 71 carbine</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Carbine.Dual.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Dual.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.DisplayName" xml:space="preserve">
-  <value>Type 71-F pulse rifle</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>Type 71-F flame rifle</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71-F pulse rifle</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>Type 71-F flame rifle</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.DisplayName" xml:space="preserve">
-  <value>Type 71-F pulse rifle</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>Type 71-F flame rifle</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71-F pulse rifle</value>
-  <comment>Type 71-F pulse rifle</comment>
+  <value>Type 71-F flame rifle</value>
+  <comment>Type 71-F flame rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Flamer.Leader.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Rifleman.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.Empty.DisplayName" xml:space="preserve">
-  <value>Type 71 pulse rifle</value>
-  <comment>Type 71 pulse rifle</comment>
+  <value>Type 71 assault rifle</value>
+  <comment>Type 71 assault rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.Type71.Sapper.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -66932,32 +67660,32 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.DisplayName" xml:space="preserve">
-  <value>Type 64 Submachinegun</value>
-  <comment>Type 64 Submachinegun</comment>
+  <value>Type 64 submachine gun</value>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Empty.DisplayName" xml:space="preserve">
-  <value>Type 64 Submachinegun</value>
-  <comment>Type 64 Submachinegun</comment>
+  <value>Type 64 submachine gun</value>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.DisplayName" xml:space="preserve">
-  <value>Type 64 Submachinegun</value>
-  <comment>Type 64 Submachinegun</comment>
+  <value>Type 64 submachine gun</value>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.Empty.DisplayName" xml:space="preserve">
-  <value>Type 64 Submachinegun</value>
-  <comment>Type 64 Submachinegun</comment>
+  <value>Type 64 submachine gun</value>
+  <comment>Type 64 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Bizon.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -67364,32 +68092,32 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.DisplayName" xml:space="preserve">
-  <value>Type-19 Submachinegun</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>Type 19 submachine gun</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.Empty.DisplayName" xml:space="preserve">
-  <value>Type-19 Submachinegun</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>Type 19 submachine gun</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.DisplayName" xml:space="preserve">
-  <value>Type-19 Submachinegun</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>Type 19 submachine gun</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.Empty.DisplayName" xml:space="preserve">
-  <value>Type-19 Submachinegun</value>
-  <comment>Type-19 Submachinegun</comment>
+  <value>Type 19 submachine gun</value>
+  <comment>Type 19 submachine gun</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Smg.Pps43.ExtendedMag.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
@@ -73807,6 +74535,70 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.1.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.1.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.2.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.2.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.3.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.3.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.4.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.4.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.5.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.5.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.6.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.6.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.7.DisplayName" xml:space="preserve">
+  <value>handful of armor-piercing sniper bullets (7.62x54mmR)</value>
+  <comment>handful of armor-piercing sniper bullets (7.62x54mmR)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.SniperUpp.7.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.AmmoHandful.Es7Slug.DisplayName" xml:space="preserve">
   <value>handful of electrostatic solid slugs (20g)</value>
   <comment>handful of electrostatic solid slugs (20g)</comment>
@@ -75604,24 +76396,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>box of TWE ORP rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.DisplayName" xml:space="preserve">
-  <value>box of UPP military rations</value>
-  <comment>box of UPP military rations</comment>
+  <value>box of PAVN rations</value>
+  <comment>box of PAVN rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Empty.DisplayName" xml:space="preserve">
-  <value>box of UPP military rations</value>
-  <comment>box of UPP military rations</comment>
+  <value>box of PAVN rations</value>
+  <comment>box of PAVN rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Upp.Deployed.DisplayName" xml:space="preserve">
-  <value>box of UPP military rations</value>
-  <comment>box of UPP military rations</comment>
+  <value>box of PAVN rations</value>
+  <comment>box of PAVN rations</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Misc.Mre.Wy.DisplayName" xml:space="preserve">
   <value>box of W-Y brand rations</value>
@@ -76244,104 +77036,104 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>magazine box (SU-6 x 16)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.DisplayName" xml:space="preserve">
-  <value>magazine box (Type19 x 12)</value>
-  <comment>magazine box (Type19 x 12)</comment>
+  <value>magazine box (Type 19 x 12)</value>
+  <comment>magazine box (Type 19 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Empty.DisplayName" xml:space="preserve">
-  <value>magazine box (Type19 x 12)</value>
-  <comment>magazine box (Type19 x 12)</comment>
+  <value>magazine box (Type 19 x 12)</value>
+  <comment>magazine box (Type 19 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type19.Deployed.DisplayName" xml:space="preserve">
-  <value>magazine box (Type19 x 12)</value>
-  <comment>magazine box (Type19 x 12)</comment>
+  <value>magazine box (Type 19 x 12)</value>
+  <comment>magazine box (Type 19 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.DisplayName" xml:space="preserve">
-  <value>magazine box (Type64 Bizon x 10)</value>
-  <comment>magazine box (Type64 Bizon x 10)</comment>
+  <value>magazine box (Type 64 x 10)</value>
+  <comment>magazine box (Type 64 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Empty.DisplayName" xml:space="preserve">
-  <value>magazine box (Type64 Bizon x 10)</value>
-  <comment>magazine box (Type64 Bizon x 10)</comment>
+  <value>magazine box (Type 64 x 10)</value>
+  <comment>magazine box (Type 64 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type64.Deployed.DisplayName" xml:space="preserve">
-  <value>magazine box (Type64 Bizon x 10)</value>
-  <comment>magazine box (Type64 Bizon x 10)</comment>
+  <value>magazine box (Type 64 x 10)</value>
+  <comment>magazine box (Type 64 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 x 10)</value>
-  <comment>magazine box (Type71 x 10)</comment>
+  <value>magazine box (Type 71 x 10)</value>
+  <comment>magazine box (Type 71 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Empty.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 x 10)</value>
-  <comment>magazine box (Type71 x 10)</comment>
+  <value>magazine box (Type 71 x 10)</value>
+  <comment>magazine box (Type 71 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Deployed.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 x 10)</value>
-  <comment>magazine box (Type71 x 10)</comment>
+  <value>magazine box (Type 71 x 10)</value>
+  <comment>magazine box (Type 71 x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 AP x 10)</value>
-  <comment>magazine box (Type71 AP x 10)</comment>
+  <value>magazine box (Type 71 AP x 10)</value>
+  <comment>magazine box (Type 71 AP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Empty.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 AP x 10)</value>
-  <comment>magazine box (Type71 AP x 10)</comment>
+  <value>magazine box (Type 71 AP x 10)</value>
+  <comment>magazine box (Type 71 AP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Ap.Deployed.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 AP x 10)</value>
-  <comment>magazine box (Type71 AP x 10)</comment>
+  <value>magazine box (Type 71 AP x 10)</value>
+  <comment>magazine box (Type 71 AP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 HEAP x 10)</value>
-  <comment>magazine box (Type71 HEAP x 10)</comment>
+  <value>magazine box (Type 71 HEAP x 10)</value>
+  <comment>magazine box (Type 71 HEAP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Empty.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 HEAP x 10)</value>
-  <comment>magazine box (Type71 HEAP x 10)</comment>
+  <value>magazine box (Type 71 HEAP x 10)</value>
+  <comment>magazine box (Type 71 HEAP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type71.Heap.Deployed.DisplayName" xml:space="preserve">
-  <value>magazine box (Type71 HEAP x 10)</value>
-  <comment>magazine box (Type71 HEAP x 10)</comment>
+  <value>magazine box (Type 71 HEAP x 10)</value>
+  <comment>magazine box (Type 71 HEAP x 10)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Type73.DisplayName" xml:space="preserve">
   <value>magazine box (Type 73 x 16)</value>
@@ -76444,24 +77236,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>magazine box (XM51 x 8)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.DisplayName" xml:space="preserve">
-  <value>speed loaders box (ZhNK-72 x 12)</value>
-  <comment>speed loaders box (ZhNK-72 x 12)</comment>
+  <value>speed loaders box (Type 72 x 12)</value>
+  <comment>speed loaders box (Type 72 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Empty.DisplayName" xml:space="preserve">
-  <value>speed loaders box (ZhNK-72 x 12)</value>
-  <comment>speed loaders box (ZhNK-72 x 12)</comment>
+  <value>speed loaders box (Type 72 x 12)</value>
+  <comment>speed loaders box (Type 72 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Zhnk.Deployed.DisplayName" xml:space="preserve">
-  <value>speed loaders box (ZhNK-72 x 12)</value>
-  <comment>speed loaders box (ZhNK-72 x 12)</comment>
+  <value>speed loaders box (Type 72 x 12)</value>
+  <comment>speed loaders box (Type 72 x 12)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Rounds.DisplayName" xml:space="preserve">
   <value>rifle ammunition box (10x24mm)</value>
@@ -77330,6 +78122,38 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Item.Attachable.Lasersight.Micro.Empty.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.DisplayName" xml:space="preserve">
+  <value>Rail flashlight (sealed)</value>
+  <comment>Rail flashlight (sealed)</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.Verb.Toggle" xml:space="preserve">
+  <value>light on</value>
+  <comment>light on</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.Verb.Toggle.State" xml:space="preserve">
+  <value>light off</value>
+  <comment>light off</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.DisplayName" xml:space="preserve">
+  <value>Rail flashlight (sealed)</value>
+  <comment>Rail flashlight (sealed)</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.Verb.Toggle" xml:space="preserve">
+  <value>light off</value>
+  <comment>light off</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.SealedFlashlight.On.Verb.Toggle.State" xml:space="preserve">
+  <value>light on</value>
+  <comment>light on</comment>
 </data>
 <data name="Def.Obj.Effect.Decal.TileDamage.Damaged1.DisplayName" xml:space="preserve">
   <value>cratered floor</value>
@@ -78527,6 +79351,42 @@ The file is looked up beside this language file first, then under the game's Con
   <value>move to</value>
   <comment>move to</comment>
 </data>
+<data name="Def.Character.Human.East.Rifleman.DisplayName" xml:space="preserve">
+  <value>East rifleman</value>
+  <comment>East rifleman</comment>
+</data>
+<data name="Def.Character.Human.East.Rifleman.Verb.Teleport" xml:space="preserve">
+  <value>teleport</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Rifleman.Verb.MoveTo" xml:space="preserve">
+  <value>move to</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Leader.DisplayName" xml:space="preserve">
+  <value>East squad leader</value>
+  <comment>East squad leader</comment>
+</data>
+<data name="Def.Character.Human.East.Leader.Verb.Teleport" xml:space="preserve">
+  <value>teleport</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Leader.Verb.MoveTo" xml:space="preserve">
+  <value>move to</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Corpsman.DisplayName" xml:space="preserve">
+  <value>East corpsman</value>
+  <comment>East corpsman</comment>
+</data>
+<data name="Def.Character.Human.East.Corpsman.Verb.Teleport" xml:space="preserve">
+  <value>teleport</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Corpsman.Verb.MoveTo" xml:space="preserve">
+  <value>move to</value>
+  <comment>move to</comment>
+</data>
 <data name="StackFamily.TestPlank" xml:space="preserve">
   <value>TestPlank</value>
   <comment>TestPlank</comment>
@@ -78891,6 +79751,30 @@ The file is looked up beside this language file first, then under the game's Con
   <value>struck by lightning the most times</value>
   <comment>struck by lightning the most times</comment>
 </data>
+<data name="Honor.Headhunter.Name" xml:space="preserve">
+  <value>HEADHUNTER</value>
+  <comment>HEADHUNTER</comment>
+</data>
+<data name="Honor.Headhunter.Flavor" xml:space="preserve">
+  <value>most headshots landed, a hundred at the least</value>
+  <comment>most headshots landed, a hundred at the least</comment>
+</data>
+<data name="Honor.BodyCount.Name" xml:space="preserve">
+  <value>BODY COUNT</value>
+  <comment>BODY COUNT</comment>
+</data>
+<data name="Honor.BodyCount.Flavor" xml:space="preserve">
+  <value>most east soldiers killed, a hundred and fifty at the least</value>
+  <comment>most east soldiers killed, a hundred and fifty at the least</comment>
+</data>
+<data name="Honor.Warlord.Name" xml:space="preserve">
+  <value>WARLORD</value>
+  <comment>WARLORD</comment>
+</data>
+<data name="Honor.Warlord.Flavor" xml:space="preserve">
+  <value>most east soldiers killed, five hundred at the least</value>
+  <comment>most east soldiers killed, five hundred at the least</comment>
+</data>
 <data name="Trait.Veteran.Name" xml:space="preserve">
   <value>Veteran</value>
   <comment>Veteran</comment>
@@ -79146,6 +80030,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Trait.EastConscript.Flavor" xml:space="preserve">
   <value>Drafted, drilled for a month and handed a rifle. Shoots high and hits soft.</value>
   <comment>Drafted, drilled for a month and handed a rifle. Shoots high and hits soft.</comment>
+</data>
+<data name="Trait.SpeaksEast.Name" xml:space="preserve">
+  <value>Multilingual</value>
+  <comment>Multilingual</comment>
+</data>
+<data name="Trait.SpeaksEast.Flavor" xml:space="preserve">
+  <value>Picked up the language somewhere along the way. When the other side shouts, you know what they are about to do.</value>
+  <comment>Picked up the language somewhere along the way. When the other side shouts, you know what they are about to do.</comment>
+</data>
+<data name="Language.East.Name" xml:space="preserve">
+  <value>East</value>
+  <comment>East</comment>
 </data>
 <data name="Emote.Warcry.GetSome" xml:space="preserve">
   <value>GET SOME!</value>
@@ -82074,6 +82970,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Loadout.East.Rifleman.Name" xml:space="preserve">
   <value>East rifleman</value>
   <comment>East rifleman</comment>
+</data>
+<data name="Loadout.East.Corpsman.Name" xml:space="preserve">
+  <value>East corpsman</value>
+  <comment>East corpsman</comment>
 </data>
 <data name="Intro.CAPE.Title" xml:space="preserve">
   <value>CAPE RIVER</value>
