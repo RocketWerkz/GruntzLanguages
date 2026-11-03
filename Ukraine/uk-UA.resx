@@ -81800,7 +81800,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>OKAY</comment>
 </data>
 <data name="ContentWarning.DisableLabel" xml:space="preserve">
-  <value>ВИМКНЕНО</value>
+  <value>ВИМКНУТИ</value>
   <comment>DISABLE</comment>
 </data>
 <data name="ContentWarning.Themes" xml:space="preserve">
