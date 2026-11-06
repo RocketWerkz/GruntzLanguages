@@ -1363,6 +1363,34 @@ The file is looked up beside this language file first, then under the game's Con
   <value>NPC</value>
   <comment>NPC</comment>
 </data>
+<data name="Chat.TipLock" xml:space="preserve">
+  <value>Toggle Lock</value>
+  <comment>Toggle Lock</comment>
+</data>
+<data name="Chat.TipOpacity" xml:space="preserve">
+  <value>Toggle Opacity</value>
+  <comment>Toggle Opacity</comment>
+</data>
+<data name="Chat.TipClickThrough" xml:space="preserve">
+  <value>Toggle Click-Through</value>
+  <comment>Toggle Click-Through</comment>
+</data>
+<data name="Chat.TipPopout" xml:space="preserve">
+  <value>Toggle Popout</value>
+  <comment>Toggle Popout</comment>
+</data>
+<data name="Chat.TipClose" xml:space="preserve">
+  <value>Close Chat</value>
+  <comment>Close Chat</comment>
+</data>
+<data name="Chat.TipNewTab" xml:space="preserve">
+  <value>New Tab</value>
+  <comment>New Tab</comment>
+</data>
+<data name="Chat.TipTabSetup" xml:space="preserve">
+  <value>Tab Setup</value>
+  <comment>Tab Setup</comment>
+</data>
 <data name="Chat.GhostMoans" xml:space="preserve">
   <value>{NAME} moans "{TEXT}"</value>
   <comment>{NAME} moans "{TEXT}"</comment>
@@ -1702,6 +1730,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HoverVerbLabels.AmmoBoxFill" xml:space="preserve">
   <value>refill magazine</value>
   <comment>refill magazine</comment>
+</data>
+<data name="HoverVerbLabels.AmmoBoxPour" xml:space="preserve">
+  <value>pour box into magazine</value>
+  <comment>pour box into magazine</comment>
 </data>
 <data name="HoverVerbLabels.AmmoBoxCollect" xml:space="preserve">
   <value>pick up</value>
@@ -2311,6 +2343,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>take </value>
   <comment>take </comment>
 </data>
+<data name="HandSlotClick.Label" xml:space="preserve">
+  <value>label </value>
+  <comment>label </comment>
+</data>
 <data name="HandSlotClick.Put" xml:space="preserve">
   <value>put </value>
   <comment>put </comment>
@@ -2326,6 +2362,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="InteractClick.RoundsDoNotMatch" xml:space="preserve">
   <value>the rounds do not match</value>
   <comment>the rounds do not match</comment>
+</data>
+<data name="InteractClick.BoxDoesNotFit" xml:space="preserve">
+  <value>no room for the whole box</value>
+  <comment>no room for the whole box</comment>
 </data>
 <data name="InteractClick.MopIsDry" xml:space="preserve">
   <value>the mop is dry</value>
@@ -2375,10 +2415,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>unbuckle first</value>
   <comment>unbuckle first</comment>
 </data>
-<data name="PilotTrainingHint.Untrained" xml:space="preserve">
-  <value>requires pilot training</value>
-  <comment>requires pilot training</comment>
-</data>
 <data name="FireInputDriver.DualHandedHoldDeny" xml:space="preserve">
   <value>requires dual-handed hold</value>
   <comment>requires dual-handed hold</comment>
@@ -2404,6 +2440,14 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>this doorway takes no weapon mount</comment>
 </data>
 <data name="ConstructionPlacement.DoorwayRefusesMountHint" xml:space="preserve">
+  <value>build it in another doorway</value>
+  <comment>build it in another doorway</comment>
+</data>
+<data name="ConstructionPlacement.MountTaken" xml:space="preserve">
+  <value>a hardpoint already holds this doorway</value>
+  <comment>a hardpoint already holds this doorway</comment>
+</data>
+<data name="ConstructionPlacement.MountTakenHint" xml:space="preserve">
   <value>build it in another doorway</value>
   <comment>build it in another doorway</comment>
 </data>
@@ -2454,6 +2498,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="BodyZoneNames.RightFoot" xml:space="preserve">
   <value>right foot</value>
   <comment>right foot</comment>
+</data>
+<data name="BodyZoneNames.Eyes" xml:space="preserve">
+  <value>eyes</value>
+  <comment>eyes</comment>
 </data>
 <data name="BodyZoneNames.Unknown" xml:space="preserve">
   <value>?</value>
@@ -4199,6 +4247,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>NVG OFF</value>
   <comment>NVG OFF</comment>
 </data>
+<data name="GunHud.Focus.On" xml:space="preserve">
+  <value>FOCUS ON</value>
+  <comment>FOCUS ON</comment>
+</data>
+<data name="GunHud.Focus.Off" xml:space="preserve">
+  <value>FOCUS OFF</value>
+  <comment>FOCUS OFF</comment>
+</data>
 <data name="GunHud.UniqueAction.Pump" xml:space="preserve">
   <value>PUMP</value>
   <comment>PUMP</comment>
@@ -4258,6 +4314,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="PaperDollUi.Title" xml:space="preserve">
   <value>AIM ZONE</value>
   <comment>AIM ZONE</comment>
+</data>
+<data name="PaperDollUi.AimVerb" xml:space="preserve">
+  <value>aim</value>
+  <comment>aim</comment>
+</data>
+<data name="PaperDollUi.AimAgain" xml:space="preserve">
+  <value> again</value>
+  <comment> again</comment>
 </data>
 <data name="TransfusionModeChip.Draw" xml:space="preserve">
   <value>DRAW</value>
@@ -4487,6 +4551,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value> Scatter</value>
   <comment> Scatter</comment>
 </data>
+<data name="TraitChips.Unit.ScatterDegrees" xml:space="preserve">
+  <value> Degrees of scatter</value>
+  <comment> Degrees of scatter</comment>
+</data>
 <data name="TraitChips.Unit.WieldTime" xml:space="preserve">
   <value> Wield time</value>
   <comment> Wield time</comment>
@@ -4623,6 +4691,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value> Bullet damage</value>
   <comment> Bullet damage</comment>
 </data>
+<data name="TraitChips.Unit.FriendlyFireDamage" xml:space="preserve">
+  <value> Damage to own side</value>
+  <comment> Damage to own side</comment>
+</data>
 <data name="TraitChips.Unit.MovementSpeedWhileWet" xml:space="preserve">
   <value> Movement speed while wet</value>
   <comment> Movement speed while wet</comment>
@@ -4702,6 +4774,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="TraitChips.Marker.SpeaksUnit" xml:space="preserve">
   <value> Understands {LANGUAGE} when spoken</value>
   <comment> Understands {LANGUAGE} when spoken</comment>
+</data>
+<data name="TraitChips.Marker.NoSalvageToken" xml:space="preserve">
+  <value>NO SALVAGE</value>
+  <comment>NO SALVAGE</comment>
+</data>
+<data name="TraitChips.Marker.NoSalvageUnit" xml:space="preserve">
+  <value> Takes structures apart and keeps nothing of what comes off</value>
+  <comment> Takes structures apart and keeps nothing of what comes off</comment>
 </data>
 <data name="ContextMenu.Row.Follow" xml:space="preserve">
   <value>follow</value>
@@ -5130,6 +5210,26 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HealthScan.EmbeddedObjectsLine" xml:space="preserve">
   <value>EMBEDDED OBJECTS ({COUNT}) - PATIENT SHOULD NOT MOVE</value>
   <comment>EMBEDDED OBJECTS ({COUNT}) - PATIENT SHOULD NOT MOVE</comment>
+</data>
+<data name="HealthScan.FractureLabel" xml:space="preserve">
+  <value>FRACTURE</value>
+  <comment>FRACTURE</comment>
+</data>
+<data name="HealthScan.SplintAdministerLabel" xml:space="preserve">
+  <value>SPLINT, ADMINISTER: </value>
+  <comment>SPLINT, ADMINISTER: </comment>
+</data>
+<data name="HealthScan.FractureDoseLine" xml:space="preserve">
+  <value>{UNITS} U // {MINUTES} MIN</value>
+  <comment>{UNITS} U // {MINUTES} MIN</comment>
+</data>
+<data name="HealthScan.FractureKnittingLine" xml:space="preserve">
+  <value>KNITTING // UP TO {MINUTES} MIN</value>
+  <comment>KNITTING // UP TO {MINUTES} MIN</comment>
+</data>
+<data name="HealthScan.FractureSplintKnittingLine" xml:space="preserve">
+  <value>SPLINT // KNITTING, UP TO {MINUTES} MIN</value>
+  <comment>SPLINT // KNITTING, UP TO {MINUTES} MIN</comment>
 </data>
 <data name="HealthScan.ChemicalContentsHeader" xml:space="preserve">
   <value>CHEMICAL CONTENTS - {WHOLE}.{FRAC}U</value>
@@ -9003,6 +9103,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>// MAP //</value>
   <comment>// MAP //</comment>
 </data>
+<data name="EorScreen.VoteSubModeApproval" xml:space="preserve">
+  <value>// GAME MODE // SELECT EVERY MODE YOU WOULD PLAY //</value>
+  <comment>// GAME MODE // SELECT EVERY MODE YOU WOULD PLAY //</comment>
+</data>
+<data name="EorScreen.VoteSubMapApproval" xml:space="preserve">
+  <value>// MAP // SELECT EVERY MAP YOU WOULD PLAY //</value>
+  <comment>// MAP // SELECT EVERY MAP YOU WOULD PLAY //</comment>
+</data>
 <data name="EorScreen.VoteClosesLine" xml:space="preserve">
   <value>VOTING CLOSES IN {SECONDS}S</value>
   <comment>VOTING CLOSES IN {SECONDS}S</comment>
@@ -9250,6 +9358,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EorScreen.CauseGibbed" xml:space="preserve">
   <value>GIBBED</value>
   <comment>GIBBED</comment>
+</data>
+<data name="EorScreen.CauseSuffocated" xml:space="preserve">
+  <value>SUFFOCATED</value>
+  <comment>SUFFOCATED</comment>
 </data>
 <data name="EorScreen.CauseOther" xml:space="preserve">
   <value>OTHER</value>
@@ -11855,6 +11967,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>a weapon mount holds the door open</value>
   <comment>a weapon mount holds the door open</comment>
 </data>
+<data name="PilotKeys.SafeRefused" xml:space="preserve">
+  <value>weapons are safe</value>
+  <comment>weapons are safe</comment>
+</data>
 <data name="PilotKeys.AbortToast" xml:space="preserve">
   <value>start aborted</value>
   <comment>start aborted</comment>
@@ -12387,6 +12503,78 @@ The file is looked up beside this language file first, then under the game's Con
   <value>{FEET} FT</value>
   <comment>{FEET} FT</comment>
 </data>
+<data name="VehicleConsole.HardpointsSection" xml:space="preserve">
+  <value>HARDPOINTS</value>
+  <comment>HARDPOINTS</comment>
+</data>
+<data name="VehicleConsole.MasterKey" xml:space="preserve">
+  <value>MASTER</value>
+  <comment>MASTER</comment>
+</data>
+<data name="VehicleConsole.SafeLabel" xml:space="preserve">
+  <value>SAFE</value>
+  <comment>SAFE</comment>
+</data>
+<data name="VehicleConsole.ArmedLabel" xml:space="preserve">
+  <value>ARMED</value>
+  <comment>ARMED</comment>
+</data>
+<data name="VehicleConsole.ModeKey" xml:space="preserve">
+  <value>MODE</value>
+  <comment>MODE</comment>
+</data>
+<data name="VehicleConsole.DualLabel" xml:space="preserve">
+  <value>DUAL</value>
+  <comment>DUAL</comment>
+</data>
+<data name="VehicleConsole.AlternateLabel" xml:space="preserve">
+  <value>ALTERNATE</value>
+  <comment>ALTERNATE</comment>
+</data>
+<data name="VehicleConsole.PortHardpointKey" xml:space="preserve">
+  <value>PORT</value>
+  <comment>PORT</comment>
+</data>
+<data name="VehicleConsole.StarboardHardpointKey" xml:space="preserve">
+  <value>STBD</value>
+  <comment>STBD</comment>
+</data>
+<data name="VehicleConsole.NoWeapon" xml:space="preserve">
+  <value>NO WEAPON</value>
+  <comment>NO WEAPON</comment>
+</data>
+<data name="VehicleConsole.RoundsLine" xml:space="preserve">
+  <value>{COUNT} RDS</value>
+  <comment>{COUNT} RDS</comment>
+</data>
+<data name="VehicleConsole.RocketsLine" xml:space="preserve">
+  <value>{COUNT} RKT</value>
+  <comment>{COUNT} RKT</comment>
+</data>
+<data name="VehicleConsole.EmptyWord" xml:space="preserve">
+  <value>EMPTY</value>
+  <comment>EMPTY</comment>
+</data>
+<data name="VehicleConsole.KeyHint" xml:space="preserve">
+  <value>({KEY})</value>
+  <comment>({KEY})</comment>
+</data>
+<data name="VehicleConsole.HardpointsHint" xml:space="preserve">
+  <value>FIRE ({FIRE}) AND ARM ({ARM}) FROM THE PILOT SEAT // EVERY ARMED POINT SHOWN ON THE GROUND // NO FIRE THROUGH A TURN</value>
+  <comment>FIRE ({FIRE}) AND ARM ({ARM}) FROM THE PILOT SEAT // EVERY ARMED POINT SHOWN ON THE GROUND // NO FIRE THROUGH A TURN</comment>
+</data>
+<data name="VehicleConsole.SafeBanner" xml:space="preserve">
+  <value>// WEAPONS SAFE //</value>
+  <comment>// WEAPONS SAFE //</comment>
+</data>
+<data name="VehicleConsole.HardpointModeControl" xml:space="preserve">
+  <value>HARDPOINT MODE</value>
+  <comment>HARDPOINT MODE</comment>
+</data>
+<data name="VehicleConsole.HardpointSwitchControl" xml:space="preserve">
+  <value>HARDPOINT ON/OFF</value>
+  <comment>HARDPOINT ON/OFF</comment>
+</data>
 <data name="NewPlayer.Title" xml:space="preserve">
   <value>NEW PLAYER</value>
   <comment>NEW PLAYER</comment>
@@ -12448,8 +12636,32 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>CORPSMAN</comment>
 </data>
 <data name="Crown.Corpsman.Flavor" xml:space="preserve">
-  <value>Keeps his squad alive. Drop him first.</value>
-  <comment>Keeps his squad alive. Drop him first.</comment>
+  <value>Treats the wounded. Shooting them is a warcrime.</value>
+  <comment>Treats the wounded. Shooting them is a warcrime.</comment>
+</data>
+<data name="Crown.Sergeant.Title" xml:space="preserve">
+  <value>SQUAD LEADER</value>
+  <comment>SQUAD LEADER</comment>
+</data>
+<data name="Crown.Sergeant.Flavor" xml:space="preserve">
+  <value>Runs a hostile squad and always carries a grenade.</value>
+  <comment>Runs a hostile squad and always carries a grenade.</comment>
+</data>
+<data name="Crown.Sniper.Title" xml:space="preserve">
+  <value>SNIPER</value>
+  <comment>SNIPER</comment>
+</data>
+<data name="Crown.Sniper.Flavor" xml:space="preserve">
+  <value>Picks targets from range. Break line of sight.</value>
+  <comment>Picks targets from range. Break line of sight.</comment>
+</data>
+<data name="Crown.Engineer.Title" xml:space="preserve">
+  <value>ENGINEER</value>
+  <comment>ENGINEER</comment>
+</data>
+<data name="Crown.Engineer.Flavor" xml:space="preserve">
+  <value>A sapper. Breaches, builds and brings walls down.</value>
+  <comment>A sapper. Breaches, builds and brings walls down.</comment>
 </data>
 <data name="HealthBar.Light.Title" xml:space="preserve">
   <value>LIGHTLY WOUNDED</value>
@@ -12514,6 +12726,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="ContentWarning.RealWorld" xml:space="preserve">
   <value>In the real world, gambling, drugs, alcohol, and combat destroy lives.</value>
   <comment>In the real world, gambling, drugs, alcohol, and combat destroy lives.</comment>
+</data>
+<data name="GhostEventChips.ClickToView" xml:space="preserve">
+  <value>CLICK TO VIEW</value>
+  <comment>CLICK TO VIEW</comment>
 </data>
 <data name="Def.Crate.DisplayName" xml:space="preserve">
   <value>crate</value>
@@ -12622,6 +12838,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.TestOpenCade.DisplayName" xml:space="preserve">
   <value>test open cade</value>
   <comment>test open cade</comment>
+</data>
+<data name="Def.TestBuckleBed.DisplayName" xml:space="preserve">
+  <value>test buckle bed</value>
+  <comment>test buckle bed</comment>
+</data>
+<data name="Def.TestBuckleBed.Up.DisplayName" xml:space="preserve">
+  <value>test buckle bed</value>
+  <comment>test buckle bed</comment>
 </data>
 <data name="Def.TestLinkedCade.DisplayName" xml:space="preserve">
   <value>test linked cade</value>
@@ -14754,6 +14978,34 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Test.Vehicle.BusConsole.DisplayName" xml:space="preserve">
   <value>test bus console</value>
   <comment>test bus console</comment>
+</data>
+<data name="Def.Test.Parachute.Descending.Ground.DisplayName" xml:space="preserve">
+  <value>test descending crate</value>
+  <comment>test descending crate</comment>
+</data>
+<data name="Def.Test.Arrival.NoGround.DisplayName" xml:space="preserve">
+  <value>test arrival</value>
+  <comment>test arrival</comment>
+</data>
+<data name="Def.Test.Arrival.NoGround.Verb.Teleport" xml:space="preserve">
+  <value>teleport</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Test.Arrival.NoGround.Verb.MoveTo" xml:space="preserve">
+  <value>move to</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Test.Arrival.Ground.DisplayName" xml:space="preserve">
+  <value>test arrival</value>
+  <comment>test arrival</comment>
+</data>
+<data name="Def.Test.Arrival.Ground.Verb.Teleport" xml:space="preserve">
+  <value>teleport</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Test.Arrival.Ground.Verb.MoveTo" xml:space="preserve">
+  <value>move to</value>
+  <comment>move to</comment>
 </data>
 <data name="Def.Character.Human.DisplayName" xml:space="preserve">
   <value>Human</value>
@@ -48311,6 +48563,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Verb.Toggle" xml:space="preserve">
+  <value>flip down</value>
+  <comment>flip down</comment>
+</data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Down.DisplayName" xml:space="preserve">
+  <value>basic medical optic</value>
+  <comment>basic medical optic</comment>
+</data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Down.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Down.Verb.Toggle" xml:space="preserve">
+  <value>push up</value>
+  <comment>push up</comment>
+</data>
 <data name="Def.Obj.Item.Device.HelmetVisor.Medical.Advanced.DisplayName" xml:space="preserve">
   <value>advanced medical optic</value>
   <comment>advanced medical optic</comment>
@@ -48904,6 +49172,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>M40 HSDP smoke grenade</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Armed.DisplayName" xml:space="preserve">
+  <value>M40 HSDP smoke grenade</value>
+  <comment>M40 HSDP smoke grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Armed.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Venting.DisplayName" xml:space="preserve">
+  <value>M40 HSDP smoke grenade</value>
+  <comment>M40 HSDP smoke grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Venting.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -77979,6 +78263,54 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.DisplayName" xml:space="preserve">
+  <value>M40 HSDP smoke grenade box</value>
+  <comment>M40 HSDP smoke grenade box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Open.DisplayName" xml:space="preserve">
+  <value>M40 HSDP smoke grenade box</value>
+  <comment>M40 HSDP smoke grenade box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade box (red)</value>
+  <comment>M18 marking smoke grenade box (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.Open.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade box (red)</value>
+  <comment>M18 marking smoke grenade box (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade box (green)</value>
+  <comment>M18 marking smoke grenade box (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.Open.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade box (green)</value>
+  <comment>M18 marking smoke grenade box (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Round40mm.He.DisplayName" xml:space="preserve">
   <value>40mm HE grenade packet</value>
   <comment>40mm HE grenade packet</comment>
@@ -78024,6 +78356,38 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>40mm incendiary grenade packet</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Round40mm.Incendiary.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke packet (red)</value>
+  <comment>M18 marking smoke packet (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.Open.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke packet (red)</value>
+  <comment>M18 marking smoke packet (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke packet (green)</value>
+  <comment>M18 marking smoke packet (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.Open.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke packet (green)</value>
+  <comment>M18 marking smoke packet (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.Open.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -78155,6 +78519,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>light on</value>
   <comment>light on</comment>
 </data>
+<data name="Def.Obj.Item.Attachable.Bayonet.Pavn.DisplayName" xml:space="preserve">
+  <value>PAVN bayonet</value>
+  <comment>PAVN bayonet</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.Bayonet.Pavn.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.Bayonet.Pavn.Family" xml:space="preserve">
+  <value>knives</value>
+  <comment>knives</comment>
+</data>
 <data name="Def.Obj.Effect.Decal.TileDamage.Damaged1.DisplayName" xml:space="preserve">
   <value>cratered floor</value>
   <comment>cratered floor</comment>
@@ -78275,23 +78651,63 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.DisplayName" xml:space="preserve">
-  <value>flight crew beacon</value>
-  <comment>flight crew beacon</comment>
+<data name="Def.Obj.Item.Device.Uh1hBeacon.DisplayName" xml:space="preserve">
+  <value>UH-1H flight crew beacon</value>
+  <comment>UH-1H flight crew beacon</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.Verb.PickUp" xml:space="preserve">
+<data name="Def.Obj.Item.Device.Uh1hBeacon.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.Verb.Toggle" xml:space="preserve">
+<data name="Def.Obj.Item.Device.Uh1hBeacon.Verb.Toggle" xml:space="preserve">
   <value>activate</value>
   <comment>activate</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.On.DisplayName" xml:space="preserve">
-  <value>flight crew beacon</value>
-  <comment>flight crew beacon</comment>
+<data name="Def.Obj.Item.Device.Uh1hBeacon.On.DisplayName" xml:space="preserve">
+  <value>UH-1H flight crew beacon</value>
+  <comment>UH-1H flight crew beacon</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.On.Verb.PickUp" xml:space="preserve">
+<data name="Def.Obj.Item.Device.Uh1hBeacon.On.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.DisplayName" xml:space="preserve">
+  <value>MH-6J flight crew beacon</value>
+  <comment>MH-6J flight crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.Verb.Toggle" xml:space="preserve">
+  <value>activate</value>
+  <comment>activate</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.On.DisplayName" xml:space="preserve">
+  <value>MH-6J flight crew beacon</value>
+  <comment>MH-6J flight crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.On.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.DisplayName" xml:space="preserve">
+  <value>AH-6J gunship crew beacon</value>
+  <comment>AH-6J gunship crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.Verb.Toggle" xml:space="preserve">
+  <value>activate</value>
+  <comment>activate</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.On.DisplayName" xml:space="preserve">
+  <value>AH-6J gunship crew beacon</value>
+  <comment>AH-6J gunship crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.On.Verb.PickUp" xml:space="preserve">
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
@@ -78410,6 +78826,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Wire.Razor.DisplayName" xml:space="preserve">
   <value>concertina wire</value>
   <comment>concertina wire</comment>
+</data>
+<data name="Def.Obj.Structure.Hedgehog.DisplayName" xml:space="preserve">
+  <value>hedgehog</value>
+  <comment>hedgehog</comment>
 </data>
 <data name="Def.Obj.Item.M2Kit.Tripod.DisplayName" xml:space="preserve">
   <value>weapon tripod</value>
@@ -78843,6 +79263,30 @@ The file is looked up beside this language file first, then under the game's Con
   <value>IV drip crate</value>
   <comment>IV drip crate</comment>
 </data>
+<data name="Def.Obj.Structure.Crate.EastSupply.DisplayName" xml:space="preserve">
+  <value>East supply crate</value>
+  <comment>East supply crate</comment>
+</data>
+<data name="Def.Obj.Structure.Crate.EastSupply.Landed.DisplayName" xml:space="preserve">
+  <value>East supply crate</value>
+  <comment>East supply crate</comment>
+</data>
+<data name="Def.Obj.Structure.Crate.EastSupply.Empty.DisplayName" xml:space="preserve">
+  <value>empty East supply crate</value>
+  <comment>empty East supply crate</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Plastic.East.DisplayName" xml:space="preserve">
+  <value>PAVN breaching charge</value>
+  <comment>PAVN breaching charge</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Plastic.East.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Plastic.East.Armed.DisplayName" xml:space="preserve">
+  <value>PAVN breaching charge</value>
+  <comment>PAVN breaching charge</comment>
+</data>
 <data name="Def.Obj.Item.Device.TrackingTransmitter.DisplayName" xml:space="preserve">
   <value>tracking transmitter</value>
   <comment>tracking transmitter</comment>
@@ -79078,6 +79522,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Vehicle.UH1H.Hull.DisplayName" xml:space="preserve">
   <value>UH-1H Huey</value>
   <comment>UH-1H Huey</comment>
+</data>
+<data name="Def.Obj.Vehicle.MH6J.Hull.DisplayName" xml:space="preserve">
+  <value>MH-6J Little Bird</value>
+  <comment>MH-6J Little Bird</comment>
+</data>
+<data name="Def.Obj.Vehicle.AH6J.Hull.DisplayName" xml:space="preserve">
+  <value>AH-6J Little Bird</value>
+  <comment>AH-6J Little Bird</comment>
 </data>
 <data name="Def.Obj.Vehicle.UH1H.Door.DisplayName" xml:space="preserve">
   <value>cabin door</value>
@@ -79327,6 +79779,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.DisplayName" xml:space="preserve">
+  <value>PAVN emergency injector</value>
+  <comment>PAVN emergency injector</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.Spent.DisplayName" xml:space="preserve">
+  <value>PAVN emergency injector</value>
+  <comment>PAVN emergency injector</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.Spent.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.DisplayName" xml:space="preserve">
+  <value>PAVN corpsman field pack</value>
+  <comment>PAVN corpsman field pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.Open.DisplayName" xml:space="preserve">
+  <value>PAVN corpsman field pack</value>
+  <comment>PAVN corpsman field pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Character.Human.East.DisplayName" xml:space="preserve">
   <value>East rifleman</value>
   <comment>East rifleman</comment>
@@ -79386,6 +79870,354 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Character.Human.East.Corpsman.Verb.MoveTo" xml:space="preserve">
   <value>move to</value>
   <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.DisplayName" xml:space="preserve">
+  <value>East engineer</value>
+  <comment>East engineer</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Verb.Teleport" xml:space="preserve">
+  <value>teleport</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Verb.MoveTo" xml:space="preserve">
+  <value>move to</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Obj.Structure.Parachute.Ground.DisplayName" xml:space="preserve">
+  <value>parachute</value>
+  <comment>parachute</comment>
+</data>
+<data name="Def.Obj.Structure.Parachute.East.Ground.DisplayName" xml:space="preserve">
+  <value>East parachute</value>
+  <comment>East parachute</comment>
+</data>
+<data name="Def.Obj.Structure.Rubble.Strata.DisplayName" xml:space="preserve">
+  <value>rubble</value>
+  <comment>rubble</comment>
+</data>
+<data name="Def.Obj.Structure.Rubble.Lava.DisplayName" xml:space="preserve">
+  <value>rubble</value>
+  <comment>rubble</comment>
+</data>
+<data name="Def.Obj.Structure.Rubble.Hybrisa.DisplayName" xml:space="preserve">
+  <value>rubble</value>
+  <comment>rubble</comment>
+</data>
+<data name="Def.Obj.Item.HardpointKit.DisplayName" xml:space="preserve">
+  <value>AH-6J hardpoint</value>
+  <comment>AH-6J hardpoint</comment>
+</data>
+<data name="Def.Obj.Item.HardpointKit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Base.DisplayName" xml:space="preserve">
+  <value>AH-6J hardpoint</value>
+  <comment>AH-6J hardpoint</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Base.Upgrade.0.Label" xml:space="preserve">
+  <value>attach the xm27</value>
+  <comment>attach the xm27</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Base.Upgrade.1.Label" xml:space="preserve">
+  <value>attach the hydra 70 pod</value>
+  <comment>attach the hydra 70 pod</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.XM27.Empty.DisplayName" xml:space="preserve">
+  <value>XM27 minigun</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.XM27.Loaded.DisplayName" xml:space="preserve">
+  <value>XM27 minigun</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Hydra.Empty.DisplayName" xml:space="preserve">
+  <value>Hydra 70 rocket pod</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Hydra.Loaded.DisplayName" xml:space="preserve">
+  <value>Hydra 70 rocket pod</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Item.XM27Kit.DisplayName" xml:space="preserve">
+  <value>XM27 minigun</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Item.XM27Kit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.HydraPodKit.DisplayName" xml:space="preserve">
+  <value>Hydra 70 rocket pod</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Item.HydraPodKit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Minigun.XM27Internal.DisplayName" xml:space="preserve">
+  <value>XM27 minigun</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Minigun.XM27Internal.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Hydra70Internal.DisplayName" xml:space="preserve">
+  <value>Hydra 70 rocket pod</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Hydra70Internal.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.DisplayName" xml:space="preserve">
+  <value>XM27 ammunition can (10x24mm)</value>
+  <comment>XM27 ammunition can (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.Empty.DisplayName" xml:space="preserve">
+  <value>XM27 ammunition can (10x24mm)</value>
+  <comment>XM27 ammunition can (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.1.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.1.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.2.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.2.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.3.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.3.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.4.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.4.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.5.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.5.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.6.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.6.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.7.DisplayName" xml:space="preserve">
+  <value>handful of minigun bullets (10x24mm)</value>
+  <comment>handful of minigun bullets (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoHandful.Bullet.Minigun.7.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoBox.Rounds.Minigun.DisplayName" xml:space="preserve">
+  <value>minigun ammunition box (10x24mm)</value>
+  <comment>minigun ammunition box (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoBox.Rounds.Minigun.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoBox.Rounds.Minigun.Empty.DisplayName" xml:space="preserve">
+  <value>minigun ammunition box (10x24mm)</value>
+  <comment>minigun ammunition box (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoBox.Rounds.Minigun.Empty.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.DisplayName" xml:space="preserve">
+  <value>Hydra 70 rocket</value>
+  <comment>Hydra 70 rocket</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.Armed.DisplayName" xml:space="preserve">
+  <value>Hydra 70 rocket</value>
+  <comment>Hydra 70 rocket</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.Armed.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.DisplayName" xml:space="preserve">
+  <value>AH-6J hardpoint case</value>
+  <comment>AH-6J hardpoint case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.Open.DisplayName" xml:space="preserve">
+  <value>AH-6J hardpoint case</value>
+  <comment>AH-6J hardpoint case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.DisplayName" xml:space="preserve">
+  <value>XM27 minigun case</value>
+  <comment>XM27 minigun case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.Open.DisplayName" xml:space="preserve">
+  <value>XM27 minigun case</value>
+  <comment>XM27 minigun case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.DisplayName" xml:space="preserve">
+  <value>Hydra 70 pod case</value>
+  <comment>Hydra 70 pod case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.Open.DisplayName" xml:space="preserve">
+  <value>Hydra 70 pod case</value>
+  <comment>Hydra 70 pod case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Descending.DisplayName" xml:space="preserve">
+  <value>XM27 minigun crate</value>
+  <comment>XM27 minigun crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.DisplayName" xml:space="preserve">
+  <value>XM27 minigun crate</value>
+  <comment>XM27 minigun crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Verb.Toggle" xml:space="preserve">
+  <value>open</value>
+  <comment>open</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Open.DisplayName" xml:space="preserve">
+  <value>XM27 minigun crate</value>
+  <comment>XM27 minigun crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Open.Verb.Toggle" xml:space="preserve">
+  <value>close</value>
+  <comment>close</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Descending.DisplayName" xml:space="preserve">
+  <value>Hydra 70 pod crate</value>
+  <comment>Hydra 70 pod crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.DisplayName" xml:space="preserve">
+  <value>Hydra 70 pod crate</value>
+  <comment>Hydra 70 pod crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Verb.Toggle" xml:space="preserve">
+  <value>open</value>
+  <comment>open</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Open.DisplayName" xml:space="preserve">
+  <value>Hydra 70 pod crate</value>
+  <comment>Hydra 70 pod crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Open.Verb.Toggle" xml:space="preserve">
+  <value>close</value>
+  <comment>close</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade (red)</value>
+  <comment>M18 marking smoke grenade (red)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Armed.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade (red)</value>
+  <comment>M18 marking smoke grenade (red)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Armed.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Venting.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade (red)</value>
+  <comment>M18 marking smoke grenade (red)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Venting.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade (green)</value>
+  <comment>M18 marking smoke grenade (green)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Armed.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade (green)</value>
+  <comment>M18 marking smoke grenade (green)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Armed.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Venting.DisplayName" xml:space="preserve">
+  <value>M18 marking smoke grenade (green)</value>
+  <comment>M18 marking smoke grenade (green)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Venting.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
 </data>
 <data name="StackFamily.TestPlank" xml:space="preserve">
   <value>TestPlank</value>
@@ -79502,6 +80334,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="StackFamily.vehicle mount kit" xml:space="preserve">
   <value>vehicle mount kit</value>
   <comment>vehicle mount kit</comment>
+</data>
+<data name="StackFamily.hardpoint kit" xml:space="preserve">
+  <value>hardpoint kit</value>
+  <comment>hardpoint kit</comment>
+</data>
+<data name="StackFamily.hydra rockets" xml:space="preserve">
+  <value>hydra rockets</value>
+  <comment>hydra rockets</comment>
 </data>
 <data name="Honor.ApexPredator.Name" xml:space="preserve">
   <value>APEX PREDATOR</value>
@@ -80031,6 +80871,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Drafted, drilled for a month and handed a rifle. Shoots high and hits soft.</value>
   <comment>Drafted, drilled for a month and handed a rifle. Shoots high and hits soft.</comment>
 </data>
+<data name="Trait.EastMedic.Name" xml:space="preserve">
+  <value>Medic</value>
+  <comment>Medic</comment>
+</data>
+<data name="Trait.EastMedic.Flavor" xml:space="preserve">
+  <value>I may not be a surgeon, but I still know how to fix things.</value>
+  <comment>I may not be a surgeon, but I still know how to fix things.</comment>
+</data>
 <data name="Trait.SpeaksEast.Name" xml:space="preserve">
   <value>Multilingual</value>
   <comment>Multilingual</comment>
@@ -80038,6 +80886,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Trait.SpeaksEast.Flavor" xml:space="preserve">
   <value>Picked up the language somewhere along the way. When the other side shouts, you know what they are about to do.</value>
   <comment>Picked up the language somewhere along the way. When the other side shouts, you know what they are about to do.</comment>
+</data>
+<data name="Trait.EastEngineer.Name" xml:space="preserve">
+  <value>Engineer</value>
+  <comment>Engineer</comment>
+</data>
+<data name="Trait.EastEngineer.Flavor" xml:space="preserve">
+  <value>Cuts it, drops it and moves on. Nothing he takes apart is worth carrying off.</value>
+  <comment>Cuts it, drops it and moves on. Nothing he takes apart is worth carrying off.</comment>
 </data>
 <data name="Language.East.Name" xml:space="preserve">
   <value>East</value>
@@ -80254,6 +81110,54 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Emote.Groan.JoinMarines" xml:space="preserve">
   <value>Join the marines they said...</value>
   <comment>Join the marines they said...</comment>
+</data>
+<data name="GhostEvent.VehicleCrash.Title" xml:space="preserve">
+  <value>VEHICLE CRASH</value>
+  <comment>VEHICLE CRASH</comment>
+</data>
+<data name="GhostEvent.JumpHint" xml:space="preserve">
+  <value>Click to be taken to the event</value>
+  <comment>Click to be taken to the event</comment>
+</data>
+<data name="GhostEvent.VehicleExplosion.Title" xml:space="preserve">
+  <value>VEHICLE EXPLOSION</value>
+  <comment>VEHICLE EXPLOSION</comment>
+</data>
+<data name="GhostEvent.ExplosivePlanted.Title" xml:space="preserve">
+  <value>EXPLOSIVE PLANTED</value>
+  <comment>EXPLOSIVE PLANTED</comment>
+</data>
+<data name="GhostEvent.AnomalyContained.Title" xml:space="preserve">
+  <value>ANOMALY CONTAINED</value>
+  <comment>ANOMALY CONTAINED</comment>
+</data>
+<data name="GhostEvent.ContainmentBreach.Title" xml:space="preserve">
+  <value>BREACH</value>
+  <comment>BREACH</comment>
+</data>
+<data name="GhostEvent.LastAlive.Title" xml:space="preserve">
+  <value>LAST ALIVE</value>
+  <comment>LAST ALIVE</comment>
+</data>
+<data name="GhostEvent.FollowHint" xml:space="preserve">
+  <value>Click to follow</value>
+  <comment>Click to follow</comment>
+</data>
+<data name="GhostEvent.AmmoCookOff.Title" xml:space="preserve">
+  <value>AMMO COOKOFF</value>
+  <comment>AMMO COOKOFF</comment>
+</data>
+<data name="GhostEvent.EnemySupplyDrop.Title" xml:space="preserve">
+  <value>ENEMY SUPPLY DROP</value>
+  <comment>ENEMY SUPPLY DROP</comment>
+</data>
+<data name="GhostEvent.FloorCollapse.Title" xml:space="preserve">
+  <value>FLOOR COLLAPSE</value>
+  <comment>FLOOR COLLAPSE</comment>
+</data>
+<data name="GhostEvent.VehicleFire.Title" xml:space="preserve">
+  <value>VEHICLE FIRE</value>
+  <comment>VEHICLE FIRE</comment>
 </data>
 <data name="SurgeryOp.InciseSkin.Display" xml:space="preserve">
   <value>Incise Skin</value>
@@ -80507,6 +81411,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>APC frame</value>
   <comment>APC frame</comment>
 </data>
+<data name="Construction.Metal.Hedgehog.DisplayName" xml:space="preserve">
+  <value>hedgehog</value>
+  <comment>hedgehog</comment>
+</data>
 <data name="Construction.SentryTripod.DisplayName" xml:space="preserve">
   <value>sentry tripod</value>
   <comment>sentry tripod</comment>
@@ -80523,6 +81431,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>vehicle weapon mount</value>
   <comment>vehicle weapon mount</comment>
 </data>
+<data name="Construction.Hardpoint.DisplayName" xml:space="preserve">
+  <value>AH-6J hardpoint</value>
+  <comment>AH-6J hardpoint</comment>
+</data>
 <data name="Reagent.Medical.Coagulex.Name" xml:space="preserve">
   <value>Coagulex</value>
   <comment>Coagulex</comment>
@@ -80536,8 +81448,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Osteracil</comment>
 </data>
 <data name="Reagent.Medical.Osteracil.Advice" xml:space="preserve">
-  <value>knits fractured bones while in the bloodstream, faster when splinted</value>
-  <comment>knits fractured bones while in the bloodstream, faster when splinted</comment>
+  <value>knits every fractured bone, faster when splinte</value>
+  <comment>knits every fractured bone, faster when splinte</comment>
 </data>
 <data name="Reagent.Medical.CoagulationFactor.Name" xml:space="preserve">
   <value>Coagulation Factor</value>
@@ -82871,6 +83783,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Pilot</value>
   <comment>Pilot</comment>
 </data>
+<data name="Loadout.Marine.Pilot.UH1H.Name" xml:space="preserve">
+  <value>UH-1H Pilot</value>
+  <comment>UH-1H Pilot</comment>
+</data>
+<data name="Loadout.Marine.Pilot.AH6J.Name" xml:space="preserve">
+  <value>AH-6J Pilot</value>
+  <comment>AH-6J Pilot</comment>
+</data>
 <data name="Loadout.Surgeon.Name" xml:space="preserve">
   <value>Surgeon</value>
   <comment>Surgeon</comment>
@@ -82967,9 +83887,17 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Flamer</value>
   <comment>Flamer</comment>
 </data>
+<data name="Loadout.East.Rifleman.Leader.Name" xml:space="preserve">
+  <value>East squad leader</value>
+  <comment>East squad leader</comment>
+</data>
 <data name="Loadout.East.Rifleman.Name" xml:space="preserve">
   <value>East rifleman</value>
   <comment>East rifleman</comment>
+</data>
+<data name="Loadout.East.Engineer.Name" xml:space="preserve">
+  <value>East engineer</value>
+  <comment>East engineer</comment>
 </data>
 <data name="Loadout.East.Corpsman.Name" xml:space="preserve">
   <value>East corpsman</value>
@@ -83118,6 +84046,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Modifier.PeoplesArmy.Tooltip" xml:space="preserve">
   <value>THE EAST PEOPLE'S ARMY ADVANCES ON THE COLONY // PLATOONS PATROL TO CONTACT // THE WAVE ASSAULT PHASE LASTS {WaveAssaultMinutes} MINUTES</value>
   <comment>THE EAST PEOPLE'S ARMY ADVANCES ON THE COLONY // PLATOONS PATROL TO CONTACT // THE WAVE ASSAULT PHASE LASTS {WaveAssaultMinutes} MINUTES</comment>
+</data>
+<data name="Modifier.Airdrop.Label" xml:space="preserve">
+  <value>AIRDROP</value>
+  <comment>AIRDROP</comment>
+</data>
+<data name="Modifier.Airdrop.Tooltip" xml:space="preserve">
+  <value>THE EAST DEPLOYS BY PARACHUTE // PLATOONS LAND ON HIDDEN GROUND AWAY FROM YOU // EXPECT CONTACT FROM ANY DIRECTION</value>
+  <comment>THE EAST DEPLOYS BY PARACHUTE // PLATOONS LAND ON HIDDEN GROUND AWAY FROM YOU // EXPECT CONTACT FROM ANY DIRECTION</comment>
 </data>
 <data name="Mode.Extended.DisplayName" xml:space="preserve">
   <value>Extended</value>
