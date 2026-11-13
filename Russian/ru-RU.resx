@@ -216,7 +216,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>QUIT GAME</comment>
 </data>
 <data name="MainMenu.QuitLine" xml:space="preserve">
-  <value>ВЫКЛЮЧИТЬСЯ И ВЫЙТИ НА РАБОЧИЙ СТОЛ?</value>
+  <value>ЗАВЕРШИТЬ РАБОТУ И ВЫЙТИ НА РАБОЧИЙ СТОЛ?</value>
   <comment>POWER DOWN AND EXIT TO DESKTOP?</comment>
 </data>
 <data name="MainMenu.QuitConfirmLabel" xml:space="preserve">
@@ -712,7 +712,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>{ACTOR} removes a splint from the {TARGET}.</comment>
 </data>
 <data name="Chat.Fracture" xml:space="preserve">
-  <value>{TARGET} ощущает отвратительный хруст!</value>
+  <value>{TARGET} чувствует, как хрустнула кость!</value>
   <comment>{TARGET} feels a sickening crack!</comment>
 </data>
 <data name="Chat.Scream" xml:space="preserve">
@@ -772,7 +772,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>{ACTOR} treats the {TARGET}.</comment>
 </data>
 <data name="Chat.Roll" xml:space="preserve">
-  <value>{ACTOR} закидывает себе на спину: {TARGET}.</value>
+  <value>{ACTOR} переворачивает на спину: {TARGET}.</value>
   <comment>{ACTOR} rolls the {TARGET} onto their back.</comment>
 </data>
 <data name="Chat.CarryStart" xml:space="preserve">
@@ -1088,7 +1088,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Nothing happens.</comment>
 </data>
 <data name="Chat.ElevatorCrush" xml:space="preserve">
-  <value>{TARGET} гибнет под лифтом!</value>
+  <value>Лифт придавливает: {TARGET}!</value>
   <comment>The {TARGET} is crushed by the elevator!</comment>
 </data>
 <data name="Chat.DoorCrush" xml:space="preserve">
@@ -1208,7 +1208,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>{ACTOR} finds nothing left to do, {OP} is abandoned.</comment>
 </data>
 <data name="Chat.HackOff" xml:space="preserve">
-  <value>{TARGET}: конечность отрублена грубо!</value>
+  <value>{TARGET}: конечность грубо отрублена!</value>
   <comment>{TARGET}'s limb is hacked off messily!</comment>
 </data>
 <data name="Chat.BulletImpact" xml:space="preserve">
@@ -1362,6 +1362,34 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Chat.KindNpc" xml:space="preserve">
   <value>NPC</value>
   <comment>NPC</comment>
+</data>
+<data name="Chat.TipLock" xml:space="preserve">
+  <value>Закрепление окна</value>
+  <comment>Toggle Lock</comment>
+</data>
+<data name="Chat.TipOpacity" xml:space="preserve">
+  <value>Прозрачность</value>
+  <comment>Toggle Opacity</comment>
+</data>
+<data name="Chat.TipClickThrough" xml:space="preserve">
+  <value>Клики сквозь окно</value>
+  <comment>Toggle Click-Through</comment>
+</data>
+<data name="Chat.TipPopout" xml:space="preserve">
+  <value>Отдельное окно</value>
+  <comment>Toggle Popout</comment>
+</data>
+<data name="Chat.TipClose" xml:space="preserve">
+  <value>Закрыть чат</value>
+  <comment>Close Chat</comment>
+</data>
+<data name="Chat.TipNewTab" xml:space="preserve">
+  <value>Новая вкладка</value>
+  <comment>New Tab</comment>
+</data>
+<data name="Chat.TipTabSetup" xml:space="preserve">
+  <value>Настройка вкладки</value>
+  <comment>Tab Setup</comment>
 </data>
 <data name="Chat.GhostMoans" xml:space="preserve">
   <value>{NAME} стонет: «{TEXT}»</value>
@@ -1702,6 +1730,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HoverVerbLabels.AmmoBoxFill" xml:space="preserve">
   <value>дозарядить магазин</value>
   <comment>refill magazine</comment>
+</data>
+<data name="HoverVerbLabels.AmmoBoxPour" xml:space="preserve">
+  <value>высыпать коробку в магазин</value>
+  <comment>pour box into magazine</comment>
 </data>
 <data name="HoverVerbLabels.AmmoBoxCollect" xml:space="preserve">
   <value>подобрать</value>
@@ -2311,6 +2343,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>взять </value>
   <comment>take </comment>
 </data>
+<data name="HandSlotClick.Label" xml:space="preserve">
+  <value>подписать </value>
+  <comment>label </comment>
+</data>
 <data name="HandSlotClick.Put" xml:space="preserve">
   <value>положить </value>
   <comment>put </comment>
@@ -2326,6 +2362,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="InteractClick.RoundsDoNotMatch" xml:space="preserve">
   <value>патроны не подходят</value>
   <comment>the rounds do not match</comment>
+</data>
+<data name="InteractClick.BoxDoesNotFit" xml:space="preserve">
+  <value>для всей коробки нет места</value>
+  <comment>no room for the whole box</comment>
 </data>
 <data name="InteractClick.MopIsDry" xml:space="preserve">
   <value>швабра сухая</value>
@@ -2375,10 +2415,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>сначала отстегнитесь</value>
   <comment>unbuckle first</comment>
 </data>
-<data name="PilotTrainingHint.Untrained" xml:space="preserve">
-  <value>нужна подготовка пилота</value>
-  <comment>requires pilot training</comment>
-</data>
 <data name="FireInputDriver.DualHandedHoldDeny" xml:space="preserve">
   <value>нужен двуручный хват</value>
   <comment>requires dual-handed hold</comment>
@@ -2404,6 +2440,14 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>this doorway takes no weapon mount</comment>
 </data>
 <data name="ConstructionPlacement.DoorwayRefusesMountHint" xml:space="preserve">
+  <value>постройте в другом проёме</value>
+  <comment>build it in another doorway</comment>
+</data>
+<data name="ConstructionPlacement.MountTaken" xml:space="preserve">
+  <value>в этом проёме уже стоит узел подвески</value>
+  <comment>a hardpoint already holds this doorway</comment>
+</data>
+<data name="ConstructionPlacement.MountTakenHint" xml:space="preserve">
   <value>постройте в другом проёме</value>
   <comment>build it in another doorway</comment>
 </data>
@@ -2454,6 +2498,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="BodyZoneNames.RightFoot" xml:space="preserve">
   <value>правая стопа</value>
   <comment>right foot</comment>
+</data>
+<data name="BodyZoneNames.Eyes" xml:space="preserve">
+  <value>глаза</value>
+  <comment>eyes</comment>
 </data>
 <data name="BodyZoneNames.Unknown" xml:space="preserve">
   <value>?</value>
@@ -2556,15 +2604,15 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>DAMP</comment>
 </data>
 <data name="Moodlet.Title.Damp.Wet" xml:space="preserve">
-  <value>ВЛАГА</value>
+  <value>МОКРАЯ ОДЕЖДА</value>
   <comment>WET</comment>
 </data>
 <data name="Moodlet.Title.Damp.Soaked" xml:space="preserve">
-  <value>ПРОМОКАНИЕ</value>
+  <value>ПРОМОКЛИ НАСКВОЗЬ</value>
   <comment>SOAKED</comment>
 </data>
 <data name="Moodlet.Title.Damp.Immersed" xml:space="preserve">
-  <value>ПОГРУЖЕНИЕ</value>
+  <value>В ВОДЕ</value>
   <comment>IMMERSED</comment>
 </data>
 <data name="Moodlet.Title.Bleeding" xml:space="preserve">
@@ -2572,7 +2620,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>BLEEDING</comment>
 </data>
 <data name="Moodlet.Title.Severed" xml:space="preserve">
-  <value>ОТСЕЧЕНИЕ</value>
+  <value>ПОТЕРЯ КОНЕЧНОСТИ</value>
   <comment>SEVERED</comment>
 </data>
 <data name="Moodlet.Title.Fracture" xml:space="preserve">
@@ -2588,15 +2636,15 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>SHRAPNEL</comment>
 </data>
 <data name="Moodlet.Title.Buckled" xml:space="preserve">
-  <value>ФИКСАЦИЯ</value>
+  <value>ПРИСТЁГНУТЫ</value>
   <comment>BUCKLED</comment>
 </data>
 <data name="Moodlet.Title.Burning" xml:space="preserve">
-  <value>ГОРЕНИЕ</value>
+  <value>В ОГНЕ</value>
   <comment>BURNING</comment>
 </data>
 <data name="Moodlet.Title.Pulling" xml:space="preserve">
-  <value>ТАСКАНИЕ</value>
+  <value>ПЕРЕТАСКИВАНИЕ</value>
   <comment>PULLING</comment>
 </data>
 <data name="Moodlet.Title.Carrying" xml:space="preserve">
@@ -2700,7 +2748,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>NAUSEOUS</comment>
 </data>
 <data name="Moodlet.Title.Gestation.Moving" xml:space="preserve">
-  <value>ШЕВЕЛЕНИЕ</value>
+  <value>ЧТО-ТО ШЕВЕЛИТСЯ</value>
   <comment>SOMETHING IS MOVING</comment>
 </data>
 <data name="Moodlet.Title.Scoped" xml:space="preserve">
@@ -2712,11 +2760,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>HOLDING BREATH</comment>
 </data>
 <data name="Moodlet.Title.Entangled" xml:space="preserve">
-  <value>ЗАПУТЫВАНИЕ</value>
+  <value>ЗАПУТАЛИСЬ</value>
   <comment>ENTANGLED</comment>
 </data>
 <data name="Moodlet.Title.Face" xml:space="preserve">
-  <value>ЛИЦЕХВАТ</value>
+  <value>ВЗГЛЯД ЗАКРЕПЛЁН</value>
   <comment>FACE</comment>
 </data>
 <data name="Moodlet.Title.Storm" xml:space="preserve">
@@ -3356,7 +3404,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>This is between your machine and the server: wifi, a download or a VPN are the usual causes</comment>
 </data>
 <data name="Moodlet.Hint.Face" xml:space="preserve">
-  <value>ALT и клавиша по направлению взгляда отпускает захват</value>
+  <value>ALT + клавиша движения в сторону взгляда — открепить</value>
   <comment>ALT plus the movement key you face releases the hold</comment>
 </data>
 <data name="Moodlet.Hint.ChestOpen" xml:space="preserve">
@@ -4199,6 +4247,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ПНВ ВЫКЛ</value>
   <comment>NVG OFF</comment>
 </data>
+<data name="GunHud.Focus.On" xml:space="preserve">
+  <value>ФОКУС ВКЛ</value>
+  <comment>FOCUS ON</comment>
+</data>
+<data name="GunHud.Focus.Off" xml:space="preserve">
+  <value>ФОКУС ВЫКЛ</value>
+  <comment>FOCUS OFF</comment>
+</data>
 <data name="GunHud.UniqueAction.Pump" xml:space="preserve">
   <value>ПОМПА</value>
   <comment>PUMP</comment>
@@ -4220,7 +4276,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>TOGGLES</comment>
 </data>
 <data name="ToggleUi.Chip.Climb" xml:space="preserve">
-  <value>ЛАЗАНИЕ</value>
+  <value>ЛАЗАТЬ</value>
   <comment>CLIMB</comment>
 </data>
 <data name="ToggleUi.Chip.Throw" xml:space="preserve">
@@ -4258,6 +4314,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="PaperDollUi.Title" xml:space="preserve">
   <value>ЗОНА ЦЕЛИ</value>
   <comment>AIM ZONE</comment>
+</data>
+<data name="PaperDollUi.AimVerb" xml:space="preserve">
+  <value>прицелиться</value>
+  <comment>aim</comment>
+</data>
+<data name="PaperDollUi.AimAgain" xml:space="preserve">
+  <value> повторным нажатием</value>
+  <comment> again</comment>
 </data>
 <data name="TransfusionModeChip.Draw" xml:space="preserve">
   <value>НАБРАТЬ</value>
@@ -4487,6 +4551,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value> к разбросу</value>
   <comment> Scatter</comment>
 </data>
+<data name="TraitChips.Unit.ScatterDegrees" xml:space="preserve">
+  <value>° к разбросу</value>
+  <comment> Degrees of scatter</comment>
+</data>
 <data name="TraitChips.Unit.WieldTime" xml:space="preserve">
   <value> ко времени взятия в обе руки</value>
   <comment> Wield time</comment>
@@ -4623,6 +4691,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value> к урону пулями</value>
   <comment> Bullet damage</comment>
 </data>
+<data name="TraitChips.Unit.FriendlyFireDamage" xml:space="preserve">
+  <value> к урону по своим</value>
+  <comment> Damage to own side</comment>
+</data>
 <data name="TraitChips.Unit.MovementSpeedWhileWet" xml:space="preserve">
   <value> к скорости при промокании</value>
   <comment> Movement speed while wet</comment>
@@ -4695,6 +4767,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value> Вы взваливаете лежащего себе на спину и двигаетесь в полную скорость</value>
   <comment> Loads a lying person onto your back and moves at full pace</comment>
 </data>
+<data name="TraitChips.Marker.MineDisarmToken" xml:space="preserve">
+  <value>РАЗМИНИРОВАНИЕ</value>
+  <comment>MINE DISARM</comment>
+</data>
+<data name="TraitChips.Marker.MineDisarmUnit" xml:space="preserve">
+  <value> Снимает установленную мину гаечным ключом</value>
+  <comment> Lifts a placed land mine with a wrench</comment>
+</data>
 <data name="TraitChips.Marker.Multilingual" xml:space="preserve">
   <value>ПОЛИГЛОТ</value>
   <comment>MULTILINGUAL</comment>
@@ -4702,6 +4782,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="TraitChips.Marker.SpeaksUnit" xml:space="preserve">
   <value> Понимает {LANGUAGE} язык на слух</value>
   <comment> Understands {LANGUAGE} when spoken</comment>
+</data>
+<data name="TraitChips.Marker.NoSalvageToken" xml:space="preserve">
+  <value>БЕЗ МАТЕРИАЛОВ</value>
+  <comment>NO SALVAGE</comment>
+</data>
+<data name="TraitChips.Marker.NoSalvageUnit" xml:space="preserve">
+  <value> Разбирает постройки, но ничего с них не получает</value>
+  <comment> Takes structures apart and keeps nothing of what comes off</comment>
 </data>
 <data name="ContextMenu.Row.Follow" xml:space="preserve">
   <value>следить</value>
@@ -5130,6 +5218,26 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HealthScan.EmbeddedObjectsLine" xml:space="preserve">
   <value>ВНЕДРЁННЫЕ ПРЕДМЕТЫ ({COUNT}) - ПАЦИЕНТУ НЕЛЬЗЯ ДВИГАТЬСЯ</value>
   <comment>EMBEDDED OBJECTS ({COUNT}) - PATIENT SHOULD NOT MOVE</comment>
+</data>
+<data name="HealthScan.FractureLabel" xml:space="preserve">
+  <value>ПЕРЕЛОМ</value>
+  <comment>FRACTURE</comment>
+</data>
+<data name="HealthScan.SplintAdministerLabel" xml:space="preserve">
+  <value>НАЛОЖИТЬ ШИНУ, ВВЕСТИ: </value>
+  <comment>SPLINT, ADMINISTER: </comment>
+</data>
+<data name="HealthScan.FractureDoseLine" xml:space="preserve">
+  <value>{UNITS} ЕД. // {MINUTES} МИН</value>
+  <comment>{UNITS} U // {MINUTES} MIN</comment>
+</data>
+<data name="HealthScan.FractureKnittingLine" xml:space="preserve">
+  <value>СРАСТАЕТСЯ // ДО {MINUTES} МИН</value>
+  <comment>KNITTING // UP TO {MINUTES} MIN</comment>
+</data>
+<data name="HealthScan.FractureSplintKnittingLine" xml:space="preserve">
+  <value>НАЛОЖИТЬ ШИНУ // СРАСТАЕТСЯ, ДО {MINUTES} МИН</value>
+  <comment>SPLINT // KNITTING, UP TO {MINUTES} MIN</comment>
 </data>
 <data name="HealthScan.ChemicalContentsHeader" xml:space="preserve">
   <value>ХИМИЧЕСКИЙ СОСТАВ - {WHOLE},{FRAC} ЕД.</value>
@@ -7428,7 +7536,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>TILL</comment>
 </data>
 <data name="Atm.Title" xml:space="preserve">
-  <value>Банкомат «Вейланд-Ютани»</value>
+  <value>Банкомат Weyland-Yutani</value>
   <comment>Weyland-Yutani ATM</comment>
 </data>
 <data name="Atm.HeaderLine" xml:space="preserve">
@@ -7672,11 +7780,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>TONEMAPPER</comment>
 </data>
 <data name="Settings.ExposureLabel" xml:space="preserve">
-  <value>ЭКСПОЗИЦИЯ ТОНОВ</value>
+  <value>ЭКСПОЗИЦИЯ</value>
   <comment>TONEMAP EXPOSURE</comment>
 </data>
 <data name="Settings.GammaLabel" xml:space="preserve">
-  <value>ГАММА ТОНОВ</value>
+  <value>ГАММА</value>
   <comment>TONEMAP GAMMA</comment>
 </data>
 <data name="Settings.HdrLabel" xml:space="preserve">
@@ -7819,6 +7927,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>УПРАВЛЕНИЕ</value>
   <comment>CONTROLS</comment>
 </data>
+<data name="Settings.Tab.Gameplay" xml:space="preserve">
+  <value>ИГРОВОЙ ПРОЦЕСС</value>
+  <comment>GAMEPLAY</comment>
+</data>
 <data name="Settings.Tab.Graphics" xml:space="preserve">
   <value>ГРАФИКА</value>
   <comment>GRAPHICS</comment>
@@ -7830,6 +7942,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Settings.Tab.Interface" xml:space="preserve">
   <value>ИНТЕРФЕЙС</value>
   <comment>INTERFACE</comment>
+</data>
+<data name="Settings.VehicleLookAheadLabel" xml:space="preserve">
+  <value>КАМЕРА ПО ХОДУ ТЕХНИКИ</value>
+  <comment>VEHICLE LOOK-AHEAD</comment>
 </data>
 <data name="Settings.ChatScaleLabel" xml:space="preserve">
   <value>МАСШТАБ ЧАТА</value>
@@ -8318,6 +8434,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="CrtClassListPanel.BranchMilitary" xml:space="preserve">
   <value>ВОЕННЫЕ</value>
   <comment>MILITARY</comment>
+</data>
+<data name="CrtClassListPanel.BranchAviation" xml:space="preserve">
+  <value>АВИАЦИЯ</value>
+  <comment>AVIATION</comment>
 </data>
 <data name="CrtChatPanel.Title" xml:space="preserve">
   <value>ООС-КАНАЛ</value>
@@ -9003,6 +9123,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>// КАРТА //</value>
   <comment>// MAP //</comment>
 </data>
+<data name="EorScreen.VoteSubModeApproval" xml:space="preserve">
+  <value>// РЕЖИМ ИГРЫ // ОТМЕТЬТЕ ВСЕ РЕЖИМЫ, В КОТОРЫЕ ГОТОВЫ ИГРАТЬ //</value>
+  <comment>// GAME MODE // SELECT EVERY MODE YOU WOULD PLAY //</comment>
+</data>
+<data name="EorScreen.VoteSubMapApproval" xml:space="preserve">
+  <value>// КАРТА // ОТМЕТЬТЕ ВСЕ КАРТЫ, НА КОТОРЫХ ГОТОВЫ ИГРАТЬ //</value>
+  <comment>// MAP // SELECT EVERY MAP YOU WOULD PLAY //</comment>
+</data>
 <data name="EorScreen.VoteClosesLine" xml:space="preserve">
   <value>ГОЛОСОВАНИЕ ЗАВЕРШИТСЯ ЧЕРЕЗ {SECONDS} С</value>
   <comment>VOTING CLOSES IN {SECONDS}S</comment>
@@ -9136,7 +9264,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>XENOMORPHS KILLED</comment>
 </data>
 <data name="EorScreen.StatHugsTaken" xml:space="preserve">
-  <value>ПОЙМАНО ЛИЦЕХВАТОВ</value>
+  <value>ЛИЦЕХВАТОВ НА ЛИЦЕ</value>
   <comment>FACEHUGS TAKEN</comment>
 </data>
 <data name="EorScreen.StatCadesBuilt" xml:space="preserve">
@@ -9250,6 +9378,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EorScreen.CauseGibbed" xml:space="preserve">
   <value>РАЗРЫВ НА КУСКИ</value>
   <comment>GIBBED</comment>
+</data>
+<data name="EorScreen.CauseSuffocated" xml:space="preserve">
+  <value>УДУШЬЕ</value>
+  <comment>SUFFOCATED</comment>
 </data>
 <data name="EorScreen.CauseOther" xml:space="preserve">
   <value>ДРУГОЕ</value>
@@ -9736,7 +9868,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>NEEDS</comment>
 </data>
 <data name="Codex.Row.Health" xml:space="preserve">
-  <value>ЗДОРОВЬЕ</value>
+  <value>ПРОЧНОСТЬ</value>
   <comment>HEALTH</comment>
 </data>
 <data name="Codex.Row.Size" xml:space="preserve">
@@ -9892,7 +10024,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>COVER</comment>
 </data>
 <data name="Codex.Climb" xml:space="preserve">
-  <value>ПЕРЕЛЕЗ</value>
+  <value>ПЕРЕЛЕЗТЬ</value>
   <comment>CLIMB</comment>
 </data>
 <data name="Codex.Sev.Minor" xml:space="preserve">
@@ -10552,7 +10684,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Marks an explosive compound. The bang itself belongs to the reaction that makes it.</comment>
 </data>
 <data name="Codex.Property.Rule.Fueling" xml:space="preserve">
-  <value>Горит как топливо в сварочном аппарате или баке огнемёта.</value>
+  <value>Горит как топливо в сварочном аппарате или баллоне огнемёта.</value>
   <comment>Burns as fuel in a welder or a flamer tank.</comment>
 </data>
 <data name="Codex.Property.Rule.Oxidizing" xml:space="preserve">
@@ -11855,6 +11987,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>станковое оружие держит дверь открытой</value>
   <comment>a weapon mount holds the door open</comment>
 </data>
+<data name="PilotKeys.SafeRefused" xml:space="preserve">
+  <value>оружие на предохранителе</value>
+  <comment>weapons are safe</comment>
+</data>
 <data name="PilotKeys.AbortToast" xml:space="preserve">
   <value>запуск прерван</value>
   <comment>start aborted</comment>
@@ -12387,6 +12523,78 @@ The file is looked up beside this language file first, then under the game's Con
   <value>{FEET} ФТ</value>
   <comment>{FEET} FT</comment>
 </data>
+<data name="VehicleConsole.HardpointsSection" xml:space="preserve">
+  <value>УЗЛЫ ПОДВЕСКИ</value>
+  <comment>HARDPOINTS</comment>
+</data>
+<data name="VehicleConsole.MasterKey" xml:space="preserve">
+  <value>ВООРУЖЕНИЕ</value>
+  <comment>MASTER</comment>
+</data>
+<data name="VehicleConsole.SafeLabel" xml:space="preserve">
+  <value>ПРЕДОХР.</value>
+  <comment>SAFE</comment>
+</data>
+<data name="VehicleConsole.ArmedLabel" xml:space="preserve">
+  <value>ВЗВЕДЕНО</value>
+  <comment>ARMED</comment>
+</data>
+<data name="VehicleConsole.ModeKey" xml:space="preserve">
+  <value>РЕЖИМ</value>
+  <comment>MODE</comment>
+</data>
+<data name="VehicleConsole.DualLabel" xml:space="preserve">
+  <value>ПАРНО</value>
+  <comment>DUAL</comment>
+</data>
+<data name="VehicleConsole.AlternateLabel" xml:space="preserve">
+  <value>ПООЧЕРЁДНО</value>
+  <comment>ALTERNATE</comment>
+</data>
+<data name="VehicleConsole.PortHardpointKey" xml:space="preserve">
+  <value>ЛБ</value>
+  <comment>PORT</comment>
+</data>
+<data name="VehicleConsole.StarboardHardpointKey" xml:space="preserve">
+  <value>ПБ</value>
+  <comment>STBD</comment>
+</data>
+<data name="VehicleConsole.NoWeapon" xml:space="preserve">
+  <value>НЕТ ОРУЖИЯ</value>
+  <comment>NO WEAPON</comment>
+</data>
+<data name="VehicleConsole.RoundsLine" xml:space="preserve">
+  <value>{COUNT} ПАТ.</value>
+  <comment>{COUNT} RDS</comment>
+</data>
+<data name="VehicleConsole.RocketsLine" xml:space="preserve">
+  <value>{COUNT} РАК.</value>
+  <comment>{COUNT} RKT</comment>
+</data>
+<data name="VehicleConsole.EmptyWord" xml:space="preserve">
+  <value>ПУСТО</value>
+  <comment>EMPTY</comment>
+</data>
+<data name="VehicleConsole.KeyHint" xml:space="preserve">
+  <value>({KEY})</value>
+  <comment>({KEY})</comment>
+</data>
+<data name="VehicleConsole.HardpointsHint" xml:space="preserve">
+  <value>ОГОНЬ ({FIRE}) И ВЗВЕДЕНИЕ ({ARM}) С МЕСТА ПИЛОТА // КАЖДЫЙ ВЗВЕДЁННЫЙ УЗЕЛ ОТМЕЧЕН НА ЗЕМЛЕ // НА РАЗВОРОТЕ ОГОНЬ НЕ ВЕДЁТСЯ</value>
+  <comment>FIRE ({FIRE}) AND ARM ({ARM}) FROM THE PILOT SEAT // EVERY ARMED POINT SHOWN ON THE GROUND // NO FIRE THROUGH A TURN</comment>
+</data>
+<data name="VehicleConsole.SafeBanner" xml:space="preserve">
+  <value>// ОРУЖИЕ НА ПРЕДОХРАНИТЕЛЕ //</value>
+  <comment>// WEAPONS SAFE //</comment>
+</data>
+<data name="VehicleConsole.HardpointModeControl" xml:space="preserve">
+  <value>РЕЖИМ ПОДВЕСКИ</value>
+  <comment>HARDPOINT MODE</comment>
+</data>
+<data name="VehicleConsole.HardpointSwitchControl" xml:space="preserve">
+  <value>ПОДВЕСКА ВКЛ/ВЫКЛ</value>
+  <comment>HARDPOINT ON/OFF</comment>
+</data>
 <data name="NewPlayer.Title" xml:space="preserve">
   <value>НОВИЧОК</value>
   <comment>NEW PLAYER</comment>
@@ -12448,8 +12656,32 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>CORPSMAN</comment>
 </data>
 <data name="Crown.Corpsman.Flavor" xml:space="preserve">
-  <value>Не даёт отделению погибнуть. Убейте его первым.</value>
-  <comment>Keeps his squad alive. Drop him first.</comment>
+  <value>Лечит раненых. Стрелять в медиков — военное преступление.</value>
+  <comment>Treats the wounded. Shooting them is a warcrime.</comment>
+</data>
+<data name="Crown.Sergeant.Title" xml:space="preserve">
+  <value>КОМАНДИР ОТДЕЛЕНИЯ</value>
+  <comment>SQUAD LEADER</comment>
+</data>
+<data name="Crown.Sergeant.Flavor" xml:space="preserve">
+  <value>Командует вражеским отделением, всегда носит гранату.</value>
+  <comment>Runs a hostile squad and always carries a grenade.</comment>
+</data>
+<data name="Crown.Sniper.Title" xml:space="preserve">
+  <value>СНАЙПЕР</value>
+  <comment>SNIPER</comment>
+</data>
+<data name="Crown.Sniper.Flavor" xml:space="preserve">
+  <value>Бьёт с дальней дистанции. Уйдите из поля зрения.</value>
+  <comment>Picks targets from range. Break line of sight.</comment>
+</data>
+<data name="Crown.Engineer.Title" xml:space="preserve">
+  <value>ИНЖЕНЕР</value>
+  <comment>ENGINEER</comment>
+</data>
+<data name="Crown.Engineer.Flavor" xml:space="preserve">
+  <value>Сапёр. Пробивает проходы, строит и сносит стены.</value>
+  <comment>A sapper. Breaches, builds and brings walls down.</comment>
 </data>
 <data name="HealthBar.Light.Title" xml:space="preserve">
   <value>ЛЁГКОЕ РАНЕНИЕ</value>
@@ -12514,6 +12746,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="ContentWarning.RealWorld" xml:space="preserve">
   <value>В реальном мире азартные игры, наркотики, алкоголь и война ломают жизни.</value>
   <comment>In the real world, gambling, drugs, alcohol, and combat destroy lives.</comment>
+</data>
+<data name="GhostEventChips.ClickToView" xml:space="preserve">
+  <value>НАЖМИТЕ ДЛЯ ПРОСМОТРА</value>
+  <comment>CLICK TO VIEW</comment>
 </data>
 <data name="Def.Crate.DisplayName" xml:space="preserve">
   <value>ящик</value>
@@ -12622,6 +12858,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.TestOpenCade.DisplayName" xml:space="preserve">
   <value>тест. откр. баррикада</value>
   <comment>test open cade</comment>
+</data>
+<data name="Def.TestBuckleBed.DisplayName" xml:space="preserve">
+  <value>тест. кровать с ремнями</value>
+  <comment>test buckle bed</comment>
+</data>
+<data name="Def.TestBuckleBed.Up.DisplayName" xml:space="preserve">
+  <value>тест. кровать с ремнями</value>
+  <comment>test buckle bed</comment>
 </data>
 <data name="Def.TestLinkedCade.DisplayName" xml:space="preserve">
   <value>тест. связ. баррикада</value>
@@ -14755,6 +14999,34 @@ The file is looked up beside this language file first, then under the game's Con
   <value>тестовая консоль шины</value>
   <comment>test bus console</comment>
 </data>
+<data name="Def.Test.Parachute.Descending.Ground.DisplayName" xml:space="preserve">
+  <value>тест. ящик: снижается</value>
+  <comment>test descending crate</comment>
+</data>
+<data name="Def.Test.Arrival.NoGround.DisplayName" xml:space="preserve">
+  <value>тест. прибытие</value>
+  <comment>test arrival</comment>
+</data>
+<data name="Def.Test.Arrival.NoGround.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Test.Arrival.NoGround.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Test.Arrival.Ground.DisplayName" xml:space="preserve">
+  <value>тест. прибытие</value>
+  <comment>test arrival</comment>
+</data>
+<data name="Def.Test.Arrival.Ground.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Test.Arrival.Ground.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
 <data name="Def.Character.Human.DisplayName" xml:space="preserve">
   <value>человек</value>
   <comment>Human</comment>
@@ -16228,11 +16500,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Corpse - Civilian - Weymart Employee</comment>
 </data>
 <data name="Def.Obj.Effect.Landmark.Corpsespawner.HybrisaGoon.DisplayName" xml:space="preserve">
-  <value>сотрудник СБ «Вейланд-Ютани»</value>
+  <value>сотрудник СБ Weyland-Yutani</value>
   <comment>Weyland-Yutani Corporate Security Officer</comment>
 </data>
 <data name="Def.Obj.Effect.Landmark.Corpsespawner.HybrisaGoon.Lead.DisplayName" xml:space="preserve">
-  <value>старший сотрудник СБ «Вейланд-Ютани»</value>
+  <value>старший сотрудник СБ Weyland-Yutani</value>
   <comment>Weyland-Yutani Corporate Security Lead</comment>
 </data>
 <data name="Def.Obj.Effect.Landmark.Corpsespawner.Miner.DisplayName" xml:space="preserve">
@@ -16240,7 +16512,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Shaft Miner</comment>
 </data>
 <data name="Def.Obj.Effect.Landmark.Corpsespawner.Pmc.DisplayName" xml:space="preserve">
-  <value>ЧВК «Вейланд-Ютани» (стандарт)</value>
+  <value>ЧВК Weyland-Yutani (стандарт)</value>
   <comment>Weyland-Yutani PMC (Standard)</comment>
 </data>
 <data name="Def.Obj.Effect.Landmark.Corpsespawner.Prisoner.DisplayName" xml:space="preserve">
@@ -17652,11 +17924,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Generic Cargo Container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Blackwyleft.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Blackwyright.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Blueleft.DisplayName" xml:space="preserve">
@@ -17712,11 +17984,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Greywyleft.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Greywyright.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.KellandLeft.DisplayName" xml:space="preserve">
@@ -17728,11 +18000,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Kelland Mining Company cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Lightgreywyleft.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Lightgreywyright.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani cargo container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Hybrisa.Containersextended.Medicalleft.DisplayName" xml:space="preserve">
@@ -18008,15 +18280,15 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Watatsumi Cargo Container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Wy.Left.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani Cargo Container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Wy.Mid.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani Cargo Container</comment>
 </data>
 <data name="Def.Obj.Structure.CargoContainer.Wy.Right.DisplayName" xml:space="preserve">
-  <value>грузовой контейнер «Вейланд-Ютани»</value>
+  <value>грузовой контейнер Weyland-Yutani</value>
   <comment>Weyland-Yutani Cargo Container</comment>
 </data>
 <data name="Def.Obj.Structure.Catwalk.Prison.DisplayName" xml:space="preserve">
@@ -22116,7 +22388,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Hybrisa Prospera - Emergency Medical Landing Zone one sign</comment>
 </data>
 <data name="Def.Obj.Structure.LzSign.HybrisaSign.Mining.DisplayName" xml:space="preserve">
-  <value>табличка Hybrisa Prospera - «Вейланд-Ютани» Kelland Mining - зона высадки 2</value>
+  <value>табличка Hybrisa Prospera - Weyland-Yutani Kelland Mining - зона высадки 2</value>
   <comment>Hybrisa Prospera - Weyland-Yutani Kelland Mining - Landing Zone two sign</comment>
 </data>
 <data name="Def.Obj.Structure.LzSign.LasalleBionationalSign.DisplayName" xml:space="preserve">
@@ -22472,11 +22744,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>landing zone camera</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Camera.WeyYu.DisplayName" xml:space="preserve">
-  <value>камера «Вейланд-Ютани»</value>
+  <value>камера Weyland-Yutani</value>
   <comment>weyland-yutani camera</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Camera.WeyYu.Unbreakable.LiaisonCell.DisplayName" xml:space="preserve">
-  <value>укреплённая камера «Вейланд-Ютани»</value>
+  <value>укреплённая камера Weyland-Yutani</value>
   <comment>reinforced weyland-yutani camera</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.CellCharger.DisplayName" xml:space="preserve">
@@ -27436,11 +27708,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>General Purpose Fax Machine</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Faxmachine.Corporate.DisplayName" xml:space="preserve">
-  <value>Корп. факс «Вейланд-Ютани»</value>
+  <value>Корп. факс Weyland-Yutani</value>
   <comment>W-Y Corporate Fax Machine</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Faxmachine.Corporate.Liaison.Almayer.DisplayName" xml:space="preserve">
-  <value>Корп. факс «Вейланд-Ютани»</value>
+  <value>Корп. факс Weyland-Yutani</value>
   <comment>W-Y Corporate Fax Machine</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Faxmachine.Uscm.DisplayName" xml:space="preserve">
@@ -28552,7 +28824,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Circuit Imprinter</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.RND.OrganicAnalyzer.DisplayName" xml:space="preserve">
-  <value>Органический анализатор «Вейланд-Ютани»(TM)</value>
+  <value>Органический анализатор Weyland-Yutani(TM)</value>
   <comment>Weyland-Yutani Brand Organic Analyzer(TM)</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.RND.Protolathe.DisplayName" xml:space="preserve">
@@ -28828,7 +29100,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Koorlander brand cigarette machine</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Vending.Cigarette.Wy.DisplayName" xml:space="preserve">
-  <value>сигаретный автомат «Вейланд-Ютани»</value>
+  <value>сигаретный автомат W-Y</value>
   <comment>Weyland Yutani brand cigarette machine</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Vending.Cigarette.Wy.Verb.Toggle" xml:space="preserve">
@@ -28836,7 +29108,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Vending.Cigarette.Wy.Off.DisplayName" xml:space="preserve">
-  <value>сигаретный автомат «Вейланд-Ютани»</value>
+  <value>сигаретный автомат W-Y</value>
   <comment>Weyland Yutani brand cigarette machine</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Vending.Cigarette.Wy.Off.Verb.Toggle" xml:space="preserve">
@@ -30284,7 +30556,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>industrial smelting furnace</comment>
 </data>
 <data name="Def.Obj.Structure.Prop.Hybrisa.Airport.Deadpilot1.DisplayName" xml:space="preserve">
-  <value>обезглавленный пилот «Вейланд-Ютани»</value>
+  <value>обезглавленный пилот Weyland-Yutani</value>
   <comment>decapitated Weyland-Yutani Pilot</comment>
 </data>
 <data name="Def.Obj.Structure.Prop.Hybrisa.Airport.Dropshipenginedamage.DisplayName" xml:space="preserve">
@@ -30524,7 +30796,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>cabinet</comment>
 </data>
 <data name="Def.Obj.Structure.Prop.Hybrisa.Misc.Commandosuitemptyprop.DisplayName" xml:space="preserve">
-  <value>витрина «Вейланд-Ютани» M5X Apesuit</value>
+  <value>витрина Weyland-Yutani M5X Apesuit</value>
   <comment>Weyland-Yutani 'M5X Apesuit' showcase</comment>
 </data>
 <data name="Def.Obj.Structure.Prop.Hybrisa.Misc.Concretestatue.DisplayName" xml:space="preserve">
@@ -30868,11 +31140,11 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>heavy-loader truck</comment>
 </data>
 <data name="Def.Obj.Structure.Prop.Hybrisa.Vehicles.ArmoredTruck.WYBlack.DisplayName" xml:space="preserve">
-  <value>охранный грузовик «Вейланд-Ютани»</value>
+  <value>охранный грузовик Weyland-Yutani</value>
   <comment>Weyland-Yutani security truck</comment>
 </data>
 <data name="Def.Obj.Structure.Prop.Hybrisa.Vehicles.ArmoredTruck.WYWhite.DisplayName" xml:space="preserve">
-  <value>охранный грузовик «Вейланд-Ютани»</value>
+  <value>охранный грузовик Weyland-Yutani</value>
   <comment>Weyland-Yutani security truck</comment>
 </data>
 <data name="Def.Obj.Structure.Prop.Hybrisa.Vehicles.ArmoredTruck.White.DisplayName" xml:space="preserve">
@@ -39164,7 +39436,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Cmcap.WyCap.DisplayName" xml:space="preserve">
-  <value>кепка «Вейланд-Ютани»</value>
+  <value>кепка Weyland-Yutani</value>
   <comment>Weyland-Yutani cap</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Cmcap.WyCap.Verb.PickUp" xml:space="preserve">
@@ -40596,7 +40868,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Hybrisa.WyPoCap.DisplayName" xml:space="preserve">
-  <value>кепка пилота «Вейланд-Ютани»</value>
+  <value>кепка пилота Weyland-Yutani</value>
   <comment>Weyland-Yutani Pilot cap</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Head.Hybrisa.WyPoCap.Verb.PickUp" xml:space="preserve">
@@ -41692,7 +41964,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.DisplayName" xml:space="preserve">
-  <value>рабочая форма инженера «Вейланд-Ютани»</value>
+  <value>рабочая форма инженера Weyland-Yutani</value>
   <comment>Weyland-Yutani engineer utility uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.Verb.PickUp" xml:space="preserve">
@@ -41700,7 +41972,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.Open.DisplayName" xml:space="preserve">
-  <value>рабочая форма инженера «Вейланд-Ютани»</value>
+  <value>рабочая форма инженера Weyland-Yutani</value>
   <comment>Weyland-Yutani engineer utility uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.Open.Verb.PickUp" xml:space="preserve">
@@ -41708,7 +41980,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.Alt.DisplayName" xml:space="preserve">
-  <value>рабочая форма инженера «Вейланд-Ютани»</value>
+  <value>рабочая форма инженера Weyland-Yutani</value>
   <comment>Weyland-Yutani engineer utility uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.Alt.Verb.PickUp" xml:space="preserve">
@@ -41716,7 +41988,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.Alt.Open.DisplayName" xml:space="preserve">
-  <value>рабочая форма инженера «Вейланд-Ютани»</value>
+  <value>рабочая форма инженера Weyland-Yutani</value>
   <comment>Weyland-Yutani engineer utility uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Hybrisa.EngineeringUtilityOversuit.Alt.Open.Verb.PickUp" xml:space="preserve">
@@ -46724,7 +46996,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Hybrisa.EngineeringUtility.DisplayName" xml:space="preserve">
-  <value>рабочая форма инженера «Вейланд-Ютани»</value>
+  <value>рабочая форма инженера Weyland-Yutani</value>
   <comment>Weyland-Yutani engineering utility uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Hybrisa.EngineeringUtility.Verb.PickUp" xml:space="preserve">
@@ -46732,7 +47004,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Hybrisa.EngineeringUtility.Alt.DisplayName" xml:space="preserve">
-  <value>рабочая форма инженера «Вейланд-Ютани»</value>
+  <value>рабочая форма инженера Weyland-Yutani</value>
   <comment>Weyland-Yutani engineering utility uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Hybrisa.EngineeringUtility.Alt.Verb.PickUp" xml:space="preserve">
@@ -47028,7 +47300,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.Pmc.Corporate.Hybrisa.DisplayName" xml:space="preserve">
-  <value>форма СБ «Вейланд-Ютани»</value>
+  <value>форма СБ Weyland-Yutani</value>
   <comment>WY corporate security uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.Pmc.Corporate.Hybrisa.Verb.PickUp" xml:space="preserve">
@@ -47036,7 +47308,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.Pmc.Corporate.Hybrisa.Lead.DisplayName" xml:space="preserve">
-  <value>форма СБ «Вейланд-Ютани»</value>
+  <value>форма СБ Weyland-Yutani</value>
   <comment>WY corporate security uniform</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Under.Marine.Veteran.Pmc.Corporate.Hybrisa.Lead.Verb.PickUp" xml:space="preserve">
@@ -47940,7 +48212,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.WY.DisplayName" xml:space="preserve">
-  <value>корпоративный ключ шифрования «Вейланд-Ютани»</value>
+  <value>корпоративный ключ шифрования Weyland-Yutani</value>
   <comment>Weyland-Yutani Corporate encryption key</comment>
 </data>
 <data name="Def.Obj.Item.Device.Encryptionkey.WY.Verb.PickUp" xml:space="preserve">
@@ -48311,6 +48583,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Verb.Toggle" xml:space="preserve">
+  <value>опустить</value>
+  <comment>flip down</comment>
+</data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Down.DisplayName" xml:space="preserve">
+  <value>базовая медоптика</value>
+  <comment>basic medical optic</comment>
+</data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Down.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.HelmetVisor.Medical.Down.Verb.Toggle" xml:space="preserve">
+  <value>поднять</value>
+  <comment>push up</comment>
+</data>
 <data name="Def.Obj.Item.Device.HelmetVisor.Medical.Advanced.DisplayName" xml:space="preserve">
   <value>улучшенная медоптика</value>
   <comment>advanced medical optic</comment>
@@ -48472,7 +48760,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Device.PortableVendor.Corporate.DisplayName" xml:space="preserve">
-  <value>портативный раздатчик «Вейланд-Ютани»</value>
+  <value>портативный раздатчик Weyland-Yutani</value>
   <comment>Weyland-Yutani Automated Storage Briefcase</comment>
 </data>
 <data name="Def.Obj.Item.Device.PortableVendor.Corporate.Verb.PickUp" xml:space="preserve">
@@ -48900,10 +49188,26 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.DisplayName" xml:space="preserve">
-  <value>дымовая граната M40 HSDP</value>
-  <comment>M40 HSDP smoke grenade</comment>
+  <value>маскирующая дымовая граната M40</value>
+  <comment>M40 screening smoke grenade</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Armed.DisplayName" xml:space="preserve">
+  <value>маскирующая дымовая граната M40</value>
+  <comment>M40 screening smoke grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Armed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Venting.DisplayName" xml:space="preserve">
+  <value>маскирующая дымовая граната M40</value>
+  <comment>M40 screening smoke grenade</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Venting.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -50288,7 +50592,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Paper.PunchCard.DisplayName" xml:space="preserve">
-  <value>перфокарта «Вейланд-Ютани»</value>
+  <value>перфокарта Weyland-Yutani</value>
   <comment>Weyland-Yutani punch card</comment>
 </data>
 <data name="Def.Obj.Item.Paper.PunchCard.Verb.PickUp" xml:space="preserve">
@@ -50296,7 +50600,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Paper.PunchCard.Instructional.DisplayName" xml:space="preserve">
-  <value>перфокарта «Вейланд-Ютани»</value>
+  <value>перфокарта Weyland-Yutani</value>
   <comment>Weyland-Yutani punch card</comment>
 </data>
 <data name="Def.Obj.Item.Paper.PunchCard.Instructional.Verb.PickUp" xml:space="preserve">
@@ -51404,7 +51708,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Bottle.Sake.DisplayName" xml:space="preserve">
-  <value>саке «Вейланд-Ютани»</value>
+  <value>саке Weyland-Yutani</value>
   <comment>Weyland-Yutani Sake</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Bottle.Sake.Verb.PickUp" xml:space="preserve">
@@ -51452,7 +51756,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Aspen.DisplayName" xml:space="preserve">
-  <value>пиво Aspen «Вейланд-Ютани»</value>
+  <value>пиво Aspen Weyland-Yutani</value>
   <comment>Weyland-Yutani Aspen Beer</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Aspen.Verb.PickUp" xml:space="preserve">
@@ -51460,7 +51764,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Aspen.Open.DisplayName" xml:space="preserve">
-  <value>пиво Aspen «Вейланд-Ютани»</value>
+  <value>пиво Aspen Weyland-Yutani</value>
   <comment>Weyland-Yutani Aspen Beer</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Aspen.Open.Verb.PickUp" xml:space="preserve">
@@ -51468,7 +51772,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Beer.DisplayName" xml:space="preserve">
-  <value>пиво Lite «Вейланд-Ютани»</value>
+  <value>пиво Lite Weyland-Yutani</value>
   <comment>Weyland-Yutani Lite</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Beer.Verb.PickUp" xml:space="preserve">
@@ -51476,7 +51780,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Beer.Open.DisplayName" xml:space="preserve">
-  <value>пиво Lite «Вейланд-Ютани»</value>
+  <value>пиво Lite Weyland-Yutani</value>
   <comment>Weyland-Yutani Lite</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Beer.Open.Verb.PickUp" xml:space="preserve">
@@ -51756,7 +52060,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Blue.DisplayName" xml:space="preserve">
-  <value>Souto «Голубая малина»</value>
+  <value>Souto Голубая малина</value>
   <comment>Blue Raspberry Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Blue.Verb.PickUp" xml:space="preserve">
@@ -51764,7 +52068,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Blue.Open.DisplayName" xml:space="preserve">
-  <value>Souto «Голубая малина»</value>
+  <value>Souto Голубая малина</value>
   <comment>Blue Raspberry Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Blue.Open.Verb.PickUp" xml:space="preserve">
@@ -51772,7 +52076,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Classic.DisplayName" xml:space="preserve">
-  <value>Souto классический</value>
+  <value>Souto Классика</value>
   <comment>Souto Classic</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Classic.Verb.PickUp" xml:space="preserve">
@@ -51780,7 +52084,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Classic.Open.DisplayName" xml:space="preserve">
-  <value>Souto классический</value>
+  <value>Souto Классика</value>
   <comment>Souto Classic</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Classic.Open.Verb.PickUp" xml:space="preserve">
@@ -51788,7 +52092,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Blue.DisplayName" xml:space="preserve">
-  <value>Souto диет голубая малина</value>
+  <value>Souto Диет Голубая малина</value>
   <comment>Diet Blue Raspberry Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Blue.Verb.PickUp" xml:space="preserve">
@@ -51796,7 +52100,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Blue.Open.DisplayName" xml:space="preserve">
-  <value>Souto диет голубая малина</value>
+  <value>Souto Диет Голубая малина</value>
   <comment>Diet Blue Raspberry Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Blue.Open.Verb.PickUp" xml:space="preserve">
@@ -51804,7 +52108,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Cherry.DisplayName" xml:space="preserve">
-  <value>Souto диет вишнёвый</value>
+  <value>Souto Диет Вишня</value>
   <comment>Diet Cherry Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Cherry.Verb.PickUp" xml:space="preserve">
@@ -51812,7 +52116,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Cherry.Open.DisplayName" xml:space="preserve">
-  <value>Souto диет вишнёвый</value>
+  <value>Souto Диет Вишня</value>
   <comment>Diet Cherry Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Cherry.Open.Verb.PickUp" xml:space="preserve">
@@ -51820,7 +52124,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Grape.DisplayName" xml:space="preserve">
-  <value>Souto диет виноград</value>
+  <value>Souto Диет Виноград</value>
   <comment>Diet Grape Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Grape.Verb.PickUp" xml:space="preserve">
@@ -51828,7 +52132,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Grape.Open.DisplayName" xml:space="preserve">
-  <value>Souto диет виноград</value>
+  <value>Souto Диет Виноград</value>
   <comment>Diet Grape Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Grape.Open.Verb.PickUp" xml:space="preserve">
@@ -51836,7 +52140,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Lime.DisplayName" xml:space="preserve">
-  <value>Souto диет лайм</value>
+  <value>Souto Диет Лайм</value>
   <comment>Diet Lime Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Lime.Verb.PickUp" xml:space="preserve">
@@ -51844,7 +52148,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Lime.Open.DisplayName" xml:space="preserve">
-  <value>Souto диет лайм</value>
+  <value>Souto Диет Лайм</value>
   <comment>Diet Lime Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Lime.Open.Verb.PickUp" xml:space="preserve">
@@ -51852,7 +52156,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Peach.DisplayName" xml:space="preserve">
-  <value>Souto диет персик</value>
+  <value>Souto Диет Персик</value>
   <comment>Diet Peach Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Peach.Verb.PickUp" xml:space="preserve">
@@ -51860,7 +52164,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Peach.Open.DisplayName" xml:space="preserve">
-  <value>Souto диет персик</value>
+  <value>Souto Диет Персик</value>
   <comment>Diet Peach Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Diet.Peach.Open.Verb.PickUp" xml:space="preserve">
@@ -51868,7 +52172,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Grape.DisplayName" xml:space="preserve">
-  <value>Souto виноградный</value>
+  <value>Souto Виноград</value>
   <comment>Grape Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Grape.Verb.PickUp" xml:space="preserve">
@@ -51876,7 +52180,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Grape.Open.DisplayName" xml:space="preserve">
-  <value>Souto виноградный</value>
+  <value>Souto Виноград</value>
   <comment>Grape Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Grape.Open.Verb.PickUp" xml:space="preserve">
@@ -51884,7 +52188,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Peach.DisplayName" xml:space="preserve">
-  <value>Souto персиковый</value>
+  <value>Souto Персик</value>
   <comment>Peach Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Peach.Verb.PickUp" xml:space="preserve">
@@ -51892,7 +52196,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Peach.Open.DisplayName" xml:space="preserve">
-  <value>Souto персиковый</value>
+  <value>Souto Персик</value>
   <comment>Peach Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Peach.Open.Verb.PickUp" xml:space="preserve">
@@ -51900,7 +52204,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Vanilla.DisplayName" xml:space="preserve">
-  <value>Souto ванильный</value>
+  <value>Souto Ваниль</value>
   <comment>Vanilla Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Vanilla.Verb.PickUp" xml:space="preserve">
@@ -51908,7 +52212,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Vanilla.Open.DisplayName" xml:space="preserve">
-  <value>Souto ванильный</value>
+  <value>Souto Ваниль</value>
   <comment>Vanilla Souto</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.Vanilla.Open.Verb.PickUp" xml:space="preserve">
@@ -52012,7 +52316,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Waterbottle.DisplayName" xml:space="preserve">
-  <value>бутилированная вода «Вейланд-Ютани»</value>
+  <value>бутилированная вода Weyland-Yutani</value>
   <comment>Weyland-Yutani Bottled Spring Water</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Waterbottle.Verb.PickUp" xml:space="preserve">
@@ -52020,7 +52324,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Waterbottle.Open.DisplayName" xml:space="preserve">
-  <value>бутилированная вода «Вейланд-Ютани»</value>
+  <value>бутилированная вода Weyland-Yutani</value>
   <comment>Weyland-Yutani Bottled Spring Water</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Waterbottle.Open.Verb.PickUp" xml:space="preserve">
@@ -52092,7 +52396,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Coffeecup.Wy.DisplayName" xml:space="preserve">
-  <value>кофейная кружка «Вейланд-Ютани»</value>
+  <value>кофейная кружка Weyland-Yutani</value>
   <comment>Weyland-Yutani coffee mug</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Coffeecup.Wy.Verb.PickUp" xml:space="preserve">
@@ -52172,7 +52476,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Flask.Weylandyutani.DisplayName" xml:space="preserve">
-  <value>фляжка «Вейланд-Ютани»</value>
+  <value>фляжка Weyland-Yutani</value>
   <comment>Weyland-Yutani flask</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Flask.Weylandyutani.Verb.PickUp" xml:space="preserve">
@@ -58132,16 +58436,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Smoke.DisplayName" xml:space="preserve">
-  <value>пачка гранат HSDP</value>
-  <comment>HSDP grenade packet</comment>
+  <value>пачка маскирующих дымов M40</value>
+  <comment>M40 screening smoke packet</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Open.DisplayName" xml:space="preserve">
-  <value>пачка гранат HSDP</value>
-  <comment>HSDP grenade packet</comment>
+  <value>пачка маскирующих дымов M40</value>
+  <comment>M40 screening smoke packet</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -58652,7 +58956,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigar.Matchbook.WyGold.DisplayName" xml:space="preserve">
-  <value>коробок спичек «Вейланд-Ютани Gold»</value>
+  <value>коробок спичек «Weyland-Yutani Gold»</value>
   <comment>Weyland-Yutani Gold matchbook</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigar.Matchbook.WyGold.Verb.PickUp" xml:space="preserve">
@@ -58660,7 +58964,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigar.Matchbook.WyGold.Open.DisplayName" xml:space="preserve">
-  <value>коробок спичек «Вейланд-Ютани Gold»</value>
+  <value>коробок спичек «Weyland-Yutani Gold»</value>
   <comment>Weyland-Yutani Gold matchbook</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigar.Matchbook.WyGold.Open.Verb.PickUp" xml:space="preserve">
@@ -58796,7 +59100,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigarettes.Wypacket.DisplayName" xml:space="preserve">
-  <value>пачка «Вейланд-Ютани Gold»</value>
+  <value>пачка «Weyland-Yutani Gold»</value>
   <comment>Weyland-Yutani Gold packet</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigarettes.Wypacket.Verb.PickUp" xml:space="preserve">
@@ -58804,7 +59108,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigarettes.Wypacket.Open.DisplayName" xml:space="preserve">
-  <value>пачка «Вейланд-Ютани Gold»</value>
+  <value>пачка «Weyland-Yutani Gold»</value>
   <comment>Weyland-Yutani Gold packet</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Fancy.Cigarettes.Wypacket.Open.Verb.PickUp" xml:space="preserve">
@@ -62688,7 +62992,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>extinguish</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Lighter.Zippo.Executive.DisplayName" xml:space="preserve">
-  <value>зажигалка Zippo «Вейланд-Ютани» для руководства</value>
+  <value>директорская Zippo Weyland-Yutani</value>
   <comment>Weyland-Yutani executive Zippo lighter</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Lighter.Zippo.Executive.Verb.PickUp" xml:space="preserve">
@@ -62700,7 +63004,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>light</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Lighter.Zippo.Executive.Lit.DisplayName" xml:space="preserve">
-  <value>зажигалка Zippo «Вейланд-Ютани» для руководства</value>
+  <value>директорская Zippo Weyland-Yutani</value>
   <comment>Weyland-Yutani executive Zippo lighter</comment>
 </data>
 <data name="Def.Obj.Item.Tool.Lighter.Zippo.Executive.Lit.IgniteFlavor" xml:space="preserve">
@@ -75256,7 +75560,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>magazine box (Ext M41A x 8)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Flamer.DisplayName" xml:space="preserve">
-  <value>ящик баков огнемёта (UT-Napthal Fuel x 8)</value>
+  <value>ящик баллонов огнемёта (UT-Napthal Fuel x 8)</value>
   <comment>flamer tank box (UT-Napthal Fuel x 8)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Flamer.Verb.PickUp" xml:space="preserve">
@@ -75264,7 +75568,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Flamer.Empty.DisplayName" xml:space="preserve">
-  <value>ящик баков огнемёта (UT-Napthal Fuel x 8)</value>
+  <value>ящик баллонов огнемёта (UT-Napthal Fuel x 8)</value>
   <comment>flamer tank box (UT-Napthal Fuel x 8)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Flamer.Empty.Verb.PickUp" xml:space="preserve">
@@ -75272,7 +75576,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Flamer.Deployed.DisplayName" xml:space="preserve">
-  <value>ящик баков огнемёта (UT-Napthal Fuel x 8)</value>
+  <value>ящик баллонов огнемёта (UT-Napthal Fuel x 8)</value>
   <comment>flamer tank box (UT-Napthal Fuel x 8)</comment>
 </data>
 <data name="Def.Obj.Item.AmmoBox.Magazine.Fp9000.DisplayName" xml:space="preserve">
@@ -77979,6 +78283,70 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Landmine.DisplayName" xml:space="preserve">
+  <value>ящик мин</value>
+  <comment>land mine box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Landmine.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Landmine.Open.DisplayName" xml:space="preserve">
+  <value>ящик мин</value>
+  <comment>land mine box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Landmine.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.DisplayName" xml:space="preserve">
+  <value>ящик маскирующих дымов M40</value>
+  <comment>M40 screening smoke grenade box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Open.DisplayName" xml:space="preserve">
+  <value>ящик маскирующих дымов M40</value>
+  <comment>M40 screening smoke grenade box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.DisplayName" xml:space="preserve">
+  <value>ящик сигнальных дымов M18 (красный)</value>
+  <comment>M18 marking smoke grenade box (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.Open.DisplayName" xml:space="preserve">
+  <value>ящик сигнальных дымов M18 (красный)</value>
+  <comment>M18 marking smoke grenade box (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Red.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.DisplayName" xml:space="preserve">
+  <value>ящик сигнальных дымов M18 (зелёный)</value>
+  <comment>M18 marking smoke grenade box (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.Open.DisplayName" xml:space="preserve">
+  <value>ящик сигнальных дымов M18 (зелёный)</value>
+  <comment>M18 marking smoke grenade box (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.Smoke.Marking.Green.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Round40mm.He.DisplayName" xml:space="preserve">
   <value>пачка гранат 40 мм HE</value>
   <comment>40mm HE grenade packet</comment>
@@ -78024,6 +78392,38 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>40mm incendiary grenade packet</comment>
 </data>
 <data name="Def.Obj.Item.Storage.Box.Packet.Round40mm.Incendiary.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.DisplayName" xml:space="preserve">
+  <value>пачка сигнальных дымов M18 (красный)</value>
+  <comment>M18 marking smoke packet (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.Open.DisplayName" xml:space="preserve">
+  <value>пачка сигнальных дымов M18 (красный)</value>
+  <comment>M18 marking smoke packet (red)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Red.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.DisplayName" xml:space="preserve">
+  <value>пачка сигнальных дымов M18 (зелёный)</value>
+  <comment>M18 marking smoke packet (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.Open.DisplayName" xml:space="preserve">
+  <value>пачка сигнальных дымов M18 (зелёный)</value>
+  <comment>M18 marking smoke packet (green)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.Smoke.Marking.Green.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -78155,6 +78555,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>фонарь вкл.</value>
   <comment>light on</comment>
 </data>
+<data name="Def.Obj.Item.Attachable.Bayonet.Pavn.DisplayName" xml:space="preserve">
+  <value>штык-нож ВНА</value>
+  <comment>PAVN bayonet</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.Bayonet.Pavn.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Attachable.Bayonet.Pavn.Family" xml:space="preserve">
+  <value>штык-ножи</value>
+  <comment>knives</comment>
+</data>
 <data name="Def.Obj.Effect.Decal.TileDamage.Damaged1.DisplayName" xml:space="preserve">
   <value>изрытый пол</value>
   <comment>cratered floor</comment>
@@ -78275,23 +78687,63 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.DisplayName" xml:space="preserve">
-  <value>маяк лётного экипажа</value>
-  <comment>flight crew beacon</comment>
+<data name="Def.Obj.Item.Device.Uh1hBeacon.DisplayName" xml:space="preserve">
+  <value>маяк экипажа UH-1H</value>
+  <comment>UH-1H flight crew beacon</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.Verb.PickUp" xml:space="preserve">
+<data name="Def.Obj.Item.Device.Uh1hBeacon.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.Verb.Toggle" xml:space="preserve">
+<data name="Def.Obj.Item.Device.Uh1hBeacon.Verb.Toggle" xml:space="preserve">
   <value>активировать</value>
   <comment>activate</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.On.DisplayName" xml:space="preserve">
-  <value>маяк лётного экипажа</value>
-  <comment>flight crew beacon</comment>
+<data name="Def.Obj.Item.Device.Uh1hBeacon.On.DisplayName" xml:space="preserve">
+  <value>маяк экипажа UH-1H</value>
+  <comment>UH-1H flight crew beacon</comment>
 </data>
-<data name="Def.Obj.Item.Device.PilotBeacon.On.Verb.PickUp" xml:space="preserve">
+<data name="Def.Obj.Item.Device.Uh1hBeacon.On.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.DisplayName" xml:space="preserve">
+  <value>маяк экипажа MH-6J</value>
+  <comment>MH-6J flight crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.Verb.Toggle" xml:space="preserve">
+  <value>активировать</value>
+  <comment>activate</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.On.DisplayName" xml:space="preserve">
+  <value>маяк экипажа MH-6J</value>
+  <comment>MH-6J flight crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Mh6jBeacon.On.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.DisplayName" xml:space="preserve">
+  <value>маяк экипажа AH-6J</value>
+  <comment>AH-6J gunship crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.Verb.Toggle" xml:space="preserve">
+  <value>активировать</value>
+  <comment>activate</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.On.DisplayName" xml:space="preserve">
+  <value>маяк экипажа AH-6J</value>
+  <comment>AH-6J gunship crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah6jBeacon.On.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -78410,6 +78862,22 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Wire.Razor.DisplayName" xml:space="preserve">
   <value>спираль Бруно</value>
   <comment>concertina wire</comment>
+</data>
+<data name="Def.Obj.Structure.Hedgehog.DisplayName" xml:space="preserve">
+  <value>противотанковый ёж</value>
+  <comment>hedgehog</comment>
+</data>
+<data name="Def.Obj.Item.Stack.Landmine.DisplayName" xml:space="preserve">
+  <value>мина</value>
+  <comment>land mine</comment>
+</data>
+<data name="Def.Obj.Item.Stack.Landmine.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Landmine.DisplayName" xml:space="preserve">
+  <value>мина</value>
+  <comment>land mine</comment>
 </data>
 <data name="Def.Obj.Item.M2Kit.Tripod.DisplayName" xml:space="preserve">
   <value>оружейная тренога</value>
@@ -78843,6 +79311,30 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ящик капельницы</value>
   <comment>IV drip crate</comment>
 </data>
+<data name="Def.Obj.Structure.Crate.EastSupply.DisplayName" xml:space="preserve">
+  <value>ящик снабжения Востока</value>
+  <comment>East supply crate</comment>
+</data>
+<data name="Def.Obj.Structure.Crate.EastSupply.Landed.DisplayName" xml:space="preserve">
+  <value>ящик снабжения Востока</value>
+  <comment>East supply crate</comment>
+</data>
+<data name="Def.Obj.Structure.Crate.EastSupply.Empty.DisplayName" xml:space="preserve">
+  <value>пустой ящик снабжения Востока</value>
+  <comment>empty East supply crate</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Plastic.East.DisplayName" xml:space="preserve">
+  <value>штурмовой заряд ВНА</value>
+  <comment>PAVN breaching charge</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Plastic.East.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Plastic.East.Armed.DisplayName" xml:space="preserve">
+  <value>штурмовой заряд ВНА</value>
+  <comment>PAVN breaching charge</comment>
+</data>
 <data name="Def.Obj.Item.Device.TrackingTransmitter.DisplayName" xml:space="preserve">
   <value>передатчик слежения</value>
   <comment>tracking transmitter</comment>
@@ -79079,6 +79571,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>UH-1H Huey</value>
   <comment>UH-1H Huey</comment>
 </data>
+<data name="Def.Obj.Vehicle.MH6J.Hull.DisplayName" xml:space="preserve">
+  <value>MH-6J Little Bird</value>
+  <comment>MH-6J Little Bird</comment>
+</data>
+<data name="Def.Obj.Vehicle.AH6J.Hull.DisplayName" xml:space="preserve">
+  <value>AH-6J Little Bird</value>
+  <comment>AH-6J Little Bird</comment>
+</data>
 <data name="Def.Obj.Vehicle.UH1H.Door.DisplayName" xml:space="preserve">
   <value>дверь кабины</value>
   <comment>cabin door</comment>
@@ -79151,6 +79651,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>обломки UH-1H</value>
   <comment>UH-1H wreck</comment>
 </data>
+<data name="Def.Obj.Structure.Wreck.MH6J.Horizontal.DisplayName" xml:space="preserve">
+  <value>обломки Little Bird</value>
+  <comment>Little Bird wreck</comment>
+</data>
+<data name="Def.Obj.Structure.Wreck.MH6J.Vertical.DisplayName" xml:space="preserve">
+  <value>обломки Little Bird</value>
+  <comment>Little Bird wreck</comment>
+</data>
 <data name="Def.Obj.Item.FlamerTurretKit.Gun.DisplayName" xml:space="preserve">
   <value>турель-огнемёт</value>
   <comment>flamethrower turret</comment>
@@ -79176,7 +79684,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.FlamerTank.Drum.DisplayName" xml:space="preserve">
-  <value>топливная бочка огнемёта</value>
+  <value>топливный баллон огнемёта</value>
   <comment>flamethrower fuel drum</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.FlamerTank.Drum.Verb.PickUp" xml:space="preserve">
@@ -79184,7 +79692,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.FlamerTank.Drum.Empty.DisplayName" xml:space="preserve">
-  <value>топливная бочка огнемёта</value>
+  <value>топливный баллон огнемёта</value>
   <comment>flamethrower fuel drum</comment>
 </data>
 <data name="Def.Obj.Item.AmmoMagazine.FlamerTank.Drum.Empty.Verb.PickUp" xml:space="preserve">
@@ -79327,6 +79835,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.DisplayName" xml:space="preserve">
+  <value>экстренный инъектор ВНА</value>
+  <comment>PAVN emergency injector</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.Spent.DisplayName" xml:space="preserve">
+  <value>экстренный инъектор ВНА</value>
+  <comment>PAVN emergency injector</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Hypospray.Autoinjector.Emergency.Pavn.Spent.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.DisplayName" xml:space="preserve">
+  <value>полевой рюкзак медика ВНА</value>
+  <comment>PAVN corpsman field pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.Open.DisplayName" xml:space="preserve">
+  <value>полевой рюкзак медика ВНА</value>
+  <comment>PAVN corpsman field pack</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Backpack.Marine.Medic.Pavn.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Character.Human.East.DisplayName" xml:space="preserve">
   <value>стрелок Востока</value>
   <comment>East rifleman</comment>
@@ -79386,6 +79926,274 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Character.Human.East.Corpsman.Verb.MoveTo" xml:space="preserve">
   <value>переместить</value>
   <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.DisplayName" xml:space="preserve">
+  <value>инженер Востока</value>
+  <comment>East engineer</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Obj.Structure.Parachute.Ground.DisplayName" xml:space="preserve">
+  <value>парашют</value>
+  <comment>parachute</comment>
+</data>
+<data name="Def.Obj.Structure.Parachute.East.Ground.DisplayName" xml:space="preserve">
+  <value>парашют Востока</value>
+  <comment>East parachute</comment>
+</data>
+<data name="Def.Obj.Structure.Rubble.Strata.DisplayName" xml:space="preserve">
+  <value>обломки</value>
+  <comment>rubble</comment>
+</data>
+<data name="Def.Obj.Structure.Rubble.Lava.DisplayName" xml:space="preserve">
+  <value>обломки</value>
+  <comment>rubble</comment>
+</data>
+<data name="Def.Obj.Structure.Rubble.Hybrisa.DisplayName" xml:space="preserve">
+  <value>обломки</value>
+  <comment>rubble</comment>
+</data>
+<data name="Def.Obj.Item.HardpointKit.DisplayName" xml:space="preserve">
+  <value>узел подвески AH-6J</value>
+  <comment>AH-6J hardpoint</comment>
+</data>
+<data name="Def.Obj.Item.HardpointKit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Base.DisplayName" xml:space="preserve">
+  <value>узел подвески AH-6J</value>
+  <comment>AH-6J hardpoint</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Base.Upgrade.0.Label" xml:space="preserve">
+  <value>установить XM27</value>
+  <comment>attach the xm27</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Base.Upgrade.1.Label" xml:space="preserve">
+  <value>установить блок Hydra 70</value>
+  <comment>attach the hydra 70 pod</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.XM27.Empty.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.XM27.Loaded.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Hydra.Empty.DisplayName" xml:space="preserve">
+  <value>блок ракет Hydra 70</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.Hydra.Loaded.DisplayName" xml:space="preserve">
+  <value>блок ракет Hydra 70</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Item.XM27Kit.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Item.XM27Kit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.HydraPodKit.DisplayName" xml:space="preserve">
+  <value>блок ракет Hydra 70</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Item.HydraPodKit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Minigun.XM27Internal.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Minigun.XM27Internal.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Hydra70Internal.DisplayName" xml:space="preserve">
+  <value>блок ракет Hydra 70</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Hydra70Internal.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.DisplayName" xml:space="preserve">
+  <value>патронный короб XM27 (10x24 мм)</value>
+  <comment>XM27 ammunition can (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.Empty.DisplayName" xml:space="preserve">
+  <value>патронный короб XM27 (10x24 мм)</value>
+  <comment>XM27 ammunition can (10x24mm)</comment>
+</data>
+<data name="Def.Obj.Item.AmmoMagazine.Minigun.XM27.Empty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.DisplayName" xml:space="preserve">
+  <value>ракета Hydra 70</value>
+  <comment>Hydra 70 rocket</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.Armed.DisplayName" xml:space="preserve">
+  <value>ракета Hydra 70</value>
+  <comment>Hydra 70 rocket</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Rocket.Hydra70.Armed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.DisplayName" xml:space="preserve">
+  <value>кейс узла подвески AH-6J</value>
+  <comment>AH-6J hardpoint case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.Open.DisplayName" xml:space="preserve">
+  <value>кейс узла подвески AH-6J</value>
+  <comment>AH-6J hardpoint case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HardpointKit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.DisplayName" xml:space="preserve">
+  <value>кейс минигана XM27</value>
+  <comment>XM27 minigun case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.Open.DisplayName" xml:space="preserve">
+  <value>кейс минигана XM27</value>
+  <comment>XM27 minigun case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.XM27Kit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.DisplayName" xml:space="preserve">
+  <value>кейс блока Hydra 70</value>
+  <comment>Hydra 70 pod case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.Open.DisplayName" xml:space="preserve">
+  <value>кейс блока Hydra 70</value>
+  <comment>Hydra 70 pod case</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.HydraPodKit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Descending.DisplayName" xml:space="preserve">
+  <value>ящик минигана XM27</value>
+  <comment>XM27 minigun crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.DisplayName" xml:space="preserve">
+  <value>ящик минигана XM27</value>
+  <comment>XM27 minigun crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Verb.Toggle" xml:space="preserve">
+  <value>открыть</value>
+  <comment>open</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Open.DisplayName" xml:space="preserve">
+  <value>ящик минигана XM27</value>
+  <comment>XM27 minigun crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.XM27.Open.Verb.Toggle" xml:space="preserve">
+  <value>закрыть</value>
+  <comment>close</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Descending.DisplayName" xml:space="preserve">
+  <value>ящик блока Hydra 70</value>
+  <comment>Hydra 70 pod crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.DisplayName" xml:space="preserve">
+  <value>ящик блока Hydra 70</value>
+  <comment>Hydra 70 pod crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Verb.Toggle" xml:space="preserve">
+  <value>открыть</value>
+  <comment>open</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Open.DisplayName" xml:space="preserve">
+  <value>ящик блока Hydra 70</value>
+  <comment>Hydra 70 pod crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Hydra.Open.Verb.Toggle" xml:space="preserve">
+  <value>закрыть</value>
+  <comment>close</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.DisplayName" xml:space="preserve">
+  <value>сигнальная дымовая граната M18 (красная)</value>
+  <comment>M18 marking smoke grenade (red)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Armed.DisplayName" xml:space="preserve">
+  <value>сигнальная дымовая граната M18 (красная)</value>
+  <comment>M18 marking smoke grenade (red)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Armed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Venting.DisplayName" xml:space="preserve">
+  <value>сигнальная дымовая граната M18 (красная)</value>
+  <comment>M18 marking smoke grenade (red)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Red.Venting.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.DisplayName" xml:space="preserve">
+  <value>сигнальная дымовая граната M18 (зелёная)</value>
+  <comment>M18 marking smoke grenade (green)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Armed.DisplayName" xml:space="preserve">
+  <value>сигнальная дымовая граната M18 (зелёная)</value>
+  <comment>M18 marking smoke grenade (green)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Armed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Venting.DisplayName" xml:space="preserve">
+  <value>сигнальная дымовая граната M18 (зелёная)</value>
+  <comment>M18 marking smoke grenade (green)</comment>
+</data>
+<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Marking.Green.Venting.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
 </data>
 <data name="StackFamily.TestPlank" xml:space="preserve">
   <value>тестовые доски</value>
@@ -79491,6 +80299,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>колючая лента</value>
   <comment>razor wire</comment>
 </data>
+<data name="StackFamily.land mine" xml:space="preserve">
+  <value>мины</value>
+  <comment>land mine</comment>
+</data>
 <data name="StackFamily.m2 tripod kit" xml:space="preserve">
   <value>треноги M2</value>
   <comment>m2 tripod kit</comment>
@@ -79502,6 +80314,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="StackFamily.vehicle mount kit" xml:space="preserve">
   <value>крепления техники</value>
   <comment>vehicle mount kit</comment>
+</data>
+<data name="StackFamily.hardpoint kit" xml:space="preserve">
+  <value>узлы подвески</value>
+  <comment>hardpoint kit</comment>
+</data>
+<data name="StackFamily.hydra rockets" xml:space="preserve">
+  <value>ракеты Hydra</value>
+  <comment>hydra rockets</comment>
 </data>
 <data name="Honor.ApexPredator.Name" xml:space="preserve">
   <value>ВЫСШИЙ ХИЩНИК</value>
@@ -79544,7 +80364,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>greatest distance travelled</comment>
 </data>
 <data name="Honor.Bagman.Name" xml:space="preserve">
-  <value>СБОРЩИК ДЕНЕГ</value>
+  <value>ДЕНЕЖНЫЙ МЕШОК</value>
   <comment>BAGMAN</comment>
 </data>
 <data name="Honor.Bagman.Flavor" xml:space="preserve">
@@ -79588,7 +80408,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>FIRST BLOOD</comment>
 </data>
 <data name="Honor.FirstBlood.Flavor" xml:space="preserve">
-  <value>первая окончательная смерть раунда</value>
+  <value>первая необратимая смерть раунда</value>
   <comment>first to die for good</comment>
 </data>
 <data name="Honor.SoleSurvivor.Name" xml:space="preserve">
@@ -79596,7 +80416,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>SOLE SURVIVOR</comment>
 </data>
 <data name="Honor.SoleSurvivor.Flavor" xml:space="preserve">
-  <value>единственный, кто выбрался живым</value>
+  <value>больше никто не выбрался живым</value>
   <comment>the only one to make it out alive</comment>
 </data>
 <data name="Honor.MasterChef.Name" xml:space="preserve">
@@ -79636,7 +80456,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>GLASS BONES</comment>
 </data>
 <data name="Honor.GlassBones.Flavor" xml:space="preserve">
-  <value>переломы всех костей до единой</value>
+  <value>сломаны все кости до единой</value>
   <comment>fractured every single bone</comment>
 </data>
 <data name="Honor.Undertaker.Name" xml:space="preserve">
@@ -79800,7 +80620,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Trained to carefully take a shot, and not miss.</comment>
 </data>
 <data name="Trait.NonCombatant.Name" xml:space="preserve">
-  <value>Некомбатант</value>
+  <value>Не боец</value>
   <comment>Non-Combatant</comment>
 </data>
 <data name="Trait.NonCombatant.Flavor" xml:space="preserve">
@@ -79832,7 +80652,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>I may not be a surgeon, but I still know how to fix things.</comment>
 </data>
 <data name="Trait.Surgeon.Name" xml:space="preserve">
-  <value>Я — хирург</value>
+  <value>Хирург</value>
   <comment>I am a Surgeon</comment>
 </data>
 <data name="Trait.Surgeon.Flavor" xml:space="preserve">
@@ -80031,6 +80851,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Призыв, месяц муштры — и винтовку в руки. Стреляет выше цели и бьёт слабо.</value>
   <comment>Drafted, drilled for a month and handed a rifle. Shoots high and hits soft.</comment>
 </data>
+<data name="Trait.EastMedic.Name" xml:space="preserve">
+  <value>Медик</value>
+  <comment>Medic</comment>
+</data>
+<data name="Trait.EastMedic.Flavor" xml:space="preserve">
+  <value>Пусть я и не хирург, но чинить людей умею.</value>
+  <comment>I may not be a surgeon, but I still know how to fix things.</comment>
+</data>
 <data name="Trait.SpeaksEast.Name" xml:space="preserve">
   <value>Полиглот</value>
   <comment>Multilingual</comment>
@@ -80038,6 +80866,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Trait.SpeaksEast.Flavor" xml:space="preserve">
   <value>Где-то по дороге довелось выучить язык противника. Когда враг кричит, вы знаете, что он сейчас сделает.</value>
   <comment>Picked up the language somewhere along the way. When the other side shouts, you know what they are about to do.</comment>
+</data>
+<data name="Trait.EastEngineer.Name" xml:space="preserve">
+  <value>Инженер</value>
+  <comment>Engineer</comment>
+</data>
+<data name="Trait.EastEngineer.Flavor" xml:space="preserve">
+  <value>Режет, бросает, идёт дальше. С разобранного брать нечего.</value>
+  <comment>Cuts it, drops it and moves on. Nothing he takes apart is worth carrying off.</comment>
 </data>
 <data name="Language.East.Name" xml:space="preserve">
   <value>восточный</value>
@@ -80255,6 +81091,58 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Вступайте в морпехи, говорили они…</value>
   <comment>Join the marines they said...</comment>
 </data>
+<data name="GhostEvent.VehicleCrash.Title" xml:space="preserve">
+  <value>КРУШЕНИЕ ТЕХНИКИ</value>
+  <comment>VEHICLE CRASH</comment>
+</data>
+<data name="GhostEvent.JumpHint" xml:space="preserve">
+  <value>Нажмите, чтобы перенестись к событию</value>
+  <comment>Click to be taken to the event</comment>
+</data>
+<data name="GhostEvent.VehicleExplosion.Title" xml:space="preserve">
+  <value>ВЗРЫВ ТЕХНИКИ</value>
+  <comment>VEHICLE EXPLOSION</comment>
+</data>
+<data name="GhostEvent.ExplosivePlanted.Title" xml:space="preserve">
+  <value>ЗАЛОЖЕНА ВЗРЫВЧАТКА</value>
+  <comment>EXPLOSIVE PLANTED</comment>
+</data>
+<data name="GhostEvent.AnomalyContained.Title" xml:space="preserve">
+  <value>АНОМАЛИЯ СДЕРЖАНА</value>
+  <comment>ANOMALY CONTAINED</comment>
+</data>
+<data name="GhostEvent.ContainmentBreach.Title" xml:space="preserve">
+  <value>ПРОРЫВ СДЕРЖИВАНИЯ</value>
+  <comment>BREACH</comment>
+</data>
+<data name="GhostEvent.LastAlive.Title" xml:space="preserve">
+  <value>В ЖИВЫХ: 1</value>
+  <comment>LAST ALIVE</comment>
+</data>
+<data name="GhostEvent.FollowHint" xml:space="preserve">
+  <value>Нажмите, чтобы следить</value>
+  <comment>Click to follow</comment>
+</data>
+<data name="GhostEvent.AmmoCookOff.Title" xml:space="preserve">
+  <value>ДЕТОНАЦИЯ БОЕПРИПАСОВ</value>
+  <comment>AMMO COOKOFF</comment>
+</data>
+<data name="GhostEvent.EnemySupplyDrop.Title" xml:space="preserve">
+  <value>СБРОС СНАБЖЕНИЯ ВРАГА</value>
+  <comment>ENEMY SUPPLY DROP</comment>
+</data>
+<data name="GhostEvent.FloorCollapse.Title" xml:space="preserve">
+  <value>ОБРУШЕНИЕ ПОЛА</value>
+  <comment>FLOOR COLLAPSE</comment>
+</data>
+<data name="GhostEvent.VehicleFire.Title" xml:space="preserve">
+  <value>ПОЖАР В ТЕХНИКЕ</value>
+  <comment>VEHICLE FIRE</comment>
+</data>
+<data name="GhostEvent.TailRotorLost.Title" xml:space="preserve">
+  <value>ПОТЕРЯ УПРАВЛЕНИЯ</value>
+  <comment>LOSS OF CONTROL</comment>
+</data>
 <data name="SurgeryOp.InciseSkin.Display" xml:space="preserve">
   <value>Разрез кожи</value>
   <comment>Incise Skin</comment>
@@ -80467,6 +81355,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>спираль Бруно</value>
   <comment>concertina wire</comment>
 </data>
+<data name="Construction.Landmine.Place.DisplayName" xml:space="preserve">
+  <value>мина</value>
+  <comment>land mine</comment>
+</data>
 <data name="Construction.Table.Tan.DisplayName" xml:space="preserve">
   <value>бежевый стол</value>
   <comment>tan table</comment>
@@ -80507,6 +81399,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>рама АПЦ</value>
   <comment>APC frame</comment>
 </data>
+<data name="Construction.Metal.Hedgehog.DisplayName" xml:space="preserve">
+  <value>противотанковый ёж</value>
+  <comment>hedgehog</comment>
+</data>
 <data name="Construction.SentryTripod.DisplayName" xml:space="preserve">
   <value>тренога турели</value>
   <comment>sentry tripod</comment>
@@ -80523,6 +81419,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>оружейная установка на технику</value>
   <comment>vehicle weapon mount</comment>
 </data>
+<data name="Construction.Hardpoint.DisplayName" xml:space="preserve">
+  <value>узел подвески AH-6J</value>
+  <comment>AH-6J hardpoint</comment>
+</data>
 <data name="Reagent.Medical.Coagulex.Name" xml:space="preserve">
   <value>Коагулекс</value>
   <comment>Coagulex</comment>
@@ -80536,8 +81436,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Osteracil</comment>
 </data>
 <data name="Reagent.Medical.Osteracil.Advice" xml:space="preserve">
-  <value>сращивает переломы, пока находится в кровотоке; с наложенной шиной — быстрее</value>
-  <comment>knits fractured bones while in the bloodstream, faster when splinted</comment>
+  <value>сращивает все переломы; с наложенной шиной — быстрее</value>
+  <comment>knits every fractured bone, faster when splinte</comment>
 </data>
 <data name="Reagent.Medical.CoagulationFactor.Name" xml:space="preserve">
   <value>Фактор свёртывания</value>
@@ -80900,39 +81800,39 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Potato Juice</comment>
 </data>
 <data name="Reagent.Drink.Souto.Name" xml:space="preserve">
-  <value>Souto классический</value>
+  <value>Souto Классика</value>
   <comment>Souto Classic</comment>
 </data>
 <data name="Reagent.Drink.Souto.Blueraspberry.Name" xml:space="preserve">
-  <value>Souto «Голубая малина»</value>
+  <value>Souto Голубая малина</value>
   <comment>Blue Raspberry Souto</comment>
 </data>
 <data name="Reagent.Drink.Souto.Cherry.Name" xml:space="preserve">
-  <value>Souto вишнёвый</value>
+  <value>Souto Вишня</value>
   <comment>Cherry Souto</comment>
 </data>
 <data name="Reagent.Drink.Souto.Cranberry.Name" xml:space="preserve">
-  <value>Souto клюквенный</value>
+  <value>Souto Клюква</value>
   <comment>Cranberry Souto</comment>
 </data>
 <data name="Reagent.Drink.Souto.Grape.Name" xml:space="preserve">
-  <value>Souto виноградный</value>
+  <value>Souto Виноград</value>
   <comment>Grape Souto</comment>
 </data>
 <data name="Reagent.Drink.Souto.Lime.Name" xml:space="preserve">
-  <value>Souto лаймовый</value>
+  <value>Souto Лайм</value>
   <comment>Lime Souto</comment>
 </data>
 <data name="Reagent.Drink.Souto.Peach.Name" xml:space="preserve">
-  <value>Souto персиковый</value>
+  <value>Souto Персик</value>
   <comment>Peach Souto</comment>
 </data>
 <data name="Reagent.Drink.Souto.Pineapple.Name" xml:space="preserve">
-  <value>Souto ананасовый</value>
+  <value>Souto Ананас</value>
   <comment>Pineapple Souto</comment>
 </data>
 <data name="Reagent.Drink.Souto.Vanilla.Name" xml:space="preserve">
-  <value>Souto ванильный</value>
+  <value>Souto Ваниль</value>
   <comment>Vanilla Souto</comment>
 </data>
 <data name="Reagent.Drink.Tea.Name" xml:space="preserve">
@@ -82867,9 +83767,13 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Гранатомётчик</value>
   <comment>Grenadier</comment>
 </data>
-<data name="Loadout.Marine.Pilot.Name" xml:space="preserve">
-  <value>Пилот</value>
-  <comment>Pilot</comment>
+<data name="Loadout.Marine.Pilot.UH1H.Name" xml:space="preserve">
+  <value>Пилот UH-1H</value>
+  <comment>UH-1H Pilot</comment>
+</data>
+<data name="Loadout.Marine.Pilot.AH6J.Name" xml:space="preserve">
+  <value>Пилот AH-6J</value>
+  <comment>AH-6J Pilot</comment>
 </data>
 <data name="Loadout.Surgeon.Name" xml:space="preserve">
   <value>Хирург</value>
@@ -82967,9 +83871,17 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Огнемётчик</value>
   <comment>Flamer</comment>
 </data>
+<data name="Loadout.East.Rifleman.Leader.Name" xml:space="preserve">
+  <value>Сержант Востока</value>
+  <comment>East squad leader</comment>
+</data>
 <data name="Loadout.East.Rifleman.Name" xml:space="preserve">
   <value>Стрелок Востока</value>
   <comment>East rifleman</comment>
+</data>
+<data name="Loadout.East.Engineer.Name" xml:space="preserve">
+  <value>Инженер Востока</value>
+  <comment>East engineer</comment>
 </data>
 <data name="Loadout.East.Corpsman.Name" xml:space="preserve">
   <value>Медик Востока</value>
@@ -83118,6 +84030,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Modifier.PeoplesArmy.Tooltip" xml:space="preserve">
   <value>НАРОДНАЯ АРМИЯ ВОСТОКА НАСТУПАЕТ НА КОЛОНИЮ // ВЗВОДЫ ВЕДУТ ПОИСК ПРОТИВНИКА // ФАЗА ШТУРМА ДЛИТСЯ {WaveAssaultMinutes} МИН.</value>
   <comment>THE EAST PEOPLE'S ARMY ADVANCES ON THE COLONY // PLATOONS PATROL TO CONTACT // THE WAVE ASSAULT PHASE LASTS {WaveAssaultMinutes} MINUTES</comment>
+</data>
+<data name="Modifier.Airdrop.Label" xml:space="preserve">
+  <value>ДЕСАНТ</value>
+  <comment>AIRDROP</comment>
+</data>
+<data name="Modifier.Airdrop.Tooltip" xml:space="preserve">
+  <value>ВОСТОК ВЫСАЖИВАЕТСЯ НА ПАРАШЮТАХ // ВЗВОДЫ ПРИЗЕМЛЯЮТСЯ В СКРЫТЫХ МЕСТАХ ВДАЛИ ОТ ВАС // ЖДИТЕ ВРАГА С ЛЮБОГО НАПРАВЛЕНИЯ</value>
+  <comment>THE EAST DEPLOYS BY PARACHUTE // PLATOONS LAND ON HIDDEN GROUND AWAY FROM YOU // EXPECT CONTACT FROM ANY DIRECTION</comment>
 </data>
 <data name="Mode.Extended.DisplayName" xml:space="preserve">
   <value>Песочница</value>
