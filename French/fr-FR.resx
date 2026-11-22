@@ -86379,6 +86379,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>asphalt floor</value>
   <comment>asphalt floor</comment>
 </data>
+<data name="Construction.Bunker.DisplayName" xml:space="preserve">
+  <value>hardened bunker</value>
+  <comment>hardened bunker</comment>
+</data>
 <data name="Reagent.Medical.Coagulex.Name" xml:space="preserve">
   <value>Coagulex</value>
   <comment>Coagulex</comment>
