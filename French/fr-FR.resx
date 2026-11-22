@@ -695,6 +695,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>There is no open sky above.</value>
   <comment>There is no open sky above.</comment>
 </data>
+<data name="Chat.SelfLaunchNoSky" xml:space="preserve">
+  <value>There is no clear sky for the flare here.</value>
+  <comment>There is no clear sky for the flare here.</comment>
+</data>
+<data name="Chat.SelfLaunchCrowded" xml:space="preserve">
+  <value>Too much is in the air to fire the flare.</value>
+  <comment>Too much is in the air to fire the flare.</comment>
+</data>
 <data name="Chat.FultonLift" xml:space="preserve">
   <value>{ACTOR} sends the body bag up on a fulton line.</value>
   <comment>{ACTOR} sends the body bag up on a fulton line.</comment>
@@ -14399,6 +14407,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>CARRIED ON</value>
   <comment>CARRIED ON</comment>
 </data>
+<data name="ArmChip.Safe" xml:space="preserve">
+  <value>SAFE</value>
+  <comment>SAFE</comment>
+</data>
+<data name="ArmChip.Armed" xml:space="preserve">
+  <value>ARMED</value>
+  <comment>ARMED</comment>
+</data>
 <data name="Def.Test.Pristine.Bottle.DisplayName" xml:space="preserve">
   <value>test pristine bottle</value>
   <comment>test pristine bottle</comment>
@@ -17082,6 +17098,54 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Test.Trench.Bags.Filled.DisplayName" xml:space="preserve">
   <value>test trench filled bags</value>
   <comment>test trench filled bags</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>test parachute flare</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Verb.Toggle" xml:space="preserve">
+  <value>arm</value>
+  <comment>arm</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Armed.DisplayName" xml:space="preserve">
+  <value>test parachute flare</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Armed.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Armed.Verb.Toggle" xml:space="preserve">
+  <value>safe</value>
+  <comment>safe</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Flying.DisplayName" xml:space="preserve">
+  <value>test parachute flare</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Hanging.DisplayName" xml:space="preserve">
+  <value>test parachute flare</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Casing.DisplayName" xml:space="preserve">
+  <value>test parachute flare casing</value>
+  <comment>test parachute flare casing</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Casing.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Burnt.DisplayName" xml:space="preserve">
+  <value>test burnt parachute flare</value>
+  <comment>test burnt parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Burnt.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
 </data>
 <data name="Def.Character.Human.DisplayName" xml:space="preserve">
   <value>Human</value>
@@ -80467,6 +80531,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>pick up</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare box</value>
+  <comment>M127A1 parachute flare box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.Open.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare box</value>
+  <comment>M127A1 parachute flare box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare packet</value>
+  <comment>M127A1 parachute flare packet</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.Open.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare packet</value>
+  <comment>M127A1 parachute flare packet</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.Open.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Belt.Grenade.Full.DisplayName" xml:space="preserve">
   <value>M276 pattern M40 Grenade rig</value>
   <comment>M276 pattern M40 Grenade rig</comment>
@@ -83603,6 +83699,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>smoke grenade crate</value>
   <comment>smoke grenade crate</comment>
 </data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.ParachuteFlares.Descending.DisplayName" xml:space="preserve">
+  <value>parachute flare crate</value>
+  <comment>parachute flare crate</comment>
+</data>
 <data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.Hmg.Descending.DisplayName" xml:space="preserve">
   <value>M2 rounds crate</value>
   <comment>M2 rounds crate</comment>
@@ -84630,6 +84730,90 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Closet.Crate.Field.Materials.Sandbags.Descending.DisplayName" xml:space="preserve">
   <value>sandbags crate</value>
   <comment>sandbags crate</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Verb.Toggle" xml:space="preserve">
+  <value>arm</value>
+  <comment>arm</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Armed.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Armed.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Armed.Verb.Toggle" xml:space="preserve">
+  <value>safe</value>
+  <comment>safe</comment>
+</data>
+<data name="Def.Obj.Effect.ParachuteFlare.Flying.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Effect.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Item.Trash.ParachuteFlareCasing.DisplayName" xml:space="preserve">
+  <value>M127A1 parachute flare casing</value>
+  <comment>M127A1 parachute flare casing</comment>
+</data>
+<data name="Def.Obj.Item.Trash.ParachuteFlareCasing.Verb.PickUp" xml:space="preserve">
+  <value>pick up</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerWall.DisplayName" xml:space="preserve">
+  <value>bunker wall</value>
+  <comment>bunker wall</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerLowWall.DisplayName" xml:space="preserve">
+  <value>bunker low wall</value>
+  <comment>bunker low wall</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerPassage.DisplayName" xml:space="preserve">
+  <value>bunker passage</value>
+  <comment>bunker passage</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerBack.DisplayName" xml:space="preserve">
+  <value>bunker back</value>
+  <comment>bunker back</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerDoor.DisplayName" xml:space="preserve">
+  <value>bunker door</value>
+  <comment>bunker door</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Footing.DisplayName" xml:space="preserve">
+  <value>bunker footing</value>
+  <comment>bunker footing</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.HalfWalls.DisplayName" xml:space="preserve">
+  <value>bunker half walls</value>
+  <comment>bunker half walls</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Walls.DisplayName" xml:space="preserve">
+  <value>bunker walls</value>
+  <comment>bunker walls</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Roofed.DisplayName" xml:space="preserve">
+  <value>bunker roof slab</value>
+  <comment>bunker roof slab</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.DisplayName" xml:space="preserve">
+  <value>hardened bunker</value>
+  <comment>hardened bunker</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Wreck.DisplayName" xml:space="preserve">
+  <value>bunker wreck</value>
+  <comment>bunker wreck</comment>
 </data>
 <data name="StackFamily.TestPlank" xml:space="preserve">
   <value>TestPlank</value>
