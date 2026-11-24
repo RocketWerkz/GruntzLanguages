@@ -679,6 +679,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Перед сворачиванием палатку нужно освободить.</value>
   <comment>The tent has to be empty before it comes down.</comment>
 </data>
+<data name="Chat.DeconstructNotDrained" xml:space="preserve">
+  <value>Сначала опустошите: {TARGET}. Иначе не разобрать.</value>
+  <comment>The {TARGET} has to be empty before it comes apart.</comment>
+</data>
 <data name="Chat.FultonUntrained" xml:space="preserve">
   <value>Вы понятия не имеете, как это закрепить.</value>
   <comment>You have no idea how to rig this.</comment>
@@ -694,6 +698,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Chat.FultonNoSky" xml:space="preserve">
   <value>Сверху нет открытого неба.</value>
   <comment>There is no open sky above.</comment>
+</data>
+<data name="Chat.SelfLaunchNoSky" xml:space="preserve">
+  <value>Здесь нет открытого неба для осветительной ракеты.</value>
+  <comment>There is no clear sky for the flare here.</comment>
+</data>
+<data name="Chat.SelfLaunchCrowded" xml:space="preserve">
+  <value>В воздухе слишком много всего, ракету не запустить.</value>
+  <comment>Too much is in the air to fire the flare.</comment>
 </data>
 <data name="Chat.FultonLift" xml:space="preserve">
   <value>{ACTOR} отправляет мешок с телом вверх на тросе Fulton.</value>
@@ -1395,6 +1407,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>[Р] {NAME}: {TEXT}</value>
   <comment>[R] {NAME}: {TEXT}</comment>
 </data>
+<data name="Chat.RankedName" xml:space="preserve">
+  <value>{RANK} {NAME}</value>
+  <comment>{RANK} {NAME}</comment>
+</data>
 <data name="Chat.ClientNoticePrefix" xml:space="preserve">
   <value>// </value>
   <comment>// </comment>
@@ -1746,6 +1762,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HoverVerbLabels.MagazineLoad" xml:space="preserve">
   <value>зарядить</value>
   <comment>load</comment>
+</data>
+<data name="HoverVerbLabels.MagazineSwap" xml:space="preserve">
+  <value>заменить магазин</value>
+  <comment>swap magazine</comment>
 </data>
 <data name="HoverVerbLabels.LauncherLoad" xml:space="preserve">
   <value>зарядить</value>
@@ -2467,6 +2487,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>{NAME} ({OWNER})</value>
   <comment>{OWNER}'s {NAME}</comment>
 </data>
+<data name="HoverName.StationName" xml:space="preserve">
+  <value>{NAME} ({KEY})</value>
+  <comment>{NAME} ({KEY})</comment>
+</data>
 <data name="HoverName.OpenBracket" xml:space="preserve">
   <value> [</value>
   <comment> [</comment>
@@ -2523,9 +2547,17 @@ The file is looked up beside this language file first, then under the game's Con
   <value>для улучшения: {TOOL}</value>
   <comment>use {TOOL} to upgrade</comment>
 </data>
+<data name="HoverName.UseHintUpgradeTwo" xml:space="preserve">
+  <value>для улучшения: {TOOL} + {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to upgrade</comment>
+</data>
 <data name="HoverName.UseHintFillIn" xml:space="preserve">
   <value>чтобы засыпать: {TOOL}</value>
   <comment>use {TOOL} to fill in</comment>
+</data>
+<data name="HoverName.UseHintAddRamp" xml:space="preserve">
+  <value>для пандуса: {TOOL}</value>
+  <comment>use {TOOL} to add a ramp</comment>
 </data>
 <data name="HoverName.UseHintAddRampTwo" xml:space="preserve">
   <value>для пандуса: {TOOL} + {TOOL2}</value>
@@ -2638,6 +2670,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HoverName.UseHintBuckle" xml:space="preserve">
   <value>перетащите сюда кого-нибудь, чтобы пристегнуть</value>
   <comment>drag a mob onto it to buckle</comment>
+</data>
+<data name="HoverName.UseHintMissingTrait" xml:space="preserve">
+  <value>(нужно: {TRAIT})</value>
+  <comment>(missing {TRAIT})</comment>
 </data>
 <data name="HoverName.PryOpenFallback" xml:space="preserve">
   <value>вскрыть</value>
@@ -2983,9 +3019,17 @@ The file is looked up beside this language file first, then under the game's Con
   <value>это нельзя строить на крыше</value>
   <comment>cannot build this on a roof</comment>
 </data>
-<data name="LadderRadial.Cancel" xml:space="preserve">
-  <value>ОТМЕНА</value>
-  <comment>CANCEL</comment>
+<data name="ConstructionPlacement.TooClose" xml:space="preserve">
+  <value>слишком близко к другому укреплению</value>
+  <comment>too close to another fortification</comment>
+</data>
+<data name="LadderRadial.Up" xml:space="preserve">
+  <value>ВВЕРХ</value>
+  <comment>UP</comment>
+</data>
+<data name="LadderRadial.Down" xml:space="preserve">
+  <value>ВНИЗ</value>
+  <comment>DOWN</comment>
 </data>
 <data name="BodyZoneNames.Chest" xml:space="preserve">
   <value>грудь</value>
@@ -5223,6 +5267,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value> $ за этап ремонта генератора</value>
   <comment> Dollars per generator repair step</comment>
 </data>
+<data name="TraitChips.Unit.DollarsPerFullVehicleRepair" xml:space="preserve">
+  <value> $ за полный ремонт техники</value>
+  <comment> Dollars per full vehicle repair</comment>
+</data>
 <data name="TraitChips.Unit.DollarsPerFractureRepaired" xml:space="preserve">
   <value> $ за вылеченный перелом</value>
   <comment> Dollars per fracture repaired</comment>
@@ -5372,8 +5420,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>FORTIFICATION</comment>
 </data>
 <data name="TraitChips.Marker.FortificationUnit" xml:space="preserve">
-  <value> Разбирает фундаменты укреплений</value>
-  <comment> Pulls up fortification footings</comment>
+  <value> Разбирает фундаменты укреплений и заливает бетонные окопы</value>
+  <comment> Pulls up fortification footings and casts concrete trenches</comment>
 </data>
 <data name="TraitChips.Marker.FultonRecoveryToken" xml:space="preserve">
   <value>FULTON</value>
@@ -5398,6 +5446,22 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="TraitChips.Marker.NoSalvageUnit" xml:space="preserve">
   <value> Разбирает постройки, но ничего с них не получает</value>
   <comment> Takes structures apart and keeps nothing of what comes off</comment>
+</data>
+<data name="TraitChips.Marker.HoldsUnderFireToken" xml:space="preserve">
+  <value>СТОЙКОСТЬ ПОД ОГНЁМ</value>
+  <comment>HOLDS UNDER FIRE</comment>
+</data>
+<data name="TraitChips.Marker.HoldsUnderFireUnit" xml:space="preserve">
+  <value> Отделение не отступает из-за ранений или подавления этого бойца</value>
+  <comment> The squad never falls back for this soldier's wounds or suppression</comment>
+</data>
+<data name="TraitChips.Marker.IgnoresBurningToken" xml:space="preserve">
+  <value>НЕ БОИТСЯ ОГНЯ</value>
+  <comment>IGNORES BURNING</comment>
+</data>
+<data name="TraitChips.Marker.IgnoresBurningUnit" xml:space="preserve">
+  <value> Не убегает от огня и не сбивает пламя, продолжает бой даже горя</value>
+  <comment> Never stops to run from a fire or roll it out, and carries on while alight</comment>
 </data>
 <data name="ContextMenu.Row.Follow" xml:space="preserve">
   <value>следить</value>
@@ -5510,6 +5574,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="ContextMenu.RollFaceUp" xml:space="preserve">
   <value>Перевернуть лицом вверх</value>
   <comment>Roll Face Up</comment>
+</data>
+<data name="ContextMenu.BattleBuddy" xml:space="preserve">
+  <value>Боевой товарищ</value>
+  <comment>Battle Buddy</comment>
 </data>
 <data name="HealthScan.AnalyzerHeader" xml:space="preserve">
   <value>АНАЛИЗАТОР HF2</value>
@@ -6143,6 +6211,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ПИТАНИЕ ОТСЕКА ВОССТАНОВЛЕНО // ПЕРЕЗАПУСК</value>
   <comment>ROOM POWER RESTORED // REARMING</comment>
 </data>
+<data name="EmitterWindow.PowerCableLine" xml:space="preserve">
+  <value>КАБЕЛЬ ГЕНЕРАТОРА // БАТ. НЕ УСТАНОВЛЕНА</value>
+  <comment>GENERATOR CABLE // NO CELL FITTED</comment>
+</data>
+<data name="EmitterWindow.PowerCableCellLine" xml:space="preserve">
+  <value>КАБЕЛЬ ГЕНЕРАТОРА ПОД ТОКОМ // БАТ. УСТАНОВЛЕНА</value>
+  <comment>GENERATOR CABLE LIVE // CELL FITTED</comment>
+</data>
 <data name="EmitterWindow.GridOkLine" xml:space="preserve">
   <value>ВНЕШНЕЕ ПИТАНИЕ // СЕТЬ В НОРМЕ // {WATTS} ВТ</value>
   <comment>EXTERNAL POWER // GRID OK // {WATTS} W</comment>
@@ -6150,6 +6226,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EmitterWindow.GridNoneLine" xml:space="preserve">
   <value>НЕТ ВНЕШНЕГО ПИТАНИЯ // ОТ ВНУТРЕННЕЙ БАТАРЕИ</value>
   <comment>NO EXTERNAL POWER // ON INTERNAL CELL</comment>
+</data>
+<data name="EmitterWindow.CableOkLine" xml:space="preserve">
+  <value>КАБЕЛЬ ГЕНЕРАТОРА ПОД ТОКОМ // {WATTS} ВТ</value>
+  <comment>GENERATOR CABLE LIVE // {WATTS} W</comment>
 </data>
 <data name="EmitterWindow.LinkOfflineLine" xml:space="preserve">
   <value>ВКЛЮЧИТЕ, ЧТОБЫ ПРОЕЦИРОВАТЬ ЛИНИЮ ПОЛЯ</value>
@@ -6748,16 +6828,24 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>USE A FUEL CAN ON THE GENERATOR</comment>
 </data>
 <data name="PortGenWindow.NoLinksLine1" xml:space="preserve">
-  <value>НЕТ ПОДКЛЮЧЁННЫХ АПЦ</value>
-  <comment>NO APC CONNECTED</comment>
+  <value>НИЧЕГО НЕ ПОДКЛЮЧЕНО</value>
+  <comment>NOTHING CONNECTED</comment>
 </data>
 <data name="PortGenWindow.NoLinksLine2" xml:space="preserve">
-  <value>ПРИМЕНИТЕ МОТОК КАБЕЛЯ К ГЕНЕРАТОРУ, ЗАТЕМ К АПЦ</value>
-  <comment>USE A CABLE COIL ON THE GENERATOR, THEN ON AN APC</comment>
+  <value>ПРИМЕНИТЕ МОТОК К ГЕНЕРАТОРУ, ЗАТЕМ К АПЦ, ВЕРТОЛЁТУ ИЛИ УСТРОЙСТВУ</value>
+  <comment>USE A COIL ON THE GENERATOR, THEN APC, HELICOPTER OR DEVICE</comment>
 </data>
 <data name="PortGenWindow.BypassLine" xml:space="preserve">
   <value>БАЙПАС // ПОТРЕБЛ. {WHOLE},{FRAC} КВТ</value>
   <comment>BYPASS // DRAW {WHOLE}.{FRAC} KW</comment>
+</data>
+<data name="PortGenWindow.GroundPowerLine" xml:space="preserve">
+  <value>НАЗЕМНОЕ ПИТАНИЕ // ПОТРЕБЛЕНИЕ {WHOLE},{FRAC} КВТ</value>
+  <comment>GROUND POWER // DRAW {WHOLE}.{FRAC} KW</comment>
+</data>
+<data name="PortGenWindow.DirectPowerLine" xml:space="preserve">
+  <value>ПРЯМОЕ ПИТАНИЕ // ПОТРЕБЛЕНИЕ {WHOLE},{FRAC} КВТ</value>
+  <comment>DIRECT POWER // DRAW {WHOLE}.{FRAC} KW</comment>
 </data>
 <data name="PortGenWindow.OnGridLine" xml:space="preserve">
   <value>В СЕТИ // ГЕНЕРАТОР НЕ ПОДАЁТ ТОК</value>
@@ -6886,6 +6974,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="SentryWindow.GridNoneLine" xml:space="preserve">
   <value>НЕТ ВНЕШНЕГО ПИТАНИЯ // ОТ ВНУТР. БАТАРЕИ</value>
   <comment>NO EXTERNAL POWER // ON INTERNAL CELL</comment>
+</data>
+<data name="SentryWindow.CableOkLine" xml:space="preserve">
+  <value>КАБЕЛЬ ГЕНЕРАТОРА ПОД ТОКОМ // {WATTS} ВТ</value>
+  <comment>GENERATOR CABLE LIVE // {WATTS} W</comment>
 </data>
 <data name="SentryWindow.ArcLine" xml:space="preserve">
   <value>СЕКТОР {DEGREES}° - ДАЛЬНОСТЬ {TILES} М</value>
@@ -8499,6 +8591,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ГРОМКОСТЬ МУЗЫКИ</value>
   <comment>MUSIC VOLUME</comment>
 </data>
+<data name="Settings.EmoteOnThrowLabel" xml:space="preserve">
+  <value>ЭМОЦИЯ ПРИ БРОСКЕ</value>
+  <comment>EMOTE ON THROW</comment>
+</data>
+<data name="Settings.ParseLocalTextLabel" xml:space="preserve">
+  <value>ЭМОЦИИ ИЗ ТЕКСТА ЧАТА</value>
+  <comment>PARSE LOCAL TEXT</comment>
+</data>
+<data name="Settings.EmoteVoicesHeader" xml:space="preserve">
+  <value>ГОЛОСА ЭМОЦИЙ</value>
+  <comment>EMOTE VOICES</comment>
+</data>
 <data name="Settings.LanguageLabel" xml:space="preserve">
   <value>ЯЗЫК</value>
   <comment>LANGUAGE</comment>
@@ -8590,6 +8694,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Settings.XrayOutlineLabel" xml:space="preserve">
   <value>РЕНТГЕН КОНТУРА</value>
   <comment>X-RAY VEHICLE OUTLINE</comment>
+</data>
+<data name="Settings.GhostOpaqueAircraftLabel" xml:space="preserve">
+  <value>НЕПРОЗРАЧНЫЕ ВЕРТОЛЁТЫ ДЛЯ ПРИЗРАКА</value>
+  <comment>OPAQUE AIRCRAFT WHEN GHOST</comment>
 </data>
 <data name="Settings.NoLanguageFiles" xml:space="preserve">
   <value>~НЕТ ЯЗЫКОВЫХ ФАЙЛОВ</value>
@@ -8815,6 +8923,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ВЫСАДКА</value>
   <comment>DEPLOY</comment>
 </data>
+<data name="LoadoutSelect.SpawnTypeNear" xml:space="preserve">
+  <value>РЯДОМ</value>
+  <comment>NEAR</comment>
+</data>
+<data name="LoadoutSelect.SpawnTypeGround" xml:space="preserve">
+  <value>СПАВН</value>
+  <comment>SPAWN</comment>
+</data>
+<data name="LoadoutSelect.SpawnTypeFlag" xml:space="preserve">
+  <value>ФЛАГ</value>
+  <comment>FLAG</comment>
+</data>
+<data name="LoadoutSelect.SpawnTypeVehicle" xml:space="preserve">
+  <value>ТЕХНИКА</value>
+  <comment>VEHICLE</comment>
+</data>
 <data name="LoadoutSelect.DeployingLabel" xml:space="preserve">
   <value>ОТПРАВКА</value>
   <comment>DEPLOYING</comment>
@@ -8919,6 +9043,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ЗАНЯТО</value>
   <comment>FULL</comment>
 </data>
+<data name="LoadoutSelect.SlotsChip" xml:space="preserve">
+  <value>МЕСТ: {HELD}/{LIMIT}</value>
+  <comment>{HELD}/{LIMIT} SLOTS</comment>
+</data>
+<data name="LoadoutSelect.VehiclesChip" xml:space="preserve">
+  <value>ТЕХНИКА: {HELD}/{LIMIT}</value>
+  <comment>{HELD}/{LIMIT} VEHICLES</comment>
+</data>
 <data name="LoadoutSelect.LockedLabel" xml:space="preserve">
   <value>НЕДОСТУПНО</value>
   <comment>LOCKED</comment>
@@ -9002,6 +9134,58 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="LoadoutSelect.RejectGeneric" xml:space="preserve">
   <value>выбор не удался, попробуйте снова</value>
   <comment>selection failed, try again</comment>
+</data>
+<data name="LoadoutSelect.ApplyLabel" xml:space="preserve">
+  <value>ПРИМЕНИТЬ</value>
+  <comment>APPLY</comment>
+</data>
+<data name="LoadoutSelect.AppliedChip" xml:space="preserve">
+  <value>ЗАЯВОК: {COUNT}</value>
+  <comment>{COUNT} APPLIED</comment>
+</data>
+<data name="LoadoutSelect.LockedRoleVoting" xml:space="preserve">
+  <value>Экипаж голосует, кому достанется эта роль</value>
+  <comment>The crew is voting on who holds this role</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteTitle" xml:space="preserve">
+  <value>ВЫБОРЫ: {ROLE}</value>
+  <comment>ELECT {ROLE}</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteSub" xml:space="preserve">
+  <value>ОДИН ГОЛОС // РОЛЬ ПОЛУЧАЕТ ЛИДЕР ПО ГОЛОСАМ</value>
+  <comment>ONE VOTE // MOST VOTES TAKES THE ROLE</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteSubApproval" xml:space="preserve">
+  <value>ОТМЕТЬТЕ ВСЕХ, КТО ВАС УСТРАИВАЕТ // ПОБЕЖДАЕТ ЛИДЕР ПО ОТМЕТКАМ</value>
+  <comment>SELECT ALL YOU ACCEPT // MOST SELECTED WINS</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteHours" xml:space="preserve">
+  <value>{ROLE}: {HOURS} Ч</value>
+  <comment>{HOURS}H AS {ROLE}</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteNewToRole" xml:space="preserve">
+  <value>НОВИЧОК В РОЛИ</value>
+  <comment>NEW TO THE ROLE</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteYou" xml:space="preserve">
+  <value>ВЫ</value>
+  <comment>YOU</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteYouHours" xml:space="preserve">
+  <value>ВЫ // {ROLE}: {HOURS} Ч</value>
+  <comment>YOU // {HOURS}H AS {ROLE}</comment>
+</data>
+<data name="LoadoutSelect.RoleVoteYouNewToRole" xml:space="preserve">
+  <value>ВЫ // НОВИЧОК В РОЛИ</value>
+  <comment>YOU // NEW TO THE ROLE</comment>
+</data>
+<data name="LoadoutSelect.LobbyAppliedLine" xml:space="preserve">
+  <value>ЗАЯВКА ОТПРАВЛЕНА // ЭКИПАЖ ПРОГОЛОСУЕТ, КОГДА ОСТАНЕТСЯ {SECONDS} С</value>
+  <comment>APPLICATION SENT // THE CREW VOTES WHEN {SECONDS}S REMAIN</comment>
+</data>
+<data name="LoadoutSelect.LobbyNotElectedLine" xml:space="preserve">
+  <value>ЭКИПАЖ ОТДАЛ РОЛЬ ({ROLE}) НЕ ВАМ // ВЫБЕРИТЕ ДРУГУЮ РОЛЬ</value>
+  <comment>THE CREW ELECTED ANOTHER {ROLE} // PICK ANOTHER ROLE</comment>
 </data>
 <data name="KillScare.Line" xml:space="preserve">
   <value>ВЫ СТЁРТЫ</value>
@@ -10127,6 +10311,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ТЕЛ ОТПРАВЛЕНО ДОМОЙ</value>
   <comment>BODIES SENT HOME</comment>
 </data>
+<data name="EorScreen.StatFlightSeconds" xml:space="preserve">
+  <value>ВРЕМЯ В ПОЛЁТЕ</value>
+  <comment>FLIGHT TIME</comment>
+</data>
+<data name="EorScreen.StatSandbagsFilled" xml:space="preserve">
+  <value>НАПОЛНЕНО МЕШКОВ</value>
+  <comment>SANDBAGS FILLED</comment>
+</data>
+<data name="EorScreen.StatVehicleKills" xml:space="preserve">
+  <value>УБИТО ОРУЖИЕМ ТЕХНИКИ</value>
+  <comment>VEHICLE WEAPON KILLS</comment>
+</data>
 <data name="EorScreen.StatUnknown" xml:space="preserve">
   <value>~НЕИЗВЕСТНАЯ СТАТИСТИКА</value>
   <comment>~UNKNOWN STAT</comment>
@@ -10927,6 +11123,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>КОПАНИЕ</value>
   <comment>DIGGING</comment>
 </data>
+<data name="Codex.Quality.Picking" xml:space="preserve">
+  <value>ДОЛБЛЕНИЕ</value>
+  <comment>PICKING</comment>
+</data>
 <data name="Codex.F1Hint" xml:space="preserve">
   <value>кодекс</value>
   <comment>codex</comment>
@@ -11215,6 +11415,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ОРУЖИЕ</value>
   <comment>WEAPONS</comment>
 </data>
+<data name="Codex.Topic.Vehicles" xml:space="preserve">
+  <value>ТЕХНИКА</value>
+  <comment>VEHICLES</comment>
+</data>
 <data name="Codex.Section.Chemistry.Reactions" xml:space="preserve">
   <value>РЕАКЦИИ</value>
   <comment>REACTIONS</comment>
@@ -11255,6 +11459,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>КОНСТРУКЦИИ</value>
   <comment>STRUCTURES</comment>
 </data>
+<data name="Codex.Section.Construction.Buildings" xml:space="preserve">
+  <value>ПОСТРОЙКИ</value>
+  <comment>BUILDINGS</comment>
+</data>
 <data name="Codex.Section.Construction.Materials" xml:space="preserve">
   <value>МАТЕРИАЛЫ</value>
   <comment>MATERIALS</comment>
@@ -11291,6 +11499,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>БЛИЖНИЙ БОЙ</value>
   <comment>MELEE</comment>
 </data>
+<data name="Codex.Section.Vehicles.Weapons" xml:space="preserve">
+  <value>ОРУЖИЕ</value>
+  <comment>WEAPONS</comment>
+</data>
 <data name="Codex.Section.Items.Families" xml:space="preserve">
   <value>СЕМЕЙСТВА</value>
   <comment>FAMILIES</comment>
@@ -11298,6 +11510,626 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Section.Items.Tools" xml:space="preserve">
   <value>ИНСТРУМЕНТЫ</value>
   <comment>TOOLS</comment>
+</data>
+<data name="VehicleConsole.HeaderLine" xml:space="preserve">
+  <value>ЛЁТНЫЙ ПУЛЬТ</value>
+  <comment>FLIGHT CONSOLE</comment>
+</data>
+<data name="VehicleConsole.SubLine" xml:space="preserve">
+  <value>{VEHICLE} // АВИАКРЫЛО USCM</value>
+  <comment>{VEHICLE} // USCM AIR WING</comment>
+</data>
+<data name="VehicleConsole.RefusedBanner" xml:space="preserve">
+  <value>// ЗВ ЗАНЯТА - ПОСАДКА ЗАПРЕЩЕНА //</value>
+  <comment>// LZ OBSTRUCTED - LANDING REFUSED //</comment>
+</data>
+<data name="VehicleConsole.StatusSection" xml:space="preserve">
+  <value>СОСТОЯНИЕ ПОЛЁТА</value>
+  <comment>FLIGHT STATUS</comment>
+</data>
+<data name="VehicleConsole.ControlsSection" xml:space="preserve">
+  <value>УПРАВЛЕНИЕ ПОЛЁТОМ</value>
+  <comment>FLIGHT CONTROLS</comment>
+</data>
+<data name="VehicleConsole.RotorSection" xml:space="preserve">
+  <value>ВИНТ И ДВИГАТЕЛЬ</value>
+  <comment>ROTOR AND ENGINE</comment>
+</data>
+<data name="VehicleConsole.DoorsSection" xml:space="preserve">
+  <value>ДВЕРИ</value>
+  <comment>DOORS</comment>
+</data>
+<data name="VehicleConsole.LightsSection" xml:space="preserve">
+  <value>ОСВЕЩЕНИЕ</value>
+  <comment>LIGHTS</comment>
+</data>
+<data name="VehicleConsole.CabinSection" xml:space="preserve">
+  <value>САЛОН</value>
+  <comment>CABIN</comment>
+</data>
+<data name="VehicleConsole.PhaseKey" xml:space="preserve">
+  <value>ФАЗА</value>
+  <comment>PHASE</comment>
+</data>
+<data name="VehicleConsole.PhaseLanded" xml:space="preserve">
+  <value>НА ЗЕМЛЕ</value>
+  <comment>LANDED</comment>
+</data>
+<data name="VehicleConsole.PhaseSpinUp" xml:space="preserve">
+  <value>РАСКРУТКА ВИНТА</value>
+  <comment>SPINNING UP</comment>
+</data>
+<data name="VehicleConsole.PhaseTakingOff" xml:space="preserve">
+  <value>ВЗЛЁТ</value>
+  <comment>TAKING OFF</comment>
+</data>
+<data name="VehicleConsole.PhaseFlying" xml:space="preserve">
+  <value>В ПОЛЁТЕ</value>
+  <comment>AIRBORNE</comment>
+</data>
+<data name="VehicleConsole.PhaseLanding" xml:space="preserve">
+  <value>ПОСАДКА</value>
+  <comment>LANDING</comment>
+</data>
+<data name="VehicleConsole.PhaseSpinDown" xml:space="preserve">
+  <value>ВЫБЕГ ВИНТА</value>
+  <comment>SPINNING DOWN</comment>
+</data>
+<data name="VehicleConsole.TileLine" xml:space="preserve">
+  <value>КЛЕТКА {X},{Y}</value>
+  <comment>TILE {X},{Y}</comment>
+</data>
+<data name="VehicleConsole.AltitudeKey" xml:space="preserve">
+  <value>ВЫСОТА</value>
+  <comment>ALTITUDE</comment>
+</data>
+<data name="VehicleConsole.AltitudeLine" xml:space="preserve">
+  <value>{PX} ПКС</value>
+  <comment>{PX} PX</comment>
+</data>
+<data name="VehicleConsole.HeadingKey" xml:space="preserve">
+  <value>КУРС</value>
+  <comment>HEADING</comment>
+</data>
+<data name="VehicleConsole.HeadingNorth" xml:space="preserve">
+  <value>С</value>
+  <comment>N</comment>
+</data>
+<data name="VehicleConsole.HeadingEast" xml:space="preserve">
+  <value>В</value>
+  <comment>E</comment>
+</data>
+<data name="VehicleConsole.HeadingSouth" xml:space="preserve">
+  <value>Ю</value>
+  <comment>S</comment>
+</data>
+<data name="VehicleConsole.HeadingWest" xml:space="preserve">
+  <value>З</value>
+  <comment>W</comment>
+</data>
+<data name="VehicleConsole.SpeedKey" xml:space="preserve">
+  <value>ПУТ. СКОРОСТЬ</value>
+  <comment>GROUND SPEED</comment>
+</data>
+<data name="VehicleConsole.SpeedLine" xml:space="preserve">
+  <value>{WHOLE},{FRAC} КЛ./С</value>
+  <comment>{WHOLE}.{FRAC} TILES/S</comment>
+</data>
+<data name="VehicleConsole.CapKey" xml:space="preserve">
+  <value>ПРЕДЕЛ</value>
+  <comment>CAP</comment>
+</data>
+<data name="VehicleConsole.CollectiveKey" xml:space="preserve">
+  <value>ОБЩИЙ ШАГ</value>
+  <comment>COLLECTIVE</comment>
+</data>
+<data name="VehicleConsole.TakeOffLabel" xml:space="preserve">
+  <value>ВЗЛЁТ</value>
+  <comment>TAKE OFF</comment>
+</data>
+<data name="VehicleConsole.LandLabel" xml:space="preserve">
+  <value>ПОСАДКА</value>
+  <comment>LAND</comment>
+</data>
+<data name="VehicleConsole.ClimbingLabel" xml:space="preserve">
+  <value>НАБОР</value>
+  <comment>CLIMBING</comment>
+</data>
+<data name="VehicleConsole.DescendingLabel" xml:space="preserve">
+  <value>СНИЖЕНИЕ</value>
+  <comment>DESCENDING</comment>
+</data>
+<data name="VehicleConsole.ThrottleKey" xml:space="preserve">
+  <value>ГАЗ</value>
+  <comment>THROTTLE</comment>
+</data>
+<data name="VehicleConsole.ThrottleLine" xml:space="preserve">
+  <value>{PERCENT}%</value>
+  <comment>{PERCENT}%</comment>
+</data>
+<data name="VehicleConsole.MinusLabel" xml:space="preserve">
+  <value>-</value>
+  <comment>-</comment>
+</data>
+<data name="VehicleConsole.PlusLabel" xml:space="preserve">
+  <value>+</value>
+  <comment>+</comment>
+</data>
+<data name="VehicleConsole.HoverKey" xml:space="preserve">
+  <value>АВТОЗАВИСАНИЕ</value>
+  <comment>HOVER SETTLE</comment>
+</data>
+<data name="VehicleConsole.PilotOnlyHint" xml:space="preserve">
+  <value>УПРАВЛЕНИЕ ОТВЕЧАЕТ ТОЛЬКО ПИЛОТАМ НА МЕСТАХ</value>
+  <comment>CONTROLS ANSWER THE SEATED PILOTS ONLY</comment>
+</data>
+<data name="VehicleConsole.MainRotorKey" xml:space="preserve">
+  <value>НЕСУЩИЙ ВИНТ</value>
+  <comment>MAIN ROTOR</comment>
+</data>
+<data name="VehicleConsole.RotorStopped" xml:space="preserve">
+  <value>ОСТАНОВ.</value>
+  <comment>STOPPED</comment>
+</data>
+<data name="VehicleConsole.RotorSlow" xml:space="preserve">
+  <value>РАЗГОН</value>
+  <comment>SPOOLING</comment>
+</data>
+<data name="VehicleConsole.RotorFast" xml:space="preserve">
+  <value>В НОРМЕ</value>
+  <comment>NOMINAL</comment>
+</data>
+<data name="VehicleConsole.RotorLine" xml:space="preserve">
+  <value>{PERCENT}% ОБ/МИН</value>
+  <comment>{PERCENT}% RPM</comment>
+</data>
+<data name="VehicleConsole.PortDoorKey" xml:space="preserve">
+  <value>ДВЕРЬ ЛБ</value>
+  <comment>PORT DOOR</comment>
+</data>
+<data name="VehicleConsole.StarboardDoorKey" xml:space="preserve">
+  <value>ДВЕРЬ ПБ</value>
+  <comment>STBD DOOR</comment>
+</data>
+<data name="VehicleConsole.DoorKey" xml:space="preserve">
+  <value>ДВЕРЬ {N}</value>
+  <comment>DOOR {N}</comment>
+</data>
+<data name="VehicleConsole.OpenLabel" xml:space="preserve">
+  <value>ОТКРЫТА</value>
+  <comment>OPEN</comment>
+</data>
+<data name="VehicleConsole.ClosedLabel" xml:space="preserve">
+  <value>ЗАКРЫТА</value>
+  <comment>CLOSED</comment>
+</data>
+<data name="VehicleConsole.DoorsHint" xml:space="preserve">
+  <value>ВО ВРЕМЯ ПОЛЁТА ДВЕРИ ОТКРЫТЫ В ПУСТОТУ - ШАГ С ПОРОГА ЭТО ПАДЕНИЕ</value>
+  <comment>DOORS OPEN TO THE AIR WHILE AIRBORNE - A STEP OFF THE SILL IS A FALL</comment>
+</data>
+<data name="VehicleConsole.CabinLightsKey" xml:space="preserve">
+  <value>САЛОН</value>
+  <comment>CABIN</comment>
+</data>
+<data name="VehicleConsole.NavLightsKey" xml:space="preserve">
+  <value>НАВ. ОГНИ</value>
+  <comment>NAV</comment>
+</data>
+<data name="VehicleConsole.PilotSeat" xml:space="preserve">
+  <value>ПИЛОТ</value>
+  <comment>PILOT</comment>
+</data>
+<data name="VehicleConsole.CoPilotSeat" xml:space="preserve">
+  <value>2-Й ПИЛОТ</value>
+  <comment>CO-PILOT</comment>
+</data>
+<data name="VehicleConsole.SeatKey" xml:space="preserve">
+  <value>КРЕСЛО {N}</value>
+  <comment>SEAT {N}</comment>
+</data>
+<data name="VehicleConsole.EmptySeat" xml:space="preserve">
+  <value>СВОБОДНО</value>
+  <comment>EMPTY</comment>
+</data>
+<data name="VehicleConsole.FootLzClear" xml:space="preserve">
+  <value>ЗВ: ЧИСТО</value>
+  <comment>LZ: CLEAR</comment>
+</data>
+<data name="VehicleConsole.FootLzObstructed" xml:space="preserve">
+  <value>ЗВ: ЗАНЯТА</value>
+  <comment>LZ: OBSTRUCTED</comment>
+</data>
+<data name="VehicleConsole.FootLzNone" xml:space="preserve">
+  <value>ЗВ: --</value>
+  <comment>LZ: --</comment>
+</data>
+<data name="VehicleConsole.FootModeGround" xml:space="preserve">
+  <value>РЕЖИМ: НАЗЕМНЫЙ</value>
+  <comment>MODE: GROUND</comment>
+</data>
+<data name="VehicleConsole.FootModeFlight" xml:space="preserve">
+  <value>РЕЖИМ: ПОЛЁТ</value>
+  <comment>MODE: FLIGHT</comment>
+</data>
+<data name="VehicleConsole.PhaseIdle" xml:space="preserve">
+  <value>ПРОСТОЙ</value>
+  <comment>IDLE</comment>
+</data>
+<data name="VehicleConsole.PhaseStarting" xml:space="preserve">
+  <value>ЗАПУСК</value>
+  <comment>STARTING</comment>
+</data>
+<data name="VehicleConsole.PhaseStopping" xml:space="preserve">
+  <value>ОСТАНОВКА</value>
+  <comment>STOPPING</comment>
+</data>
+<data name="VehicleConsole.EngineKey" xml:space="preserve">
+  <value>ДВИГАТЕЛЬ</value>
+  <comment>ENGINE</comment>
+</data>
+<data name="VehicleConsole.EngineStartLabel" xml:space="preserve">
+  <value>ЗАПУСК</value>
+  <comment>ENGINE START</comment>
+</data>
+<data name="VehicleConsole.EngineStopLabel" xml:space="preserve">
+  <value>ОСТАНОВ ДВИГ.</value>
+  <comment>ENGINE STOP</comment>
+</data>
+<data name="VehicleConsole.EngineStartingLabel" xml:space="preserve">
+  <value>ЗАПУСК</value>
+  <comment>STARTING</comment>
+</data>
+<data name="VehicleConsole.EngineStoppingLabel" xml:space="preserve">
+  <value>ОСТАНОВКА</value>
+  <comment>STOPPING</comment>
+</data>
+<data name="VehicleConsole.EngineRunningLabel" xml:space="preserve">
+  <value>РАБОТАЕТ</value>
+  <comment>RUNNING</comment>
+</data>
+<data name="VehicleConsole.LowFuelBanner" xml:space="preserve">
+  <value>// МАЛО ТОПЛИВА - ВЗЛЁТ НЕВОЗМОЖЕН //</value>
+  <comment>// LOW FUEL - LIFT REFUSED //</comment>
+</data>
+<data name="VehicleConsole.FuelKey" xml:space="preserve">
+  <value>ТОПЛИВО</value>
+  <comment>FUEL</comment>
+</data>
+<data name="VehicleConsole.FuelNominal" xml:space="preserve">
+  <value>НОРМА</value>
+  <comment>NOMINAL</comment>
+</data>
+<data name="VehicleConsole.FuelLow" xml:space="preserve">
+  <value>МАЛО</value>
+  <comment>LOW</comment>
+</data>
+<data name="VehicleConsole.FuelEmpty" xml:space="preserve">
+  <value>ПУСТО</value>
+  <comment>EMPTY</comment>
+</data>
+<data name="VehicleConsole.PhaseStalling" xml:space="preserve">
+  <value>ОТКАЗ ДВИГАТЕЛЯ</value>
+  <comment>ENGINE OUT</comment>
+</data>
+<data name="VehicleConsole.PhaseFalling" xml:space="preserve">
+  <value>ПАДЕНИЕ</value>
+  <comment>GOING DOWN</comment>
+</data>
+<data name="VehicleConsole.EngineOutLabel" xml:space="preserve">
+  <value>MAYDAY</value>
+  <comment>MAYDAY</comment>
+</data>
+<data name="VehicleConsole.PowerSection" xml:space="preserve">
+  <value>ПИТАНИЕ</value>
+  <comment>POWER</comment>
+</data>
+<data name="VehicleConsole.BatteryKey" xml:space="preserve">
+  <value>БАТ.</value>
+  <comment>BAT</comment>
+</data>
+<data name="VehicleConsole.FuelPumpKey" xml:space="preserve">
+  <value>ТОПЛ. НАСОС</value>
+  <comment>FUEL PUMP</comment>
+</data>
+<data name="VehicleConsole.GeneratorKey" xml:space="preserve">
+  <value>ГЕН.</value>
+  <comment>GEN</comment>
+</data>
+<data name="VehicleConsole.BatteryReadoutKey" xml:space="preserve">
+  <value>БАТАРЕЯ</value>
+  <comment>BATTERY</comment>
+</data>
+<data name="VehicleConsole.BatteryReserve" xml:space="preserve">
+  <value>РЕЗЕРВ</value>
+  <comment>RESERVE</comment>
+</data>
+<data name="VehicleConsole.BatteryLow" xml:space="preserve">
+  <value>МАЛО</value>
+  <comment>LOW</comment>
+</data>
+<data name="VehicleConsole.BatteryNominal" xml:space="preserve">
+  <value>НОРМА</value>
+  <comment>NOMINAL</comment>
+</data>
+<data name="VehicleConsole.GenOffCaution" xml:space="preserve">
+  <value>// ГЕН. ВЫКЛ - ЗАРЯДКИ НЕТ //</value>
+  <comment>// GEN OFF - NOT CHARGING //</comment>
+</data>
+<data name="VehicleConsole.PumpOffLabel" xml:space="preserve">
+  <value>НАСОС ВЫКЛ</value>
+  <comment>PUMP OFF</comment>
+</data>
+<data name="VehicleConsole.BatteryBanner" xml:space="preserve">
+  <value>// БАТАРЕЯ - ЗАПУСК НЕВОЗМОЖЕН //</value>
+  <comment>// BATTERY - START REFUSED //</comment>
+</data>
+<data name="VehicleConsole.FuelPressureBanner" xml:space="preserve">
+  <value>// ДАВЛ. ТОПЛ. НИЗКОЕ - ЗАПУСК НЕВОЗМОЖЕН //</value>
+  <comment>// FUEL PRES LOW - START REFUSED //</comment>
+</data>
+<data name="VehicleConsole.FuelPressureKey" xml:space="preserve">
+  <value>ДАВЛ. ТОПЛ.</value>
+  <comment>FUEL PRES</comment>
+</data>
+<data name="VehicleConsole.FuelPressureOff" xml:space="preserve">
+  <value>ВЫКЛ</value>
+  <comment>OFF</comment>
+</data>
+<data name="VehicleConsole.FuelPressureRising" xml:space="preserve">
+  <value>РАСТЁТ</value>
+  <comment>RISING</comment>
+</data>
+<data name="VehicleConsole.FuelPressureLow" xml:space="preserve">
+  <value>МАЛО</value>
+  <comment>LOW</comment>
+</data>
+<data name="VehicleConsole.FuelPressureNominal" xml:space="preserve">
+  <value>НОРМА</value>
+  <comment>NOMINAL</comment>
+</data>
+<data name="VehicleConsole.FuelPressureCaution" xml:space="preserve">
+  <value>// ДАВЛ. ТОПЛ. НИЗКОЕ - ДВИГАТЕЛЬ БЕЗ ТОПЛИВА //</value>
+  <comment>// FUEL PRES LOW - ENGINE STARVING //</comment>
+</data>
+<data name="VehicleConsole.RotorSpoolingBanner" xml:space="preserve">
+  <value>// ВИНТ РАСКРУЧИВАЕТСЯ - ЖДИТЕ //</value>
+  <comment>// ROTOR SPOOLING - WAIT //</comment>
+</data>
+<data name="VehicleConsole.RotorLowBanner" xml:space="preserve">
+  <value>// ОБОРОТЫ ВИНТА НИЗКИЕ - ДОБАВЬТЕ ГАЗ //</value>
+  <comment>// ROTOR LOW - THROTTLE UP //</comment>
+</data>
+<data name="VehicleConsole.TooHeavyBanner" xml:space="preserve">
+  <value>// СЛИШКОМ ТЯЖЕЛО - РАЗГРУЗИТЕ КАБИНУ //</value>
+  <comment>// TOO HEAVY - LIGHTEN THE CABIN //</comment>
+</data>
+<data name="VehicleConsole.MountedBanner" xml:space="preserve">
+  <value>// ДВЕРНАЯ УСТАНОВКА СМОНТИРОВАНА //</value>
+  <comment>// DOOR MOUNT FITTED //</comment>
+</data>
+<data name="VehicleConsole.HoldToStartLabel" xml:space="preserve">
+  <value>ДЕРЖИТЕ: ЗАПУСК</value>
+  <comment>HOLD TO START</comment>
+</data>
+<data name="VehicleConsole.ReleaseLabel" xml:space="preserve">
+  <value>ОТПУСТИТЕ</value>
+  <comment>RELEASE</comment>
+</data>
+<data name="VehicleConsole.ThrottleToIdleLabel" xml:space="preserve">
+  <value>НА МАЛЫЙ ГАЗ</value>
+  <comment>THROTTLE TO IDLE</comment>
+</data>
+<data name="VehicleConsole.ThrottleDownLabel" xml:space="preserve">
+  <value>ВНИЗ</value>
+  <comment>DOWN</comment>
+</data>
+<data name="VehicleConsole.ThrottleUpLabel" xml:space="preserve">
+  <value>ВВЕРХ</value>
+  <comment>UP</comment>
+</data>
+<data name="VehicleConsole.ClimbLabel" xml:space="preserve">
+  <value>ВВЕРХ</value>
+  <comment>CLIMB</comment>
+</data>
+<data name="VehicleConsole.DescendLabel" xml:space="preserve">
+  <value>ВНИЗ</value>
+  <comment>DESCEND</comment>
+</data>
+<data name="VehicleConsole.MotionClimb" xml:space="preserve">
+  <value>ПОДЪЁМ</value>
+  <comment>CLIMB</comment>
+</data>
+<data name="VehicleConsole.MotionHold" xml:space="preserve">
+  <value>ЗАВИС.</value>
+  <comment>HOLD</comment>
+</data>
+<data name="VehicleConsole.MotionDescend" xml:space="preserve">
+  <value>СПУСК</value>
+  <comment>DESCEND</comment>
+</data>
+<data name="VehicleConsole.AltitudeSetLine" xml:space="preserve">
+  <value>{FEET} ФТ  УСТ. {SET} ФТ</value>
+  <comment>{FEET} FT  SET {SET} FT</comment>
+</data>
+<data name="VehicleConsole.PhaseAutorotating" xml:space="preserve">
+  <value>АВТОРОТАЦИЯ</value>
+  <comment>AUTOROTATING</comment>
+</data>
+<data name="VehicleConsole.EgtRedCaution" xml:space="preserve">
+  <value>// Т-РА ГАЗОВ В КРАСНОЙ ЗОНЕ - УБЕРИТЕ ГАЗ //</value>
+  <comment>// EGT RED - THROTTLE BACK //</comment>
+</data>
+<data name="VehicleConsole.DeckHotCaution" xml:space="preserve">
+  <value>// ПАЛУБА ГОРЯЧАЯ - ГОТОВЬТЕ ОГНЕТУШИТЕЛЬ //</value>
+  <comment>// DECK HOT - STAND BY EXTINGUISHER //</comment>
+</data>
+<data name="VehicleConsole.DeckFireCaution" xml:space="preserve">
+  <value>// ПАЛУБА В ОГНЕ - ТУШИТЕ //</value>
+  <comment>// DECK FIRE - EXTINGUISH //</comment>
+</data>
+<data name="VehicleConsole.EngineOutCaution" xml:space="preserve">
+  <value>// ОТКАЗ ДВИГАТЕЛЯ - АВТОРОТАЦИЯ - УХОДИТЕ ОТ ЗЕМЛИ //</value>
+  <comment>// ENGINE OUT - AUTOROTATING - STEER TO CLEAR GROUND //</comment>
+</data>
+<data name="VehicleConsole.RotorRpmLowCaution" xml:space="preserve">
+  <value>// ОБОРОТЫ ВИНТА НИЗКИЕ //</value>
+  <comment>// ROTOR RPM LOW //</comment>
+</data>
+<data name="VehicleConsole.AltLimitedCaution" xml:space="preserve">
+  <value>ВЫСОТА ОГРАНИЧЕНА - ВИНТ ДЕРЖИТ ДО {FEET} ФТ</value>
+  <comment>ALT LIMITED - ROTOR HOLDS {FEET} FT</comment>
+</data>
+<data name="VehicleConsole.PumpOffCaution" xml:space="preserve">
+  <value>НАСОС ВЫКЛ</value>
+  <comment>PUMP OFF</comment>
+</data>
+<data name="VehicleConsole.PressureRisingCaution" xml:space="preserve">
+  <value>ДАВЛЕНИЕ РАСТЁТ: ЖДИТЕ</value>
+  <comment>PRESSURE RISING: WAIT</comment>
+</data>
+<data name="VehicleConsole.PressureLowCaution" xml:space="preserve">
+  <value>// ДАВЛЕНИЕ НИЗКОЕ: САДИТЕСЬ //</value>
+  <comment>// PRESSURE LOW: LAND //</comment>
+</data>
+<data name="VehicleConsole.MainTab" xml:space="preserve">
+  <value>ОСНОВНОЕ</value>
+  <comment>MAIN</comment>
+</data>
+<data name="VehicleConsole.ControlsTab" xml:space="preserve">
+  <value>УПРАВЛЕНИЕ</value>
+  <comment>CONTROLS</comment>
+</data>
+<data name="VehicleConsole.FlightGroup" xml:space="preserve">
+  <value>ПОЛЁТ</value>
+  <comment>FLIGHT</comment>
+</data>
+<data name="VehicleConsole.AircraftGroup" xml:space="preserve">
+  <value>ЛЕТАТЕЛЬНЫЙ АППАРАТ</value>
+  <comment>AIRCRAFT</comment>
+</data>
+<data name="VehicleConsole.GeneralGroup" xml:space="preserve">
+  <value>ОБЩЕЕ</value>
+  <comment>GENERAL</comment>
+</data>
+<data name="VehicleConsole.Unassigned" xml:space="preserve">
+  <value>НЕ НАЗНАЧЕНО</value>
+  <comment>UNASSIGNED</comment>
+</data>
+<data name="VehicleConsole.ConsoleChip" xml:space="preserve">
+  <value>ЧИП КОНСОЛИ</value>
+  <comment>CONSOLE CHIP</comment>
+</data>
+<data name="VehicleConsole.CabinLightsControl" xml:space="preserve">
+  <value>ОСВЕЩЕНИЕ КАБИНЫ</value>
+  <comment>CABIN LIGHTS</comment>
+</data>
+<data name="VehicleConsole.NavLightsControl" xml:space="preserve">
+  <value>НАВИГ. ОГНИ</value>
+  <comment>NAV LIGHTS</comment>
+</data>
+<data name="VehicleConsole.AltitudeFeetLine" xml:space="preserve">
+  <value>{FEET} ФТ</value>
+  <comment>{FEET} FT</comment>
+</data>
+<data name="VehicleConsole.HardpointsSection" xml:space="preserve">
+  <value>УЗЛЫ ПОДВЕСКИ</value>
+  <comment>HARDPOINTS</comment>
+</data>
+<data name="VehicleConsole.MasterKey" xml:space="preserve">
+  <value>ВООРУЖЕНИЕ</value>
+  <comment>MASTER</comment>
+</data>
+<data name="VehicleConsole.SafeLabel" xml:space="preserve">
+  <value>ПРЕДОХР.</value>
+  <comment>SAFE</comment>
+</data>
+<data name="VehicleConsole.ArmedLabel" xml:space="preserve">
+  <value>ВЗВЕДЕНО</value>
+  <comment>ARMED</comment>
+</data>
+<data name="VehicleConsole.ModeKey" xml:space="preserve">
+  <value>РЕЖИМ</value>
+  <comment>MODE</comment>
+</data>
+<data name="VehicleConsole.DualLabel" xml:space="preserve">
+  <value>ПАРНО</value>
+  <comment>DUAL</comment>
+</data>
+<data name="VehicleConsole.AlternateLabel" xml:space="preserve">
+  <value>ПООЧЕРЁДНО</value>
+  <comment>ALTERNATE</comment>
+</data>
+<data name="VehicleConsole.PortHardpointKey" xml:space="preserve">
+  <value>ЛБ</value>
+  <comment>PORT</comment>
+</data>
+<data name="VehicleConsole.StarboardHardpointKey" xml:space="preserve">
+  <value>ПБ</value>
+  <comment>STBD</comment>
+</data>
+<data name="VehicleConsole.NoseHardpointKey" xml:space="preserve">
+  <value>НОС</value>
+  <comment>NOSE</comment>
+</data>
+<data name="VehicleConsole.PortOutboardHardpointKey" xml:space="preserve">
+  <value>ЛБ ВНЕШ</value>
+  <comment>PORT OUT</comment>
+</data>
+<data name="VehicleConsole.PortInboardHardpointKey" xml:space="preserve">
+  <value>ЛБ ВНУТР</value>
+  <comment>PORT IN</comment>
+</data>
+<data name="VehicleConsole.StarboardInboardHardpointKey" xml:space="preserve">
+  <value>ПБ ВНУТР</value>
+  <comment>STBD IN</comment>
+</data>
+<data name="VehicleConsole.StarboardOutboardHardpointKey" xml:space="preserve">
+  <value>ПБ ВНЕШ</value>
+  <comment>STBD OUT</comment>
+</data>
+<data name="VehicleConsole.PilotSeatLabel" xml:space="preserve">
+  <value>ПИЛ</value>
+  <comment>PLT</comment>
+</data>
+<data name="VehicleConsole.GunnerSeatLabel" xml:space="preserve">
+  <value>СТР</value>
+  <comment>GNR</comment>
+</data>
+<data name="VehicleConsole.NoWeapon" xml:space="preserve">
+  <value>НЕТ ОРУЖИЯ</value>
+  <comment>NO WEAPON</comment>
+</data>
+<data name="VehicleConsole.RoundsLine" xml:space="preserve">
+  <value>{COUNT} ПАТ.</value>
+  <comment>{COUNT} RDS</comment>
+</data>
+<data name="VehicleConsole.RocketsLine" xml:space="preserve">
+  <value>{COUNT} РАК.</value>
+  <comment>{COUNT} RKT</comment>
+</data>
+<data name="VehicleConsole.EmptyWord" xml:space="preserve">
+  <value>ПУСТО</value>
+  <comment>EMPTY</comment>
+</data>
+<data name="VehicleConsole.KeyHint" xml:space="preserve">
+  <value>({KEY})</value>
+  <comment>({KEY})</comment>
+</data>
+<data name="VehicleConsole.HardpointsHint" xml:space="preserve">
+  <value>ОГОНЬ ({FIRE}) И ВЗВЕДЕНИЕ ({ARM}) СО СВОЕГО МЕСТА // КАЖДЫЙ ВЗВЕДЁННЫЙ УЗЕЛ ОТМЕЧЕН НА ЗЕМЛЕ // НА РАЗВОРОТЕ ОГОНЬ НЕ ВЕДЁТСЯ</value>
+  <comment>FIRE ({FIRE}) AND ARM ({ARM}) FROM YOUR SEAT // EVERY ARMED POINT SHOWN ON THE GROUND // NO FIRE THROUGH A TURN</comment>
+</data>
+<data name="VehicleConsole.SafeBanner" xml:space="preserve">
+  <value>// ОРУЖИЕ НА ПРЕДОХРАНИТЕЛЕ //</value>
+  <comment>// WEAPONS SAFE //</comment>
+</data>
+<data name="VehicleConsole.HardpointModeControl" xml:space="preserve">
+  <value>РЕЖИМ ПОДВЕСКИ</value>
+  <comment>HARDPOINT MODE</comment>
+</data>
+<data name="VehicleConsole.HardpointSwitchControl" xml:space="preserve">
+  <value>ПОДВЕСКА ВКЛ/ВЫКЛ</value>
+  <comment>HARDPOINT ON/OFF</comment>
 </data>
 <data name="Codex.Group.Medical.Conditions.Lethal" xml:space="preserve">
   <value>СМЕРТЕЛЬНЫЕ</value>
@@ -12843,598 +13675,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>отказ двигателя</value>
   <comment>engine failure</comment>
 </data>
-<data name="VehicleConsole.HeaderLine" xml:space="preserve">
-  <value>ЛЁТНЫЙ ПУЛЬТ</value>
-  <comment>FLIGHT CONSOLE</comment>
-</data>
-<data name="VehicleConsole.SubLine" xml:space="preserve">
-  <value>{VEHICLE} // АВИАКРЫЛО USCM</value>
-  <comment>{VEHICLE} // USCM AIR WING</comment>
-</data>
-<data name="VehicleConsole.RefusedBanner" xml:space="preserve">
-  <value>// ЗВ ЗАНЯТА - ПОСАДКА ЗАПРЕЩЕНА //</value>
-  <comment>// LZ OBSTRUCTED - LANDING REFUSED //</comment>
-</data>
-<data name="VehicleConsole.StatusSection" xml:space="preserve">
-  <value>СОСТОЯНИЕ ПОЛЁТА</value>
-  <comment>FLIGHT STATUS</comment>
-</data>
-<data name="VehicleConsole.ControlsSection" xml:space="preserve">
-  <value>УПРАВЛЕНИЕ ПОЛЁТОМ</value>
-  <comment>FLIGHT CONTROLS</comment>
-</data>
-<data name="VehicleConsole.RotorSection" xml:space="preserve">
-  <value>ВИНТ И ДВИГАТЕЛЬ</value>
-  <comment>ROTOR AND ENGINE</comment>
-</data>
-<data name="VehicleConsole.DoorsSection" xml:space="preserve">
-  <value>ДВЕРИ</value>
-  <comment>DOORS</comment>
-</data>
-<data name="VehicleConsole.LightsSection" xml:space="preserve">
-  <value>ОСВЕЩЕНИЕ</value>
-  <comment>LIGHTS</comment>
-</data>
-<data name="VehicleConsole.CabinSection" xml:space="preserve">
-  <value>САЛОН</value>
-  <comment>CABIN</comment>
-</data>
-<data name="VehicleConsole.PhaseKey" xml:space="preserve">
-  <value>ФАЗА</value>
-  <comment>PHASE</comment>
-</data>
-<data name="VehicleConsole.PhaseLanded" xml:space="preserve">
-  <value>НА ЗЕМЛЕ</value>
-  <comment>LANDED</comment>
-</data>
-<data name="VehicleConsole.PhaseSpinUp" xml:space="preserve">
-  <value>РАСКРУТКА ВИНТА</value>
-  <comment>SPINNING UP</comment>
-</data>
-<data name="VehicleConsole.PhaseTakingOff" xml:space="preserve">
-  <value>ВЗЛЁТ</value>
-  <comment>TAKING OFF</comment>
-</data>
-<data name="VehicleConsole.PhaseFlying" xml:space="preserve">
-  <value>В ПОЛЁТЕ</value>
-  <comment>AIRBORNE</comment>
-</data>
-<data name="VehicleConsole.PhaseLanding" xml:space="preserve">
-  <value>ПОСАДКА</value>
-  <comment>LANDING</comment>
-</data>
-<data name="VehicleConsole.PhaseSpinDown" xml:space="preserve">
-  <value>ВЫБЕГ ВИНТА</value>
-  <comment>SPINNING DOWN</comment>
-</data>
-<data name="VehicleConsole.TileLine" xml:space="preserve">
-  <value>КЛЕТКА {X},{Y}</value>
-  <comment>TILE {X},{Y}</comment>
-</data>
-<data name="VehicleConsole.AltitudeKey" xml:space="preserve">
-  <value>ВЫСОТА</value>
-  <comment>ALTITUDE</comment>
-</data>
-<data name="VehicleConsole.AltitudeLine" xml:space="preserve">
-  <value>{PX} ПКС</value>
-  <comment>{PX} PX</comment>
-</data>
-<data name="VehicleConsole.HeadingKey" xml:space="preserve">
-  <value>КУРС</value>
-  <comment>HEADING</comment>
-</data>
-<data name="VehicleConsole.HeadingNorth" xml:space="preserve">
-  <value>С</value>
-  <comment>N</comment>
-</data>
-<data name="VehicleConsole.HeadingEast" xml:space="preserve">
-  <value>В</value>
-  <comment>E</comment>
-</data>
-<data name="VehicleConsole.HeadingSouth" xml:space="preserve">
-  <value>Ю</value>
-  <comment>S</comment>
-</data>
-<data name="VehicleConsole.HeadingWest" xml:space="preserve">
-  <value>З</value>
-  <comment>W</comment>
-</data>
-<data name="VehicleConsole.SpeedKey" xml:space="preserve">
-  <value>ПУТ. СКОРОСТЬ</value>
-  <comment>GROUND SPEED</comment>
-</data>
-<data name="VehicleConsole.SpeedLine" xml:space="preserve">
-  <value>{WHOLE},{FRAC} КЛ./С</value>
-  <comment>{WHOLE}.{FRAC} TILES/S</comment>
-</data>
-<data name="VehicleConsole.CapKey" xml:space="preserve">
-  <value>ПРЕДЕЛ</value>
-  <comment>CAP</comment>
-</data>
-<data name="VehicleConsole.CollectiveKey" xml:space="preserve">
-  <value>ОБЩИЙ ШАГ</value>
-  <comment>COLLECTIVE</comment>
-</data>
-<data name="VehicleConsole.TakeOffLabel" xml:space="preserve">
-  <value>ВЗЛЁТ</value>
-  <comment>TAKE OFF</comment>
-</data>
-<data name="VehicleConsole.LandLabel" xml:space="preserve">
-  <value>ПОСАДКА</value>
-  <comment>LAND</comment>
-</data>
-<data name="VehicleConsole.ClimbingLabel" xml:space="preserve">
-  <value>НАБОР</value>
-  <comment>CLIMBING</comment>
-</data>
-<data name="VehicleConsole.DescendingLabel" xml:space="preserve">
-  <value>СНИЖЕНИЕ</value>
-  <comment>DESCENDING</comment>
-</data>
-<data name="VehicleConsole.ThrottleKey" xml:space="preserve">
-  <value>ГАЗ</value>
-  <comment>THROTTLE</comment>
-</data>
-<data name="VehicleConsole.ThrottleLine" xml:space="preserve">
-  <value>{PERCENT}%</value>
-  <comment>{PERCENT}%</comment>
-</data>
-<data name="VehicleConsole.MinusLabel" xml:space="preserve">
-  <value>-</value>
-  <comment>-</comment>
-</data>
-<data name="VehicleConsole.PlusLabel" xml:space="preserve">
-  <value>+</value>
-  <comment>+</comment>
-</data>
-<data name="VehicleConsole.HoverKey" xml:space="preserve">
-  <value>АВТОЗАВИСАНИЕ</value>
-  <comment>HOVER SETTLE</comment>
-</data>
-<data name="VehicleConsole.PilotOnlyHint" xml:space="preserve">
-  <value>УПРАВЛЕНИЕ ОТВЕЧАЕТ ТОЛЬКО ПИЛОТАМ НА МЕСТАХ</value>
-  <comment>CONTROLS ANSWER THE SEATED PILOTS ONLY</comment>
-</data>
-<data name="VehicleConsole.MainRotorKey" xml:space="preserve">
-  <value>НЕСУЩИЙ ВИНТ</value>
-  <comment>MAIN ROTOR</comment>
-</data>
-<data name="VehicleConsole.RotorStopped" xml:space="preserve">
-  <value>ОСТАНОВ.</value>
-  <comment>STOPPED</comment>
-</data>
-<data name="VehicleConsole.RotorSlow" xml:space="preserve">
-  <value>РАЗГОН</value>
-  <comment>SPOOLING</comment>
-</data>
-<data name="VehicleConsole.RotorFast" xml:space="preserve">
-  <value>В НОРМЕ</value>
-  <comment>NOMINAL</comment>
-</data>
-<data name="VehicleConsole.RotorLine" xml:space="preserve">
-  <value>{PERCENT}% ОБ/МИН</value>
-  <comment>{PERCENT}% RPM</comment>
-</data>
-<data name="VehicleConsole.PortDoorKey" xml:space="preserve">
-  <value>ДВЕРЬ ЛБ</value>
-  <comment>PORT DOOR</comment>
-</data>
-<data name="VehicleConsole.StarboardDoorKey" xml:space="preserve">
-  <value>ДВЕРЬ ПБ</value>
-  <comment>STBD DOOR</comment>
-</data>
-<data name="VehicleConsole.DoorKey" xml:space="preserve">
-  <value>ДВЕРЬ {N}</value>
-  <comment>DOOR {N}</comment>
-</data>
-<data name="VehicleConsole.OpenLabel" xml:space="preserve">
-  <value>ОТКРЫТА</value>
-  <comment>OPEN</comment>
-</data>
-<data name="VehicleConsole.ClosedLabel" xml:space="preserve">
-  <value>ЗАКРЫТА</value>
-  <comment>CLOSED</comment>
-</data>
-<data name="VehicleConsole.DoorsHint" xml:space="preserve">
-  <value>ВО ВРЕМЯ ПОЛЁТА ДВЕРИ ОТКРЫТЫ В ПУСТОТУ - ШАГ С ПОРОГА ЭТО ПАДЕНИЕ</value>
-  <comment>DOORS OPEN TO THE AIR WHILE AIRBORNE - A STEP OFF THE SILL IS A FALL</comment>
-</data>
-<data name="VehicleConsole.CabinLightsKey" xml:space="preserve">
-  <value>САЛОН</value>
-  <comment>CABIN</comment>
-</data>
-<data name="VehicleConsole.NavLightsKey" xml:space="preserve">
-  <value>НАВ. ОГНИ</value>
-  <comment>NAV</comment>
-</data>
-<data name="VehicleConsole.PilotSeat" xml:space="preserve">
-  <value>ПИЛОТ</value>
-  <comment>PILOT</comment>
-</data>
-<data name="VehicleConsole.CoPilotSeat" xml:space="preserve">
-  <value>2-Й ПИЛОТ</value>
-  <comment>CO-PILOT</comment>
-</data>
-<data name="VehicleConsole.SeatKey" xml:space="preserve">
-  <value>КРЕСЛО {N}</value>
-  <comment>SEAT {N}</comment>
-</data>
-<data name="VehicleConsole.EmptySeat" xml:space="preserve">
-  <value>СВОБОДНО</value>
-  <comment>EMPTY</comment>
-</data>
-<data name="VehicleConsole.FootLzClear" xml:space="preserve">
-  <value>ЗВ: ЧИСТО</value>
-  <comment>LZ: CLEAR</comment>
-</data>
-<data name="VehicleConsole.FootLzObstructed" xml:space="preserve">
-  <value>ЗВ: ЗАНЯТА</value>
-  <comment>LZ: OBSTRUCTED</comment>
-</data>
-<data name="VehicleConsole.FootLzNone" xml:space="preserve">
-  <value>ЗВ: --</value>
-  <comment>LZ: --</comment>
-</data>
-<data name="VehicleConsole.FootModeGround" xml:space="preserve">
-  <value>РЕЖИМ: НАЗЕМНЫЙ</value>
-  <comment>MODE: GROUND</comment>
-</data>
-<data name="VehicleConsole.FootModeFlight" xml:space="preserve">
-  <value>РЕЖИМ: ПОЛЁТ</value>
-  <comment>MODE: FLIGHT</comment>
-</data>
-<data name="VehicleConsole.PhaseIdle" xml:space="preserve">
-  <value>ПРОСТОЙ</value>
-  <comment>IDLE</comment>
-</data>
-<data name="VehicleConsole.PhaseStarting" xml:space="preserve">
-  <value>ЗАПУСК</value>
-  <comment>STARTING</comment>
-</data>
-<data name="VehicleConsole.PhaseStopping" xml:space="preserve">
-  <value>ОСТАНОВКА</value>
-  <comment>STOPPING</comment>
-</data>
-<data name="VehicleConsole.EngineKey" xml:space="preserve">
-  <value>ДВИГАТЕЛЬ</value>
-  <comment>ENGINE</comment>
-</data>
-<data name="VehicleConsole.EngineStartLabel" xml:space="preserve">
-  <value>ЗАПУСК</value>
-  <comment>ENGINE START</comment>
-</data>
-<data name="VehicleConsole.EngineStopLabel" xml:space="preserve">
-  <value>ОСТАНОВ ДВИГ.</value>
-  <comment>ENGINE STOP</comment>
-</data>
-<data name="VehicleConsole.EngineStartingLabel" xml:space="preserve">
-  <value>ЗАПУСК</value>
-  <comment>STARTING</comment>
-</data>
-<data name="VehicleConsole.EngineStoppingLabel" xml:space="preserve">
-  <value>ОСТАНОВКА</value>
-  <comment>STOPPING</comment>
-</data>
-<data name="VehicleConsole.EngineRunningLabel" xml:space="preserve">
-  <value>РАБОТАЕТ</value>
-  <comment>RUNNING</comment>
-</data>
-<data name="VehicleConsole.LowFuelBanner" xml:space="preserve">
-  <value>// МАЛО ТОПЛИВА - ВЗЛЁТ НЕВОЗМОЖЕН //</value>
-  <comment>// LOW FUEL - LIFT REFUSED //</comment>
-</data>
-<data name="VehicleConsole.FuelKey" xml:space="preserve">
-  <value>ТОПЛИВО</value>
-  <comment>FUEL</comment>
-</data>
-<data name="VehicleConsole.FuelNominal" xml:space="preserve">
-  <value>НОРМА</value>
-  <comment>NOMINAL</comment>
-</data>
-<data name="VehicleConsole.FuelLow" xml:space="preserve">
-  <value>МАЛО</value>
-  <comment>LOW</comment>
-</data>
-<data name="VehicleConsole.FuelEmpty" xml:space="preserve">
-  <value>ПУСТО</value>
-  <comment>EMPTY</comment>
-</data>
-<data name="VehicleConsole.PhaseStalling" xml:space="preserve">
-  <value>ОТКАЗ ДВИГАТЕЛЯ</value>
-  <comment>ENGINE OUT</comment>
-</data>
-<data name="VehicleConsole.PhaseFalling" xml:space="preserve">
-  <value>ПАДЕНИЕ</value>
-  <comment>GOING DOWN</comment>
-</data>
-<data name="VehicleConsole.EngineOutLabel" xml:space="preserve">
-  <value>MAYDAY</value>
-  <comment>MAYDAY</comment>
-</data>
-<data name="VehicleConsole.PowerSection" xml:space="preserve">
-  <value>ПИТАНИЕ</value>
-  <comment>POWER</comment>
-</data>
-<data name="VehicleConsole.BatteryKey" xml:space="preserve">
-  <value>БАТ.</value>
-  <comment>BAT</comment>
-</data>
-<data name="VehicleConsole.FuelPumpKey" xml:space="preserve">
-  <value>ТОПЛ. НАСОС</value>
-  <comment>FUEL PUMP</comment>
-</data>
-<data name="VehicleConsole.GeneratorKey" xml:space="preserve">
-  <value>ГЕН.</value>
-  <comment>GEN</comment>
-</data>
-<data name="VehicleConsole.BatteryReadoutKey" xml:space="preserve">
-  <value>БАТАРЕЯ</value>
-  <comment>BATTERY</comment>
-</data>
-<data name="VehicleConsole.BatteryReserve" xml:space="preserve">
-  <value>РЕЗЕРВ</value>
-  <comment>RESERVE</comment>
-</data>
-<data name="VehicleConsole.BatteryLow" xml:space="preserve">
-  <value>МАЛО</value>
-  <comment>LOW</comment>
-</data>
-<data name="VehicleConsole.BatteryNominal" xml:space="preserve">
-  <value>НОРМА</value>
-  <comment>NOMINAL</comment>
-</data>
-<data name="VehicleConsole.GenOffCaution" xml:space="preserve">
-  <value>// ГЕН. ВЫКЛ - ЗАРЯДКИ НЕТ //</value>
-  <comment>// GEN OFF - NOT CHARGING //</comment>
-</data>
-<data name="VehicleConsole.PumpOffLabel" xml:space="preserve">
-  <value>НАСОС ВЫКЛ</value>
-  <comment>PUMP OFF</comment>
-</data>
-<data name="VehicleConsole.BatteryBanner" xml:space="preserve">
-  <value>// БАТАРЕЯ - ЗАПУСК НЕВОЗМОЖЕН //</value>
-  <comment>// BATTERY - START REFUSED //</comment>
-</data>
-<data name="VehicleConsole.FuelPressureBanner" xml:space="preserve">
-  <value>// ДАВЛ. ТОПЛ. НИЗКОЕ - ЗАПУСК НЕВОЗМОЖЕН //</value>
-  <comment>// FUEL PRES LOW - START REFUSED //</comment>
-</data>
-<data name="VehicleConsole.FuelPressureKey" xml:space="preserve">
-  <value>ДАВЛ. ТОПЛ.</value>
-  <comment>FUEL PRES</comment>
-</data>
-<data name="VehicleConsole.FuelPressureOff" xml:space="preserve">
-  <value>ВЫКЛ</value>
-  <comment>OFF</comment>
-</data>
-<data name="VehicleConsole.FuelPressureRising" xml:space="preserve">
-  <value>РАСТЁТ</value>
-  <comment>RISING</comment>
-</data>
-<data name="VehicleConsole.FuelPressureLow" xml:space="preserve">
-  <value>МАЛО</value>
-  <comment>LOW</comment>
-</data>
-<data name="VehicleConsole.FuelPressureNominal" xml:space="preserve">
-  <value>НОРМА</value>
-  <comment>NOMINAL</comment>
-</data>
-<data name="VehicleConsole.FuelPressureCaution" xml:space="preserve">
-  <value>// ДАВЛ. ТОПЛ. НИЗКОЕ - ДВИГАТЕЛЬ БЕЗ ТОПЛИВА //</value>
-  <comment>// FUEL PRES LOW - ENGINE STARVING //</comment>
-</data>
-<data name="VehicleConsole.RotorSpoolingBanner" xml:space="preserve">
-  <value>// ВИНТ РАСКРУЧИВАЕТСЯ - ЖДИТЕ //</value>
-  <comment>// ROTOR SPOOLING - WAIT //</comment>
-</data>
-<data name="VehicleConsole.RotorLowBanner" xml:space="preserve">
-  <value>// ОБОРОТЫ ВИНТА НИЗКИЕ - ДОБАВЬТЕ ГАЗ //</value>
-  <comment>// ROTOR LOW - THROTTLE UP //</comment>
-</data>
-<data name="VehicleConsole.TooHeavyBanner" xml:space="preserve">
-  <value>// СЛИШКОМ ТЯЖЕЛО - РАЗГРУЗИТЕ КАБИНУ //</value>
-  <comment>// TOO HEAVY - LIGHTEN THE CABIN //</comment>
-</data>
-<data name="VehicleConsole.MountedBanner" xml:space="preserve">
-  <value>// ДВЕРНАЯ УСТАНОВКА СМОНТИРОВАНА //</value>
-  <comment>// DOOR MOUNT FITTED //</comment>
-</data>
-<data name="VehicleConsole.HoldToStartLabel" xml:space="preserve">
-  <value>ДЕРЖИТЕ: ЗАПУСК</value>
-  <comment>HOLD TO START</comment>
-</data>
-<data name="VehicleConsole.ReleaseLabel" xml:space="preserve">
-  <value>ОТПУСТИТЕ</value>
-  <comment>RELEASE</comment>
-</data>
-<data name="VehicleConsole.ThrottleToIdleLabel" xml:space="preserve">
-  <value>НА МАЛЫЙ ГАЗ</value>
-  <comment>THROTTLE TO IDLE</comment>
-</data>
-<data name="VehicleConsole.ThrottleDownLabel" xml:space="preserve">
-  <value>ВНИЗ</value>
-  <comment>DOWN</comment>
-</data>
-<data name="VehicleConsole.ThrottleUpLabel" xml:space="preserve">
-  <value>ВВЕРХ</value>
-  <comment>UP</comment>
-</data>
-<data name="VehicleConsole.ClimbLabel" xml:space="preserve">
-  <value>ВВЕРХ</value>
-  <comment>CLIMB</comment>
-</data>
-<data name="VehicleConsole.DescendLabel" xml:space="preserve">
-  <value>ВНИЗ</value>
-  <comment>DESCEND</comment>
-</data>
-<data name="VehicleConsole.MotionClimb" xml:space="preserve">
-  <value>ПОДЪЁМ</value>
-  <comment>CLIMB</comment>
-</data>
-<data name="VehicleConsole.MotionHold" xml:space="preserve">
-  <value>ЗАВИС.</value>
-  <comment>HOLD</comment>
-</data>
-<data name="VehicleConsole.MotionDescend" xml:space="preserve">
-  <value>СПУСК</value>
-  <comment>DESCEND</comment>
-</data>
-<data name="VehicleConsole.AltitudeSetLine" xml:space="preserve">
-  <value>{FEET} ФТ  УСТ. {SET} ФТ</value>
-  <comment>{FEET} FT  SET {SET} FT</comment>
-</data>
-<data name="VehicleConsole.PhaseAutorotating" xml:space="preserve">
-  <value>АВТОРОТАЦИЯ</value>
-  <comment>AUTOROTATING</comment>
-</data>
-<data name="VehicleConsole.EgtRedCaution" xml:space="preserve">
-  <value>// Т-РА ГАЗОВ В КРАСНОЙ ЗОНЕ - УБЕРИТЕ ГАЗ //</value>
-  <comment>// EGT RED - THROTTLE BACK //</comment>
-</data>
-<data name="VehicleConsole.DeckHotCaution" xml:space="preserve">
-  <value>// ПАЛУБА ГОРЯЧАЯ - ГОТОВЬТЕ ОГНЕТУШИТЕЛЬ //</value>
-  <comment>// DECK HOT - STAND BY EXTINGUISHER //</comment>
-</data>
-<data name="VehicleConsole.DeckFireCaution" xml:space="preserve">
-  <value>// ПАЛУБА В ОГНЕ - ТУШИТЕ //</value>
-  <comment>// DECK FIRE - EXTINGUISH //</comment>
-</data>
-<data name="VehicleConsole.EngineOutCaution" xml:space="preserve">
-  <value>// ОТКАЗ ДВИГАТЕЛЯ - АВТОРОТАЦИЯ - УХОДИТЕ ОТ ЗЕМЛИ //</value>
-  <comment>// ENGINE OUT - AUTOROTATING - STEER TO CLEAR GROUND //</comment>
-</data>
-<data name="VehicleConsole.RotorRpmLowCaution" xml:space="preserve">
-  <value>// ОБОРОТЫ ВИНТА НИЗКИЕ //</value>
-  <comment>// ROTOR RPM LOW //</comment>
-</data>
-<data name="VehicleConsole.AltLimitedCaution" xml:space="preserve">
-  <value>ВЫСОТА ОГРАНИЧЕНА - ВИНТ ДЕРЖИТ ДО {FEET} ФТ</value>
-  <comment>ALT LIMITED - ROTOR HOLDS {FEET} FT</comment>
-</data>
-<data name="VehicleConsole.PumpOffCaution" xml:space="preserve">
-  <value>НАСОС ВЫКЛ</value>
-  <comment>PUMP OFF</comment>
-</data>
-<data name="VehicleConsole.PressureRisingCaution" xml:space="preserve">
-  <value>ДАВЛЕНИЕ РАСТЁТ: ЖДИТЕ</value>
-  <comment>PRESSURE RISING: WAIT</comment>
-</data>
-<data name="VehicleConsole.PressureLowCaution" xml:space="preserve">
-  <value>// ДАВЛЕНИЕ НИЗКОЕ: САДИТЕСЬ //</value>
-  <comment>// PRESSURE LOW: LAND //</comment>
-</data>
-<data name="VehicleConsole.MainTab" xml:space="preserve">
-  <value>ОСНОВНОЕ</value>
-  <comment>MAIN</comment>
-</data>
-<data name="VehicleConsole.ControlsTab" xml:space="preserve">
-  <value>УПРАВЛЕНИЕ</value>
-  <comment>CONTROLS</comment>
-</data>
-<data name="VehicleConsole.FlightGroup" xml:space="preserve">
-  <value>ПОЛЁТ</value>
-  <comment>FLIGHT</comment>
-</data>
-<data name="VehicleConsole.AircraftGroup" xml:space="preserve">
-  <value>ЛЕТАТЕЛЬНЫЙ АППАРАТ</value>
-  <comment>AIRCRAFT</comment>
-</data>
-<data name="VehicleConsole.GeneralGroup" xml:space="preserve">
-  <value>ОБЩЕЕ</value>
-  <comment>GENERAL</comment>
-</data>
-<data name="VehicleConsole.Unassigned" xml:space="preserve">
-  <value>НЕ НАЗНАЧЕНО</value>
-  <comment>UNASSIGNED</comment>
-</data>
-<data name="VehicleConsole.ConsoleChip" xml:space="preserve">
-  <value>ЧИП КОНСОЛИ</value>
-  <comment>CONSOLE CHIP</comment>
-</data>
-<data name="VehicleConsole.CabinLightsControl" xml:space="preserve">
-  <value>ОСВЕЩЕНИЕ КАБИНЫ</value>
-  <comment>CABIN LIGHTS</comment>
-</data>
-<data name="VehicleConsole.NavLightsControl" xml:space="preserve">
-  <value>НАВИГ. ОГНИ</value>
-  <comment>NAV LIGHTS</comment>
-</data>
-<data name="VehicleConsole.AltitudeFeetLine" xml:space="preserve">
-  <value>{FEET} ФТ</value>
-  <comment>{FEET} FT</comment>
-</data>
-<data name="VehicleConsole.HardpointsSection" xml:space="preserve">
-  <value>УЗЛЫ ПОДВЕСКИ</value>
-  <comment>HARDPOINTS</comment>
-</data>
-<data name="VehicleConsole.MasterKey" xml:space="preserve">
-  <value>ВООРУЖЕНИЕ</value>
-  <comment>MASTER</comment>
-</data>
-<data name="VehicleConsole.SafeLabel" xml:space="preserve">
-  <value>ПРЕДОХР.</value>
-  <comment>SAFE</comment>
-</data>
-<data name="VehicleConsole.ArmedLabel" xml:space="preserve">
-  <value>ВЗВЕДЕНО</value>
-  <comment>ARMED</comment>
-</data>
-<data name="VehicleConsole.ModeKey" xml:space="preserve">
-  <value>РЕЖИМ</value>
-  <comment>MODE</comment>
-</data>
-<data name="VehicleConsole.DualLabel" xml:space="preserve">
-  <value>ПАРНО</value>
-  <comment>DUAL</comment>
-</data>
-<data name="VehicleConsole.AlternateLabel" xml:space="preserve">
-  <value>ПООЧЕРЁДНО</value>
-  <comment>ALTERNATE</comment>
-</data>
-<data name="VehicleConsole.PortHardpointKey" xml:space="preserve">
-  <value>ЛБ</value>
-  <comment>PORT</comment>
-</data>
-<data name="VehicleConsole.StarboardHardpointKey" xml:space="preserve">
-  <value>ПБ</value>
-  <comment>STBD</comment>
-</data>
-<data name="VehicleConsole.NoWeapon" xml:space="preserve">
-  <value>НЕТ ОРУЖИЯ</value>
-  <comment>NO WEAPON</comment>
-</data>
-<data name="VehicleConsole.RoundsLine" xml:space="preserve">
-  <value>{COUNT} ПАТ.</value>
-  <comment>{COUNT} RDS</comment>
-</data>
-<data name="VehicleConsole.RocketsLine" xml:space="preserve">
-  <value>{COUNT} РАК.</value>
-  <comment>{COUNT} RKT</comment>
-</data>
-<data name="VehicleConsole.EmptyWord" xml:space="preserve">
-  <value>ПУСТО</value>
-  <comment>EMPTY</comment>
-</data>
-<data name="VehicleConsole.KeyHint" xml:space="preserve">
-  <value>({KEY})</value>
-  <comment>({KEY})</comment>
-</data>
-<data name="VehicleConsole.HardpointsHint" xml:space="preserve">
-  <value>ОГОНЬ ({FIRE}) И ВЗВЕДЕНИЕ ({ARM}) С МЕСТА ПИЛОТА // КАЖДЫЙ ВЗВЕДЁННЫЙ УЗЕЛ ОТМЕЧЕН НА ЗЕМЛЕ // НА РАЗВОРОТЕ ОГОНЬ НЕ ВЕДЁТСЯ</value>
-  <comment>FIRE ({FIRE}) AND ARM ({ARM}) FROM THE PILOT SEAT // EVERY ARMED POINT SHOWN ON THE GROUND // NO FIRE THROUGH A TURN</comment>
-</data>
-<data name="VehicleConsole.SafeBanner" xml:space="preserve">
-  <value>// ОРУЖИЕ НА ПРЕДОХРАНИТЕЛЕ //</value>
-  <comment>// WEAPONS SAFE //</comment>
-</data>
-<data name="VehicleConsole.HardpointModeControl" xml:space="preserve">
-  <value>РЕЖИМ ПОДВЕСКИ</value>
-  <comment>HARDPOINT MODE</comment>
-</data>
-<data name="VehicleConsole.HardpointSwitchControl" xml:space="preserve">
-  <value>ПОДВЕСКА ВКЛ/ВЫКЛ</value>
-  <comment>HARDPOINT ON/OFF</comment>
-</data>
 <data name="NewPlayer.Title" xml:space="preserve">
   <value>НОВИЧОК</value>
   <comment>NEW PLAYER</comment>
@@ -13618,6 +13858,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Crown.Veterancy.Flavor" xml:space="preserve">
   <value>Знаки различия на форме.</value>
   <comment>Rank pins worn on the uniform.</comment>
+</data>
+<data name="Crown.BattleBuddy.Title" xml:space="preserve">
+  <value>БОЕВОЙ ТОВАРИЩ</value>
+  <comment>BATTLE BUDDY</comment>
+</data>
+<data name="Crown.BattleBuddy.Flavor" xml:space="preserve">
+  <value>Ваша метка: чтобы не терять из виду.</value>
+  <comment>You tagged them for easy recall.</comment>
 </data>
 <data name="HealthBar.Light.Title" xml:space="preserve">
   <value>ЛЁГКОЕ РАНЕНИЕ</value>
@@ -13898,6 +14146,490 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="SupplyConsole.IntervalSeconds" xml:space="preserve">
   <value>{COUNT} СЕК.</value>
   <comment>{COUNT} SECONDS</comment>
+</data>
+<data name="GuardExecution.Title" xml:space="preserve">
+  <value>РАССТРЕЛ</value>
+  <comment>EXECUTED</comment>
+</data>
+<data name="GuardExecution.BodyLead" xml:space="preserve">
+  <value>ВЫ НАПАЛИ НА ОХРАНУ ЭВАКУАЦИИ.</value>
+  <comment>YOU ATTACKED AN EXTRACTION GUARD.</comment>
+</data>
+<data name="GuardExecution.BodyTail" xml:space="preserve">
+  <value>ЗА ЭТО ОХРАНА ВАС ЗАСТРЕЛИЛА.</value>
+  <comment>THE GUARDS SHOT YOU FOR IT.</comment>
+</data>
+<data name="GuardExecution.AcknowledgeLabel" xml:space="preserve">
+  <value>ПОНЯТНО</value>
+  <comment>UNDERSTOOD</comment>
+</data>
+<data name="Codex.Vehicle.StatsClass" xml:space="preserve">
+  <value>КЛАСС</value>
+  <comment>CLASS</comment>
+</data>
+<data name="Codex.Vehicle.StatsArea" xml:space="preserve">
+  <value>{WIDTH} x {HEIGHT} КЛ.</value>
+  <comment>{WIDTH} x {HEIGHT} TILES</comment>
+</data>
+<data name="Codex.Vehicle.StatsSeats" xml:space="preserve">
+  <value>МЕСТА</value>
+  <comment>SEATS</comment>
+</data>
+<data name="Codex.Vehicle.StatsSeatsPassengers" xml:space="preserve">
+  <value>{SEATS} (ПАССАЖИРОВ: {PASSENGERS})</value>
+  <comment>{SEATS} ({PASSENGERS} PASSENGERS)</comment>
+</data>
+<data name="Codex.Vehicle.StatsWeight" xml:space="preserve">
+  <value>МАССА</value>
+  <comment>WEIGHT</comment>
+</data>
+<data name="Codex.Vehicle.StatsKilograms" xml:space="preserve">
+  <value>{KG} КГ</value>
+  <comment>{KG} KG</comment>
+</data>
+<data name="Codex.Vehicle.StatsLz" xml:space="preserve">
+  <value>ЗВ</value>
+  <comment>LZ</comment>
+</data>
+<data name="Codex.Vehicle.DurabilitySection" xml:space="preserve">
+  <value>ПРОЧНОСТЬ</value>
+  <comment>DURABILITY</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityDamage" xml:space="preserve">
+  <value>УРОН</value>
+  <comment>DAMAGE</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityTakes" xml:space="preserve">
+  <value>ПОЛУЧАЕТ</value>
+  <comment>TAKES</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityToDestroy" xml:space="preserve">
+  <value>ДО РАЗРУШЕНИЯ</value>
+  <comment>TO DESTROY</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityBullet" xml:space="preserve">
+  <value>ПУЛИ</value>
+  <comment>BULLET</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityBlast" xml:space="preserve">
+  <value>ВЗРЫВ</value>
+  <comment>BLAST</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityFire" xml:space="preserve">
+  <value>ОГОНЬ</value>
+  <comment>FIRE</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityImmune" xml:space="preserve">
+  <value>НЕУЯЗВИМ</value>
+  <comment>IMMUNE</comment>
+</data>
+<data name="Codex.Vehicle.DurabilityTerrainStrike" xml:space="preserve">
+  <value>УДАР О ЗЕМЛЮ</value>
+  <comment>TERRAIN STRIKE</comment>
+</data>
+<data name="Codex.Vehicle.FuelRate" xml:space="preserve">
+  <value>РАСХОД</value>
+  <comment>RATE</comment>
+</data>
+<data name="Codex.Vehicle.FuelHoverThrottle" xml:space="preserve">
+  <value>{PERCENT}% ВИСЕНИЕ</value>
+  <comment>{PERCENT}% HOVER</comment>
+</data>
+<data name="Codex.Vehicle.FuelPerMinute" xml:space="preserve">
+  <value>{WHOLE},{FRAC}% В МИНУТУ</value>
+  <comment>{WHOLE}.{FRAC}% A MINUTE</comment>
+</data>
+<data name="Codex.Vehicle.FuelRefuelCan" xml:space="preserve">
+  <value>ЗАПРАВКА ИЗ КАНИСТРЫ</value>
+  <comment>REFUEL BY CAN</comment>
+</data>
+<data name="Codex.Vehicle.FuelRefuelHose" xml:space="preserve">
+  <value>ЗАПРАВКА ИЗ ШЛАНГА</value>
+  <comment>REFUEL BY HOSE</comment>
+</data>
+<data name="Codex.Vehicle.EngineThrottleLimit" xml:space="preserve">
+  <value>ПРЕДЕЛ ТЯГИ</value>
+  <comment>THROTTLE LIMIT</comment>
+</data>
+<data name="Codex.Vehicle.EngineOutSeconds" xml:space="preserve">
+  <value>ЧЕРЕЗ {SECONDS} С ПОЖАРА НА БОРТУ</value>
+  <comment>AFTER {SECONDS}S OF DECK FIRE</comment>
+</data>
+<data name="Codex.Vehicle.EngineOutMinutes" xml:space="preserve">
+  <value>ЧЕРЕЗ {MINUTES} МИН {SECONDS} С ПОЖАРА НА БОРТУ</value>
+  <comment>AFTER {MINUTES}M {SECONDS}S OF DECK FIRE</comment>
+</data>
+<data name="Codex.Vehicle.EngineRotorPerTonne" xml:space="preserve">
+  <value>ОБОРОТЫ НА ТОННУ</value>
+  <comment>ROTOR PER TONNE</comment>
+</data>
+<data name="Codex.Vehicle.EngineRotorLoss" xml:space="preserve">
+  <value>-{WHOLE},{FRAC}% ОБ/МИН</value>
+  <comment>-{WHOLE}.{FRAC}% RPM</comment>
+</data>
+<data name="Codex.Vehicle.EngineHeatPerTonne" xml:space="preserve">
+  <value>НАГРЕВ НА ТОННУ</value>
+  <comment>HEAT PER TONNE</comment>
+</data>
+<data name="Codex.Vehicle.EngineHeatGain" xml:space="preserve">
+  <value>+{CELSIUS} °C</value>
+  <comment>+{CELSIUS} C</comment>
+</data>
+<data name="Codex.Vehicle.FlightBackward" xml:space="preserve">
+  <value>НАЗАД</value>
+  <comment>BACKWARD</comment>
+</data>
+<data name="Codex.Vehicle.FlightSideways" xml:space="preserve">
+  <value>ВБОК</value>
+  <comment>SIDEWAYS</comment>
+</data>
+<data name="Codex.Vehicle.FlightLowAltitude" xml:space="preserve">
+  <value>МАЛАЯ ВЫСОТА</value>
+  <comment>LOW ALTITUDE</comment>
+</data>
+<data name="Codex.Vehicle.FlightLowAltitudeValue" xml:space="preserve">
+  <value>{PERCENT}% НИЖЕ {FEET} ФТ</value>
+  <comment>{PERCENT}% UNDER {FEET} FT</comment>
+</data>
+<data name="Codex.Vehicle.FlightQuarterTurn" xml:space="preserve">
+  <value>ПОВОРОТ НА 90°</value>
+  <comment>QUARTER TURN</comment>
+</data>
+<data name="Codex.Vehicle.FlightTurnSeconds" xml:space="preserve">
+  <value>{WHOLE},{FRAC} С</value>
+  <comment>{WHOLE}.{FRAC}S</comment>
+</data>
+<data name="Codex.Vehicle.FlightCeiling" xml:space="preserve">
+  <value>ПОТОЛОК</value>
+  <comment>CEILING</comment>
+</data>
+<data name="Codex.Vehicle.FlightAutorotation" xml:space="preserve">
+  <value>СНИЖЕНИЕ НА АВТОРОТАЦИИ</value>
+  <comment>AUTOROTATION SINK</comment>
+</data>
+<data name="Codex.Vehicle.ArmsSeats" xml:space="preserve">
+  <value>МЕСТА</value>
+  <comment>SEATS</comment>
+</data>
+<data name="Codex.Vehicle.ArmsAim" xml:space="preserve">
+  <value>НАВЕДЕНИЕ</value>
+  <comment>AIM</comment>
+</data>
+<data name="Codex.Vehicle.ArmsFits" xml:space="preserve">
+  <value>ПОДХОДИТ</value>
+  <comment>FITS</comment>
+</data>
+<data name="Codex.Vehicle.ArmsFixedForward" xml:space="preserve">
+  <value>НЕПОДВИЖНО ВПЕРЁД</value>
+  <comment>FIXED FORWARD</comment>
+</data>
+<data name="Codex.Vehicle.ArmsFollowsCursor" xml:space="preserve">
+  <value>ЗА КУРСОРОМ</value>
+  <comment>FOLLOWS THE CURSOR</comment>
+</data>
+<data name="Codex.Vehicle.ArmsArc" xml:space="preserve">
+  <value>СЕКТОР {DEGREES}°</value>
+  <comment>{DEGREES} DEG ARC</comment>
+</data>
+<data name="Codex.Vehicle.ArmsManned" xml:space="preserve">
+  <value>КТО ЗА ОРУЖИЕМ</value>
+  <comment>WHOEVER MANS IT</comment>
+</data>
+<data name="Codex.Vehicle.ArmsFitted" xml:space="preserve">
+  <value>УСТАНОВЛЕНО</value>
+  <comment>FITTED</comment>
+</data>
+<data name="Codex.Vehicle.ArmsKit" xml:space="preserve">
+  <value>НАБОР</value>
+  <comment>KIT</comment>
+</data>
+<data name="Codex.Vehicle.ArmsWeapon" xml:space="preserve">
+  <value>ОРУЖИЕ</value>
+  <comment>WEAPON</comment>
+</data>
+<data name="Codex.Vehicle.ControlsControl" xml:space="preserve">
+  <value>ДЕЙСТВИЕ</value>
+  <comment>CONTROL</comment>
+</data>
+<data name="Codex.Vehicle.ControlsKey" xml:space="preserve">
+  <value>КЛАВИША</value>
+  <comment>KEY</comment>
+</data>
+<data name="Codex.Vehicle.ControlsSettings" xml:space="preserve">
+  <value>НАСТРОЙКИ</value>
+  <comment>SETTINGS</comment>
+</data>
+<data name="Codex.Vehicle.CrewSection" xml:space="preserve">
+  <value>ЭКИПАЖ</value>
+  <comment>CREW</comment>
+</data>
+<data name="Codex.Vehicle.CrewSeat" xml:space="preserve">
+  <value>МЕСТО</value>
+  <comment>SEAT</comment>
+</data>
+<data name="Codex.Vehicle.CrewFlies" xml:space="preserve">
+  <value>ПИЛОТ</value>
+  <comment>FLIES</comment>
+</data>
+<data name="Codex.Vehicle.CrewFires" xml:space="preserve">
+  <value>ОГОНЬ</value>
+  <comment>FIRES</comment>
+</data>
+<data name="Codex.Vehicle.CrewYes" xml:space="preserve">
+  <value>ДА</value>
+  <comment>YES</comment>
+</data>
+<data name="Codex.Vehicle.CrewNo" xml:space="preserve">
+  <value>НЕТ</value>
+  <comment>NO</comment>
+</data>
+<data name="Codex.Vehicle.CrewGunner" xml:space="preserve">
+  <value>СТРЕЛОК</value>
+  <comment>GUNNER</comment>
+</data>
+<data name="Codex.Vehicle.CrewPassengers" xml:space="preserve">
+  <value>ПАССАЖИРЫ</value>
+  <comment>PASSENGERS</comment>
+</data>
+<data name="Codex.Vehicle.CrewTrained" xml:space="preserve">
+  <value>ОБУЧЕНЫ</value>
+  <comment>TRAINED</comment>
+</data>
+<data name="Codex.Vehicle.CrewIssuedTo" xml:space="preserve">
+  <value>ВЫДАЁТСЯ</value>
+  <comment>ISSUED TO</comment>
+</data>
+<data name="Codex.Vehicle.Hp" xml:space="preserve">
+  <value>{HP} ОЗ</value>
+  <comment>{HP} HP</comment>
+</data>
+<data name="Codex.Vehicle.UpToHp" xml:space="preserve">
+  <value>ДО {HP} ОЗ</value>
+  <comment>UP TO {HP} HP</comment>
+</data>
+<data name="Codex.Vehicle.Percent" xml:space="preserve">
+  <value>{PERCENT}%</value>
+  <comment>{PERCENT}%</comment>
+</data>
+<data name="Codex.Vehicle.Tiles" xml:space="preserve">
+  <value>{TILES} КЛ.</value>
+  <comment>{TILES} TILES</comment>
+</data>
+<data name="Codex.Vehicle.MinutesSeconds" xml:space="preserve">
+  <value>{MINUTES} МИН {SECONDS} С</value>
+  <comment>{MINUTES}M {SECONDS}S</comment>
+</data>
+<data name="Codex.Vehicle.FeetPerSecond" xml:space="preserve">
+  <value>{FEET} ФТ/С</value>
+  <comment>{FEET} FT/S</comment>
+</data>
+<data name="Codex.Vehicle.DurationHead" xml:space="preserve">
+  <value>ДЛИТЕЛЬНОСТЬ</value>
+  <comment>DURATION</comment>
+</data>
+<data name="Codex.Vehicle.DamageProcess" xml:space="preserve">
+  <value>ХОД ПОВРЕЖДЕНИЙ</value>
+  <comment>DAMAGE PROCESS</comment>
+</data>
+<data name="Codex.Vehicle.DamageBelowHead" xml:space="preserve">
+  <value>НИЖЕ</value>
+  <comment>BELOW</comment>
+</data>
+<data name="Codex.Vehicle.DamageFuelLeak" xml:space="preserve">
+  <value>УТЕЧКА ТОПЛИВА</value>
+  <comment>FUEL LEAK</comment>
+</data>
+<data name="Codex.Vehicle.DamageCabinSpill" xml:space="preserve">
+  <value>ТОПЛИВО В КАБИНЕ</value>
+  <comment>CABIN FUEL SPILL</comment>
+</data>
+<data name="Codex.Vehicle.DamageSmoke" xml:space="preserve">
+  <value>ДЫМ ИЗ ВЫХЛОПА</value>
+  <comment>EXHAUST SMOKE</comment>
+</data>
+<data name="Codex.Vehicle.DamageRunsHot" xml:space="preserve">
+  <value>ДВИГАТЕЛЬ ПЕРЕГРЕВАЕТСЯ</value>
+  <comment>ENGINE RUNS HOT</comment>
+</data>
+<data name="Codex.Vehicle.DamageClatter" xml:space="preserve">
+  <value>ДВИГАТЕЛЬ СТУЧИТ</value>
+  <comment>ENGINE CLATTER</comment>
+</data>
+<data name="Codex.Vehicle.DamageOnCollision" xml:space="preserve">
+  <value>СТОЛКНОВЕНИЕ</value>
+  <comment>COLLISION</comment>
+</data>
+<data name="Codex.Vehicle.DamageTailRotorLost" xml:space="preserve">
+  <value>ПОТЕРЯ ХВОСТОВОГО ВИНТА</value>
+  <comment>TAIL ROTOR LOST</comment>
+</data>
+<data name="Codex.Vehicle.DamageDestroyed" xml:space="preserve">
+  <value>УНИЧТОЖЕН</value>
+  <comment>DESTROYED</comment>
+</data>
+<data name="Codex.Vehicle.DamageCrashFires" xml:space="preserve">
+  <value>КРУШЕНИЕ: ДО {COUNT} ОЧАГОВ ПОЖАРА В РАДИУСЕ {TILES} КЛ.</value>
+  <comment>CRASH: UP TO {COUNT} FIRES WITHIN {TILES} TILES</comment>
+</data>
+<data name="Codex.Vehicle.DamageCrewThrown" xml:space="preserve">
+  <value>ЭКИПАЖ ОТБРАСЫВАЕТ НА {TILES} КЛ.</value>
+  <comment>CREW THROWN UP TO {TILES} TILES</comment>
+</data>
+<data name="Codex.Vehicle.DamageWreck" xml:space="preserve">
+  <value>ОБЛОМКИ</value>
+  <comment>WRECK</comment>
+</data>
+<data name="Codex.Vehicle.BatteryInstruments" xml:space="preserve">
+  <value>ПРИБОРЫ</value>
+  <comment>INSTRUMENTS</comment>
+</data>
+<data name="Codex.Vehicle.BatteryStarts" xml:space="preserve">
+  <value>ЗАПУСКИ</value>
+  <comment>STARTS</comment>
+</data>
+<data name="Codex.Vehicle.BatteryChargeByGenerator" xml:space="preserve">
+  <value>ЗАРЯДКА ОТ ГЕН.</value>
+  <comment>CHARGE BY GEN</comment>
+</data>
+<data name="Codex.Vehicle.BatteryChargeByCable" xml:space="preserve">
+  <value>ЗАРЯДКА ПО КАБЕЛЮ</value>
+  <comment>CHARGE BY CABLE</comment>
+</data>
+<data name="Codex.Vehicle.VehicleWeaponKind" xml:space="preserve">
+  <value>ОРУЖИЕ ТЕХНИКИ</value>
+  <comment>MOUNTED WEAPON</comment>
+</data>
+<data name="Codex.Vehicle.CarriedOn" xml:space="preserve">
+  <value>УСТАНАВЛИВАЕТСЯ НА</value>
+  <comment>CARRIED ON</comment>
+</data>
+<data name="ArmChip.Safe" xml:space="preserve">
+  <value>ПРЕДОХР.</value>
+  <comment>SAFE</comment>
+</data>
+<data name="ArmChip.Armed" xml:space="preserve">
+  <value>ВЗВЕДЕНО</value>
+  <comment>ARMED</comment>
+</data>
+<data name="Codex.Building.DurabilityMelee" xml:space="preserve">
+  <value>БЛИЖНИЙ БОЙ</value>
+  <comment>MELEE</comment>
+</data>
+<data name="Codex.Building.DurabilityMeleeAtWall" xml:space="preserve">
+  <value>БЛИЖНИЙ БОЙ ПО СТЕНЕ</value>
+  <comment>MELEE AT A WALL</comment>
+</data>
+<data name="Codex.Building.DurabilityEveryState" xml:space="preserve">
+  <value>ДО РАЗРУШЕНИЯ: СУММА ВСЕХ СТАДИЙ ДО ПОСЛЕДНЕЙ</value>
+  <comment>TO DESTROY COUNTS EVERY STATE DOWN TO THE LAST</comment>
+</data>
+<data name="Codex.Building.InsideSection" xml:space="preserve">
+  <value>ВНУТРИ</value>
+  <comment>INSIDE</comment>
+</data>
+<data name="Codex.Building.InsideRain" xml:space="preserve">
+  <value>КРЫША ЗАЩИЩАЕТ ОТ ДОЖДЯ</value>
+  <comment>THE ROOF KEEPS THE RAIN OUT</comment>
+</data>
+<data name="Codex.Building.InsideRoomNothing" xml:space="preserve">
+  <value>ВЗРЫВЫ СНАРУЖИ НЕ ДОСТАЮТ ДО ПОМЕЩЕНИЯ</value>
+  <comment>NOTHING OF AN EXPLOSION OUTSIDE REACHES THE ROOM</comment>
+</data>
+<data name="Codex.Building.InsideRoomPercent" xml:space="preserve">
+  <value>ДО ПОМЕЩЕНИЯ ДОХОДИТ {PERCENT}% ВЗРЫВА СНАРУЖИ</value>
+  <comment>{PERCENT}% OF AN EXPLOSION OUTSIDE REACHES THE ROOM</comment>
+</data>
+<data name="Codex.Building.InsideDoorway" xml:space="preserve">
+  <value>ДВЕРНОЙ ПРОЁМ ЗАЩИЩЁН, ТОЛЬКО ПОКА ДВЕРЬ ЗАКРЫТА</value>
+  <comment>THE DOORWAY IS SHELTERED ONLY WHILE THE DOOR IS SHUT</comment>
+</data>
+<data name="Codex.Building.InsideDoorGrenades" xml:space="preserve">
+  <value>БРОШЕННЫЕ ГРАНАТЫ ПОПАДАЮТ ВНУТРЬ ТОЛЬКО ЧЕРЕЗ ОТКРЫТУЮ ДВЕРЬ</value>
+  <comment>THROWN GRENADES GET IN ONLY THROUGH THE OPEN DOOR</comment>
+</data>
+<data name="Codex.Building.InsidePercentGrenades" xml:space="preserve">
+  <value>ВНУТРЬ ПОПАДАЕТ {PERCENT}% ГРАНАТ, БРОШЕННЫХ СНАРУЖИ</value>
+  <comment>{PERCENT}% OF GRENADES THROWN AT IT FROM OUTSIDE LAND INSIDE</comment>
+</data>
+<data name="Codex.Building.InsideHidden" xml:space="preserve">
+  <value>ПОКА ДВЕРЬ ЗАКРЫТА, ВРАЖЕСКАЯ ПЕХОТА НЕ ВИДИТ, ЧТО ВНУТРИ</value>
+  <comment>ENEMY INFANTRY CANNOT SEE IN WHILE THE DOOR IS SHUT</comment>
+</data>
+<data name="Codex.Building.InsideBarrier" xml:space="preserve">
+  <value>СКВОЗЬ СТЕНЫ НЕЛЬЗЯ НИ УДАРИТЬ, НИ ДОТЯНУТЬСЯ</value>
+  <comment>NO MELEE OR REACH THROUGH THE WALLS</comment>
+</data>
+<data name="Codex.Building.InsideWalls" xml:space="preserve">
+  <value>ЧТО ПРОХОДИТ СКВОЗЬ СТЕНУ ОТ ВЗРЫВА ЗА НЕЙ</value>
+  <comment>WHAT GETS PAST A WALL FROM AN EXPLOSION BEYOND IT</comment>
+</data>
+<data name="Codex.Building.InsideStanding" xml:space="preserve">
+  <value>СТОЯ</value>
+  <comment>STANDING</comment>
+</data>
+<data name="Codex.Building.InsideLying" xml:space="preserve">
+  <value>ЛЁЖА</value>
+  <comment>LYING</comment>
+</data>
+<data name="Codex.Building.InsideFragments" xml:space="preserve">
+  <value>ОСКОЛКИ</value>
+  <comment>FRAGMENTS</comment>
+</data>
+<data name="Codex.Building.InsideConcussion" xml:space="preserve">
+  <value>КОНТУЗИЯ</value>
+  <comment>CONCUSSION</comment>
+</data>
+<data name="Codex.Building.InsideSuppression" xml:space="preserve">
+  <value>ПОДАВЛЕНИЕ</value>
+  <comment>SUPPRESSION</comment>
+</data>
+<data name="Codex.Building.MendScales" xml:space="preserve">
+  <value>ЧЕМ МЕНЬШЕ ПОВРЕЖДЕНИЙ, ТЕМ ДЕШЕВЛЕ И БЫСТРЕЕ РЕМОНТ</value>
+  <comment>A MEND COSTS AND TAKES LESS THE LESS DAMAGE THERE IS</comment>
+</data>
+<data name="Codex.Building.StatesSection" xml:space="preserve">
+  <value>СТАДИИ СТРОИТЕЛЬСТВА</value>
+  <comment>BUILD STATES</comment>
+</data>
+<data name="Codex.Building.StatesBroken" xml:space="preserve">
+  <value>СЛОМАНО</value>
+  <comment>BROKEN</comment>
+</data>
+<data name="Codex.Building.StatesSite" xml:space="preserve">
+  <value>МЕСТО</value>
+  <comment>SITE</comment>
+</data>
+<data name="Codex.Building.StatesOpenSky" xml:space="preserve">
+  <value>НУЖНО ОТКРЫТОЕ НЕБО</value>
+  <comment>NEEDS OPEN SKY</comment>
+</data>
+<data name="Codex.Building.StatesNoRoofDeck" xml:space="preserve">
+  <value>НЕ НА КРЫШЕ</value>
+  <comment>NOT ON A ROOF DECK</comment>
+</data>
+<data name="Codex.Building.StatesSpacing" xml:space="preserve">
+  <value>НЕ БЛИЖЕ {TILES} КЛ. К ТАКОЙ ЖЕ</value>
+  <comment>{TILES} TILE CLEAR OF ITS OWN KIND</comment>
+</data>
+<data name="Codex.Building.StatesSpacingMany" xml:space="preserve">
+  <value>НЕ БЛИЖЕ {TILES} КЛ. К ТАКОЙ ЖЕ</value>
+  <comment>{TILES} TILES CLEAR OF ITS OWN KIND</comment>
+</data>
+<data name="EmoteRadial.Title" xml:space="preserve">
+  <value>ЭМОЦИИ</value>
+  <comment>EMOTE</comment>
+</data>
+<data name="EmoteRadial.KindShout" xml:space="preserve">
+  <value>КРИК</value>
+  <comment>SHOUT</comment>
+</data>
+<data name="EmoteRadial.KindSay" xml:space="preserve">
+  <value>РЕЧЬ</value>
+  <comment>SAY</comment>
+</data>
+<data name="EmoteRadial.KindAction" xml:space="preserve">
+  <value>ДЕЙСТВИЕ</value>
+  <comment>ACTION</comment>
 </data>
 <data name="Def.Test.Pristine.Bottle.DisplayName" xml:space="preserve">
   <value>тест. нетронутая бутылка</value>
@@ -16582,6 +17314,54 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Test.Trench.Bags.Filled.DisplayName" xml:space="preserve">
   <value>тест. полные мешки траншеи</value>
   <comment>test trench filled bags</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>тест. осветительная ракета</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Verb.Toggle" xml:space="preserve">
+  <value>взвести</value>
+  <comment>arm</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Armed.DisplayName" xml:space="preserve">
+  <value>тест. осветительная ракета</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Armed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Armed.Verb.Toggle" xml:space="preserve">
+  <value>на предохранитель</value>
+  <comment>safe</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Flying.DisplayName" xml:space="preserve">
+  <value>тест. осветительная ракета</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Hanging.DisplayName" xml:space="preserve">
+  <value>тест. осветительная ракета</value>
+  <comment>test parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Casing.DisplayName" xml:space="preserve">
+  <value>тест. гильза осветительной ракеты</value>
+  <comment>test parachute flare casing</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Casing.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Burnt.DisplayName" xml:space="preserve">
+  <value>тест. сгоревшая осветительная ракета</value>
+  <comment>test burnt parachute flare</comment>
+</data>
+<data name="Def.Test.ParachuteFlare.Burnt.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
 </data>
 <data name="Def.Character.Human.DisplayName" xml:space="preserve">
   <value>человек</value>
@@ -44752,8 +45532,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.DisplayName" xml:space="preserve">
-  <value>броня коммандос ВНА</value>
-  <comment>PAVN commando armor</comment>
+  <value>броня коммандос «Тип 5»</value>
+  <comment>Type 5 commando armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -44764,8 +45544,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.DisplayName" xml:space="preserve">
-  <value>броня коммандос ВНА</value>
-  <comment>PAVN commando armor</comment>
+  <value>броня коммандос «Тип 5»</value>
+  <comment>Type 5 commando armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -44776,8 +45556,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn on</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.DisplayName" xml:space="preserve">
-  <value>броня коммандос ВНА</value>
-  <comment>PAVN commando armor</comment>
+  <value>броня коммандос «Тип 5»</value>
+  <comment>Type 5 commando armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -44788,8 +45568,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.DisplayName" xml:space="preserve">
-  <value>броня коммандос ВНА</value>
-  <comment>PAVN commando armor</comment>
+  <value>броня коммандос «Тип 5»</value>
+  <comment>Type 5 commando armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Lit.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -44800,16 +45580,16 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>turn off</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.DisplayName" xml:space="preserve">
-  <value>броня коммандос ВНА</value>
-  <comment>PAVN commando armor</comment>
+  <value>броня коммандос «Тип 5»</value>
+  <comment>Type 5 commando armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Open.DisplayName" xml:space="preserve">
-  <value>броня коммандос ВНА</value>
-  <comment>PAVN commando armor</comment>
+  <value>броня коммандос «Тип 5»</value>
+  <comment>Type 5 commando armor</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Marine.Faction.UPP.Commando.Empty.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
@@ -50778,10 +51558,6 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Venting.DisplayName" xml:space="preserve">
   <value>маскирующая дымовая граната M40</value>
   <comment>M40 screening smoke grenade</comment>
-</data>
-<data name="Def.Obj.Item.Explosive.Grenade.Smokebomb.Venting.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
 </data>
 <data name="Def.Obj.Item.Explosive.Plastic.DisplayName" xml:space="preserve">
   <value>пластиковая взрывчатка</value>
@@ -79971,6 +80747,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>ящик осветительных ракет M127A1</value>
+  <comment>M127A1 parachute flare box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.Open.DisplayName" xml:space="preserve">
+  <value>ящик осветительных ракет M127A1</value>
+  <comment>M127A1 parachute flare box</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.NadeBox.ParachuteFlare.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>пачка осветительных ракет M127A1</value>
+  <comment>M127A1 parachute flare packet</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.Open.DisplayName" xml:space="preserve">
+  <value>пачка осветительных ракет M127A1</value>
+  <comment>M127A1 parachute flare packet</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Packet.ParachuteFlare.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Belt.Grenade.Full.DisplayName" xml:space="preserve">
   <value>разгрузка для гранат M40 (M276)</value>
   <comment>M276 pattern M40 Grenade rig</comment>
@@ -80308,6 +81116,26 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>AH-6J gunship crew beacon</comment>
 </data>
 <data name="Def.Obj.Item.Device.Ah6jBeacon.On.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah1gBeacon.DisplayName" xml:space="preserve">
+  <value>маяк экипажа AH-1G Cobra</value>
+  <comment>AH-1G Cobra crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah1gBeacon.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah1gBeacon.Verb.Toggle" xml:space="preserve">
+  <value>активировать</value>
+  <comment>activate</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah1gBeacon.On.DisplayName" xml:space="preserve">
+  <value>маяк экипажа AH-1G Cobra</value>
+  <comment>AH-1G Cobra crew beacon</comment>
+</data>
+<data name="Def.Obj.Item.Device.Ah1gBeacon.On.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -81583,6 +82411,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Mk19TurretInternal.DisplayName" xml:space="preserve">
+  <value>гранатомёт MK19</value>
+  <comment>MK19 grenade launcher</comment>
+</data>
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Mk19TurretInternal.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.Storage.Box.Mk19Ammo.DisplayName" xml:space="preserve">
   <value>патронный короб MK19 (40 мм)</value>
   <comment>MK19 ammo box (40mm)</comment>
@@ -81643,6 +82479,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>UH-1H Huey (M60)</value>
   <comment>UH-1H Huey (M60)</comment>
 </data>
+<data name="Def.Obj.Vehicle.AH1G.Hull.DisplayName" xml:space="preserve">
+  <value>AH-1G Cobra</value>
+  <comment>AH-1G Cobra</comment>
+</data>
 <data name="Def.Obj.Vehicle.UH1H.Door.DisplayName" xml:space="preserve">
   <value>дверь кабины</value>
   <comment>cabin door</comment>
@@ -81658,6 +82498,22 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Vehicle.UH1H.Door.Closing.DisplayName" xml:space="preserve">
   <value>дверь кабины</value>
   <comment>cabin door</comment>
+</data>
+<data name="Def.Obj.Vehicle.AH1G.Canopy.DisplayName" xml:space="preserve">
+  <value>фонарь кабины</value>
+  <comment>canopy</comment>
+</data>
+<data name="Def.Obj.Vehicle.AH1G.Canopy.Opening.DisplayName" xml:space="preserve">
+  <value>фонарь кабины</value>
+  <comment>canopy</comment>
+</data>
+<data name="Def.Obj.Vehicle.AH1G.Canopy.Open.DisplayName" xml:space="preserve">
+  <value>фонарь кабины</value>
+  <comment>canopy</comment>
+</data>
+<data name="Def.Obj.Vehicle.AH1G.Canopy.Closing.DisplayName" xml:space="preserve">
+  <value>фонарь кабины</value>
+  <comment>canopy</comment>
 </data>
 <data name="Def.Obj.Vehicle.UH1H.Lamp.DisplayName" xml:space="preserve">
   <value>лампа кабины</value>
@@ -81679,6 +82535,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>пульт управления</value>
   <comment>flight console</comment>
 </data>
+<data name="Def.Obj.Vehicle.AH1G.Console.Pilot.DisplayName" xml:space="preserve">
+  <value>пульт управления</value>
+  <comment>flight console</comment>
+</data>
+<data name="Def.Obj.Vehicle.AH1G.Console.Gunner.DisplayName" xml:space="preserve">
+  <value>пульт управления</value>
+  <comment>flight console</comment>
+</data>
 <data name="Def.Obj.Vehicle.UH1H.FuelPort.DisplayName" xml:space="preserve">
   <value>топливный патрубок</value>
   <comment>fuel inlet</comment>
@@ -81690,6 +82554,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Chair.Heli.Pilot.DisplayName" xml:space="preserve">
   <value>кресло пилота</value>
   <comment>pilot seat</comment>
+</data>
+<data name="Def.Obj.Structure.Chair.Heli.Gunner.DisplayName" xml:space="preserve">
+  <value>кресло стрелка</value>
+  <comment>gunner seat</comment>
 </data>
 <data name="Def.Obj.Vehicle.UH1H.Extinguisher.DisplayName" xml:space="preserve">
   <value>аварийный шкафчик</value>
@@ -81731,6 +82599,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>обломки Little Bird</value>
   <comment>Little Bird wreck</comment>
 </data>
+<data name="Def.Obj.Structure.Wreck.AH1G.West.DisplayName" xml:space="preserve">
+  <value>обломки AH-1G</value>
+  <comment>AH-1G wreck</comment>
+</data>
+<data name="Def.Obj.Structure.Wreck.AH1G.East.DisplayName" xml:space="preserve">
+  <value>обломки AH-1G</value>
+  <comment>AH-1G wreck</comment>
+</data>
+<data name="Def.Obj.Structure.Wreck.AH1G.Vertical.DisplayName" xml:space="preserve">
+  <value>обломки AH-1G</value>
+  <comment>AH-1G wreck</comment>
+</data>
 <data name="Def.Obj.Structure.Wreck.UH1H.East.Ditched.DisplayName" xml:space="preserve">
   <value>обломки UH-1H</value>
   <comment>UH-1H wreck</comment>
@@ -81754,6 +82634,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Wreck.MH6J.Vertical.Ditched.DisplayName" xml:space="preserve">
   <value>обломки Little Bird</value>
   <comment>Little Bird wreck</comment>
+</data>
+<data name="Def.Obj.Structure.Wreck.AH1G.East.Ditched.DisplayName" xml:space="preserve">
+  <value>обломки AH-1G</value>
+  <comment>AH-1G wreck</comment>
+</data>
+<data name="Def.Obj.Structure.Wreck.AH1G.West.Ditched.DisplayName" xml:space="preserve">
+  <value>обломки AH-1G</value>
+  <comment>AH-1G wreck</comment>
+</data>
+<data name="Def.Obj.Structure.Wreck.AH1G.Vertical.Ditched.DisplayName" xml:space="preserve">
+  <value>обломки AH-1G</value>
+  <comment>AH-1G wreck</comment>
 </data>
 <data name="Def.Obj.Item.FlamerTurretKit.Gun.DisplayName" xml:space="preserve">
   <value>турель-огнемёт</value>
@@ -82103,6 +82995,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>переместить</value>
   <comment>move to</comment>
 </data>
+<data name="Def.Character.Human.East.Engineer.Leader.DisplayName" xml:space="preserve">
+  <value>командир отделения Востока</value>
+  <comment>East squad leader</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Leader.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Leader.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
 <data name="Def.Character.Human.East.Flamer.DisplayName" xml:space="preserve">
   <value>огнемётчик Востока</value>
   <comment>East flamer</comment>
@@ -82230,6 +83134,50 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Hardpoint.Hydra.Loaded.DisplayName" xml:space="preserve">
   <value>блок ракет Hydra 70</value>
   <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.AH1G.Pylon.DisplayName" xml:space="preserve">
+  <value>крыльевой пилон</value>
+  <comment>wing pylon</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.AH1G.Pylon.Upgrade.0.Label" xml:space="preserve">
+  <value>установить XM27</value>
+  <comment>attach the xm27</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.AH1G.Pylon.Upgrade.1.Label" xml:space="preserve">
+  <value>установить блок Hydra 70</value>
+  <comment>attach the hydra 70 pod</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.AH1G.XM27.Empty.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.AH1G.XM27.Loaded.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.AH1G.Hydra.Empty.DisplayName" xml:space="preserve">
+  <value>блок ракет Hydra 70</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Structure.Hardpoint.AH1G.Hydra.Loaded.DisplayName" xml:space="preserve">
+  <value>блок ракет Hydra 70</value>
+  <comment>Hydra 70 rocket pod</comment>
+</data>
+<data name="Def.Obj.Structure.Turret.AH1G.Minigun.Empty.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Turret.AH1G.Minigun.Loaded.DisplayName" xml:space="preserve">
+  <value>миниган XM27</value>
+  <comment>XM27 minigun</comment>
+</data>
+<data name="Def.Obj.Structure.Turret.AH1G.Mk19.Empty.DisplayName" xml:space="preserve">
+  <value>гранатомёт MK19</value>
+  <comment>MK19 grenade launcher</comment>
+</data>
+<data name="Def.Obj.Structure.Turret.AH1G.Mk19.Loaded.DisplayName" xml:space="preserve">
+  <value>гранатомёт MK19</value>
+  <comment>MK19 grenade launcher</comment>
 </data>
 <data name="Def.Obj.Item.XM27Kit.DisplayName" xml:space="preserve">
   <value>миниган XM27</value>
@@ -82947,6 +83895,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ящик тяжёлых импульсных винтовок</value>
   <comment>heavy pulse rifle crate</comment>
 </data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Weapons.M4raRifles.Descending.DisplayName" xml:space="preserve">
+  <value>ящик боевых винтовок M4RA</value>
+  <comment>M4RA battle rifle crate</comment>
+</data>
 <data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.Incendiary.Descending.DisplayName" xml:space="preserve">
   <value>ящик зажигательных магазинов</value>
   <comment>incendiary magazine crate</comment>
@@ -82966,6 +83918,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.Smoke.Descending.DisplayName" xml:space="preserve">
   <value>ящик дымовых гранат</value>
   <comment>smoke grenade crate</comment>
+</data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.ParachuteFlares.Descending.DisplayName" xml:space="preserve">
+  <value>ящик осветительных ракет</value>
+  <comment>parachute flare crate</comment>
 </data>
 <data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.Hmg.Descending.DisplayName" xml:space="preserve">
   <value>ящик патронов M2</value>
@@ -83038,6 +83994,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.M1911Magazines.Descending.DisplayName" xml:space="preserve">
   <value>ящик магазинов M1911</value>
   <comment>M1911 magazine crate</comment>
+</data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Ammunition.M4raMagazines.Descending.DisplayName" xml:space="preserve">
+  <value>ящик магазинов M4RA</value>
+  <comment>M4RA magazine crate</comment>
 </data>
 <data name="Def.Obj.Structure.Closet.Crate.Field.Medical.Supplies.Descending.DisplayName" xml:space="preserve">
   <value>полевой медицинский ящик</value>
@@ -83951,11 +84911,11 @@ The file is looked up beside this language file first, then under the game's Con
   <value>развалины ДОТа</value>
   <comment>pillbox wreck</comment>
 </data>
-<data name="Def.Obj.Item.PillboxKit.DisplayName" xml:space="preserve">
-  <value>набор ДОТа</value>
-  <comment>pillbox kit</comment>
+<data name="Def.Obj.Item.HeavyFortificationKit.DisplayName" xml:space="preserve">
+  <value>набор тяжёлых укреплений</value>
+  <comment>heavy fortifications kit</comment>
 </data>
-<data name="Def.Obj.Item.PillboxKit.Verb.PickUp" xml:space="preserve">
+<data name="Def.Obj.Item.HeavyFortificationKit.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -83972,6 +84932,150 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>PAVN night vision goggles</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Glasses.Pavn.Night.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Pavn.Commando.DisplayName" xml:space="preserve">
+  <value>броня коммандос ВНА</value>
+  <comment>PAVN commando armor</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Pavn.Commando.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Materials.HeavyFortification.Descending.DisplayName" xml:space="preserve">
+  <value>ящик тяжёлых укреплений</value>
+  <comment>heavy fortifications crate</comment>
+</data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Materials.Concrete.Descending.DisplayName" xml:space="preserve">
+  <value>ящик бетона</value>
+  <comment>concrete crate</comment>
+</data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Materials.Sandbags.Descending.DisplayName" xml:space="preserve">
+  <value>ящик мешков с песком</value>
+  <comment>sandbags crate</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.DisplayName" xml:space="preserve">
+  <value>осветительная ракета M127A1</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Verb.Toggle" xml:space="preserve">
+  <value>взвести</value>
+  <comment>arm</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Armed.DisplayName" xml:space="preserve">
+  <value>осветительная ракета M127A1</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Armed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Device.Flashlight.Flare.Parachute.Armed.Verb.Toggle" xml:space="preserve">
+  <value>на предохранитель</value>
+  <comment>safe</comment>
+</data>
+<data name="Def.Obj.Effect.ParachuteFlare.Flying.DisplayName" xml:space="preserve">
+  <value>осветительная ракета M127A1</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Effect.ParachuteFlare.DisplayName" xml:space="preserve">
+  <value>осветительная ракета M127A1</value>
+  <comment>M127A1 parachute flare</comment>
+</data>
+<data name="Def.Obj.Item.Trash.ParachuteFlareCasing.DisplayName" xml:space="preserve">
+  <value>гильза осветительной ракеты M127A1</value>
+  <comment>M127A1 parachute flare casing</comment>
+</data>
+<data name="Def.Obj.Item.Trash.ParachuteFlareCasing.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerWall.DisplayName" xml:space="preserve">
+  <value>стена бункера</value>
+  <comment>bunker wall</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerLowWall.DisplayName" xml:space="preserve">
+  <value>низкая стена бункера</value>
+  <comment>bunker low wall</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerPassage.DisplayName" xml:space="preserve">
+  <value>проход бункера</value>
+  <comment>bunker passage</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerBack.DisplayName" xml:space="preserve">
+  <value>задняя стена бункера</value>
+  <comment>bunker back</comment>
+</data>
+<data name="Def.Obj.Structure.BunkerDoor.DisplayName" xml:space="preserve">
+  <value>дверь бункера</value>
+  <comment>bunker door</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Footing.DisplayName" xml:space="preserve">
+  <value>фундамент бункера</value>
+  <comment>bunker footing</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.HalfWalls.DisplayName" xml:space="preserve">
+  <value>бункер: стены до половины</value>
+  <comment>bunker half walls</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Walls.DisplayName" xml:space="preserve">
+  <value>бункер: стены</value>
+  <comment>bunker walls</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Roofed.DisplayName" xml:space="preserve">
+  <value>плита перекрытия бункера</value>
+  <comment>bunker roof slab</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.DisplayName" xml:space="preserve">
+  <value>укреплённый бункер</value>
+  <comment>hardened bunker</comment>
+</data>
+<data name="Def.Obj.Structure.Bunker.Wreck.DisplayName" xml:space="preserve">
+  <value>руины бункера</value>
+  <comment>bunker wreck</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.DisplayName" xml:space="preserve">
+  <value>металлолом</value>
+  <comment>scrap metal</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Crushed.DisplayName" xml:space="preserve">
+  <value>металлолом</value>
+  <comment>scrap metal</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Crushed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Torn.DisplayName" xml:space="preserve">
+  <value>металлолом</value>
+  <comment>scrap metal</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Torn.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Folded.DisplayName" xml:space="preserve">
+  <value>металлолом</value>
+  <comment>scrap metal</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Folded.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Flattened.DisplayName" xml:space="preserve">
+  <value>металлолом</value>
+  <comment>scrap metal</comment>
+</data>
+<data name="Def.Obj.Item.ScrapMetal.Flattened.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -84199,13 +85303,25 @@ The file is looked up beside this language file first, then under the game's Con
   <value>шланги</value>
   <comment>hose</comment>
 </data>
-<data name="StackFamily.pillbox kit" xml:space="preserve">
-  <value>наборы ДОТа</value>
-  <comment>pillbox kit</comment>
+<data name="StackFamily.heavy fortifications kit" xml:space="preserve">
+  <value>наборы тяжёлых укреплений</value>
+  <comment>heavy fortifications kit</comment>
 </data>
 <data name="StackFamily.concrete mix" xml:space="preserve">
   <value>бетонная смесь</value>
   <comment>concrete mix</comment>
+</data>
+<data name="VehicleClass.utility helicopter" xml:space="preserve">
+  <value>многоцелевой вертолёт</value>
+  <comment>utility helicopter</comment>
+</data>
+<data name="VehicleClass.light helicopter" xml:space="preserve">
+  <value>лёгкий вертолёт</value>
+  <comment>light helicopter</comment>
+</data>
+<data name="VehicleClass.attack helicopter" xml:space="preserve">
+  <value>ударный вертолёт</value>
+  <comment>attack helicopter</comment>
 </data>
 <data name="Honor.ApexPredator.Name" xml:space="preserve">
   <value>ВЫСШИЙ ХИЩНИК</value>
@@ -84486,6 +85602,54 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Honor.AngelFlight.Flavor" xml:space="preserve">
   <value>больше всего павших отправлено домой, к семьям</value>
   <comment>most of the fallen sent home to their families</comment>
+</data>
+<data name="Honor.FrequentFlyer.Name" xml:space="preserve">
+  <value>ЗАВСЕГДАТАЙ НЕБА</value>
+  <comment>FREQUENT FLYER</comment>
+</data>
+<data name="Honor.FrequentFlyer.Flavor" xml:space="preserve">
+  <value>больше всего времени за штурвалом с запущенным двигателем, не меньше двадцати минут</value>
+  <comment>most time at the controls with the engine running, twenty minutes at the least</comment>
+</data>
+<data name="Honor.HighTime.Name" xml:space="preserve">
+  <value>БОЛЬШОЙ НАЛЁТ</value>
+  <comment>HIGH TIME</comment>
+</data>
+<data name="Honor.HighTime.Flavor" xml:space="preserve">
+  <value>больше всего времени за штурвалом с запущенным двигателем, не меньше сорока минут</value>
+  <comment>most time at the controls with the engine running, forty minutes at the least</comment>
+</data>
+<data name="Honor.Sandbagger.Name" xml:space="preserve">
+  <value>МАСТЕР МЕШКОВ</value>
+  <comment>SANDBAGGER</comment>
+</data>
+<data name="Honor.Sandbagger.Flavor" xml:space="preserve">
+  <value>больше всего наполненных мешков с песком, не меньше сотни</value>
+  <comment>most sandbags filled, a hundred at the least</comment>
+</data>
+<data name="Honor.GunsHot.Name" xml:space="preserve">
+  <value>СТВОЛЫ ГОРЯЧИЕ</value>
+  <comment>GUNS HOT</comment>
+</data>
+<data name="Honor.GunsHot.Flavor" xml:space="preserve">
+  <value>больше всего убийств оружием техники, не меньше сотни</value>
+  <comment>most kills with weapons fitted to a vehicle, a hundred at the least</comment>
+</data>
+<data name="Honor.DeathFromAbove.Name" xml:space="preserve">
+  <value>СМЕРТЬ С НЕБЕС</value>
+  <comment>DEATH FROM ABOVE</comment>
+</data>
+<data name="Honor.DeathFromAbove.Flavor" xml:space="preserve">
+  <value>больше всего убийств оружием техники, не меньше пятисот</value>
+  <comment>most kills with weapons fitted to a vehicle, five hundred at the least</comment>
+</data>
+<data name="Honor.Valkyrie.Name" xml:space="preserve">
+  <value>ВАЛЬКИРИЯ</value>
+  <comment>VALKYRIE</comment>
+</data>
+<data name="Honor.Valkyrie.Flavor" xml:space="preserve">
+  <value>больше всего убийств оружием техники, не меньше тысячи</value>
+  <comment>most kills with weapons fitted to a vehicle, a thousand at the least</comment>
 </data>
 <data name="Trait.Veteran.Name" xml:space="preserve">
   <value>Ветеран</value>
@@ -84791,6 +85955,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Годы в джунглях с одними и теми же бойцами. Проходит сквозь строй своих и знает, где стоит каждый.</value>
   <comment>Years in the jungle with the same few men. Slips through his own ranks and knows where each of them stands.</comment>
 </data>
+<data name="Trait.EastResolute.Name" xml:space="preserve">
+  <value>Стойкость</value>
+  <comment>Resolute</comment>
+</data>
+<data name="Trait.EastResolute.Flavor" xml:space="preserve">
+  <value>Идёт вперёд раненым и под огнём. Отделение не отступает из-за этого бойца.</value>
+  <comment>Goes forward hurt and under fire. The squad never turns back on his account.</comment>
+</data>
+<data name="Trait.EastFireHardened.Name" xml:space="preserve">
+  <value>Закалка огнём</value>
+  <comment>Fire Hardened</comment>
+</data>
+<data name="Trait.EastFireHardened.Flavor" xml:space="preserve">
+  <value>Так долго носит баллоны, что жар больше не пугает. Горит и идёт дальше.</value>
+  <comment>Has carried the tanks long enough to stop minding the heat. Burns and keeps walking.</comment>
+</data>
 <data name="Language.East.Name" xml:space="preserve">
   <value>восточный</value>
   <comment>East</comment>
@@ -84803,181 +85983,381 @@ The file is looked up beside this language file first, then under the game's Con
   <value>снабжение</value>
   <comment>cargo</comment>
 </data>
+<data name="EmoteCategory.Contact" xml:space="preserve">
+  <value>контакт</value>
+  <comment>contact</comment>
+</data>
+<data name="EmoteCategory.Orders" xml:space="preserve">
+  <value>приказы</value>
+  <comment>orders</comment>
+</data>
+<data name="EmoteCategory.Status" xml:space="preserve">
+  <value>состояние</value>
+  <comment>status</comment>
+</data>
+<data name="EmoteCategory.Talk" xml:space="preserve">
+  <value>разговор</value>
+  <comment>talk</comment>
+</data>
+<data name="EmoteCategory.Gestures" xml:space="preserve">
+  <value>жесты</value>
+  <comment>gestures</comment>
+</data>
+<data name="EmoteCategory.Face" xml:space="preserve">
+  <value>мимика</value>
+  <comment>face</comment>
+</data>
+<data name="EmoteCategory.Sounds" xml:space="preserve">
+  <value>звуки</value>
+  <comment>sounds</comment>
+</data>
+<data name="EmoteCategory.Body" xml:space="preserve">
+  <value>тело</value>
+  <comment>body</comment>
+</data>
+<data name="EmoteName.Warcry" xml:space="preserve">
+  <value>боевой клич</value>
+  <comment>war cry</comment>
+</data>
 <data name="Emote.Warcry.GetSome" xml:space="preserve">
   <value>НУ, ПОЛУЧАЙ!</value>
   <comment>GET SOME!</comment>
-</data>
-<data name="Emote.Warcry.LetsGo" xml:space="preserve">
-  <value>ВПЕРЁД!</value>
-  <comment>LET'S GO!</comment>
 </data>
 <data name="Emote.Warcry.Hoorah" xml:space="preserve">
   <value>У-РААААА!</value>
   <comment>HOOO RAAAHH!</comment>
 </data>
-<data name="Emote.Warcry.ComeOn" xml:space="preserve">
-  <value>НУ ДАВАЙ!</value>
-  <comment>COME ON!</comment>
-</data>
 <data name="Emote.Warcry.Yeah" xml:space="preserve">
   <value>ДААААА!</value>
   <comment>YEAHHHH!</comment>
+</data>
+<data name="Emote.Warcry.LockAndLoad" xml:space="preserve">
+  <value>К БОЮ!</value>
+  <comment>LOCK AND LOAD!</comment>
+</data>
+<data name="EmoteName.Medic" xml:space="preserve">
+  <value>медик</value>
+  <comment>medic</comment>
 </data>
 <data name="Emote.Medic" xml:space="preserve">
   <value>МЕДИК!</value>
   <comment>MEDIC!</comment>
 </data>
+<data name="Emote.Medic.NeedMedic" xml:space="preserve">
+  <value>НУЖЕН МЕДИК!</value>
+  <comment>I NEED A MEDIC!</comment>
+</data>
+<data name="Emote.Medic.Help" xml:space="preserve">
+  <value>ПОМОГИТЕ!</value>
+  <comment>HELP!</comment>
+</data>
+<data name="EmoteName.Blink" xml:space="preserve">
+  <value>моргнуть</value>
+  <comment>blink</comment>
+</data>
 <data name="Emote.Blinks" xml:space="preserve">
   <value>моргает.</value>
   <comment>blinks.</comment>
+</data>
+<data name="EmoteName.Rapidblink" xml:space="preserve">
+  <value>часто моргать</value>
+  <comment>rapid blink</comment>
 </data>
 <data name="Emote.Blinks.Rapid" xml:space="preserve">
   <value>быстро моргает.</value>
   <comment>blinks rapidly.</comment>
 </data>
+<data name="EmoteName.Bow" xml:space="preserve">
+  <value>поклон</value>
+  <comment>bow</comment>
+</data>
 <data name="Emote.Bows" xml:space="preserve">
   <value>кланяется.</value>
   <comment>bows.</comment>
+</data>
+<data name="EmoteName.Chuckle" xml:space="preserve">
+  <value>смешок</value>
+  <comment>chuckle</comment>
 </data>
 <data name="Emote.Chuckles" xml:space="preserve">
   <value>посмеивается.</value>
   <comment>chuckles.</comment>
 </data>
+<data name="EmoteName.Cough" xml:space="preserve">
+  <value>кашель</value>
+  <comment>cough</comment>
+</data>
 <data name="Emote.Coughs" xml:space="preserve">
   <value>кашляет!</value>
   <comment>coughs!</comment>
+</data>
+<data name="EmoteName.Cry" xml:space="preserve">
+  <value>плач</value>
+  <comment>cry</comment>
 </data>
 <data name="Emote.Cries" xml:space="preserve">
   <value>плачет.</value>
   <comment>cries.</comment>
 </data>
+<data name="EmoteName.Eyebrow" xml:space="preserve">
+  <value>поднять бровь</value>
+  <comment>raise eyebrow</comment>
+</data>
 <data name="Emote.RaisesEyebrow" xml:space="preserve">
   <value>приподнимает бровь.</value>
   <comment>raises an eyebrow.</comment>
+</data>
+<data name="EmoteName.Facepalm" xml:space="preserve">
+  <value>рукалицо</value>
+  <comment>facepalm</comment>
 </data>
 <data name="Emote.Facepalms" xml:space="preserve">
   <value>закрывает лицо ладонью.</value>
   <comment>facepalms.</comment>
 </data>
+<data name="EmoteName.Frown" xml:space="preserve">
+  <value>нахмуриться</value>
+  <comment>frown</comment>
+</data>
 <data name="Emote.Frowns" xml:space="preserve">
   <value>хмурится.</value>
   <comment>frowns.</comment>
+</data>
+<data name="EmoteName.Gasp" xml:space="preserve">
+  <value>ахнуть</value>
+  <comment>gasp</comment>
 </data>
 <data name="Emote.Gasps" xml:space="preserve">
   <value>ахает!</value>
   <comment>gasps!</comment>
 </data>
+<data name="EmoteName.Giggle" xml:space="preserve">
+  <value>хихикать</value>
+  <comment>giggle</comment>
+</data>
 <data name="Emote.Giggles" xml:space="preserve">
   <value>хихикает.</value>
   <comment>giggles.</comment>
+</data>
+<data name="EmoteName.Glare" xml:space="preserve">
+  <value>сверлить взглядом</value>
+  <comment>glare</comment>
 </data>
 <data name="Emote.Glares" xml:space="preserve">
   <value>сверлит взглядом.</value>
   <comment>glares.</comment>
 </data>
+<data name="EmoteName.Grin" xml:space="preserve">
+  <value>ухмылка</value>
+  <comment>grin</comment>
+</data>
 <data name="Emote.Grins" xml:space="preserve">
   <value>ухмыляется.</value>
   <comment>grins.</comment>
+</data>
+<data name="EmoteName.Grumble" xml:space="preserve">
+  <value>ворчать</value>
+  <comment>grumble</comment>
 </data>
 <data name="Emote.Grumbles" xml:space="preserve">
   <value>ворчит.</value>
   <comment>grumbles.</comment>
 </data>
+<data name="EmoteName.Laugh" xml:space="preserve">
+  <value>смех</value>
+  <comment>laugh</comment>
+</data>
 <data name="Emote.Laughs" xml:space="preserve">
   <value>смеётся!</value>
   <comment>laughs!</comment>
+</data>
+<data name="EmoteName.Look" xml:space="preserve">
+  <value>смотреть</value>
+  <comment>look</comment>
 </data>
 <data name="Emote.Looks" xml:space="preserve">
   <value>смотрит.</value>
   <comment>looks.</comment>
 </data>
+<data name="EmoteName.Moan" xml:space="preserve">
+  <value>стон</value>
+  <comment>moan</comment>
+</data>
 <data name="Emote.Moans" xml:space="preserve">
   <value>стонет.</value>
   <comment>moans.</comment>
+</data>
+<data name="EmoteName.Mumble" xml:space="preserve">
+  <value>бубнить</value>
+  <comment>mumble</comment>
 </data>
 <data name="Emote.Mumbles" xml:space="preserve">
   <value>бубнит.</value>
   <comment>mumbles.</comment>
 </data>
+<data name="EmoteName.Nod" xml:space="preserve">
+  <value>кивок</value>
+  <comment>nod</comment>
+</data>
 <data name="Emote.Nods" xml:space="preserve">
   <value>кивает.</value>
   <comment>nods.</comment>
+</data>
+<data name="EmoteName.Shakehead" xml:space="preserve">
+  <value>качать головой</value>
+  <comment>shake head</comment>
 </data>
 <data name="Emote.ShakesHead" xml:space="preserve">
   <value>качает головой.</value>
   <comment>shakes their head.</comment>
 </data>
+<data name="EmoteName.Shiver" xml:space="preserve">
+  <value>дрожь</value>
+  <comment>shiver</comment>
+</data>
 <data name="Emote.Shivers" xml:space="preserve">
   <value>дрожит.</value>
   <comment>shivers.</comment>
+</data>
+<data name="EmoteName.Shrug" xml:space="preserve">
+  <value>пожать плечами</value>
+  <comment>shrug</comment>
 </data>
 <data name="Emote.Shrugs" xml:space="preserve">
   <value>пожимает плечами.</value>
   <comment>shrugs.</comment>
 </data>
+<data name="EmoteName.Sigh" xml:space="preserve">
+  <value>вздох</value>
+  <comment>sigh</comment>
+</data>
 <data name="Emote.Sighs" xml:space="preserve">
   <value>вздыхает.</value>
   <comment>sighs.</comment>
+</data>
+<data name="EmoteName.Smile" xml:space="preserve">
+  <value>улыбка</value>
+  <comment>smile</comment>
 </data>
 <data name="Emote.Smiles" xml:space="preserve">
   <value>улыбается.</value>
   <comment>smiles.</comment>
 </data>
+<data name="EmoteName.Sneeze" xml:space="preserve">
+  <value>чих</value>
+  <comment>sneeze</comment>
+</data>
 <data name="Emote.Sneezes" xml:space="preserve">
   <value>чихает!</value>
   <comment>sneezes!</comment>
+</data>
+<data name="EmoteName.Snore" xml:space="preserve">
+  <value>храп</value>
+  <comment>snore</comment>
 </data>
 <data name="Emote.Snores" xml:space="preserve">
   <value>храпит.</value>
   <comment>snores.</comment>
 </data>
+<data name="EmoteName.Stare" xml:space="preserve">
+  <value>пялиться</value>
+  <comment>stare</comment>
+</data>
 <data name="Emote.Stares" xml:space="preserve">
   <value>пялится.</value>
   <comment>stares.</comment>
+</data>
+<data name="EmoteName.Stop" xml:space="preserve">
+  <value>стоп</value>
+  <comment>stop</comment>
 </data>
 <data name="Emote.GesturesStop" xml:space="preserve">
   <value>поднимает раскрытую ладонь, прося остановиться.</value>
   <comment>holds out an open palm, gesturing to stop.</comment>
 </data>
+<data name="EmoteName.Thumbsup" xml:space="preserve">
+  <value>палец вверх</value>
+  <comment>thumbs up</comment>
+</data>
 <data name="Emote.ThumbsUp" xml:space="preserve">
   <value>показывает большой палец вверх.</value>
   <comment>gives a thumbs up.</comment>
+</data>
+<data name="EmoteName.Thumbsdown" xml:space="preserve">
+  <value>палец вниз</value>
+  <comment>thumbs down</comment>
 </data>
 <data name="Emote.ThumbsDown" xml:space="preserve">
   <value>показывает большой палец вниз.</value>
   <comment>gives a thumbs down.</comment>
 </data>
+<data name="EmoteName.Twitch" xml:space="preserve">
+  <value>дёрнуться</value>
+  <comment>twitch</comment>
+</data>
 <data name="Emote.Twitches" xml:space="preserve">
   <value>дёргается.</value>
   <comment>twitches.</comment>
+</data>
+<data name="EmoteName.Wave" xml:space="preserve">
+  <value>помахать</value>
+  <comment>wave</comment>
 </data>
 <data name="Emote.Waves" xml:space="preserve">
   <value>машет.</value>
   <comment>waves.</comment>
 </data>
+<data name="EmoteName.Yawn" xml:space="preserve">
+  <value>зевок</value>
+  <comment>yawn</comment>
+</data>
 <data name="Emote.Yawns" xml:space="preserve">
   <value>зевает.</value>
   <comment>yawns.</comment>
+</data>
+<data name="EmoteName.Salute" xml:space="preserve">
+  <value>отдать честь</value>
+  <comment>salute</comment>
 </data>
 <data name="Emote.Salutes" xml:space="preserve">
   <value>отдаёт честь.</value>
   <comment>salutes.</comment>
 </data>
+<data name="EmoteName.Clap" xml:space="preserve">
+  <value>хлопать</value>
+  <comment>clap</comment>
+</data>
 <data name="Emote.Claps" xml:space="preserve">
   <value>хлопает.</value>
   <comment>claps.</comment>
+</data>
+<data name="EmoteName.Golfclap" xml:space="preserve">
+  <value>вялые хлопки</value>
+  <comment>golf clap</comment>
 </data>
 <data name="Emote.Claps.Unimpressed" xml:space="preserve">
   <value>вяло хлопает, явно без восторга.</value>
   <comment>claps, clearly unimpressed.</comment>
 </data>
+<data name="EmoteName.Whimper" xml:space="preserve">
+  <value>хныкать</value>
+  <comment>whimper</comment>
+</data>
 <data name="Emote.Whimpers" xml:space="preserve">
   <value>хнычет.</value>
   <comment>whimpers.</comment>
 </data>
+<data name="EmoteName.Overhere" xml:space="preserve">
+  <value>сюда</value>
+  <comment>over here</comment>
+</data>
 <data name="Emote.OverHere" xml:space="preserve">
   <value>СЮДА!</value>
   <comment>OVER HERE!</comment>
+</data>
+<data name="EmoteName.Fragout" xml:space="preserve">
+  <value>граната</value>
+  <comment>frag out</comment>
 </data>
 <data name="Emote.Frag.FragOut" xml:space="preserve">
   <value>КИДАЮ ГРАНАТУ!</value>
@@ -84987,9 +86367,25 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ГРАНАТА!</value>
   <comment>GRENADE!</comment>
 </data>
+<data name="Emote.Frag.FireInTheHole" xml:space="preserve">
+  <value>ПОДРЫВ!</value>
+  <comment>FIRE IN THE HOLE!</comment>
+</data>
+<data name="EmoteName.Getdown" xml:space="preserve">
+  <value>ложись</value>
+  <comment>get down</comment>
+</data>
 <data name="Emote.GetDown" xml:space="preserve">
   <value>ЛОЖИСЬ!</value>
   <comment>GET DOWN!</comment>
+</data>
+<data name="Emote.GetDown.DownDown" xml:space="preserve">
+  <value>ЛЕЖАТЬ! ЛЕЖАТЬ!</value>
+  <comment>DOWN! DOWN!</comment>
+</data>
+<data name="EmoteName.Coverme" xml:space="preserve">
+  <value>прикрой</value>
+  <comment>cover me</comment>
 </data>
 <data name="Emote.Cover.CoveringFire" xml:space="preserve">
   <value>ПРИКРЫВАЮ!</value>
@@ -85003,6 +86399,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ПРИКРОЙ МЕНЯ!</value>
   <comment>COVER ME!</comment>
 </data>
+<data name="EmoteName.Groan" xml:space="preserve">
+  <value>досада</value>
+  <comment>groan</comment>
+</data>
 <data name="Emote.Groan.Serious" xml:space="preserve">
   <value>Серьёзно?</value>
   <comment>Are you serious?</comment>
@@ -85014,6 +86414,334 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Emote.Groan.JoinMarines" xml:space="preserve">
   <value>Вступайте в морпехи, говорили они…</value>
   <comment>Join the marines they said...</comment>
+</data>
+<data name="EmoteName.Letsgo" xml:space="preserve">
+  <value>погнали</value>
+  <comment>let's go</comment>
+</data>
+<data name="Emote.Warcry.LetsGo" xml:space="preserve">
+  <value>ВПЕРЁД!</value>
+  <comment>LET'S GO!</comment>
+</data>
+<data name="Emote.Warcry.ComeOn" xml:space="preserve">
+  <value>НУ ДАВАЙ!</value>
+  <comment>COME ON!</comment>
+</data>
+<data name="Emote.LetsGo.SaddleUp" xml:space="preserve">
+  <value>ПО КОНЯМ!</value>
+  <comment>SADDLE UP!</comment>
+</data>
+<data name="EmoteName.Reloading" xml:space="preserve">
+  <value>перезарядка</value>
+  <comment>reloading</comment>
+</data>
+<data name="Emote.Reloading.Reloading" xml:space="preserve">
+  <value>ПЕРЕЗАРЯЖАЮСЬ!</value>
+  <comment>RELOADING!</comment>
+</data>
+<data name="Emote.Reloading.ChangingMag" xml:space="preserve">
+  <value>МЕНЯЮ МАГАЗИН!</value>
+  <comment>CHANGING MAG!</comment>
+</data>
+<data name="EmoteName.Contact" xml:space="preserve">
+  <value>контакт</value>
+  <comment>contact</comment>
+</data>
+<data name="Emote.Contact.Contact" xml:space="preserve">
+  <value>КОНТАКТ!</value>
+  <comment>CONTACT!</comment>
+</data>
+<data name="Emote.Contact.EnemySpotted" xml:space="preserve">
+  <value>ВИЖУ ВРАГА!</value>
+  <comment>ENEMY SPOTTED!</comment>
+</data>
+<data name="Emote.Contact.Hostiles" xml:space="preserve">
+  <value>ПРОТИВНИК!</value>
+  <comment>HOSTILES!</comment>
+</data>
+<data name="EmoteName.Mandown" xml:space="preserve">
+  <value>трёхсотый</value>
+  <comment>man down</comment>
+</data>
+<data name="Emote.ManDown" xml:space="preserve">
+  <value>ЕСТЬ ТРЁХСОТЫЙ!</value>
+  <comment>MAN DOWN!</comment>
+</data>
+<data name="EmoteName.Hit" xml:space="preserve">
+  <value>задело</value>
+  <comment>hit</comment>
+</data>
+<data name="Emote.Hit" xml:space="preserve">
+  <value>МЕНЯ ЗАДЕЛО!</value>
+  <comment>I'M HIT!</comment>
+</data>
+<data name="EmoteName.Ammo" xml:space="preserve">
+  <value>патроны</value>
+  <comment>ammo</comment>
+</data>
+<data name="Emote.Ammo.NeedAmmo" xml:space="preserve">
+  <value>НУЖНЫ ПАТРОНЫ!</value>
+  <comment>I NEED AMMO!</comment>
+</data>
+<data name="Emote.Ammo.OutOfAmmo" xml:space="preserve">
+  <value>ПАТРОНЫ КОНЧИЛИСЬ!</value>
+  <comment>I'M OUT OF AMMO!</comment>
+</data>
+<data name="EmoteName.Moveup" xml:space="preserve">
+  <value>вперёд</value>
+  <comment>move up</comment>
+</data>
+<data name="Emote.MoveUp.MoveUp" xml:space="preserve">
+  <value>ВПЕРЁД!</value>
+  <comment>MOVE UP!</comment>
+</data>
+<data name="Emote.MoveUp.PushUp" xml:space="preserve">
+  <value>ПОДТЯГИВАЙСЯ!</value>
+  <comment>PUSH UP!</comment>
+</data>
+<data name="Emote.MoveUp.Advance" xml:space="preserve">
+  <value>НАСТУПАЕМ!</value>
+  <comment>ADVANCE!</comment>
+</data>
+<data name="Emote.MoveUp.GoGoGo" xml:space="preserve">
+  <value>ПОШЛИ! ПОШЛИ! ПОШЛИ!</value>
+  <comment>GO! GO! GO!</comment>
+</data>
+<data name="EmoteName.Fallback" xml:space="preserve">
+  <value>отход</value>
+  <comment>fall back</comment>
+</data>
+<data name="Emote.FallBack.FallBack" xml:space="preserve">
+  <value>ОТХОДИМ!</value>
+  <comment>FALL BACK!</comment>
+</data>
+<data name="Emote.FallBack.PullBack" xml:space="preserve">
+  <value>НАЗАД!</value>
+  <comment>PULL BACK!</comment>
+</data>
+<data name="Emote.FallBack.Retreat" xml:space="preserve">
+  <value>ОТСТУПАЕМ!</value>
+  <comment>RETREAT!</comment>
+</data>
+<data name="EmoteName.Hold" xml:space="preserve">
+  <value>держать</value>
+  <comment>hold</comment>
+</data>
+<data name="Emote.Hold.HoldPosition" xml:space="preserve">
+  <value>ДЕРЖАТЬ ПОЗИЦИЮ!</value>
+  <comment>HOLD POSITION!</comment>
+</data>
+<data name="Emote.Hold.HoldTheLine" xml:space="preserve">
+  <value>ДЕРЖАТЬ РУБЕЖ!</value>
+  <comment>HOLD THE LINE!</comment>
+</data>
+<data name="Emote.Hold.StandFast" xml:space="preserve">
+  <value>НИ ШАГУ НАЗАД!</value>
+  <comment>STAND FAST!</comment>
+</data>
+<data name="EmoteName.Holdfire" xml:space="preserve">
+  <value>не стрелять</value>
+  <comment>hold fire</comment>
+</data>
+<data name="Emote.HoldFire.HoldYourFire" xml:space="preserve">
+  <value>НЕ СТРЕЛЯТЬ!</value>
+  <comment>HOLD YOUR FIRE!</comment>
+</data>
+<data name="Emote.HoldFire.CeaseFire" xml:space="preserve">
+  <value>ПРЕКРАТИТЬ ОГОНЬ!</value>
+  <comment>CEASE FIRE!</comment>
+</data>
+<data name="Emote.HoldFire.CheckYourFire" xml:space="preserve">
+  <value>СМОТРИ, КУДА СТРЕЛЯЕШЬ!</value>
+  <comment>CHECK YOUR FIRE!</comment>
+</data>
+<data name="EmoteName.Onme" xml:space="preserve">
+  <value>ко мне</value>
+  <comment>on me</comment>
+</data>
+<data name="Emote.OnMe.OnMe" xml:space="preserve">
+  <value>КО МНЕ!</value>
+  <comment>ON ME!</comment>
+</data>
+<data name="Emote.OnMe.FollowMe" xml:space="preserve">
+  <value>ЗА МНОЙ!</value>
+  <comment>FOLLOW ME!</comment>
+</data>
+<data name="Emote.OnMe.RallyOnMe" xml:space="preserve">
+  <value>ВСЕ КО МНЕ!</value>
+  <comment>RALLY ON ME!</comment>
+</data>
+<data name="EmoteName.Clear" xml:space="preserve">
+  <value>чисто</value>
+  <comment>clear</comment>
+</data>
+<data name="Emote.Clear.Clear" xml:space="preserve">
+  <value>ЧИСТО!</value>
+  <comment>CLEAR!</comment>
+</data>
+<data name="Emote.Clear.AllClear" xml:space="preserve">
+  <value>ВСЁ ЧИСТО!</value>
+  <comment>ALL CLEAR!</comment>
+</data>
+<data name="Emote.Clear.AreaSecure" xml:space="preserve">
+  <value>ЗОНА ЗАЧИЩЕНА!</value>
+  <comment>AREA SECURE!</comment>
+</data>
+<data name="EmoteName.Roger" xml:space="preserve">
+  <value>принято</value>
+  <comment>roger</comment>
+</data>
+<data name="Emote.Roger.RogerThat" xml:space="preserve">
+  <value>Принято.</value>
+  <comment>Roger that.</comment>
+</data>
+<data name="Emote.Roger.Affirmative" xml:space="preserve">
+  <value>Так точно.</value>
+  <comment>Affirmative.</comment>
+</data>
+<data name="Emote.Roger.SolidCopy" xml:space="preserve">
+  <value>Слышу чётко.</value>
+  <comment>Solid copy.</comment>
+</data>
+<data name="EmoteName.Negative" xml:space="preserve">
+  <value>никак нет</value>
+  <comment>negative</comment>
+</data>
+<data name="Emote.Negative.Negative" xml:space="preserve">
+  <value>Никак нет.</value>
+  <comment>Negative.</comment>
+</data>
+<data name="Emote.Negative.NoCanDo" xml:space="preserve">
+  <value>Не выйдет.</value>
+  <comment>No can do.</comment>
+</data>
+<data name="EmoteName.Friendly" xml:space="preserve">
+  <value>свои</value>
+  <comment>friendly</comment>
+</data>
+<data name="Emote.Friendly.Friendly" xml:space="preserve">
+  <value>СВОИ!</value>
+  <comment>FRIENDLY!</comment>
+</data>
+<data name="Emote.Friendly.FriendliesComingIn" xml:space="preserve">
+  <value>ИДУТ СВОИ!</value>
+  <comment>FRIENDLIES COMING IN!</comment>
+</data>
+<data name="EmoteName.Thanks" xml:space="preserve">
+  <value>спасибо</value>
+  <comment>thanks</comment>
+</data>
+<data name="Emote.Thanks.Thanks" xml:space="preserve">
+  <value>Спасибо.</value>
+  <comment>Thanks.</comment>
+</data>
+<data name="Emote.Thanks.AppreciateIt" xml:space="preserve">
+  <value>Благодарю.</value>
+  <comment>Appreciate it.</comment>
+</data>
+<data name="EmoteName.Sorry" xml:space="preserve">
+  <value>извини</value>
+  <comment>sorry</comment>
+</data>
+<data name="Emote.Sorry.Sorry" xml:space="preserve">
+  <value>Извини.</value>
+  <comment>Sorry.</comment>
+</data>
+<data name="Emote.Sorry.MyBad" xml:space="preserve">
+  <value>Моя ошибка.</value>
+  <comment>My bad.</comment>
+</data>
+<data name="Emote.Sorry.SorryBoutThat" xml:space="preserve">
+  <value>Ну, бывает, прости.</value>
+  <comment>Sorry 'bout that.</comment>
+</data>
+<data name="EmoteName.Smoke" xml:space="preserve">
+  <value>дым</value>
+  <comment>smoke</comment>
+</data>
+<data name="Emote.Smoke.PoppingSmoke" xml:space="preserve">
+  <value>СТАВЛЮ ДЫМ!</value>
+  <comment>POPPING SMOKE!</comment>
+</data>
+<data name="Emote.Smoke.SmokeOut" xml:space="preserve">
+  <value>ДЫМ ПОШЁЛ!</value>
+  <comment>SMOKE OUT!</comment>
+</data>
+<data name="EmoteName.Flare" xml:space="preserve">
+  <value>ракета</value>
+  <comment>flare</comment>
+</data>
+<data name="Emote.Flare.FlareUp" xml:space="preserve">
+  <value>РАКЕТА!</value>
+  <comment>FLARE UP!</comment>
+</data>
+<data name="Emote.Flare.PoppingFlare" xml:space="preserve">
+  <value>ПУСКАЮ РАКЕТУ!</value>
+  <comment>POPPING FLARE!</comment>
+</data>
+<data name="EmoteName.Goodkill" xml:space="preserve">
+  <value>минус один</value>
+  <comment>good kill</comment>
+</data>
+<data name="Emote.GoodKill.GoodKill" xml:space="preserve">
+  <value>МИНУС ОДИН!</value>
+  <comment>GOOD KILL!</comment>
+</data>
+<data name="Emote.GoodKill.NiceShot" xml:space="preserve">
+  <value>ОТЛИЧНЫЙ ВЫСТРЕЛ!</value>
+  <comment>NICE SHOT!</comment>
+</data>
+<data name="EmoteName.Frosty" xml:space="preserve">
+  <value>бдительность</value>
+  <comment>frosty</comment>
+</data>
+<data name="Emote.Frosty.StayFrosty" xml:space="preserve">
+  <value>НЕ РАССЛАБЛЯТЬСЯ!</value>
+  <comment>STAY FROSTY!</comment>
+</data>
+<data name="Emote.Frosty.EyesOpen" xml:space="preserve">
+  <value>СМОТРЕТЬ В ОБА!</value>
+  <comment>EYES OPEN!</comment>
+</data>
+<data name="EmoteName.Taunt" xml:space="preserve">
+  <value>насмешка</value>
+  <comment>taunt</comment>
+</data>
+<data name="Emote.Taunt.AllYouGot" xml:space="preserve">
+  <value>И ЭТО ВСЁ?</value>
+  <comment>IS THAT ALL YOU GOT?</comment>
+</data>
+<data name="Emote.Taunt.ComeAndGetIt" xml:space="preserve">
+  <value>ИДИ СЮДА, ПОПРОБУЙ!</value>
+  <comment>COME AND GET IT!</comment>
+</data>
+<data name="EmoteName.Quiet" xml:space="preserve">
+  <value>тише</value>
+  <comment>quiet</comment>
+</data>
+<data name="Emote.Quiet.KeepItDown" xml:space="preserve">
+  <value>Потише.</value>
+  <comment>Keep it down.</comment>
+</data>
+<data name="Emote.Quiet.Quiet" xml:space="preserve">
+  <value>Тихо.</value>
+  <comment>Quiet.</comment>
+</data>
+<data name="EmoteName.Thunder" xml:space="preserve">
+  <value>гром</value>
+  <comment>thunder</comment>
+</data>
+<data name="Emote.Thunder" xml:space="preserve">
+  <value>ГРОМ!</value>
+  <comment>THUNDER!</comment>
+</data>
+<data name="EmoteName.Flash" xml:space="preserve">
+  <value>вспышка</value>
+  <comment>flash</comment>
+</data>
+<data name="Emote.Flash" xml:space="preserve">
+  <value>ВСПЫШКА!</value>
+  <comment>FLASH!</comment>
 </data>
 <data name="GhostEvent.VehicleCrash.Title" xml:space="preserve">
   <value>КРУШЕНИЕ ТЕХНИКИ</value>
@@ -85082,6 +86810,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="GhostEvent.WireBreach.Title" xml:space="preserve">
   <value>ПРОРЫВ ОГРАЖДЕНИЯ</value>
   <comment>WIRE BREACH</comment>
+</data>
+<data name="GhostEvent.CommandoRaid.Title" xml:space="preserve">
+  <value>НАЛЁТ КОММАНДОС</value>
+  <comment>COMMANDO RAID</comment>
 </data>
 <data name="TitleCard.BaseEstablished.Caption" xml:space="preserve">
   <value>БАЗА РАЗВЁРНУТА</value>
@@ -85498,6 +87230,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Construction.Pillbox.DisplayName" xml:space="preserve">
   <value>ДОТ</value>
   <comment>pillbox</comment>
+</data>
+<data name="Construction.Floor.Concrete.DisplayName" xml:space="preserve">
+  <value>бетонный пол</value>
+  <comment>concrete floor</comment>
+</data>
+<data name="Construction.Floor.Asphalt.DisplayName" xml:space="preserve">
+  <value>асфальтовый пол</value>
+  <comment>asphalt floor</comment>
+</data>
+<data name="Construction.Bunker.DisplayName" xml:space="preserve">
+  <value>укреплённый бункер</value>
+  <comment>hardened bunker</comment>
 </data>
 <data name="Reagent.Medical.Coagulex.Name" xml:space="preserve">
   <value>Коагулекс</value>
@@ -87863,9 +89607,21 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Пилот UH-1H</value>
   <comment>UH-1H Pilot</comment>
 </data>
+<data name="Loadout.Marine.Pilot.MH6J.Name" xml:space="preserve">
+  <value>Пилот MH-6J</value>
+  <comment>MH-6J Pilot</comment>
+</data>
 <data name="Loadout.Marine.Pilot.AH6J.Name" xml:space="preserve">
   <value>Пилот AH-6J</value>
   <comment>AH-6J Pilot</comment>
+</data>
+<data name="Loadout.Marine.Pilot.AH1G.Name" xml:space="preserve">
+  <value>Пилот AH-1G</value>
+  <comment>AH-1G Pilot</comment>
+</data>
+<data name="Loadout.Marine.Gunner.AH1G.Name" xml:space="preserve">
+  <value>Стрелок AH-1G</value>
+  <comment>AH-1G Gunner</comment>
 </data>
 <data name="Loadout.Surgeon.Name" xml:space="preserve">
   <value>Хирург</value>
@@ -88083,6 +89839,30 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Штаб-сержант</value>
   <comment>Staff Sergeant</comment>
 </data>
+<data name="Rank.Private.Short" xml:space="preserve">
+  <value>Ряд</value>
+  <comment>Pvt</comment>
+</data>
+<data name="Rank.PrivateFirstClass.Short" xml:space="preserve">
+  <value>Ряд1к</value>
+  <comment>PFC</comment>
+</data>
+<data name="Rank.LanceCorporal.Short" xml:space="preserve">
+  <value>МлКпр</value>
+  <comment>LCpl</comment>
+</data>
+<data name="Rank.Corporal.Short" xml:space="preserve">
+  <value>Кпр</value>
+  <comment>Cpl</comment>
+</data>
+<data name="Rank.Sergeant.Short" xml:space="preserve">
+  <value>Срж</value>
+  <comment>Sgt</comment>
+</data>
+<data name="Rank.StaffSergeant.Short" xml:space="preserve">
+  <value>ШтСрж</value>
+  <comment>SSgt</comment>
+</data>
 <data name="RoleClass.MachineGunner.Name" xml:space="preserve">
   <value>Пулемётчик</value>
   <comment>Machine Gunner</comment>
@@ -88143,6 +89923,26 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Майор</value>
   <comment>Major</comment>
 </data>
+<data name="Rank.OfficerCadet.Short" xml:space="preserve">
+  <value>Крс</value>
+  <comment>Ocdt</comment>
+</data>
+<data name="Rank.SecondLieutenant.Short" xml:space="preserve">
+  <value>МлЛт</value>
+  <comment>2ndLt</comment>
+</data>
+<data name="Rank.FirstLieutenant.Short" xml:space="preserve">
+  <value>Лт</value>
+  <comment>1stLt</comment>
+</data>
+<data name="Rank.Captain.Short" xml:space="preserve">
+  <value>Кпт</value>
+  <comment>Capt</comment>
+</data>
+<data name="Rank.Major.Short" xml:space="preserve">
+  <value>Мйр</value>
+  <comment>Maj</comment>
+</data>
 <data name="RoleClass.Doctor.Name" xml:space="preserve">
   <value>Врач</value>
   <comment>Doctor</comment>
@@ -88160,8 +89960,12 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>Engineer</comment>
 </data>
 <data name="RoleClass.LightHelicopterPilot.Name" xml:space="preserve">
-  <value>Пилот лёгкого вертолёта</value>
-  <comment>Light Helicopter Pilot</comment>
+  <value>Лёгкий вертолёт</value>
+  <comment>Light Helicopter</comment>
+</data>
+<data name="RoleClass.AttackHelicopterPilot.Name" xml:space="preserve">
+  <value>Ударный вертолёт</value>
+  <comment>Attack Helicopter</comment>
 </data>
 <data name="RoleClass.Mercenary.Name" xml:space="preserve">
   <value>Наёмник</value>
@@ -88382,6 +90186,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Modifier.AshStorms.Tooltip" xml:space="preserve">
   <value>ВУЛКАНИЧЕСКИЕ ПЕПЕЛЬНЫЕ БУРИ НАКРЫВАЮТ КОЛОНИЮ БЕЗ ПРЕДУПРЕЖДЕНИЯ // ПОКА ОНИ ИДУТ, ПОДНИМАЕТСЯ ВЕТЕР И ВИДИМОСТЬ ПАДАЕТ ПОЧТИ ДО НУЛЯ</value>
   <comment>VOLCANIC ASH STORMS ROLL OVER THE COLONY WITHOUT WARNING // THE WIND RISES AND VISIBILITY COLLAPSES WHILE THEY LAST</comment>
+</data>
+<data name="Modifier.LargeArea.Label" xml:space="preserve">
+  <value>БОЛЬШАЯ ТЕРРИТОРИЯ</value>
+  <comment>LARGE AREA</comment>
+</data>
+<data name="Modifier.LargeArea.Tooltip" xml:space="preserve">
+  <value>КОЛОНИЯ РАСКИНУЛАСЬ ШИРОКО // ДО КОНТАКТА ПРИДЁТСЯ ПРОЙТИ БОЛЬШЕ // ПОДГОТОВКА ДЛИТСЯ НА ПЯТЬ МИНУТ ДОЛЬШЕ</value>
+  <comment>THE COLONY SPRAWLS // THERE IS MORE GROUND TO COVER BEFORE CONTACT // PREPARATION EXTENDED BY FIVE MINUTES</comment>
 </data>
 <data name="Mode.Extended.DisplayName" xml:space="preserve">
   <value>Песочница</value>
