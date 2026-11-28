@@ -511,6 +511,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Низкое</value>
   <comment>Low</comment>
 </data>
+<data name="Enum.GibEffects.Low" xml:space="preserve">
+  <value>Низкие</value>
+  <comment>Low</comment>
+</data>
+<data name="Enum.GibEffects.Medium" xml:space="preserve">
+  <value>Средние</value>
+  <comment>Medium</comment>
+</data>
+<data name="Enum.GibEffects.High" xml:space="preserve">
+  <value>Высокие</value>
+  <comment>High</comment>
+</data>
 <data name="Enum.FrameQueueLimit.Unlimited" xml:space="preserve">
   <value>Без ограничений</value>
   <comment>Unlimited</comment>
@@ -1078,6 +1090,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Chat.CookDeny" xml:space="preserve">
   <value>{TARGET} отказывается: содержимое не годится для готовки.</value>
   <comment>The {TARGET} refuses; the contents are unsuitable for cookery.</comment>
+</data>
+<data name="Chat.CookSpoiled" xml:space="preserve">
+  <value>{ACTOR} портит блюдо: {DISH}</value>
+  <comment>{ACTOR} spoils the {DISH}</comment>
 </data>
 <data name="Chat.GibberRefuse" xml:space="preserve">
   <value>{TARGET} отказывается: тело нельзя измельчить.</value>
@@ -2151,10 +2167,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>вставить</value>
   <comment>insert</comment>
 </data>
-<data name="HoverVerbLabels.CookPour" xml:space="preserve">
-  <value>налить</value>
-  <comment>pour</comment>
-</data>
 <data name="HoverVerbLabels.GibberLoad" xml:space="preserve">
   <value>загрузить</value>
   <comment>load</comment>
@@ -2174,10 +2186,6 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="HoverVerbLabels.FloodlightSwitch" xml:space="preserve">
   <value>щёлкнуть выключатель</value>
   <comment>flip switch</comment>
-</data>
-<data name="HoverVerbLabels.MicrowaveWindow" xml:space="preserve">
-  <value>управление</value>
-  <comment>controls</comment>
 </data>
 <data name="HoverVerbLabels.GrinderWindow" xml:space="preserve">
   <value>управление</value>
@@ -2339,6 +2347,26 @@ The file is looked up beside this language file first, then under the game's Con
   <value>смотать шланг</value>
   <comment>pick up hose</comment>
 </data>
+<data name="HoverVerbLabels.CookStation" xml:space="preserve">
+  <value>использовать</value>
+  <comment>use</comment>
+</data>
+<data name="HoverVerbLabels.CookAdd" xml:space="preserve">
+  <value>добавить</value>
+  <comment>add</comment>
+</data>
+<data name="HoverVerbLabels.CookTip" xml:space="preserve">
+  <value>пусто</value>
+  <comment>empty</comment>
+</data>
+<data name="HoverVerbLabels.CookAssemble" xml:space="preserve">
+  <value>собрать</value>
+  <comment>assemble</comment>
+</data>
+<data name="HoverVerbLabels.TabletopLift" xml:space="preserve">
+  <value>поставить на стол</value>
+  <comment>lift onto table</comment>
+</data>
 <data name="HoverVerbLabels.ElevatorCall" xml:space="preserve">
   <value>вызвать лифт</value>
   <comment>call elevator</comment>
@@ -2467,6 +2495,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>открыть монитор</value>
   <comment>open monitor</comment>
 </data>
+<data name="ActivateVerbLabels.Tablet" xml:space="preserve">
+  <value>открыть планшет</value>
+  <comment>open tablet</comment>
+</data>
 <data name="ActivateVerbLabels.SwitchToInject" xml:space="preserve">
   <value>переключить на инъекцию</value>
   <comment>switch to inject</comment>
@@ -2516,40 +2548,48 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>use {TOOL} to deconstruct</comment>
 </data>
 <data name="HoverName.UseHintDeconstructTwo" xml:space="preserve">
-  <value>для разборки: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to deconstruct</comment>
+  <value>для разборки: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to deconstruct</comment>
 </data>
 <data name="HoverName.UseHintRepair" xml:space="preserve">
   <value>для ремонта: {TOOL}</value>
   <comment>use {TOOL} to repair</comment>
 </data>
 <data name="HoverName.UseHintRepairTwo" xml:space="preserve">
-  <value>для ремонта: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to repair</comment>
+  <value>для ремонта: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to repair</comment>
 </data>
 <data name="HoverName.UseHintRepairCounted" xml:space="preserve">
   <value>для ремонта: {TOOL} ×{COUNT}</value>
   <comment>use {COUNT} {TOOL} to repair</comment>
 </data>
 <data name="HoverName.UseHintRepairCountedTwo" xml:space="preserve">
-  <value>для ремонта: {TOOL} ×{COUNT} + {TOOL2}</value>
-  <comment>use {COUNT} {TOOL} + {TOOL2} to repair</comment>
+  <value>для ремонта: {TOOL} ×{COUNT} и {TOOL2}</value>
+  <comment>use {COUNT} {TOOL} and {TOOL2} to repair</comment>
 </data>
 <data name="HoverName.UseHintBuild" xml:space="preserve">
   <value>для строительства: {TOOL}</value>
   <comment>use {TOOL} to build</comment>
 </data>
 <data name="HoverName.UseHintBuildTwo" xml:space="preserve">
-  <value>для строительства: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to build</comment>
+  <value>для строительства: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to build</comment>
 </data>
 <data name="HoverName.UseHintUpgrade" xml:space="preserve">
   <value>для улучшения: {TOOL}</value>
   <comment>use {TOOL} to upgrade</comment>
 </data>
 <data name="HoverName.UseHintUpgradeTwo" xml:space="preserve">
-  <value>для улучшения: {TOOL} + {TOOL2}</value>
+  <value>для улучшения: {TOOL} и {TOOL2}</value>
   <comment>use {TOOL} and {TOOL2} to upgrade</comment>
+</data>
+<data name="HoverName.UseHintUpgradeCounted" xml:space="preserve">
+  <value>для улучшения: {TOOL} ×{COUNT}</value>
+  <comment>use {COUNT} {TOOL} to upgrade</comment>
+</data>
+<data name="HoverName.UseHintUpgradeCountedTwo" xml:space="preserve">
+  <value>для улучшения: {TOOL} ×{COUNT} и {TOOL2}</value>
+  <comment>use {COUNT} {TOOL} and {TOOL2} to upgrade</comment>
 </data>
 <data name="HoverName.UseHintFillIn" xml:space="preserve">
   <value>чтобы засыпать: {TOOL}</value>
@@ -2560,7 +2600,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>use {TOOL} to add a ramp</comment>
 </data>
 <data name="HoverName.UseHintAddRampTwo" xml:space="preserve">
-  <value>для пандуса: {TOOL} + {TOOL2}</value>
+  <value>для пандуса: {TOOL} и {TOOL2}</value>
   <comment>use {TOOL} and {TOOL2} to add a ramp</comment>
 </data>
 <data name="HoverName.UseHintRemoveRamp" xml:space="preserve">
@@ -2572,8 +2612,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>use {TOOL} to pack up</comment>
 </data>
 <data name="HoverName.UseHintPackTwo" xml:space="preserve">
-  <value>для сворачивания: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to pack up</comment>
+  <value>для сворачивания: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to pack up</comment>
 </data>
 <data name="HoverName.UseHintOpen" xml:space="preserve">
   <value>для вскрытия: {TOOL}</value>
@@ -2596,40 +2636,40 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>use {TOOL} to secure</comment>
 </data>
 <data name="HoverName.UseHintSecureTwo" xml:space="preserve">
-  <value>для крепления: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to secure</comment>
+  <value>для крепления: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to secure</comment>
 </data>
 <data name="HoverName.UseHintConnect" xml:space="preserve">
   <value>для подключения: {TOOL}</value>
   <comment>use {TOOL} to connect</comment>
 </data>
 <data name="HoverName.UseHintConnectTwo" xml:space="preserve">
-  <value>для подключения: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to connect</comment>
+  <value>для подключения: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to connect</comment>
 </data>
 <data name="HoverName.UseHintDisconnect" xml:space="preserve">
   <value>для отключения: {TOOL}</value>
   <comment>use {TOOL} to disconnect</comment>
 </data>
 <data name="HoverName.UseHintDisconnectTwo" xml:space="preserve">
-  <value>для отключения: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to disconnect</comment>
+  <value>для отключения: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to disconnect</comment>
 </data>
 <data name="HoverName.UseHintRotate" xml:space="preserve">
   <value>для поворота: {TOOL}</value>
   <comment>use {TOOL} to rotate</comment>
 </data>
 <data name="HoverName.UseHintRotateTwo" xml:space="preserve">
-  <value>для поворота: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to rotate</comment>
+  <value>для поворота: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to rotate</comment>
 </data>
 <data name="HoverName.UseHintRefuel" xml:space="preserve">
   <value>для заправки: {TOOL}</value>
   <comment>use {TOOL} to refuel</comment>
 </data>
 <data name="HoverName.UseHintRefuelTwo" xml:space="preserve">
-  <value>для заправки: {TOOL} + {TOOL2}</value>
-  <comment>use {TOOL} + {TOOL2} to refuel</comment>
+  <value>для заправки: {TOOL} и {TOOL2}</value>
+  <comment>use {TOOL} and {TOOL2} to refuel</comment>
 </data>
 <data name="HoverName.UseHintCut" xml:space="preserve">
   <value>чтобы срубить: {TOOL}</value>
@@ -2644,7 +2684,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>mend with {TOOL}</comment>
 </data>
 <data name="HoverName.UseHintMendTwo" xml:space="preserve">
-  <value>для починки: {TOOL} + {TOOL2}</value>
+  <value>для починки: {TOOL} и {TOOL2}</value>
   <comment>mend with {TOOL} and {TOOL2}</comment>
 </data>
 <data name="HoverName.UseHintDigFill" xml:space="preserve">
@@ -2671,9 +2711,21 @@ The file is looked up beside this language file first, then under the game's Con
   <value>перетащите сюда кого-нибудь, чтобы пристегнуть</value>
   <comment>drag a mob onto it to buckle</comment>
 </data>
+<data name="HoverName.HintToolOr" xml:space="preserve">
+  <value>{TOOL} или {TOOL2}</value>
+  <comment>{TOOL} or {TOOL2}</comment>
+</data>
 <data name="HoverName.UseHintMissingTrait" xml:space="preserve">
   <value>(нужно: {TRAIT})</value>
   <comment>(missing {TRAIT})</comment>
+</data>
+<data name="HoverName.UseHintMissingSet" xml:space="preserve">
+  <value>(нужно: {SET})</value>
+  <comment>(missing {SET})</comment>
+</data>
+<data name="HoverName.UseHintMissingRankSet" xml:space="preserve">
+  <value>(нужно: {SET}, {RANK})</value>
+  <comment>(missing {RANK} {SET})</comment>
 </data>
 <data name="HoverName.PryOpenFallback" xml:space="preserve">
   <value>вскрыть</value>
@@ -2759,6 +2811,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>заряд не закрепится</value>
   <comment>the charge will not stick</comment>
 </data>
+<data name="InteractClick.NoExplosivesNearExtraction" xml:space="preserve">
+  <value>взрывчатку нельзя ставить так близко к точке эвакуации</value>
+  <comment>no explosives this close to the extraction point</comment>
+</data>
 <data name="InteractClick.CannotDigHere" xml:space="preserve">
   <value>здесь нечего копать</value>
   <comment>nothing to dig here</comment>
@@ -2810,6 +2866,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="InteractClick.TrenchMendFirst" xml:space="preserve">
   <value>сначала подправьте траншею</value>
   <comment>mend the trench first</comment>
+</data>
+<data name="InteractClick.UpgradeMendFirst" xml:space="preserve">
+  <value>сначала почините</value>
+  <comment>mend it first</comment>
+</data>
+<data name="InteractClick.UpgradeNeedsFloor" xml:space="preserve">
+  <value>снизу нужно основание: {FLOOR}</value>
+  <comment>needs {FLOOR} underneath</comment>
+</data>
+<data name="InteractClick.UpgradeNeedsGround" xml:space="preserve">
+  <value>~снизу нужно другое основание</value>
+  <comment>~needs other ground underneath</comment>
 </data>
 <data name="LabelAim.WontStick" xml:space="preserve">
   <value>метка на этом не держится</value>
@@ -3427,6 +3495,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ПОД ОГНЁМ</value>
   <comment>PINNED</comment>
 </data>
+<data name="Moodlet.Title.WellFed" xml:space="preserve">
+  <value>СЫТОСТЬ</value>
+  <comment>WELL FED</comment>
+</data>
+<data name="Moodlet.Title.RawFood" xml:space="preserve">
+  <value>ПЛОХАЯ ЕДА</value>
+  <comment>BAD FOOD</comment>
+</data>
 <data name="Moodlet.Title.Fallback" xml:space="preserve">
   <value>~MOODLET</value>
   <comment>~MOODLET</comment>
@@ -3783,6 +3859,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>За глазами тёплый туман</value>
   <comment>A warm fog sits behind your eyes</comment>
 </data>
+<data name="Moodlet.Flavor.WellFed" xml:space="preserve">
+  <value>Хорошая еда делает своё дело</value>
+  <comment>A good meal is doing its work</comment>
+</data>
+<data name="Moodlet.Flavor.RawFood.Warn" xml:space="preserve">
+  <value>Еда пошла не впрок</value>
+  <comment>That did not sit right</comment>
+</data>
+<data name="Moodlet.Flavor.RawFood.Bad" xml:space="preserve">
+  <value>Желудок взбунтовался против съеденного</value>
+  <comment>Your stomach turned on what you ate</comment>
+</data>
+<data name="Moodlet.Flavor.RawFood.Severe" xml:space="preserve">
+  <value>Вас мутит от чего-то съеденного</value>
+  <comment>Something you ate is making you sick</comment>
+</data>
 <data name="Moodlet.Flavor.Fallback" xml:space="preserve">
   <value>~состояние</value>
   <comment>~moodlet</comment>
@@ -4039,6 +4131,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Подождите, пока выветрится: вещество в крови</value>
   <comment>Let it wear off; it is in your blood</comment>
 </data>
+<data name="Moodlet.Hint.WellFed" xml:space="preserve">
+  <value>Эффект каждого блюда проходит, когда истекают его минуты</value>
+  <comment>Each meal fades as its minutes run out</comment>
+</data>
+<data name="Moodlet.Hint.RawFood" xml:space="preserve">
+  <value>Готовьте еду, прежде чем есть</value>
+  <comment>Cook it before you eat it</comment>
+</data>
 <data name="Moodlet.Phrase.ZombiesCannotSeeYou" xml:space="preserve">
   <value>Зомби не видят вас</value>
   <comment>Zombies cannot see you</comment>
@@ -4247,6 +4347,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Искажения зрения</value>
   <comment>Visual distortions</comment>
 </data>
+<data name="Moodlet.Phrase.ThrewUp" xml:space="preserve">
+  <value>Вас вырвало</value>
+  <comment>Threw up</comment>
+</data>
 <data name="Moodlet.WordToken.MovingOppositeFacing" xml:space="preserve">
   <value>Задний ход: {WORD}</value>
   <comment>Moving opposite the facing {WORD}</comment>
@@ -4271,17 +4375,25 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Ползание: {WORD}</value>
   <comment>Crawling {WORD}</comment>
 </data>
-<data name="Moodlet.WordToken.Eating" xml:space="preserve">
-  <value>Приём пищи: {WORD}</value>
-  <comment>Eating {WORD}</comment>
+<data name="Moodlet.WordToken.FurtherFood" xml:space="preserve">
+  <value>Дальнейшая еда: {WORD}</value>
+  <comment>Further food is {WORD}</comment>
+</data>
+<data name="Moodlet.Word.Wasted" xml:space="preserve">
+  <value>впустую</value>
+  <comment>wasted</comment>
+</data>
+<data name="Moodlet.Phrase.MealBonusesStillCount" xml:space="preserve">
+  <value>Бонусы блюд всё равно действуют</value>
+  <comment>Meal bonuses still count</comment>
 </data>
 <data name="Moodlet.WordToken.HungerEffects" xml:space="preserve">
   <value>Эффекты голода: {WORD}</value>
   <comment>Hunger effects {WORD}</comment>
 </data>
-<data name="Moodlet.WordToken.Drinking" xml:space="preserve">
-  <value>Приём воды: {WORD}</value>
-  <comment>Drinking {WORD}</comment>
+<data name="Moodlet.WordToken.FurtherDrink" xml:space="preserve">
+  <value>Дальнейшее питьё: {WORD}</value>
+  <comment>Further drink is {WORD}</comment>
 </data>
 <data name="Moodlet.WordToken.ThirstEffects" xml:space="preserve">
   <value>Эффекты жажды: {WORD}</value>
@@ -4354,6 +4466,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Moodlet.Row.OrganHitPerStep" xml:space="preserve">
   <value>{PERCENT}% за шаг: от {MIN} до {MAX} урона органам</value>
   <comment>{PERCENT}% per step: {MIN} to {MAX} organ damage</comment>
+</data>
+<data name="Moodlet.Row.MealMinutes" xml:space="preserve">
+  <value>{MINUTES} мин</value>
+  <comment>{MINUTES} min</comment>
+</data>
+<data name="Moodlet.Row.HungerWorse" xml:space="preserve">
+  <value>Голод сильнее на {PERCENT}%</value>
+  <comment>Hunger worse by {PERCENT}%</comment>
+</data>
+<data name="Moodlet.Row.ThirstWorse" xml:space="preserve">
+  <value>Жажда сильнее на {PERCENT}%</value>
+  <comment>Thirst worse by {PERCENT}%</comment>
 </data>
 <data name="Moodlet.Unit.BloodPerSecond" xml:space="preserve">
   <value> крови/с</value>
@@ -4506,6 +4630,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Moodlet.Unit.SightTiles" xml:space="preserve">
   <value> кл. обзора</value>
   <comment> tiles of sight</comment>
+</data>
+<data name="Moodlet.Unit.MealHealing" xml:space="preserve">
+  <value> ОЗ/мин, лечение</value>
+  <comment> HP per minute healed</comment>
+</data>
+<data name="Moodlet.Unit.HpFromToxins" xml:space="preserve">
+  <value> ОЗ от токсинов</value>
+  <comment> HP from toxins</comment>
 </data>
 <data name="StripUi.Adjacent" xml:space="preserve">
   <value>РЯДОМ</value>
@@ -5155,6 +5287,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Открывает рецепты:</value>
   <comment>Unlocks the following recipes:</comment>
 </data>
+<data name="TraitChips.CooksLabel" xml:space="preserve">
+  <value>ГОТОВИТ</value>
+  <comment>COOKS</comment>
+</data>
+<data name="TraitChips.CooksHeader" xml:space="preserve">
+  <value>Знает следующие рецепты:</value>
+  <comment>Has learned the following recipes:</comment>
+</data>
 <data name="TraitChips.OperatesLabel" xml:space="preserve">
   <value>УПРАВЛЯЕТ</value>
   <comment>OPERATES</comment>
@@ -5363,6 +5503,50 @@ The file is looked up beside this language file first, then under the game's Con
   <value>  Дальность броска</value>
   <comment> Throw distance</comment>
 </data>
+<data name="TraitChips.Unit.MountedGunLoadTime" xml:space="preserve">
+  <value> ко времени заряжания станкового оружия</value>
+  <comment> Mounted gun loading time</comment>
+</data>
+<data name="TraitChips.Unit.ConcreteTime" xml:space="preserve">
+  <value> ко времени работ с бетоном</value>
+  <comment> Concrete work time</comment>
+</data>
+<data name="TraitChips.Unit.VehicleRepairTime" xml:space="preserve">
+  <value> ко времени ремонта техники</value>
+  <comment> Vehicle repair time</comment>
+</data>
+<data name="TraitChips.Unit.CommandIncome" xml:space="preserve">
+  <value> к доходу полевого снабжения у флага базы</value>
+  <comment> Field supply income near a base flag</comment>
+</data>
+<data name="TraitChips.Unit.CrateOpenTime" xml:space="preserve">
+  <value> ко времени вскрытия ящиков</value>
+  <comment> Crate opening time</comment>
+</data>
+<data name="TraitChips.Unit.CookFireChance" xml:space="preserve">
+  <value> к шансу пожара от сгоревшего блюда</value>
+  <comment> Burnt dish fire chance</comment>
+</data>
+<data name="TraitChips.Unit.LadenSlowdown" xml:space="preserve">
+  <value> к замедлению от надетого снаряжения</value>
+  <comment> Slowdown from worn gear</comment>
+</data>
+<data name="TraitChips.Unit.BloodRegenRate" xml:space="preserve">
+  <value> к восстановлению крови</value>
+  <comment> Blood regeneration</comment>
+</data>
+<data name="TraitChips.Unit.NaturalHeal" xml:space="preserve">
+  <value> к естественному заживлению ран</value>
+  <comment> Natural wound healing</comment>
+</data>
+<data name="TraitChips.Unit.DampDryingRate" xml:space="preserve">
+  <value> к скорости высыхания</value>
+  <comment> Drying speed</comment>
+</data>
+<data name="TraitChips.Unit.FirstAidTime" xml:space="preserve">
+  <value> ко времени первой помощи</value>
+  <comment> First aid time</comment>
+</data>
 <data name="TraitChips.Marker.DeafToken" xml:space="preserve">
   <value>ГЛУХОТА</value>
   <comment>DEAF</comment>
@@ -5420,7 +5604,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>FORTIFICATION</comment>
 </data>
 <data name="TraitChips.Marker.FortificationUnit" xml:space="preserve">
-  <value> Разбирает фундаменты укреплений и заливает бетонные окопы</value>
+  <value> Разбирает фундаменты укреплений и заливает бетонные траншеи</value>
   <comment> Pulls up fortification footings and casts concrete trenches</comment>
 </data>
 <data name="TraitChips.Marker.FultonRecoveryToken" xml:space="preserve">
@@ -7391,118 +7575,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>БАНК {COUNT} // ПРОСТОЙ</value>
   <comment>BANK {COUNT} // IDLE</comment>
 </data>
-<data name="Microwave.UnitLine" xml:space="preserve">
-  <value>W-Y KITCHENTECH // БАНК РЕЦЕПТОВ MU/TH/UR 6500</value>
-  <comment>W-Y KITCHENTECH // RECIPE BANK MU/TH/UR 6500</comment>
-</data>
-<data name="Microwave.ContentsSection" xml:space="preserve">
-  <value>СОДЕРЖИМОЕ</value>
-  <comment>CONTENTS</comment>
-</data>
-<data name="Microwave.ReagentsSection" xml:space="preserve">
-  <value>РЕАГЕНТЫ</value>
-  <comment>REAGENTS</comment>
-</data>
-<data name="Microwave.EmptyContentsLine" xml:space="preserve">
-  <value>КАМЕРА ПУСТА - ПОЛОЖИТЕ ЕДУ В СВЧ, ЧТОБЫ ЗАГРУЗИТЬ</value>
-  <comment>CHAMBER EMPTY - HIT THE MICROWAVE WITH FOOD TO LOAD IT</comment>
-</data>
-<data name="Microwave.ContentsItemsLine" xml:space="preserve">
-  <value>ПРЕДМЕТЫ: {COUNT}/{MAX}</value>
-  <comment>{COUNT} / {MAX} ITEMS</comment>
-</data>
-<data name="Microwave.CookingWord" xml:space="preserve">
-  <value>ГОТОВИТСЯ</value>
-  <comment>COOKING</comment>
-</data>
-<data name="Microwave.CookingName" xml:space="preserve">
-  <value>ГОТОВИТСЯ: {NAME}</value>
-  <comment>COOKING {NAME}</comment>
-</data>
-<data name="Microwave.StandbyLabel" xml:space="preserve">
-  <value>ОЖИДАНИЕ</value>
-  <comment>STANDBY</comment>
-</data>
-<data name="Microwave.FootLeft" xml:space="preserve">
-  <value>W-Y KITCHENTECH OS 2.11</value>
-  <comment>W-Y KITCHENTECH OS 2.11</comment>
-</data>
-<data name="Microwave.HeaderFallback" xml:space="preserve">
-  <value>СВЧ-ПЕЧЬ</value>
-  <comment>MICROWAVE</comment>
-</data>
-<data name="Microwave.FootRightLine" xml:space="preserve">
-  <value>{COUNT} ШТ. // {AMOUNT} ЕД.</value>
-  <comment>{COUNT} ITEMS // {AMOUNT} U</comment>
-</data>
-<data name="Microwave.EjectLabel" xml:space="preserve">
-  <value>ИЗВЛЕЧЬ</value>
-  <comment>EJECT</comment>
-</data>
-<data name="Microwave.EjectAllLabel" xml:space="preserve">
-  <value>ИЗВЛЕЧЬ ВСЁ</value>
-  <comment>EJECT ALL</comment>
-</data>
-<data name="Microwave.CookLabel" xml:space="preserve">
-  <value>ГОТОВИТЬ</value>
-  <comment>COOK</comment>
-</data>
-<data name="Microwave.RecipesSection" xml:space="preserve">
-  <value>РЕЦЕПТЫ</value>
-  <comment>RECIPES</comment>
-</data>
-<data name="Microwave.WillCook" xml:space="preserve">
-  <value>РЕЗУЛЬТАТ: {NAME}</value>
-  <comment>WILL COOK {NAME}</comment>
-</data>
-<data name="Microwave.WillCookStatus" xml:space="preserve">
-  <value>РЕЗУЛЬТАТ</value>
-  <comment>WILL COOK</comment>
-</data>
-<data name="Microwave.WillBurn" xml:space="preserve">
-  <value>СГОРИТ КАК ЕСТЬ</value>
-  <comment>WILL BURN AS LOADED</comment>
-</data>
-<data name="Microwave.AlsoMatches" xml:space="preserve">
-  <value>ТОЖЕ ПОДХОДИТ</value>
-  <comment>ALSO MATCHES</comment>
-</data>
-<data name="Microwave.StillPartOf" xml:space="preserve">
-  <value>ЕЩЁ В РЕЦЕПТАХ: {COUNT}</value>
-  <comment>{COUNT} STILL PART OF</comment>
-</data>
-<data name="Microwave.RecipesCount" xml:space="preserve">
-  <value>РЕЦЕПТОВ: {COUNT}</value>
-  <comment>{COUNT} RECIPES</comment>
-</data>
-<data name="Microwave.RecipesPossible" xml:space="preserve">
-  <value>ДОСТУПНО: {COUNT}</value>
-  <comment>{COUNT} POSSIBLE</comment>
-</data>
-<data name="Microwave.NoRecipeTakes" xml:space="preserve">
-  <value>НИ ОДИН РЕЦЕПТ НЕ ПОДХОДИТ: ИЗВЛЕЧЬ ВСЁ</value>
-  <comment>NO RECIPE TAKES THIS LOAD: EJECT ALL</comment>
-</data>
-<data name="Microwave.LoadSomething" xml:space="preserve">
-  <value>ЗАГРУЗИТЕ ЧТО-НИБУДЬ</value>
-  <comment>LOAD SOMETHING</comment>
-</data>
-<data name="Microwave.EjectAll" xml:space="preserve">
-  <value>НЕТ РЕЦЕПТА НА ЭТОТ НАБОР: ИЗВЛЕЧЬ ВСЁ И НАЧНИТЕ ЗАНОВО</value>
-  <comment>NO RECIPE CONTAINS THIS LOAD: EJECT ALL AND START AGAIN</comment>
-</data>
-<data name="Microwave.Missing" xml:space="preserve">
-  <value>НЕ ХВАТАЕТ: {NAME}</value>
-  <comment>MISSING {NAME}</comment>
-</data>
-<data name="Microwave.MissingReagents" xml:space="preserve">
-  <value>НЕТ РЕАГЕНТОВ</value>
-  <comment>MISSING REAGENTS</comment>
-</data>
-<data name="Microwave.FootCodex" xml:space="preserve">
-  <value>КОДЕКС</value>
-  <comment>CODEX</comment>
-</data>
 <data name="SmartFridge.HeaderFallback" xml:space="preserve">
   <value>УМНОЕ ХРАНИЛИЩЕ ХИМИКАТОВ</value>
   <comment>SMART CHEMICAL STORAGE</comment>
@@ -8091,10 +8163,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ПОДХОДИТ ЛЮБОЙ МОДУЛЬ: {MOUNT}</value>
   <comment>ACCEPTS ANY {MOUNT} ATTACHMENT</comment>
 </data>
-<data name="ExamineWeapon.AndMoreLine" xml:space="preserve">
-  <value>И ЕЩЁ {COUNT}</value>
-  <comment>AND {COUNT} MORE</comment>
-</data>
 <data name="ExamineWeapon.FootLeft" xml:space="preserve">
   <value>ПЕРЕТАЩИТЕ, ЧТОБЫ ВСТАВИТЬ ИЛИ СНЯТЬ // ПКМ: УБРАТЬ // ПЕРЕКЛЮЧАТЕЛИ: В МЕНЮ</value>
   <comment>DRAG TO FIT OR STRIP // RIGHT CLICK TO REMOVE // TOGGLES VIA CONTEXT MENU</comment>
@@ -8547,6 +8615,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>КАЧЕСТВО ЭФФЕКТОВ</value>
   <comment>EFFECTS QUALITY</comment>
 </data>
+<data name="Settings.GibEffectsLabel" xml:space="preserve">
+  <value>ЭФФЕКТЫ РАСЧЛЕНЁНКИ</value>
+  <comment>GIB EFFECTS</comment>
+</data>
 <data name="Settings.TonemapperLabel" xml:space="preserve">
   <value>ОТОБРАЖЕНИЕ ТОНОВ</value>
   <comment>TONEMAPPER</comment>
@@ -8775,9 +8847,13 @@ The file is looked up beside this language file first, then under the game's Con
   <value>НАСТРОЙКА ПЕРСОНАЖА</value>
   <comment>CHARACTER SETUP</comment>
 </data>
-<data name="CharacterSetup.NameLabel" xml:space="preserve">
+<data name="CharacterSetup.FirstNameLabel" xml:space="preserve">
   <value>ИМЯ</value>
-  <comment>NAME</comment>
+  <comment>FIRST NAME</comment>
+</data>
+<data name="CharacterSetup.LastNameLabel" xml:space="preserve">
+  <value>ФАМИЛИЯ</value>
+  <comment>LAST NAME</comment>
 </data>
 <data name="CharacterSetup.RandomNameLabel" xml:space="preserve">
   <value>СЛУЧ. ИМЯ</value>
@@ -9051,6 +9127,42 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ТЕХНИКА: {HELD}/{LIMIT}</value>
   <comment>{HELD}/{LIMIT} VEHICLES</comment>
 </data>
+<data name="LoadoutSelect.SelectionElectionChip" xml:space="preserve">
+  <value>ВЫБОРЫ</value>
+  <comment>ELECTION</comment>
+</data>
+<data name="LoadoutSelect.SelectionRandomChip" xml:space="preserve">
+  <value>ЖРЕБИЙ</value>
+  <comment>RANDOM</comment>
+</data>
+<data name="LoadoutSelect.SelectionFirstChip" xml:space="preserve">
+  <value>КТО ПЕРВЫЙ</value>
+  <comment>FIRST</comment>
+</data>
+<data name="LoadoutSelect.SelectionElectionTitle" xml:space="preserve">
+  <value>Выбирает экипаж</value>
+  <comment>Elected by the crew</comment>
+</data>
+<data name="LoadoutSelect.SelectionElectionTip" xml:space="preserve">
+  <value>Подайте заявку в лобби. Незадолго до начала раунда все, кто выбрал роль, голосуют, кому она достанется. После голосования свободное место достаётся тому, кто займёт его первым.</value>
+  <comment>Apply in the lobby. Shortly before the round starts, everyone holding a pick votes on who gets the role. Once the vote is over, a free slot goes to whoever picks it first.</comment>
+</data>
+<data name="LoadoutSelect.SelectionRandomTitle" xml:space="preserve">
+  <value>Жеребьёвка</value>
+  <comment>Drawn at random</comment>
+</data>
+<data name="LoadoutSelect.SelectionRandomTip" xml:space="preserve">
+  <value>Подайте заявку в лобби. Незадолго до начала раунда одна заявка выбирается случайно. При отказе от роли приём заявок ненадолго открывается снова. После жеребьёвки свободное место достаётся тому, кто займёт его первым.</value>
+  <comment>Apply in the lobby. Shortly before the round starts, one applicant is drawn at random. If they give the role up, applications reopen for a short time. After the draw, a free slot goes to whoever picks it first.</comment>
+</data>
+<data name="LoadoutSelect.SelectionFirstTitle" xml:space="preserve">
+  <value>Кто первый, того и роль</value>
+  <comment>First come, first served</comment>
+</data>
+<data name="LoadoutSelect.SelectionFirstTip" xml:space="preserve">
+  <value>Места достаются тем, кто выбрал роль первым, пока не закончатся.</value>
+  <comment>Slots go to whoever picks the role first, until they are full.</comment>
+</data>
 <data name="LoadoutSelect.LockedLabel" xml:space="preserve">
   <value>НЕДОСТУПНО</value>
   <comment>LOCKED</comment>
@@ -9186,6 +9298,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="LoadoutSelect.LobbyNotElectedLine" xml:space="preserve">
   <value>ЭКИПАЖ ОТДАЛ РОЛЬ ({ROLE}) НЕ ВАМ // ВЫБЕРИТЕ ДРУГУЮ РОЛЬ</value>
   <comment>THE CREW ELECTED ANOTHER {ROLE} // PICK ANOTHER ROLE</comment>
+</data>
+<data name="LoadoutSelect.LobbyAppliedDrawLine" xml:space="preserve">
+  <value>ЗАЯВКА ОТПРАВЛЕНА // ЖЕРЕБЬЁВКА ПРОЙДЁТ, КОГДА ОСТАНЕТСЯ {SECONDS} С</value>
+  <comment>APPLICATION SENT // THE DRAW RUNS WHEN {SECONDS}S REMAIN</comment>
+</data>
+<data name="LoadoutSelect.LobbyNotDrawnLine" xml:space="preserve">
+  <value>ЖРЕБИЙ ОТДАЛ РОЛЬ ({ROLE}) НЕ ВАМ // ВЫБЕРИТЕ ДРУГУЮ РОЛЬ</value>
+  <comment>THE DRAW CHOSE ANOTHER {ROLE} // PICK ANOTHER ROLE</comment>
 </data>
 <data name="KillScare.Line" xml:space="preserve">
   <value>ВЫ СТЁРТЫ</value>
@@ -9567,6 +9687,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ОСТАЛОСЬ: {COUNT}</value>
   <comment>{COUNT} LEFT</comment>
 </data>
+<data name="RenamePopup.FlagWarning" xml:space="preserve">
+  <value>ВЫБЕРИТЕ НАЗВАНИЕ БАЗЫ В ДУХЕ ЛОРА. ЗА НЕУМЕСТНЫЕ ИЛИ ЗЛОБОДНЕВНЫЕ ФРАЗЫ МОЖНО ПОЛУЧИТЬ БАН РОЛИ.</value>
+  <comment>CHOOSE A LORE-ACCURATE BASE NAME. INAPPROPRIATE OR TOPICAL PHRASES MAY GET YOU ROLE BANNED.</comment>
+</data>
+<data name="RenamePopup.FlagDenied" xml:space="preserve">
+  <value>НАЗВАНИЕ ЗАПРЕЩЕНО</value>
+  <comment>NAME NOT ALLOWED</comment>
+</data>
 <data name="TalkPopup.Local" xml:space="preserve">
   <value>Рядом</value>
   <comment>Local</comment>
@@ -9839,6 +9967,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ВОЛНА</value>
   <comment>WAVE</comment>
 </data>
+<data name="WorldMap.LegendLoiterLabel" xml:space="preserve">
+  <value>ЗОНА ОЖИДАНИЯ</value>
+  <comment>LOITER ZONE</comment>
+</data>
+<data name="WorldMap.LoiterTag" xml:space="preserve">
+  <value>ОЖИДАНИЕ</value>
+  <comment>LOITER</comment>
+</data>
+<data name="WorldMap.LoiterTip" xml:space="preserve">
+  <value>Здесь вертолёты могут войти в зону ожидания. В ней они тратят гораздо меньше топлива и недосягаемы. Чтобы войти, поднимите общий шаг на вершине набора высоты; чтобы выйти, опустите его.</value>
+  <comment>Aircraft can enter loiter zones here. When loitering they will burn much less fuel and be out of reach. Raise the collective at the top of your climb to enter, and lower it to leave.</comment>
+</data>
 <data name="WorldMap.Legend.Wall" xml:space="preserve">
   <value>СТЕНА</value>
   <comment>WALL</comment>
@@ -10062,10 +10202,6 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EorScreen.UnknownName" xml:space="preserve">
   <value>~НЕИЗВЕСТНО</value>
   <comment>~UNKNOWN</comment>
-</data>
-<data name="EorScreen.TilesSuffix" xml:space="preserve">
-  <value>{VALUE} КЛ.</value>
-  <comment>{VALUE} TILES</comment>
 </data>
 <data name="EorScreen.LegendaryTipHeader" xml:space="preserve">
   <value>ЛЕГЕНДАРНАЯ</value>
@@ -10322,6 +10458,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EorScreen.StatVehicleKills" xml:space="preserve">
   <value>УБИТО ОРУЖИЕМ ТЕХНИКИ</value>
   <comment>VEHICLE WEAPON KILLS</comment>
+</data>
+<data name="EorScreen.StatTrenchesDug" xml:space="preserve">
+  <value>ВЫРЫТО ТРАНШЕЙ</value>
+  <comment>TRENCHES DUG</comment>
 </data>
 <data name="EorScreen.StatUnknown" xml:space="preserve">
   <value>~НЕИЗВЕСТНАЯ СТАТИСТИКА</value>
@@ -10955,6 +11095,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>НЕДОСТУПНО</value>
   <comment>LOCKED</comment>
 </data>
+<data name="Codex.Trained" xml:space="preserve">
+  <value>ОБУЧЕНЫ</value>
+  <comment>TRAINED</comment>
+</data>
 <data name="Codex.Part" xml:space="preserve">
   <value>ЧАСТЬ</value>
   <comment>PART</comment>
@@ -11126,6 +11270,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Quality.Picking" xml:space="preserve">
   <value>ДОЛБЛЕНИЕ</value>
   <comment>PICKING</comment>
+</data>
+<data name="Codex.Quality.Masonry" xml:space="preserve">
+  <value>КЛАДКА</value>
+  <comment>MASONRY</comment>
 </data>
 <data name="Codex.F1Hint" xml:space="preserve">
   <value>кодекс</value>
@@ -11432,8 +11580,8 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>EFFECTS</comment>
 </data>
 <data name="Codex.Section.Chemistry.Glassware" xml:space="preserve">
-  <value>СТЕКЛОТАРА</value>
-  <comment>GLASSWARE</comment>
+  <value>ЁМКОСТИ</value>
+  <comment>CONTAINERS</comment>
 </data>
 <data name="Codex.Section.Chemistry.Machines" xml:space="preserve">
   <value>АППАРАТЫ</value>
@@ -12131,6 +12279,34 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ПОДВЕСКА ВКЛ/ВЫКЛ</value>
   <comment>HARDPOINT ON/OFF</comment>
 </data>
+<data name="VehicleConsole.PhaseLoitering" xml:space="preserve">
+  <value>ОЖИДАНИЕ</value>
+  <comment>LOITER</comment>
+</data>
+<data name="VehicleConsole.LoiterObscuredBanner" xml:space="preserve">
+  <value>// ВЫХОД ИЗ ЗОНЫ ОЖИДАНИЯ ЗАКРЫТ //</value>
+  <comment>// LOITER EXIT OBSCURED //</comment>
+</data>
+<data name="Codex.Group.General" xml:space="preserve">
+  <value>ОБЩЕЕ</value>
+  <comment>GENERAL</comment>
+</data>
+<data name="Codex.Group.StackFamilies" xml:space="preserve">
+  <value>СЕМЕЙСТВА СТОПОК</value>
+  <comment>STACK FAMILIES</comment>
+</data>
+<data name="Codex.Group.Items.Families.Tool" xml:space="preserve">
+  <value>СЕМЕЙСТВА ИНСТРУМЕНТОВ</value>
+  <comment>TOOL FAMILIES</comment>
+</data>
+<data name="Codex.Group.Construction.Materials.Items" xml:space="preserve">
+  <value>ПРЕДМЕТЫ</value>
+  <comment>ITEMS</comment>
+</data>
+<data name="Codex.Group.Construction.Materials.Structures" xml:space="preserve">
+  <value>КОНСТРУКЦИИ</value>
+  <comment>STRUCTURES</comment>
+</data>
 <data name="Codex.Group.Medical.Conditions.Lethal" xml:space="preserve">
   <value>СМЕРТЕЛЬНЫЕ</value>
   <comment>LETHAL</comment>
@@ -12142,6 +12318,22 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Group.Medical.Treatments.Treatments" xml:space="preserve">
   <value>ЛЕЧЕНИЕ</value>
   <comment>TREATMENTS</comment>
+</data>
+<data name="Codex.Group.Construction.Buildings.Buildings" xml:space="preserve">
+  <value>ПОСТРОЙКИ</value>
+  <comment>BUILDINGS</comment>
+</data>
+<data name="Codex.Group.Construction.Buildings.Tents" xml:space="preserve">
+  <value>ПАЛАТКИ</value>
+  <comment>TENTS</comment>
+</data>
+<data name="Codex.Group.Construction.Buildings.Trenches" xml:space="preserve">
+  <value>ТРАНШЕИ</value>
+  <comment>TRENCHES</comment>
+</data>
+<data name="Codex.Group.Construction.Buildings.Sandbags" xml:space="preserve">
+  <value>МЕШКИ С ПЕСКОМ</value>
+  <comment>SANDBAGS</comment>
 </data>
 <data name="Codex.Group.Galley.Food.Craftable" xml:space="preserve">
   <value>ИЗ РЕЦЕПТОВ</value>
@@ -13087,6 +13279,18 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ПРОДАЁТСЯ В</value>
   <comment>STOCKED IN</comment>
 </data>
+<data name="Codex.Galley.UsedFor" xml:space="preserve">
+  <value>ИСПОЛЬЗУЕТСЯ ДЛЯ</value>
+  <comment>USED FOR</comment>
+</data>
+<data name="Codex.Galley.Takes" xml:space="preserve">
+  <value>ПРИНИМАЕТ</value>
+  <comment>TAKES</comment>
+</data>
+<data name="Codex.Galley.GoesOn" xml:space="preserve">
+  <value>СТАВИТСЯ НА</value>
+  <comment>GOES ON</comment>
+</data>
 <data name="Codex.Galley.JuicedFrom" xml:space="preserve">
   <value>ВЫЖАТО ИЗ</value>
   <comment>JUICED FROM</comment>
@@ -13094,6 +13298,18 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Galley.GroundFrom" xml:space="preserve">
   <value>ИЗМЕЛЬЧЕНО ИЗ</value>
   <comment>GROUND FROM</comment>
+</data>
+<data name="Codex.Galley.LearnedBy" xml:space="preserve">
+  <value>КТО УМЕЕТ ГОТОВИТЬ</value>
+  <comment>LEARNED BY</comment>
+</data>
+<data name="Codex.Galley.WholeDishGives" xml:space="preserve">
+  <value>ЦЕЛОЕ БЛЮДО ДАЁТ</value>
+  <comment>THE WHOLE DISH GIVES</comment>
+</data>
+<data name="Codex.Galley.EatenRaw" xml:space="preserve">
+  <value>ЕСЛИ СЪЕСТЬ СЫРЫМ</value>
+  <comment>EATEN RAW</comment>
 </data>
 <data name="Codex.Galley.How" xml:space="preserve">
   <value>СПОСОБ</value>
@@ -13115,9 +13331,21 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ИСПОЛЬЗУЯ</value>
   <comment>USING</comment>
 </data>
-<data name="Codex.Galley.KindMicrowave" xml:space="preserve">
-  <value>СВЧ-ПЕЧЬ</value>
-  <comment>MICROWAVE</comment>
+<data name="Codex.Galley.Heat" xml:space="preserve">
+  <value>НАГРЕВ</value>
+  <comment>HEAT</comment>
+</data>
+<data name="Codex.Galley.Burns" xml:space="preserve">
+  <value>СГОРИТ</value>
+  <comment>BURNS</comment>
+</data>
+<data name="Codex.Galley.KindStation" xml:space="preserve">
+  <value>ГОТОВКА</value>
+  <comment>COOKED</comment>
+</data>
+<data name="Codex.Galley.KindContainer" xml:space="preserve">
+  <value>СБОРКА</value>
+  <comment>ASSEMBLED</comment>
 </data>
 <data name="Codex.Galley.KindProcessor" xml:space="preserve">
   <value>ПЕРЕРАБ.</value>
@@ -13191,6 +13419,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>БОЛЬШЕ НИЧЕГО</value>
   <comment>NOTHING ELSE</comment>
 </data>
+<data name="Codex.Galley.NeverBurns" xml:space="preserve">
+  <value>НЕТ</value>
+  <comment>NEVER</comment>
+</data>
+<data name="Codex.Galley.Learned" xml:space="preserve">
+  <value>ИЗУЧАЕТСЯ</value>
+  <comment>LEARNED</comment>
+</data>
 <data name="Codex.Galley.IntoTheSocketedBeaker" xml:space="preserve">
   <value>В ВСТАВЛЕННУЮ МЕНЗУРКУ</value>
   <comment>INTO THE SOCKETED BEAKER</comment>
@@ -13231,22 +13467,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>НЕВЕРНАЯ ЗАГРУЗКА ОБЖИГАЕТ</value>
   <comment>A WRONG LOAD BURNS</comment>
 </data>
-<data name="Codex.Galley.HowToLoad" xml:space="preserve">
-  <value>НАЖМИТЕ ПУСТОЙ РУКОЙ, ЧТОБЫ ОТКРЫТЬ ЭКРАН; ЗАГРУЗИТЕ, НАЖИМАЯ НА ПРИБОР ЕДОЙ</value>
-  <comment>CLICK IT EMPTY-HANDED TO OPEN ITS SCREEN; LOAD IT BY CLICKING IT WITH FOOD</comment>
-</data>
-<data name="Codex.Galley.PourOpen" xml:space="preserve">
-  <value>НАЛИВАЙТЕ, НАЖИМАЯ НА ПРИБОР ОТКРЫТОЙ ЕМКОСТЬЮ (ЗАПЕЧАТАННАЯ НЕ ПРИНИМАЕТСЯ: СНАЧАЛА ОТКРОЙТЕ); ПО ОДНОЙ ДОЗЕ ЗА НАЖАТИЕ (НА СТРАНИЦЕ КАЖДОЙ ЕМКОСТИ ПОКАЗАНО, ЧТО ОНА НАЛИВАЕТ)</value>
-  <comment>POUR BY CLICKING IT WITH AN OPEN CONTAINER (A SEALED ONE IS REFUSED: OPEN IT FIRST), ONE DOSE PER CLICK (EVERY CONTAINER'S PAGE SAYS WHAT IT POURS)</comment>
-</data>
-<data name="Codex.Galley.PourExact" xml:space="preserve">
-  <value>РЕАГЕНТ, НЕ ИСПОЛЬЗУЕМЫЙ НИ В ОДНОМ РЕЦЕПТЕ, НЕ ПРИНИМАЕТСЯ; НО ПРИНЯТЫЙ НАЛИВ ЕЩЁ НЕ РЕЦЕПТ: ВСЯ СМЕСЬ ДОЛЖНА ТОЧНО СОВПАСТЬ С ОБЪЁМАМИ ОДНОГО РЕЦЕПТА, А ВЫБРОС ВСЕГО СБРАСЫВАЕТ ПЕРЕЛИВ</value>
-  <comment>A REAGENT NO RECIPE USES IS REFUSED AT THE DOOR, BUT AN ACCEPTED POUR IS NOT YET A RECIPE: THE WHOLE MIX MUST END EXACTLY ON ONE RECIPE'S AMOUNTS, AND EJECT ALL CLEARS AN OVER-POUR</comment>
-</data>
-<data name="Codex.Galley.HowToCook" xml:space="preserve">
-  <value>ЗАТЕМ ГОТОВЬТЕ ПО ЭКРАНУ</value>
-  <comment>THEN COOK FROM THE SCREEN</comment>
-</data>
 <data name="Codex.Galley.RunsWithExactlyOne" xml:space="preserve">
   <value>РАБОТАЕТ, ЕСЛИ ВНУТРИ РОВНО ОДИН ПРЕДМЕТ (БОЛЬШЕ НЕ ПРИНИМАЕТСЯ И ВЫБРАСЫВАЕТСЯ)</value>
   <comment>RUNS WITH EXACTLY ONE INSIDE (MORE IS REFUSED AND EJECTED)</comment>
@@ -13274,10 +13494,6 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Galley.HowToGrinder" xml:space="preserve">
   <value>НАЖМИТЕ НА НЕГО МЕНЗУРКОЙ, ЧТОБЫ ВСТАВИТЬ; ЕДОЙ — ЧТОБЫ ЗАГРУЗИТЬ; ПУСТОЙ РУКОЙ — ЧТОБЫ ОТКРЫТЬ ЭКРАН; ЗАТЕМ ИЗМЕЛЬЧИТЕ ИЛИ ВЫЖМИТЕ</value>
   <comment>CLICK IT WITH A BEAKER TO SOCKET IT, CLICK IT WITH FOOD TO LOAD, CLICK IT EMPTY-HANDED TO OPEN ITS SCREEN, THEN GRIND OR JUICE</comment>
-</data>
-<data name="Codex.Galley.HoldsItemsAndUnits" xml:space="preserve">
-  <value>{COUNT} ШТ. + {WHOLE},{FRAC} ЕД.</value>
-  <comment>{COUNT} ITEMS + {WHOLE}.{FRAC}U</comment>
 </data>
 <data name="Codex.Galley.HoldsItems" xml:space="preserve">
   <value>{COUNT} ШТ.</value>
@@ -13322,6 +13538,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Codex.Galley.OtherBlades" xml:space="preserve">
   <value>И ЕЩЁ НОЖЕЙ: {COUNT}</value>
   <comment>AND {COUNT} OTHER BLADES</comment>
+</data>
+<data name="Codex.Galley.LearnedFromRank" xml:space="preserve">
+  <value>СО ЗВАНИЯ: {RANK}</value>
+  <comment>FROM {RANK}</comment>
 </data>
 <data name="CoveredHint.Covered" xml:space="preserve">
   <value>нельзя — закрыто: {AREA}</value>
@@ -13663,6 +13883,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>оружие на предохранителе</value>
   <comment>weapons are safe</comment>
 </data>
+<data name="PilotKeys.LoiterObscuredRefused" xml:space="preserve">
+  <value>Выход из зоны ожидания закрыт</value>
+  <comment>Loiter exit obscured</comment>
+</data>
 <data name="PilotKeys.AbortToast" xml:space="preserve">
   <value>запуск прерван</value>
   <comment>start aborted</comment>
@@ -13674,6 +13898,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="PilotKeys.FailureToast" xml:space="preserve">
   <value>отказ двигателя</value>
   <comment>engine failure</comment>
+</data>
+<data name="PilotKeys.LoiterStallToast" xml:space="preserve">
+  <value>Ожидание сорвано: упали обороты винта</value>
+  <comment>Loiter lost: rotor stall</comment>
+</data>
+<data name="PilotKeys.LoiterStallGrace" xml:space="preserve">
+  <value>Обороты винта падают: ожидание сорвётся через {SECONDS} с</value>
+  <comment>Rotor stall: loiter lost in {SECONDS} s</comment>
 </data>
 <data name="NewPlayer.Title" xml:space="preserve">
   <value>НОВИЧОК</value>
@@ -13859,6 +14091,46 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Знаки различия на форме.</value>
   <comment>Rank pins worn on the uniform.</comment>
 </data>
+<data name="Crown.ChiefEngineer.Title" xml:space="preserve">
+  <value>ГЛАВНЫЙ ИНЖЕНЕР</value>
+  <comment>CHIEF ENGINEER</comment>
+</data>
+<data name="Crown.ChiefEngineer.Flavor" xml:space="preserve">
+  <value>Ведает стройкой: укрепления и энергия.</value>
+  <comment>Runs the works. Fortifications and power go through this one.</comment>
+</data>
+<data name="Crown.Chef.Title" xml:space="preserve">
+  <value>ШЕФ-ПОВАР</value>
+  <comment>CHEF</comment>
+</data>
+<data name="Crown.Chef.Flavor" xml:space="preserve">
+  <value>Заведует кухней. Здесь кормят горячим.</value>
+  <comment>Runs the galley. Go to them for a hot meal.</comment>
+</data>
+<data name="Crown.PlotArmor.Title" xml:space="preserve">
+  <value>СЮЖЕТНАЯ БРОНЯ</value>
+  <comment>PLOT ARMOR</comment>
+</data>
+<data name="Crown.PlotArmor.Flavor" xml:space="preserve">
+  <value>Сюжету нужна эта жизнь. Убить нельзя.</value>
+  <comment>The plot needs this one alive. Nothing here can kill them.</comment>
+</data>
+<data name="Crown.GuardMedic.Title" xml:space="preserve">
+  <value>МЕДИК ОХРАНЫ</value>
+  <comment>GUARD MEDIC</comment>
+</data>
+<data name="Crown.GuardMedic.Flavor" xml:space="preserve">
+  <value>Медик поста эвакуации. Лечит раненых.</value>
+  <comment>A medic at the extraction post. Go to them when you are hurt.</comment>
+</data>
+<data name="Crown.Commander.Title" xml:space="preserve">
+  <value>КОМАНДИР</value>
+  <comment>COMMANDER</comment>
+</data>
+<data name="Crown.Commander.Flavor" xml:space="preserve">
+  <value>Командует. Старше всех в команде.</value>
+  <comment>Holds command. The most senior on the team.</comment>
+</data>
 <data name="Crown.BattleBuddy.Title" xml:space="preserve">
   <value>БОЕВОЙ ТОВАРИЩ</value>
   <comment>BATTLE BUDDY</comment>
@@ -13986,6 +14258,14 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="SupplyConsole.KindMachine" xml:space="preserve">
   <value>ЯЩИК С АППАРАТОМ // ЛОМ</value>
   <comment>MACHINE CRATE // CROWBAR</comment>
+</data>
+<data name="SupplyConsole.SearchHint" xml:space="preserve">
+  <value>ПОИСК ПО ЯЩИКАМ И СОДЕРЖИМОМУ</value>
+  <comment>SEARCH CRATES AND CONTENTS</comment>
+</data>
+<data name="SupplyConsole.SearchNoMatch" xml:space="preserve">
+  <value>// НЕТ ТАКИХ ЯЩИКОВ И СОДЕРЖИМОГО //</value>
+  <comment>// NO CRATE NAME OR CONTENTS MATCH //</comment>
 </data>
 <data name="SupplyConsole.AddLabel" xml:space="preserve">
   <value>+ В ОЧЕРЕДЬ</value>
@@ -14543,6 +14823,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ДВЕРНОЙ ПРОЁМ ЗАЩИЩЁН, ТОЛЬКО ПОКА ДВЕРЬ ЗАКРЫТА</value>
   <comment>THE DOORWAY IS SHELTERED ONLY WHILE THE DOOR IS SHUT</comment>
 </data>
+<data name="Codex.Building.InsideOpenPassage" xml:space="preserve">
+  <value>ПОМЕЩЕНИЕ НЕ ЗАЩИЩАЕТ БОЙЦА В ОТКРЫТОМ ПРОХОДЕ</value>
+  <comment>THE ROOM NEVER SHELTERS A MAN IN ITS OPEN PASSAGE</comment>
+</data>
 <data name="Codex.Building.InsideDoorGrenades" xml:space="preserve">
   <value>БРОШЕННЫЕ ГРАНАТЫ ПОПАДАЮТ ВНУТРЬ ТОЛЬКО ЧЕРЕЗ ОТКРЫТУЮ ДВЕРЬ</value>
   <comment>THROWN GRENADES GET IN ONLY THROUGH THE OPEN DOOR</comment>
@@ -14630,6 +14914,386 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EmoteRadial.KindAction" xml:space="preserve">
   <value>ДЕЙСТВИЕ</value>
   <comment>ACTION</comment>
+</data>
+<data name="Codex.Trench.ApartBack" xml:space="preserve">
+  <value>X{COUNT} ОБРАТНО</value>
+  <comment>X{COUNT} BACK</comment>
+</data>
+<data name="Codex.Trench.ApartFillNote" xml:space="preserve">
+  <value>ЗАСЫПКА ОСТАВЛЯЕТ ГОЛУЮ ЗЕМЛЮ И НИЧЕГО НЕ ВОЗВРАЩАЕТ</value>
+  <comment>FILLING IN LEAVES BARE GROUND AND RETURNS NOTHING</comment>
+</data>
+<data name="Codex.Trench.CoverStopped" xml:space="preserve">
+  <value>ОСТАНОВЛЕНО ПУЛЬ</value>
+  <comment>ROUNDS STOPPED</comment>
+</data>
+<data name="Codex.Trench.CoverPast" xml:space="preserve">
+  <value>ЧТО ПРОХОДИТ ЧЕРЕЗ КРАЙ ОТ ВЗРЫВА СНАРУЖИ</value>
+  <comment>WHAT GETS PAST THE LIP FROM AN EXPLOSION OUTSIDE</comment>
+</data>
+<data name="Codex.Trench.CoverOutside" xml:space="preserve">
+  <value>УКРЫТИЕ ДЕЙСТВУЕТ ТОЛЬКО ПРОТИВ ОГНЯ СНАРУЖИ ТРАНШЕИ</value>
+  <comment>COVER COUNTS ONLY AGAINST FIRE FROM OUTSIDE THE TRENCH</comment>
+</data>
+<data name="Codex.Trench.CoverFade" xml:space="preserve">
+  <value>НЕТ УКРЫТИЯ ОТ СТРЕЛКА В {NEAR} КЛ. ОТ КРАЯ, ПОЛНОЕ УКРЫТИЕ С {FAR} КЛ.</value>
+  <comment>NO COVER FROM A SHOOTER {NEAR} TILE FROM THE LIP, FULL COVER FROM {FAR}</comment>
+</data>
+<data name="Codex.Trench.CoverFadeMany" xml:space="preserve">
+  <value>НЕТ УКРЫТИЯ ОТ СТРЕЛКА В {NEAR} КЛ. ОТ КРАЯ, ПОЛНОЕ УКРЫТИЕ С {FAR} КЛ.</value>
+  <comment>NO COVER FROM A SHOOTER {NEAR} TILES FROM THE LIP, FULL COVER FROM {FAR}</comment>
+</data>
+<data name="Codex.Trench.CoverInside" xml:space="preserve">
+  <value>ОТ ГРАНАТЫ, УПАВШЕЙ В ТРАНШЕЮ, УКРЫТИЯ НЕТ</value>
+  <comment>A GRENADE THAT LANDS IN THE TRENCH IS NOT SHELTERED FROM</comment>
+</data>
+<data name="Codex.Trench.Kind" xml:space="preserve">
+  <value>ТРАНШЕЯ</value>
+  <comment>TRENCH</comment>
+</data>
+<data name="Codex.Trench.Ground" xml:space="preserve">
+  <value>ГОЛАЯ ЗЕМЛЯ</value>
+  <comment>BARE GROUND</comment>
+</data>
+<data name="Codex.Trench.ByTool" xml:space="preserve">
+  <value>ИНСТРУМЕНТОМ</value>
+  <comment>BY TOOL</comment>
+</data>
+<data name="Codex.Trench.DurabilityIgnores" xml:space="preserve">
+  <value>НЕ ЗАМЕЧАЕТ ВЗРЫВ СЛАБЕЕ</value>
+  <comment>IGNORES A BLAST UNDER</comment>
+</data>
+<data name="Codex.Trench.DurabilityNothingElse" xml:space="preserve">
+  <value>ПУЛИ, БЛИЖНИЙ БОЙ И ОГОНЬ ТРАНШЕЕ НЕ ВРЕДЯТ</value>
+  <comment>BULLETS, MELEE AND FIRE DO NOTHING TO A TRENCH</comment>
+</data>
+<data name="Codex.Trench.DurabilityOneStage" xml:space="preserve">
+  <value>ВЗРЫВ СНИМАЕТ ПО ОДНОЙ СТАДИИ ЗА РАЗ</value>
+  <comment>A BLAST TAKES ONE STAGE AT A TIME</comment>
+</data>
+<data name="Codex.Trench.StatesOrFrom" xml:space="preserve">
+  <value>ИЛИ ИЗ</value>
+  <comment>OR FROM</comment>
+</data>
+<data name="Codex.Trench.StatesNext" xml:space="preserve">
+  <value>СЛЕДУЮЩАЯ СТАДИЯ</value>
+  <comment>NEXT STAGE</comment>
+</data>
+<data name="Codex.Trench.StatesRampEnd" xml:space="preserve">
+  <value>ПАНДУС СТАВИТСЯ В ТОРЕЦ ТРАНШЕИ: РЯДОМ ОДНА КЛЕТКА ТРАНШЕИ</value>
+  <comment>A RAMP GOES ON A TRENCH END: ONE TRENCH TILE BESIDE IT</comment>
+</data>
+<data name="Codex.Trench.StatesRampOpen" xml:space="preserve">
+  <value>ЧЕРЕЗ ОТКРЫТУЮ СТОРОНУ ТОРЦА С ПАНДУСОМ ПЕРЕЛЕЗТЬ НЕЛЬЗЯ</value>
+  <comment>NO CLIMB OVER THE OPEN SIDE OF A RAMP END</comment>
+</data>
+<data name="Codex.Trench.StatsClimb" xml:space="preserve">
+  <value>{SECONDS} С, ЧТОБЫ ЗАЛЕЗТЬ ИЛИ ВЫЛЕЗТИ ЧЕРЕЗ КРАЙ</value>
+  <comment>{SECONDS}S IN OR OUT OVER THE LIP</comment>
+</data>
+<data name="Codex.Trench.StatsPushed" xml:space="preserve">
+  <value>ЕСЛИ СТОЛКНУЛИ ВНУТРЬ</value>
+  <comment>PUSHED IN</comment>
+</data>
+<data name="Codex.Trench.StatsKnocked" xml:space="preserve">
+  <value>ПАДЕНИЕ НА {SECONDS} С</value>
+  <comment>KNOCKED DOWN {SECONDS}S</comment>
+</data>
+<data name="Codex.Wall.ApartFewer" xml:space="preserve">
+  <value>ПОВРЕЖДЁННАЯ СТЕНА ВОЗВРАЩАЕТ МЕНЬШЕ</value>
+  <comment>A DAMAGED WALL HANDS BACK FEWER</comment>
+</data>
+<data name="Codex.Wall.CoverCeiling" xml:space="preserve">
+  <value>ЦИФРЫ ДАНЫ ДЛЯ БОЙЦА У СТЕНЫ ПОД ОГНЁМ ИЗДАЛЕКА</value>
+  <comment>THE FIGURES ARE FOR A MAN AT THE WALL FIRED ON FROM FAR OFF</comment>
+</data>
+<data name="Codex.Wall.CoverShare" xml:space="preserve">
+  <value>СТЕНА ПРИКРЫВАЕТ ОБЕ СТОРОНЫ: БОЛЬШЕ ДОСТАЁТСЯ ТОМУ, КТО БЛИЖЕ</value>
+  <comment>THE WALL COVERS BOTH SIDES: THE NEARER MAN GETS THE LARGER SHARE</comment>
+</data>
+<data name="Codex.Wall.CoverReach" xml:space="preserve">
+  <value>НЕТ УКРЫТИЯ ДАЛЬШЕ {TILES} КЛ. ОТ СТЕНЫ</value>
+  <comment>NO COVER FOR A MAN MORE THAN {TILES} TILE FROM THE WALL</comment>
+</data>
+<data name="Codex.Wall.CoverReachMany" xml:space="preserve">
+  <value>НЕТ УКРЫТИЯ ДАЛЬШЕ {TILES} КЛ. ОТ СТЕНЫ</value>
+  <comment>NO COVER FOR A MAN MORE THAN {TILES} TILES FROM THE WALL</comment>
+</data>
+<data name="Codex.Wall.CoverGrenades" xml:space="preserve">
+  <value>СТЕНА ОСТАНАВЛИВАЕТ ДО {PERCENT}% БРОШЕННЫХ ГРАНАТ</value>
+  <comment>UP TO {PERCENT}% OF THROWN GRENADES ARE STOPPED AT THE WALL</comment>
+</data>
+<data name="Codex.Wall.CoverToss" xml:space="preserve">
+  <value>БРОСОК С {TILES} КЛ. ОТ СТЕНЫ ИЛИ БЛИЖЕ ПЕРЕЛЕТАЕТ ЧЕРЕЗ НЕЁ</value>
+  <comment>A THROWER WITHIN {TILES} TILE OF THE WALL TOSSES OVER IT</comment>
+</data>
+<data name="Codex.Wall.CoverTossMany" xml:space="preserve">
+  <value>БРОСОК С {TILES} КЛ. ОТ СТЕНЫ ИЛИ БЛИЖЕ ПЕРЕЛЕТАЕТ ЧЕРЕЗ НЕЁ</value>
+  <comment>A THROWER WITHIN {TILES} TILES OF THE WALL TOSSES OVER IT</comment>
+</data>
+<data name="Codex.Wall.CoverLaunched" xml:space="preserve">
+  <value>ГРАНАТА ИЗ ГРАНАТОМЁТА НАВЕСОМ ПЕРЕЛЕТАЕТ СТЕНУ</value>
+  <comment>A LOBBED LAUNCHER ROUND CLEARS IT</comment>
+</data>
+<data name="Codex.Wall.CoverAtWall" xml:space="preserve">
+  <value>УКРЫТИЕ ТОЛЬКО НА КЛЕТКЕ, ПО КРАЮ КОТОРОЙ ИДЁТ СТЕНА</value>
+  <comment>ONLY A MAN ON A TILE WITH THE WALL ON ITS EDGE IS SHELTERED</comment>
+</data>
+<data name="Codex.Wall.Kind" xml:space="preserve">
+  <value>СТЕНА</value>
+  <comment>WALL</comment>
+</data>
+<data name="Codex.Wall.DurabilityFloor" xml:space="preserve">
+  <value>НЕ ЗАМЕЧАЕТ РУЧНОЕ ОРУЖИЕ С СИЛОЙ УДАРА {FORCE} И НИЖЕ</value>
+  <comment>IGNORES A HAND WEAPON OF MELEE {FORCE} OR UNDER</comment>
+</data>
+<data name="Codex.Wall.DurabilityOneStage" xml:space="preserve">
+  <value>УДАР СНИМАЕТ ПО ОДНОЙ СТАДИИ ЗА РАЗ</value>
+  <comment>A HIT TAKES ONE STAGE AT A TIME</comment>
+</data>
+<data name="Codex.Wall.StatesFloor" xml:space="preserve">
+  <value>ПОЛ</value>
+  <comment>FLOOR</comment>
+</data>
+<data name="Codex.Wall.StatesMendFirst" xml:space="preserve">
+  <value>ПОВРЕЖДЁННУЮ СТАДИЮ СНАЧАЛА ЧИНЯТ, ПОТОМ НАРАЩИВАЮТ</value>
+  <comment>A DAMAGED STAGE IS MENDED BEFORE IT CAN BE RAISED</comment>
+</data>
+<data name="Codex.Wall.StatesEitherSide" xml:space="preserve">
+  <value>ПОЛ МОЖЕТ БЫТЬ С ЛЮБОЙ СТОРОНЫ СТЕНЫ</value>
+  <comment>THE FLOOR MAY LIE ON EITHER SIDE OF THE WALL</comment>
+</data>
+<data name="Codex.Wall.StatesUndamaged" xml:space="preserve">
+  <value>ПЕРЕЗАЛИТЬ МОЖНО ТОЛЬКО ЦЕЛУЮ СТЕНУ</value>
+  <comment>ONLY AN UNDAMAGED WALL IS RECAST</comment>
+</data>
+<data name="Codex.Wall.StatsClimb" xml:space="preserve">
+  <value>{SECONDS} С, ЧТОБЫ ПЕРЕЛЕЗТЬ СТЕНУ</value>
+  <comment>{SECONDS}S OVER THE WALL</comment>
+</data>
+<data name="Codex.Wall.StatsStandsOn" xml:space="preserve">
+  <value>СТОИТ НА</value>
+  <comment>STANDS ON</comment>
+</data>
+<data name="Codex.Wall.StatsEdge" xml:space="preserve">
+  <value>КРАЙ КЛЕТКИ, СОЕДИНЯЕТСЯ С СОСЕДНИМИ</value>
+  <comment>A TILE EDGE, JOINED TO ITS NEIGHBOURS</comment>
+</data>
+<data name="Codex.Wall.StatsGuns" xml:space="preserve">
+  <value>ОГНЕСТРЕЛ</value>
+  <comment>GUNS</comment>
+</data>
+<data name="Codex.Wall.StatsEmplacement" xml:space="preserve">
+  <value>НА ТОЙ ЖЕ КЛЕТКЕ МОЖНО ПОСТАВИТЬ ОРУЖИЕ НА ТРЕНОГЕ ИЛИ ТУРЕЛЬ</value>
+  <comment>A TRIPOD GUN OR SENTRY CAN SHARE ITS TILE</comment>
+</data>
+<data name="NameCheck.Title" xml:space="preserve">
+  <value>ПРОВЕРКА ИМЕНИ</value>
+  <comment>NAME CHECK</comment>
+</data>
+<data name="NameCheck.StandardLine" xml:space="preserve">
+  <value>ИМЯ «{NAME}» НЕ СООТВЕТСТВУЕТ ПРАВИЛАМ ИМЁН.</value>
+  <comment>"{NAME}" DOES NOT MEET THE NAME STANDARD.</comment>
+</data>
+<data name="NameCheck.JoinLine" xml:space="preserve">
+  <value>ЗАЙТИ НА СЕРВЕР МОЖНО, КОГДА ИМЯ ПРОЙДЁТ ПРОВЕРКУ.</value>
+  <comment>YOU CAN JOIN A SERVER ONCE YOUR NAME PASSES.</comment>
+</data>
+<data name="NameCheck.ServerLine" xml:space="preserve">
+  <value>ЭТО ИМЯ ЗАПРЕЩЕНО НА ЭТОМ СЕРВЕРЕ</value>
+  <comment>THAT NAME IS NOT ALLOWED ON THIS SERVER</comment>
+</data>
+<data name="NameCheck.ContinueLabel" xml:space="preserve">
+  <value>ПРОДОЛЖИТЬ</value>
+  <comment>CONTINUE</comment>
+</data>
+<data name="NameCheck.RandomLabel" xml:space="preserve">
+  <value>СЛУЧ. ИМЯ</value>
+  <comment>RANDOM</comment>
+</data>
+<data name="NameCheck.SetupLabel" xml:space="preserve">
+  <value>НАСТРОЙКА</value>
+  <comment>SETUP</comment>
+</data>
+<data name="NameCheck.BlankLine" xml:space="preserve">
+  <value>ИСПОЛЬЗУЙТЕ ВИДИМЫЕ БУКВЫ</value>
+  <comment>USE VISIBLE LETTERS</comment>
+</data>
+<data name="NameCheck.NumeralLine" xml:space="preserve">
+  <value>БЕЗ НОМЕРОВ ПОСЛЕ ИМЕНИ</value>
+  <comment>NO NUMERALS AFTER THE NAME</comment>
+</data>
+<data name="NameCheck.TitleLine" xml:space="preserve">
+  <value>НЕ ПИШИТЕ ЗВАНИЕ И ТИТУЛ. ИХ ДАЁТ ВАША РОЛЬ</value>
+  <comment>LEAVE RANK AND TITLE OFF. YOUR ROLE GIVES YOU THOSE</comment>
+</data>
+<data name="NameCheck.PhraseLine" xml:space="preserve">
+  <value>ЭТО ПОХОЖЕ НА ФРАЗУ. ВВЕДИТЕ ИМЯ И ФАМИЛИЮ</value>
+  <comment>THAT READS AS A PHRASE. ENTER A FIRST AND LAST NAME</comment>
+</data>
+<data name="NameCheck.TooManyWordsLine" xml:space="preserve">
+  <value>СЛИШКОМ МНОГО СЛОВ</value>
+  <comment>TOO MANY WORDS</comment>
+</data>
+<data name="NameCheck.TagLine" xml:space="preserve">
+  <value>БЕЗ ТЕГОВ. НАПИШИТЕ {WORD} КАК ИМЯ, С ЗАГЛАВНОЙ БУКВЫ</value>
+  <comment>NO TAGS. CAPITALISE {WORD} LIKE A NAME</comment>
+</data>
+<data name="NameCheck.CapitalsLine" xml:space="preserve">
+  <value>ПРОВЕРЬТЕ ЗАГЛАВНЫЕ БУКВЫ В СЛОВЕ {WORD}</value>
+  <comment>CHECK THE CAPITALS IN {WORD}</comment>
+</data>
+<data name="NameCheck.PunctuationLine" xml:space="preserve">
+  <value>ПРОВЕРЬТЕ ЗНАКИ ПРЕПИНАНИЯ В СЛОВЕ {WORD}</value>
+  <comment>CHECK THE PUNCTUATION IN {WORD}</comment>
+</data>
+<data name="NameCheck.LastInitialLine" xml:space="preserve">
+  <value>НАПИШИТЕ ФАМИЛИЮ ПОЛНОСТЬЮ</value>
+  <comment>SPELL THE LAST NAME OUT</comment>
+</data>
+<data name="NameCheck.JunkLine" xml:space="preserve">
+  <value>{WORD} НЕ ПОХОЖЕ НА ИМЯ</value>
+  <comment>{WORD} DOES NOT READ AS A NAME</comment>
+</data>
+<data name="NameCheck.ReservedLine" xml:space="preserve">
+  <value>{WORD} — ЭТО НАЗВАНИЕ РОЛИ ИЛИ ФРАКЦИИ</value>
+  <comment>{WORD} IS A ROLE OR A FACTION WORD</comment>
+</data>
+<data name="NameCheck.BannedLine" xml:space="preserve">
+  <value>ЭТО ИМЯ ЗАПРЕЩЕНО</value>
+  <comment>THAT NAME IS NOT ALLOWED</comment>
+</data>
+<data name="CookStation.Ready" xml:space="preserve">
+  <value>{DISH}: готово</value>
+  <comment>{DISH} ready</comment>
+</data>
+<data name="CookStation.AddFuel" xml:space="preserve">
+  <value>добавьте: {ITEM}</value>
+  <comment>add {ITEM}</comment>
+</data>
+<data name="CookStation.MakesOnHeat" xml:space="preserve">
+  <value>получится: {DISH} (нагрев: {HEAT})</value>
+  <comment>makes {DISH} on {HEAT}</comment>
+</data>
+<data name="CookStation.Makes" xml:space="preserve">
+  <value>получится: {DISH}</value>
+  <comment>makes {DISH}</comment>
+</data>
+<data name="CookStation.Countdown" xml:space="preserve">
+  <value>{DISH}: через {SECONDS} с</value>
+  <comment>{DISH} in {SECONDS}s</comment>
+</data>
+<data name="CookStation.NeedsHeat" xml:space="preserve">
+  <value>{DISH}: нужен нагрев: {HEAT}</value>
+  <comment>{DISH} needs {HEAT} heat</comment>
+</data>
+<data name="CookStation.AddToMake" xml:space="preserve">
+  <value>добавьте: {ITEM} — получится: {DISH}</value>
+  <comment>add {ITEM} to make {DISH}</comment>
+</data>
+<data name="CookStation.ReagentAmount" xml:space="preserve">
+  <value>{REAGENT} ({WHOLE},{FRAC} ед.)</value>
+  <comment>{WHOLE}.{FRAC}U {REAGENT}</comment>
+</data>
+<data name="CookStation.Holds" xml:space="preserve">
+  <value>внутри: {ITEM}</value>
+  <comment>holds {ITEM}</comment>
+</data>
+<data name="CookStation.MakesNothing" xml:space="preserve">
+  <value>ничего не получится</value>
+  <comment>makes nothing</comment>
+</data>
+<data name="CookStation.BurnsIn" xml:space="preserve">
+  <value>{DISH}: сгорит через {SECONDS} с</value>
+  <comment>{DISH} burns in {SECONDS}s</comment>
+</data>
+<data name="CookStation.SpoiledRescue" xml:space="preserve">
+  <value>{DISH}: испорчено, снимите и поставьте заново</value>
+  <comment>{DISH} spoiled, lift it off and seat it again</comment>
+</data>
+<data name="CookStation.Spoiled" xml:space="preserve">
+  <value>{DISH}: испорчено</value>
+  <comment>{DISH} spoiled</comment>
+</data>
+<data name="CookStation.SpoiledNoDish" xml:space="preserve">
+  <value>испорчено, снимите и поставьте заново</value>
+  <comment>spoiled, lift it off and seat it again</comment>
+</data>
+<data name="CookStation.DragOntoTable" xml:space="preserve">
+  <value>перетащите на стол</value>
+  <comment>drag onto a table</comment>
+</data>
+<data name="CookStation.DoorName" xml:space="preserve">
+  <value>{STATION}: дверца</value>
+  <comment>{STATION} door</comment>
+</data>
+<data name="CookStation.HopperName" xml:space="preserve">
+  <value>{STATION}: топка</value>
+  <comment>{STATION} hopper</comment>
+</data>
+<data name="CookStation.SurfaceName" xml:space="preserve">
+  <value>{STATION}: {PART}</value>
+  <comment>{STATION} {PART}</comment>
+</data>
+<data name="CookStation.VerbPlace" xml:space="preserve">
+  <value>поставить</value>
+  <comment>place</comment>
+</data>
+<data name="CookStation.VerbAdd" xml:space="preserve">
+  <value>добавить</value>
+  <comment>add</comment>
+</data>
+<data name="CookStation.VerbPour" xml:space="preserve">
+  <value>налить</value>
+  <comment>pour</comment>
+</data>
+<data name="CookStation.VerbLift" xml:space="preserve">
+  <value>снять</value>
+  <comment>lift</comment>
+</data>
+<data name="CookStation.VerbOpen" xml:space="preserve">
+  <value>открыть</value>
+  <comment>open</comment>
+</data>
+<data name="CookStation.VerbShut" xml:space="preserve">
+  <value>закрыть</value>
+  <comment>shut</comment>
+</data>
+<data name="CookStation.VerbFuel" xml:space="preserve">
+  <value>подбросить топливо</value>
+  <comment>fuel</comment>
+</data>
+<data name="CookStation.VerbHeat" xml:space="preserve">
+  <value>нагрев</value>
+  <comment>heat</comment>
+</data>
+<data name="CookStation.VerbAlarm" xml:space="preserve">
+  <value>таймер</value>
+  <comment>alarm</comment>
+</data>
+<data name="CookRadial.Off" xml:space="preserve">
+  <value>ВЫКЛ</value>
+  <comment>OFF</comment>
+</data>
+<data name="CookRadial.AlarmTitle" xml:space="preserve">
+  <value>ТАЙМЕР</value>
+  <comment>ALARM</comment>
+</data>
+<data name="CookRadial.AlarmSeconds" xml:space="preserve">
+  <value>{SECONDS} С</value>
+  <comment>{SECONDS}S</comment>
+</data>
+<data name="CookRadial.AlarmCounting" xml:space="preserve">
+  <value>{SECONDS} С, ОСТАЛОСЬ {LEFT} С</value>
+  <comment>{SECONDS}S, {LEFT}S LEFT</comment>
+</data>
+<data name="ExamineWeapon.AndMoreLine" xml:space="preserve">
+  <value>И ЕЩЁ {COUNT}</value>
+  <comment>AND {COUNT} MORE</comment>
+</data>
+<data name="CrtTipGrid.GroupHours" xml:space="preserve">
+  <value>{HOURS} Ч</value>
+  <comment>{HOURS}H</comment>
 </data>
 <data name="Def.Test.Pristine.Bottle.DisplayName" xml:space="preserve">
   <value>тест. нетронутая бутылка</value>
@@ -16843,10 +17507,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>тестовый спелый продукт</value>
   <comment>test ripe product</comment>
 </data>
-<data name="Def.Test.Cook.Microwave.DisplayName" xml:space="preserve">
-  <value>тестовая микроволновка</value>
-  <comment>test microwave</comment>
-</data>
 <data name="Def.Test.Cook.Processor.DisplayName" xml:space="preserve">
   <value>тестовый переработчик</value>
   <comment>test processor</comment>
@@ -17362,6 +18022,114 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Test.ParachuteFlare.Burnt.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
+</data>
+<data name="Def.Test.CookStation.Stove.DisplayName" xml:space="preserve">
+  <value>тестовая плита</value>
+  <comment>test stove</comment>
+</data>
+<data name="Def.Test.CookStation.Stove.CookSurface.0" xml:space="preserve">
+  <value>тестовая конфорка</value>
+  <comment>test hob</comment>
+</data>
+<data name="Def.Test.CookStation.Stove.Off.DisplayName" xml:space="preserve">
+  <value>тестовая плита</value>
+  <comment>test stove</comment>
+</data>
+<data name="Def.Test.CookStation.Stove.Off.CookSurface.0" xml:space="preserve">
+  <value>тестовая конфорка</value>
+  <comment>test hob</comment>
+</data>
+<data name="Def.Test.CookStation.Oven.DisplayName" xml:space="preserve">
+  <value>тестовая духовка</value>
+  <comment>test oven</comment>
+</data>
+<data name="Def.Test.CookStation.Oven.Off.DisplayName" xml:space="preserve">
+  <value>тестовая духовка</value>
+  <comment>test oven</comment>
+</data>
+<data name="Def.Test.CookStation.Mixer.DisplayName" xml:space="preserve">
+  <value>тестовый миксер</value>
+  <comment>test mixer</comment>
+</data>
+<data name="Def.Test.CookStation.Mixer.Off.DisplayName" xml:space="preserve">
+  <value>тестовый миксер</value>
+  <comment>test mixer</comment>
+</data>
+<data name="Def.Test.CookStation.Grill.DisplayName" xml:space="preserve">
+  <value>тестовый гриль</value>
+  <comment>test grill</comment>
+</data>
+<data name="Def.Test.CookContainer.Pot.DisplayName" xml:space="preserve">
+  <value>тестовая кастрюля</value>
+  <comment>test pot</comment>
+</data>
+<data name="Def.Test.CookContainer.Dish.DisplayName" xml:space="preserve">
+  <value>тестовая форма</value>
+  <comment>test dish</comment>
+</data>
+<data name="Def.Test.CookContainer.Bowl.DisplayName" xml:space="preserve">
+  <value>тестовая миска</value>
+  <comment>test bowl</comment>
+</data>
+<data name="Def.Test.CookContainer.Board.DisplayName" xml:space="preserve">
+  <value>тестовая доска</value>
+  <comment>test board</comment>
+</data>
+<data name="Def.Test.CookFood.Carrot.DisplayName" xml:space="preserve">
+  <value>тестовая морковь</value>
+  <comment>test carrot</comment>
+</data>
+<data name="Def.Test.CookFood.Meat.DisplayName" xml:space="preserve">
+  <value>тестовое мясо</value>
+  <comment>test meat</comment>
+</data>
+<data name="Def.Test.CookFood.Cream.DisplayName" xml:space="preserve">
+  <value>тестовые сливки</value>
+  <comment>test cream</comment>
+</data>
+<data name="Def.Test.CookFood.Dough.DisplayName" xml:space="preserve">
+  <value>тестовое тесто</value>
+  <comment>test dough</comment>
+</data>
+<data name="Def.Test.CookFood.Cheese.DisplayName" xml:space="preserve">
+  <value>тестовый сыр</value>
+  <comment>test cheese</comment>
+</data>
+<data name="Def.Test.CookFood.Bun.DisplayName" xml:space="preserve">
+  <value>тестовая булочка</value>
+  <comment>test bun</comment>
+</data>
+<data name="Def.Test.CookFood.Patty.DisplayName" xml:space="preserve">
+  <value>тестовая котлета</value>
+  <comment>test patty</comment>
+</data>
+<data name="Def.Test.CookFood.Soup.DisplayName" xml:space="preserve">
+  <value>тестовый суп</value>
+  <comment>test soup</comment>
+</data>
+<data name="Def.Test.CookFood.Stew.DisplayName" xml:space="preserve">
+  <value>тестовое рагу</value>
+  <comment>test stew</comment>
+</data>
+<data name="Def.Test.CookFood.Broth.DisplayName" xml:space="preserve">
+  <value>тестовый бульон</value>
+  <comment>test broth</comment>
+</data>
+<data name="Def.Test.CookFood.Ice.DisplayName" xml:space="preserve">
+  <value>тестовый лёд</value>
+  <comment>test ice</comment>
+</data>
+<data name="Def.Test.CookFood.Loaf.DisplayName" xml:space="preserve">
+  <value>тестовая буханка</value>
+  <comment>test loaf</comment>
+</data>
+<data name="Def.Test.CookFood.LoafCheese.DisplayName" xml:space="preserve">
+  <value>тестовая буханка с сыром</value>
+  <comment>test loafcheese</comment>
+</data>
+<data name="Def.Test.CookFood.Stack.DisplayName" xml:space="preserve">
+  <value>тестовая стопка</value>
+  <comment>test stack</comment>
 </data>
 <data name="Def.Character.Human.DisplayName" xml:space="preserve">
   <value>человек</value>
@@ -19838,10 +20606,6 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Barricade.Sandbags.Low.DisplayName" xml:space="preserve">
   <value>низкая баррикада из мешков с песком</value>
   <comment>low sandbag barricade</comment>
-</data>
-<data name="Def.Obj.Structure.Barricade.Sandbags.Wired.DisplayName" xml:space="preserve">
-  <value>баррикада из мешков с песком</value>
-  <comment>sandbag barricade</comment>
 </data>
 <data name="Def.Obj.Structure.Barricade.Wooden.DisplayName" xml:space="preserve">
   <value>деревянная баррикада</value>
@@ -30547,22 +31311,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>счётчик</value>
   <comment>meter</comment>
 </data>
-<data name="Def.Obj.Structure.Machinery.Microwave.DisplayName" xml:space="preserve">
-  <value>микроволновка</value>
-  <comment>microwave</comment>
-</data>
-<data name="Def.Obj.Structure.Machinery.Microwave.Verb.Toggle" xml:space="preserve">
-  <value>выключить</value>
-  <comment>turn off</comment>
-</data>
-<data name="Def.Obj.Structure.Machinery.Microwave.Off.DisplayName" xml:space="preserve">
-  <value>микроволновка</value>
-  <comment>microwave</comment>
-</data>
-<data name="Def.Obj.Structure.Machinery.Microwave.Off.Verb.Toggle" xml:space="preserve">
-  <value>включить</value>
-  <comment>turn on</comment>
-</data>
 <data name="Def.Obj.Structure.Machinery.Mill.DisplayName" xml:space="preserve">
   <value>Мельница</value>
   <comment>Mill</comment>
@@ -38167,38 +38915,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.DisplayName" xml:space="preserve">
-  <value>магазин XM40 (10x24 мм)</value>
-  <comment>XM40 magazine (10x24mm)</comment>
-</data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.Empty.DisplayName" xml:space="preserve">
-  <value>магазин XM40 (10x24 мм)</value>
-  <comment>XM40 magazine (10x24mm)</comment>
-</data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.Empty.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.Heap.DisplayName" xml:space="preserve">
-  <value>магазин XM40 БФ (10x24 мм)</value>
-  <comment>XM40 HEAP magazine (10x24mm)</comment>
-</data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.Heap.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.Heap.Empty.DisplayName" xml:space="preserve">
-  <value>магазин XM40 БФ (10x24 мм)</value>
-  <comment>XM40 HEAP magazine (10x24mm)</comment>
-</data>
-<data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm40.Heap.Empty.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
 <data name="Def.Obj.Item.AmmoMagazine.Rifle.Xm51.DisplayName" xml:space="preserve">
   <value>магазин XM51 (16 калибр)</value>
   <comment>XM51 magazine (16g)</comment>
@@ -40728,6 +41444,14 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>USCM patch</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Accessory.Patch.Uscmpatch.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Accessory.Poncho.DisplayName" xml:space="preserve">
+  <value>пончо USCM</value>
+  <comment>USCM Poncho</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Accessory.Poncho.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -44776,6 +45500,22 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>marine officer dress jacket</comment>
 </data>
 <data name="Def.Obj.Item.Clothing.Suit.Storage.Jacket.Marine.Dress.Officer.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Jacket.Marine.Dress.Officer.Bomber.DisplayName" xml:space="preserve">
+  <value>бомбер командира</value>
+  <comment>commanding officer bomber jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Jacket.Marine.Dress.Officer.Bomber.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Jacket.Marine.Dress.Officer.Bomber.Open.DisplayName" xml:space="preserve">
+  <value>бомбер командира</value>
+  <comment>commanding officer bomber jacket</comment>
+</data>
+<data name="Def.Obj.Item.Clothing.Suit.Storage.Jacket.Marine.Dress.Officer.Bomber.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -54391,6 +55131,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Sodawater.Crushed.DisplayName" xml:space="preserve">
+  <value>газированная вода</value>
+  <comment>soda water</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Sodawater.Crushed.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Drinks.Cans.Souto.DisplayName" xml:space="preserve">
   <value>банка Souto</value>
   <comment>Souto Can</comment>
@@ -56311,14 +57059,6 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
-<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Rawmeatball.DisplayName" xml:space="preserve">
-  <value>сырая фрикаделька</value>
-  <comment>raw meatball</comment>
-</data>
-<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Rawmeatball.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Rawsticks.DisplayName" xml:space="preserve">
   <value>сырой картофель-фри</value>
   <comment>raw potato sticks</comment>
@@ -56628,14 +57368,6 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>waffles</comment>
 </data>
 <data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Waffles.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Wishsoup.DisplayName" xml:space="preserve">
-  <value>суп желаний</value>
-  <comment>Wish Soup</comment>
-</data>
-<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Wishsoup.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -67523,11 +68255,11 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
-<data name="Def.Obj.Item.Weapon.Gun.Launcher.Grenade.M81.M85a1.Empty.DisplayName" xml:space="preserve">
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Grenade.M81.M85a1.Open.DisplayName" xml:space="preserve">
   <value>гранатомёт M85A1</value>
   <comment>M85A1 grenade launcher</comment>
 </data>
-<data name="Def.Obj.Item.Weapon.Gun.Launcher.Grenade.M81.M85a1.Empty.Verb.PickUp" xml:space="preserve">
+<data name="Def.Obj.Item.Weapon.Gun.Launcher.Grenade.M81.M85a1.Open.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -69136,38 +69868,6 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>M41A/2 pulse rifle</comment>
 </data>
 <data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Whiteout.Empty.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка XM40</value>
-  <comment>XM40 pulse rifle</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка XM40</value>
-  <comment>XM40 pulse rifle</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.Empty.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.Ap.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка XM40</value>
-  <comment>XM40 pulse rifle</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.Ap.Verb.PickUp" xml:space="preserve">
-  <value>подобрать</value>
-  <comment>pick up</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.Ap.Empty.DisplayName" xml:space="preserve">
-  <value>импульсная винтовка XM40</value>
-  <comment>XM40 pulse rifle</comment>
-</data>
-<data name="Def.Obj.Item.Weapon.Gun.Rifle.M41a.Elite.Xm40.Ap.Empty.Verb.PickUp" xml:space="preserve">
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
@@ -81679,13 +82379,61 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ящик измельчителя</value>
   <comment>grinder crate</comment>
 </data>
-<data name="Def.Obj.Structure.Largecrate.Machine.Microwave.Descending.DisplayName" xml:space="preserve">
-  <value>ящик СВЧ-печи</value>
-  <comment>microwave crate</comment>
+<data name="Def.Obj.Structure.Largecrate.Machine.Grill.Descending.DisplayName" xml:space="preserve">
+  <value>ящик с грилем</value>
+  <comment>grill crate</comment>
 </data>
-<data name="Def.Obj.Structure.Largecrate.Machine.Microwave.DisplayName" xml:space="preserve">
-  <value>ящик СВЧ-печи</value>
-  <comment>microwave crate</comment>
+<data name="Def.Obj.Structure.Largecrate.Machine.Grill.DisplayName" xml:space="preserve">
+  <value>ящик с грилем</value>
+  <comment>grill crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Stovetop.Descending.DisplayName" xml:space="preserve">
+  <value>ящик с плитой</value>
+  <comment>stovetop crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Stovetop.DisplayName" xml:space="preserve">
+  <value>ящик с плитой</value>
+  <comment>stovetop crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Oven.Descending.DisplayName" xml:space="preserve">
+  <value>ящик с духовкой</value>
+  <comment>oven crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Oven.DisplayName" xml:space="preserve">
+  <value>ящик с духовкой</value>
+  <comment>oven crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Deepfryer.Descending.DisplayName" xml:space="preserve">
+  <value>ящик с фритюрницей</value>
+  <comment>deep fryer crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Deepfryer.DisplayName" xml:space="preserve">
+  <value>ящик с фритюрницей</value>
+  <comment>deep fryer crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Icecreammixer.Descending.DisplayName" xml:space="preserve">
+  <value>ящик с мороженицей</value>
+  <comment>ice cream mixer crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Icecreammixer.DisplayName" xml:space="preserve">
+  <value>ящик с мороженицей</value>
+  <comment>ice cream mixer crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Processor.Descending.DisplayName" xml:space="preserve">
+  <value>ящик с кухонным процессором</value>
+  <comment>food processor crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Processor.DisplayName" xml:space="preserve">
+  <value>ящик с кухонным процессором</value>
+  <comment>food processor crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Gibber.Descending.DisplayName" xml:space="preserve">
+  <value>ящик с мясорубкой</value>
+  <comment>gibber crate</comment>
+</data>
+<data name="Def.Obj.Structure.Largecrate.Machine.Gibber.DisplayName" xml:space="preserve">
+  <value>ящик с мясорубкой</value>
+  <comment>gibber crate</comment>
 </data>
 <data name="Def.Obj.Structure.Largecrate.Machine.ChemMaster.Descending.DisplayName" xml:space="preserve">
   <value>ящик ChemMaster</value>
@@ -82435,6 +83183,38 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Frag.DisplayName" xml:space="preserve">
+  <value>патронный короб MK19 (40 мм, осколочные)</value>
+  <comment>MK19 ammo box (40mm fragmentation)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Frag.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Frag.Open.DisplayName" xml:space="preserve">
+  <value>патронный короб MK19 (40 мм, осколочные)</value>
+  <comment>MK19 ammo box (40mm fragmentation)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Frag.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Incendiary.DisplayName" xml:space="preserve">
+  <value>патронный короб MK19 (40 мм, зажигательные)</value>
+  <comment>MK19 ammo box (40mm incendiary)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Incendiary.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Incendiary.Open.DisplayName" xml:space="preserve">
+  <value>патронный короб MK19 (40 мм, зажигательные)</value>
+  <comment>MK19 ammo box (40mm incendiary)</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.Mk19Ammo.Incendiary.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="Def.Obj.Structure.Largecrate.Mk19.Descending.DisplayName" xml:space="preserve">
   <value>ящик MK19</value>
   <comment>MK19 crate</comment>
@@ -83004,6 +83784,18 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>teleport</comment>
 </data>
 <data name="Def.Character.Human.East.Engineer.Leader.Verb.MoveTo" xml:space="preserve">
+  <value>переместить</value>
+  <comment>move to</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Corpsman.DisplayName" xml:space="preserve">
+  <value>медик Востока</value>
+  <comment>East corpsman</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Corpsman.Verb.Teleport" xml:space="preserve">
+  <value>телепортировать</value>
+  <comment>teleport</comment>
+</data>
+<data name="Def.Character.Human.East.Engineer.Corpsman.Verb.MoveTo" xml:space="preserve">
   <value>переместить</value>
   <comment>move to</comment>
 </data>
@@ -83867,6 +84659,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ящик турелей</value>
   <comment>sentry crate</comment>
 </data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Weapons.SentryKits.Descending.DisplayName" xml:space="preserve">
+  <value>ящик комплектов турелей</value>
+  <comment>sentry kit crate</comment>
+</data>
 <data name="Def.Obj.Structure.Closet.Crate.Field.Weapons.Hardpoints.Descending.DisplayName" xml:space="preserve">
   <value>ящик узлов подвески</value>
   <comment>hardpoint kit crate</comment>
@@ -84175,6 +84971,10 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ящик продуктов для выпечки</value>
   <comment>baking supplies crate</comment>
 </data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Supply.Condiments.Descending.DisplayName" xml:space="preserve">
+  <value>ящик приправ</value>
+  <comment>condiment crate</comment>
+</data>
 <data name="Def.Obj.Structure.Closet.Crate.Field.Supply.Dairy.Descending.DisplayName" xml:space="preserve">
   <value>ящик молочных продуктов и яиц</value>
   <comment>dairy and egg crate</comment>
@@ -84186,6 +84986,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Closet.Crate.Field.Supply.Produce.Descending.DisplayName" xml:space="preserve">
   <value>ящик свежих овощей и фруктов</value>
   <comment>fresh produce crate</comment>
+</data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Supply.Provisions.Descending.DisplayName" xml:space="preserve">
+  <value>ящик смешанной провизии</value>
+  <comment>mixed provisions crate</comment>
 </data>
 <data name="Def.Obj.Structure.Closet.Crate.Field.Supply.Juices.Descending.DisplayName" xml:space="preserve">
   <value>ящик соков и воды</value>
@@ -84302,6 +85106,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Def.Obj.Structure.Closet.Crate.Field.Medical.BurnKits.Descending.DisplayName" xml:space="preserve">
   <value>ящик ожоговых наборов</value>
   <comment>burn kit crate</comment>
+</data>
+<data name="Def.Obj.Structure.Closet.Crate.Field.Supply.Ponchos.Descending.DisplayName" xml:space="preserve">
+  <value>ящик пончо</value>
+  <comment>poncho crate</comment>
 </data>
 <data name="Def.Obj.Structure.Machinery.Computer.Supply.Field.Off.DisplayName" xml:space="preserve">
   <value>консоль снабжения</value>
@@ -85079,6 +85887,410 @@ The file is looked up beside this language file first, then under the game's Con
   <value>подобрать</value>
   <comment>pick up</comment>
 </data>
+<data name="Def.Obj.Structure.Barricade.Palisade.DisplayName" xml:space="preserve">
+  <value>бетонная стена</value>
+  <comment>concrete palisade</comment>
+</data>
+<data name="Def.Obj.Structure.Barricade.Palisade.Rubble.DisplayName" xml:space="preserve">
+  <value>бетонные обломки</value>
+  <comment>concrete rubble</comment>
+</data>
+<data name="Def.Obj.Item.Device.Cotablet.Command.DisplayName" xml:space="preserve">
+  <value>командный планшет</value>
+  <comment>command tablet</comment>
+</data>
+<data name="Def.Obj.Item.Device.Cotablet.Command.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="CommandTablet.Tab.Announce" xml:space="preserve">
+  <value>ОБЪЯВЛЕНИЕ</value>
+  <comment>ANNOUNCE</comment>
+</data>
+<data name="CommandTablet.Announce.Title" xml:space="preserve">
+  <value>ОБЪЯВЛЕНИЕ КОМАНДОВАНИЯ</value>
+  <comment>COMMAND ANNOUNCEMENT</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Rifleman.DisplayName" xml:space="preserve">
+  <value>жетоны стрелка</value>
+  <comment>Rifleman dog tags</comment>
+</data>
+<data name="OwnerName.DogTags" xml:space="preserve">
+  <value>жетоны</value>
+  <comment>dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Rifleman.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.MachineGunner.DisplayName" xml:space="preserve">
+  <value>жетоны пулемётчика</value>
+  <comment>Machine Gunner dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.MachineGunner.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Grenadier.DisplayName" xml:space="preserve">
+  <value>жетоны гранатомётчика</value>
+  <comment>Grenadier dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Grenadier.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Sapper.DisplayName" xml:space="preserve">
+  <value>жетоны сапёра</value>
+  <comment>Sapper dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Sapper.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Sniper.DisplayName" xml:space="preserve">
+  <value>жетоны снайпера</value>
+  <comment>Sniper dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Sniper.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Flamer.DisplayName" xml:space="preserve">
+  <value>жетоны огнемётчика</value>
+  <comment>Flamer dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Flamer.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Mercenary.DisplayName" xml:space="preserve">
+  <value>жетоны наёмника</value>
+  <comment>Mercenary dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.Mercenary.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.LightHelicopterPilot.DisplayName" xml:space="preserve">
+  <value>жетоны пилота лёгкого вертолёта</value>
+  <comment>Light Helicopter dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.LightHelicopterPilot.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.AttackHelicopterPilot.DisplayName" xml:space="preserve">
+  <value>жетоны пилота ударного вертолёта</value>
+  <comment>Attack Helicopter dog tags</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Dogtag.AttackHelicopterPilot.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Engineering.ChiefEngineer.DisplayName" xml:space="preserve">
+  <value>ID главного инженера</value>
+  <comment>Chief Engineer ID</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Engineering.ChiefEngineer.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Tool.Trowel.Masonry.DisplayName" xml:space="preserve">
+  <value>мастерок каменщика</value>
+  <comment>masonry trowel</comment>
+</data>
+<data name="Def.Obj.Item.Tool.Trowel.Masonry.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Tool.Trowel.Masonry.Family" xml:space="preserve">
+  <value>инструменты каменщика</value>
+  <comment>masonry tools</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Command.Commander.DisplayName" xml:space="preserve">
+  <value>ID командира</value>
+  <comment>Commander ID</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Command.Commander.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Microwave.DisplayName" xml:space="preserve">
+  <value>сломанная микроволновка</value>
+  <comment>broken microwave</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Stovetop.DisplayName" xml:space="preserve">
+  <value>плита</value>
+  <comment>stovetop</comment>
+</data>
+<data name="CookPart.Burner" xml:space="preserve">
+  <value>конфорка</value>
+  <comment>burner</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Stovetop.Off.DisplayName" xml:space="preserve">
+  <value>плита</value>
+  <comment>stovetop</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Grill.DisplayName" xml:space="preserve">
+  <value>гриль</value>
+  <comment>grill</comment>
+</data>
+<data name="CookPart.Well" xml:space="preserve">
+  <value>жаровня</value>
+  <comment>well</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Oven.DisplayName" xml:space="preserve">
+  <value>духовка</value>
+  <comment>oven</comment>
+</data>
+<data name="CookPart.Shelf" xml:space="preserve">
+  <value>полка</value>
+  <comment>shelf</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Oven.Off.DisplayName" xml:space="preserve">
+  <value>духовка</value>
+  <comment>oven</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Deepfryer.DisplayName" xml:space="preserve">
+  <value>фритюрница</value>
+  <comment>deep fryer</comment>
+</data>
+<data name="CookPart.Basin" xml:space="preserve">
+  <value>ванна</value>
+  <comment>basin</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Deepfryer.Off.DisplayName" xml:space="preserve">
+  <value>фритюрница</value>
+  <comment>deep fryer</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Icecreammixer.DisplayName" xml:space="preserve">
+  <value>мороженица</value>
+  <comment>ice cream mixer</comment>
+</data>
+<data name="CookPart.Chamber" xml:space="preserve">
+  <value>камера</value>
+  <comment>chamber</comment>
+</data>
+<data name="Def.Obj.Structure.Machinery.Cooking.Icecreammixer.Off.DisplayName" xml:space="preserve">
+  <value>мороженица</value>
+  <comment>ice cream mixer</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Pot.DisplayName" xml:space="preserve">
+  <value>кастрюля</value>
+  <comment>cooking pot</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Pot.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Pan.DisplayName" xml:space="preserve">
+  <value>сковорода</value>
+  <comment>frying pan</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Pan.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Ovendish.DisplayName" xml:space="preserve">
+  <value>форма для запекания</value>
+  <comment>oven dish</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Ovendish.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Grillgrate.DisplayName" xml:space="preserve">
+  <value>решётка гриля</value>
+  <comment>grill grate</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Grillgrate.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Fryerbasket.DisplayName" xml:space="preserve">
+  <value>корзина фритюрницы</value>
+  <comment>fryer basket</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Fryerbasket.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Freezingbowl.DisplayName" xml:space="preserve">
+  <value>чаша для заморозки</value>
+  <comment>freezing bowl</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Freezingbowl.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Cuttingboard.DisplayName" xml:space="preserve">
+  <value>разделочная доска</value>
+  <comment>cutting board</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Cuttingboard.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Prepbowl.DisplayName" xml:space="preserve">
+  <value>миска для заготовок</value>
+  <comment>prep bowl</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Cooking.Prepbowl.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Groundmeat.DisplayName" xml:space="preserve">
+  <value>фарш</value>
+  <comment>ground meat</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Groundmeat.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Rawmeatball.DisplayName" xml:space="preserve">
+  <value>сырая фрикаделька</value>
+  <comment>raw meatball</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Rawmeatball.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Rawpatty.DisplayName" xml:space="preserve">
+  <value>сырая котлета</value>
+  <comment>raw patty</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Rawpatty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Patty.DisplayName" xml:space="preserve">
+  <value>котлета</value>
+  <comment>patty</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Patty.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Tortilla.DisplayName" xml:space="preserve">
+  <value>тортилья</value>
+  <comment>tortilla</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Tortilla.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Sliceable.Pizza.Pepperonipizza.DisplayName" xml:space="preserve">
+  <value>пицца пепперони</value>
+  <comment>pepperoni pizza</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Sliceable.Pizza.Pepperonipizza.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Garlicbread.DisplayName" xml:space="preserve">
+  <value>чесночный хлеб</value>
+  <comment>garlic bread</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Garlicbread.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Cornuto.DisplayName" xml:space="preserve">
+  <value>рожок мороженого</value>
+  <comment>cornuto</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Cornuto.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Sundae.DisplayName" xml:space="preserve">
+  <value>сандей</value>
+  <comment>sundae</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Sundae.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Icecreamsandwich.DisplayName" xml:space="preserve">
+  <value>сэндвич-мороженое</value>
+  <comment>ice cream sandwich</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Icecreamsandwich.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Berryicecreamsandwich.DisplayName" xml:space="preserve">
+  <value>ягодный сэндвич-мороженое</value>
+  <comment>berry ice cream sandwich</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Berryicecreamsandwich.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Popsicle.DisplayName" xml:space="preserve">
+  <value>шоколадное эскимо</value>
+  <comment>chocolate popsicle</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.Popsicle.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.PopsicleOrange.DisplayName" xml:space="preserve">
+  <value>апельсиновое мороженое на палочке</value>
+  <comment>orange creamsicle</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.PopsicleOrange.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.PopsicleBerry.DisplayName" xml:space="preserve">
+  <value>ягодное мороженое на палочке</value>
+  <comment>berry creamsicle</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.PopsicleBerry.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.PopsicleSeasalt.DisplayName" xml:space="preserve">
+  <value>эскимо с морской солью</value>
+  <comment>sea salt popsicle</comment>
+</data>
+<data name="Def.Obj.Item.ReagentContainer.Food.Snacks.PopsicleSeasalt.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.PopsicleStick.DisplayName" xml:space="preserve">
+  <value>палочка от мороженого</value>
+  <comment>popsicle stick</comment>
+</data>
+<data name="Def.Obj.Item.PopsicleStick.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.CookwareKit.DisplayName" xml:space="preserve">
+  <value>набор кухонной посуды</value>
+  <comment>cookware kit</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.CookwareKit.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.CookwareKit.Open.DisplayName" xml:space="preserve">
+  <value>набор кухонной посуды</value>
+  <comment>cookware kit</comment>
+</data>
+<data name="Def.Obj.Item.Storage.Box.CookwareKit.Open.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Galley.Chef.DisplayName" xml:space="preserve">
+  <value>ID шеф-повара</value>
+  <comment>Chef ID</comment>
+</data>
+<data name="Def.Obj.Item.Card.Id.Galley.Chef.Verb.PickUp" xml:space="preserve">
+  <value>подобрать</value>
+  <comment>pick up</comment>
+</data>
 <data name="StackFamily.TestPlank" xml:space="preserve">
   <value>тестовые доски</value>
   <comment>TestPlank</comment>
@@ -85311,6 +86523,22 @@ The file is looked up beside this language file first, then under the game's Con
   <value>бетонная смесь</value>
   <comment>concrete mix</comment>
 </data>
+<data name="CookHeat.Low" xml:space="preserve">
+  <value>слабый</value>
+  <comment>Low</comment>
+</data>
+<data name="CookHeat.Medium" xml:space="preserve">
+  <value>средний</value>
+  <comment>Medium</comment>
+</data>
+<data name="CookHeat.High" xml:space="preserve">
+  <value>сильный</value>
+  <comment>High</comment>
+</data>
+<data name="CookHeat.On" xml:space="preserve">
+  <value>вкл</value>
+  <comment>On</comment>
+</data>
 <data name="VehicleClass.utility helicopter" xml:space="preserve">
   <value>многоцелевой вертолёт</value>
   <comment>utility helicopter</comment>
@@ -85322,6 +86550,130 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="VehicleClass.attack helicopter" xml:space="preserve">
   <value>ударный вертолёт</value>
   <comment>attack helicopter</comment>
+</data>
+<data name="CodexGroup.bottles" xml:space="preserve">
+  <value>бутылки</value>
+  <comment>bottles</comment>
+</data>
+<data name="CodexGroup.autoinjectors" xml:space="preserve">
+  <value>автоинъекторы</value>
+  <comment>autoinjectors</comment>
+</data>
+<data name="CodexGroup.crates" xml:space="preserve">
+  <value>ящики</value>
+  <comment>crates</comment>
+</data>
+<data name="CodexGroup.tanks" xml:space="preserve">
+  <value>баки</value>
+  <comment>tanks</comment>
+</data>
+<data name="CodexGroup.lockers" xml:space="preserve">
+  <value>шкафчики</value>
+  <comment>lockers</comment>
+</data>
+<data name="CodexGroup.barricades" xml:space="preserve">
+  <value>баррикады</value>
+  <comment>barricades</comment>
+</data>
+<data name="CodexGroup.doors" xml:space="preserve">
+  <value>двери</value>
+  <comment>doors</comment>
+</data>
+<data name="CodexGroup.cargo containers" xml:space="preserve">
+  <value>грузовые контейнеры</value>
+  <comment>cargo containers</comment>
+</data>
+<data name="CodexGroup.computers" xml:space="preserve">
+  <value>компьютеры</value>
+  <comment>computers</comment>
+</data>
+<data name="CodexGroup.emplacements" xml:space="preserve">
+  <value>огневые точки</value>
+  <comment>emplacements</comment>
+</data>
+<data name="CodexGroup.signs" xml:space="preserve">
+  <value>знаки</value>
+  <comment>signs</comment>
+</data>
+<data name="CodexGroup.machines" xml:space="preserve">
+  <value>оборудование</value>
+  <comment>machines</comment>
+</data>
+<data name="CodexGroup.vendors" xml:space="preserve">
+  <value>автоматы</value>
+  <comment>vendors</comment>
+</data>
+<data name="CodexGroup.lights" xml:space="preserve">
+  <value>светильники</value>
+  <comment>lights</comment>
+</data>
+<data name="CodexGroup.platforms" xml:space="preserve">
+  <value>платформы</value>
+  <comment>platforms</comment>
+</data>
+<data name="CodexGroup.wrecks" xml:space="preserve">
+  <value>обломки</value>
+  <comment>wrecks</comment>
+</data>
+<data name="CodexGroup.props" xml:space="preserve">
+  <value>декорации</value>
+  <comment>props</comment>
+</data>
+<data name="CodexGroup.shuttle parts" xml:space="preserve">
+  <value>части шаттла</value>
+  <comment>shuttle parts</comment>
+</data>
+<data name="CodexGroup.tables" xml:space="preserve">
+  <value>столы</value>
+  <comment>tables</comment>
+</data>
+<data name="CodexGroup.windows" xml:space="preserve">
+  <value>окна</value>
+  <comment>windows</comment>
+</data>
+<data name="CodexGroup.magazines" xml:space="preserve">
+  <value>магазины</value>
+  <comment>magazines</comment>
+</data>
+<data name="CodexGroup.boxes" xml:space="preserve">
+  <value>коробки</value>
+  <comment>boxes</comment>
+</data>
+<data name="CodexGroup.tools" xml:space="preserve">
+  <value>инструменты</value>
+  <comment>tools</comment>
+</data>
+<data name="CodexGroup.blood packs" xml:space="preserve">
+  <value>пакеты крови</value>
+  <comment>blood packs</comment>
+</data>
+<data name="CodexGroup.cans" xml:space="preserve">
+  <value>банки</value>
+  <comment>cans</comment>
+</data>
+<data name="CodexGroup.pills" xml:space="preserve">
+  <value>таблетки</value>
+  <comment>pills</comment>
+</data>
+<data name="TrenchState.Dug" xml:space="preserve">
+  <value>вырытая траншея</value>
+  <comment>dug trench</comment>
+</data>
+<data name="TrenchState.Sandbagged" xml:space="preserve">
+  <value>траншея с мешками</value>
+  <comment>sandbagged trench</comment>
+</data>
+<data name="TrenchState.RampEnd" xml:space="preserve">
+  <value>торец с пандусом</value>
+  <comment>ramp end</comment>
+</data>
+<data name="TrenchState.Concrete" xml:space="preserve">
+  <value>бетонная траншея</value>
+  <comment>concrete trench</comment>
+</data>
+<data name="TrenchState.ConcreteRampEnd" xml:space="preserve">
+  <value>бетонный торец с пандусом</value>
+  <comment>concrete ramp end</comment>
 </data>
 <data name="Honor.ApexPredator.Name" xml:space="preserve">
   <value>ВЫСШИЙ ХИЩНИК</value>
@@ -85651,6 +87003,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>больше всего убийств оружием техники, не меньше тысячи</value>
   <comment>most kills with weapons fitted to a vehicle, a thousand at the least</comment>
 </data>
+<data name="Honor.Sapper.Name" xml:space="preserve">
+  <value>ЗЕМЛЕКОП</value>
+  <comment>SAPPER</comment>
+</data>
+<data name="Honor.Sapper.Flavor" xml:space="preserve">
+  <value>больше всего вырытых траншей, не меньше десяти</value>
+  <comment>most trenches dug, ten at the least</comment>
+</data>
 <data name="Trait.Veteran.Name" xml:space="preserve">
   <value>Ветеран</value>
   <comment>Veteran</comment>
@@ -85971,6 +87331,46 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Так долго носит баллоны, что жар больше не пугает. Горит и идёт дальше.</value>
   <comment>Has carried the tanks long enough to stop minding the heat. Burns and keeps walking.</comment>
 </data>
+<data name="Trait.MasterEngineer.Name" xml:space="preserve">
+  <value>Мастер-инженер</value>
+  <comment>Master Engineer</comment>
+</data>
+<data name="Trait.MasterEngineer.Flavor" xml:space="preserve">
+  <value>Всё это уже строилось, ломалось и строилось заново. Быстрее на базе не работает никто, тем более с бетоном.</value>
+  <comment>Has built it, broken it and rebuilt it before. Nobody on the base works faster, least of all in concrete.</comment>
+</data>
+<data name="Trait.StaffOfficer.Name" xml:space="preserve">
+  <value>Штабной офицер</value>
+  <comment>Staff Officer</comment>
+</data>
+<data name="Trait.StaffOfficer.Flavor" xml:space="preserve">
+  <value>Командует из тыла. Оружие было в руках последний раз на зачётных стрельбах, и это заметно.</value>
+  <comment>Commands from behind the line. Has not fired a weapon since the qualification range, and it shows.</comment>
+</data>
+<data name="Trait.Commander.Name" xml:space="preserve">
+  <value>Командир</value>
+  <comment>Commander</comment>
+</data>
+<data name="Trait.Commander.Flavor" xml:space="preserve">
+  <value>Где командир стоит у флага, туда тянется снабжение. Гаечный ключ держать умеет, но медленно.</value>
+  <comment>Where the commander stands by the flag, the supply line follows. Can turn a wrench, slowly.</comment>
+</data>
+<data name="Trait.CargoHand.Name" xml:space="preserve">
+  <value>Грузчик</value>
+  <comment>Cargo Hand</comment>
+</data>
+<data name="Trait.CargoHand.Flavor" xml:space="preserve">
+  <value>На счету больше вскрытых ящиков, чем у кого-либо на базе. Лом входит с первого раза.</value>
+  <comment>Has pried the lid off more crates than anyone on the base. The crowbar goes in once.</comment>
+</data>
+<data name="Trait.LineCook.Name" xml:space="preserve">
+  <value>Линейный повар</value>
+  <comment>Line Cook</comment>
+</data>
+<data name="Trait.LineCook.Flavor" xml:space="preserve">
+  <value>Годы у горячей плиты в самый наплыв заказов. Сгоревшее блюдо реже вызывает пожар.</value>
+  <comment>Has worked a hot line through years of dinner rushes. A burnt dish is less likely to start a fire.</comment>
+</data>
 <data name="Language.East.Name" xml:space="preserve">
   <value>восточный</value>
   <comment>East</comment>
@@ -85998,6 +87398,10 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="EmoteCategory.Talk" xml:space="preserve">
   <value>разговор</value>
   <comment>talk</comment>
+</data>
+<data name="EmoteCategory.Replies" xml:space="preserve">
+  <value>ответы</value>
+  <comment>replies</comment>
 </data>
 <data name="EmoteCategory.Gestures" xml:space="preserve">
   <value>жесты</value>
@@ -86536,7 +87940,7 @@ The file is looked up beside this language file first, then under the game's Con
   <comment>HOLD THE LINE!</comment>
 </data>
 <data name="Emote.Hold.StandFast" xml:space="preserve">
-  <value>НИ ШАГУ НАЗАД!</value>
+  <value>ДЕРЖАТЬСЯ!</value>
   <comment>STAND FAST!</comment>
 </data>
 <data name="EmoteName.Holdfire" xml:space="preserve">
@@ -86742,6 +88146,498 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Emote.Flash" xml:space="preserve">
   <value>ВСПЫШКА!</value>
   <comment>FLASH!</comment>
+</data>
+<data name="EmoteName.Laststand" xml:space="preserve">
+  <value>последний бой</value>
+  <comment>last stand</comment>
+</data>
+<data name="Emote.LastStand.VeryLastOfUs" xml:space="preserve">
+  <value>ДО ПОСЛЕДНЕГО БОЙЦА!</value>
+  <comment>TO THE VERY LAST OF US!</comment>
+</data>
+<data name="Emote.LastStand.NotOneStepBack" xml:space="preserve">
+  <value>НИ ШАГУ НАЗАД!</value>
+  <comment>NOT ONE STEP BACK!</comment>
+</data>
+<data name="Emote.LastStand.UntilTheVeryEnd" xml:space="preserve">
+  <value>ДО САМОГО КОНЦА!</value>
+  <comment>UNTIL THE VERY END!</comment>
+</data>
+<data name="EmoteName.Leaveme" xml:space="preserve">
+  <value>бросьте меня</value>
+  <comment>leave me</comment>
+</data>
+<data name="Emote.LeaveMe.JustLeaveMe" xml:space="preserve">
+  <value>БРОСЬТЕ МЕНЯ!</value>
+  <comment>JUST LEAVE ME!</comment>
+</data>
+<data name="Emote.LeaveMe.GoOnWithoutMe" xml:space="preserve">
+  <value>ИДИТЕ БЕЗ МЕНЯ!</value>
+  <comment>GO ON WITHOUT ME!</comment>
+</data>
+<data name="Emote.LeaveMe.SaveYourselves" xml:space="preserve">
+  <value>СПАСАЙТЕСЬ!</value>
+  <comment>SAVE YOURSELVES!</comment>
+</data>
+<data name="Emote.LeaveMe.GetOutOfHere" xml:space="preserve">
+  <value>УХОДИТЕ ОТСЮДА!</value>
+  <comment>GET OUT OF HERE!</comment>
+</data>
+<data name="EmoteName.Hungry" xml:space="preserve">
+  <value>голод</value>
+  <comment>hungry</comment>
+</data>
+<data name="Emote.Hungry.GotAnyFood" xml:space="preserve">
+  <value>Есть еда?</value>
+  <comment>Got any food?</comment>
+</data>
+<data name="Emote.Hungry.Starving" xml:space="preserve">
+  <value>Умираю с голоду.</value>
+  <comment>I'm starving.</comment>
+</data>
+<data name="EmoteName.Thirsty" xml:space="preserve">
+  <value>жажда</value>
+  <comment>thirsty</comment>
+</data>
+<data name="Emote.Thirsty.GotAnyWater" xml:space="preserve">
+  <value>Есть вода?</value>
+  <comment>Got any water?</comment>
+</data>
+<data name="Emote.Thirsty.NeedWater" xml:space="preserve">
+  <value>Мне нужна вода.</value>
+  <comment>I need water.</comment>
+</data>
+<data name="EmoteName.Lightsoff" xml:space="preserve">
+  <value>погасить свет</value>
+  <comment>lights off</comment>
+</data>
+<data name="Emote.LightsOff.LightsOff" xml:space="preserve">
+  <value>Выключить свет.</value>
+  <comment>Lights off.</comment>
+</data>
+<data name="Emote.LightsOff.LightsOut" xml:space="preserve">
+  <value>Гасим свет.</value>
+  <comment>Lights out.</comment>
+</data>
+<data name="EmoteName.Cpr" xml:space="preserve">
+  <value>слр</value>
+  <comment>cpr</comment>
+</data>
+<data name="Emote.Cpr.ChestCompressions" xml:space="preserve">
+  <value>МАССАЖ СЕРДЦА!</value>
+  <comment>CHEST COMPRESSIONS!</comment>
+</data>
+<data name="Emote.Cpr.CprHere" xml:space="preserve">
+  <value>ЗДЕСЬ СЛР!</value>
+  <comment>CPR HERE!</comment>
+</data>
+<data name="EmoteName.Panic" xml:space="preserve">
+  <value>паника</value>
+  <comment>panic</comment>
+</data>
+<data name="Emote.Panic.Everywhere" xml:space="preserve">
+  <value>ОНИ ПОВСЮДУ!</value>
+  <comment>THEY'RE EVERYWHERE!</comment>
+</data>
+<data name="Emote.Panic.Surrounded" xml:space="preserve">
+  <value>МЫ ОКРУЖЕНЫ!</value>
+  <comment>WE'RE SURROUNDED!</comment>
+</data>
+<data name="Emote.Panic.TooMany" xml:space="preserve">
+  <value>ИХ СЛИШКОМ МНОГО!</value>
+  <comment>THERE'S TOO MANY OF THEM!</comment>
+</data>
+<data name="Emote.Panic.AllGoingToDie" xml:space="preserve">
+  <value>МЫ ВСЕ УМРЁМ!</value>
+  <comment>WE'RE ALL GOING TO DIE!</comment>
+</data>
+<data name="EmoteName.Yes" xml:space="preserve">
+  <value>да</value>
+  <comment>yes</comment>
+</data>
+<data name="Emote.Yes.Yes" xml:space="preserve">
+  <value>Да.</value>
+  <comment>Yes.</comment>
+</data>
+<data name="Emote.Yes.Yeah" xml:space="preserve">
+  <value>Ага.</value>
+  <comment>Yeah.</comment>
+</data>
+<data name="Emote.Yes.Yep" xml:space="preserve">
+  <value>Угу.</value>
+  <comment>Yep.</comment>
+</data>
+<data name="Emote.Yes.Sure" xml:space="preserve">
+  <value>Конечно.</value>
+  <comment>Sure.</comment>
+</data>
+<data name="EmoteName.No" xml:space="preserve">
+  <value>нет</value>
+  <comment>no</comment>
+</data>
+<data name="Emote.No.No" xml:space="preserve">
+  <value>Нет.</value>
+  <comment>No.</comment>
+</data>
+<data name="Emote.No.Nope" xml:space="preserve">
+  <value>Не-а.</value>
+  <comment>Nope.</comment>
+</data>
+<data name="EmoteName.Okay" xml:space="preserve">
+  <value>ладно</value>
+  <comment>okay</comment>
+</data>
+<data name="Emote.Okay.Okay" xml:space="preserve">
+  <value>Хорошо.</value>
+  <comment>Okay.</comment>
+</data>
+<data name="Emote.Okay.Alright" xml:space="preserve">
+  <value>Ладно.</value>
+  <comment>Alright.</comment>
+</data>
+<data name="Emote.Okay.SureThing" xml:space="preserve">
+  <value>Само собой.</value>
+  <comment>Sure thing.</comment>
+</data>
+<data name="EmoteName.Checkfire" xml:space="preserve">
+  <value>огонь по своим</value>
+  <comment>check fire</comment>
+</data>
+<data name="Emote.CheckFire.WatchYourFire" xml:space="preserve">
+  <value>АККУРАТНЕЕ С ОГНЁМ!</value>
+  <comment>WATCH YOUR FIRE!</comment>
+</data>
+<data name="Emote.CheckFire.FriendlyFire" xml:space="preserve">
+  <value>ОГОНЬ ПО СВОИМ!</value>
+  <comment>FRIENDLY FIRE!</comment>
+</data>
+<data name="EmoteName.Really" xml:space="preserve">
+  <value>правда?</value>
+  <comment>really</comment>
+</data>
+<data name="Emote.Really" xml:space="preserve">
+  <value>Правда?</value>
+  <comment>Really?</comment>
+</data>
+<data name="EmoteName.Refuel" xml:space="preserve">
+  <value>заправка</value>
+  <comment>refuel</comment>
+</data>
+<data name="Emote.Refuel.NeedRefueling" xml:space="preserve">
+  <value>Мне нужна заправка.</value>
+  <comment>I need refueling.</comment>
+</data>
+<data name="Emote.Refuel.NeedGas" xml:space="preserve">
+  <value>Мне нужно топливо.</value>
+  <comment>I need gas.</comment>
+</data>
+<data name="EmoteName.Repairs" xml:space="preserve">
+  <value>ремонт</value>
+  <comment>repairs</comment>
+</data>
+<data name="Emote.Repairs.RepairsNeeded" xml:space="preserve">
+  <value>Здесь нужен ремонт.</value>
+  <comment>Repairs needed here.</comment>
+</data>
+<data name="Emote.Repairs.NeedRepairs" xml:space="preserve">
+  <value>Мне нужен ремонт.</value>
+  <comment>I need some repairs.</comment>
+</data>
+<data name="EmoteName.Wtf" xml:space="preserve">
+  <value>что за?</value>
+  <comment>wtf</comment>
+</data>
+<data name="Emote.Wtf.WhatTheHell" xml:space="preserve">
+  <value>Какого чёрта?</value>
+  <comment>What the hell?</comment>
+</data>
+<data name="Emote.Wtf.WhatOnEarth" xml:space="preserve">
+  <value>Что за дела?</value>
+  <comment>What on earth?</comment>
+</data>
+<data name="EmoteName.Damn" xml:space="preserve">
+  <value>чёрт</value>
+  <comment>damn</comment>
+</data>
+<data name="Emote.Damn.Damn" xml:space="preserve">
+  <value>Чёрт.</value>
+  <comment>Damn.</comment>
+</data>
+<data name="Emote.Damn.DamnIt" xml:space="preserve">
+  <value>Чёрт возьми.</value>
+  <comment>Damn it.</comment>
+</data>
+<data name="EmoteName.Thanksdoc" xml:space="preserve">
+  <value>спасибо, док</value>
+  <comment>thanks doc</comment>
+</data>
+<data name="Emote.ThanksDoc.ThanksDoc" xml:space="preserve">
+  <value>Спасибо, док.</value>
+  <comment>Thanks, Doc.</comment>
+</data>
+<data name="Emote.ThanksDoc.AppreciateIt" xml:space="preserve">
+  <value>Благодарю, док.</value>
+  <comment>Appreciate it, Doc.</comment>
+</data>
+<data name="Emote.ThanksDoc.OweYouOne" xml:space="preserve">
+  <value>С меня причитается, док.</value>
+  <comment>I owe you one, Doc.</comment>
+</data>
+<data name="EmoteName.Noproblem" xml:space="preserve">
+  <value>без проблем</value>
+  <comment>no problem</comment>
+</data>
+<data name="Emote.NoProblem.NoProblem" xml:space="preserve">
+  <value>Без проблем.</value>
+  <comment>No problem.</comment>
+</data>
+<data name="Emote.NoProblem.NoWorries" xml:space="preserve">
+  <value>Пустяки.</value>
+  <comment>No worries.</comment>
+</data>
+<data name="Emote.NoProblem.DontMentionIt" xml:space="preserve">
+  <value>Не стоит благодарности.</value>
+  <comment>Don't mention it.</comment>
+</data>
+<data name="Emote.NoProblem.Anytime" xml:space="preserve">
+  <value>Всегда пожалуйста.</value>
+  <comment>Anytime.</comment>
+</data>
+<data name="EmoteName.Goodbye" xml:space="preserve">
+  <value>пока</value>
+  <comment>goodbye</comment>
+</data>
+<data name="Emote.Goodbye.Goodbye" xml:space="preserve">
+  <value>До свидания.</value>
+  <comment>Goodbye.</comment>
+</data>
+<data name="Emote.Goodbye.Bye" xml:space="preserve">
+  <value>Пока.</value>
+  <comment>Bye.</comment>
+</data>
+<data name="Emote.Goodbye.SeeYa" xml:space="preserve">
+  <value>Увидимся.</value>
+  <comment>See ya.</comment>
+</data>
+<data name="Emote.Goodbye.Later" xml:space="preserve">
+  <value>Бывай.</value>
+  <comment>Later.</comment>
+</data>
+<data name="EmoteName.Takingfire" xml:space="preserve">
+  <value>под огнём</value>
+  <comment>taking fire</comment>
+</data>
+<data name="Emote.TakingFire.TakingFire" xml:space="preserve">
+  <value>ПО МНЕ СТРЕЛЯЮТ!</value>
+  <comment>TAKING FIRE!</comment>
+</data>
+<data name="Emote.TakingFire.UnderFire" xml:space="preserve">
+  <value>ПОД ОГНЁМ!</value>
+  <comment>UNDER FIRE!</comment>
+</data>
+<data name="EmoteName.Yessir" xml:space="preserve">
+  <value>да, сэр</value>
+  <comment>yes sir</comment>
+</data>
+<data name="Emote.YesSir.YesSir" xml:space="preserve">
+  <value>Да, сэр.</value>
+  <comment>Yes, sir.</comment>
+</data>
+<data name="Emote.YesSir.AyeSir" xml:space="preserve">
+  <value>Есть, сэр.</value>
+  <comment>Aye, sir.</comment>
+</data>
+<data name="EmoteName.Nosir" xml:space="preserve">
+  <value>нет, сэр</value>
+  <comment>no sir</comment>
+</data>
+<data name="Emote.NoSir.NoSir" xml:space="preserve">
+  <value>Нет, сэр.</value>
+  <comment>No, sir.</comment>
+</data>
+<data name="Emote.NoSir.NegativeSir" xml:space="preserve">
+  <value>Никак нет, сэр.</value>
+  <comment>Negative, sir.</comment>
+</data>
+<data name="EmoteName.Yesmaam" xml:space="preserve">
+  <value>да, мэм</value>
+  <comment>yes ma'am</comment>
+</data>
+<data name="Emote.YesMaam.YesMaam" xml:space="preserve">
+  <value>Да, мэм.</value>
+  <comment>Yes, ma'am.</comment>
+</data>
+<data name="Emote.YesMaam.AyeMaam" xml:space="preserve">
+  <value>Есть, мэм.</value>
+  <comment>Aye, ma'am.</comment>
+</data>
+<data name="EmoteName.Nomaam" xml:space="preserve">
+  <value>нет, мэм</value>
+  <comment>no ma'am</comment>
+</data>
+<data name="Emote.NoMaam.NoMaam" xml:space="preserve">
+  <value>Нет, мэм.</value>
+  <comment>No, ma'am.</comment>
+</data>
+<data name="Emote.NoMaam.NegativeMaam" xml:space="preserve">
+  <value>Никак нет, мэм.</value>
+  <comment>Negative, ma'am.</comment>
+</data>
+<data name="EmoteName.Ikr" xml:space="preserve">
+  <value>вот именно</value>
+  <comment>ikr</comment>
+</data>
+<data name="Emote.Ikr" xml:space="preserve">
+  <value>Вот и я говорю.</value>
+  <comment>I know, right?</comment>
+</data>
+<data name="EmoteName.Oh" xml:space="preserve">
+  <value>о</value>
+  <comment>oh</comment>
+</data>
+<data name="Emote.Oh" xml:space="preserve">
+  <value>О.</value>
+  <comment>Oh.</comment>
+</data>
+<data name="EmoteName.Probably" xml:space="preserve">
+  <value>наверное</value>
+  <comment>probably</comment>
+</data>
+<data name="Emote.Probably" xml:space="preserve">
+  <value>Наверное.</value>
+  <comment>Probably.</comment>
+</data>
+<data name="EmoteName.Maybe" xml:space="preserve">
+  <value>может быть</value>
+  <comment>maybe</comment>
+</data>
+<data name="Emote.Maybe" xml:space="preserve">
+  <value>Может быть.</value>
+  <comment>Maybe.</comment>
+</data>
+<data name="EmoteName.Idk" xml:space="preserve">
+  <value>не знаю</value>
+  <comment>idk</comment>
+</data>
+<data name="Emote.Idk.DontKnow" xml:space="preserve">
+  <value>Не знаю.</value>
+  <comment>I don't know.</comment>
+</data>
+<data name="Emote.Idk.NoIdea" xml:space="preserve">
+  <value>Без понятия.</value>
+  <comment>No idea.</comment>
+</data>
+<data name="Emote.Idk.BeatsMe" xml:space="preserve">
+  <value>Кто его знает.</value>
+  <comment>Beats me.</comment>
+</data>
+<data name="Emote.Idk.NotSure" xml:space="preserve">
+  <value>Точно не скажу.</value>
+  <comment>Not sure.</comment>
+</data>
+<data name="EmoteName.Seemsreasonable" xml:space="preserve">
+  <value>разумно</value>
+  <comment>seems reasonable</comment>
+</data>
+<data name="Emote.SeemsReasonable.SeemsReasonable" xml:space="preserve">
+  <value>Звучит разумно.</value>
+  <comment>Seems reasonable.</comment>
+</data>
+<data name="Emote.SeemsReasonable.FairEnough" xml:space="preserve">
+  <value>Справедливо.</value>
+  <comment>Fair enough.</comment>
+</data>
+<data name="Emote.SeemsReasonable.SoundsGood" xml:space="preserve">
+  <value>Годится.</value>
+  <comment>Sounds good.</comment>
+</data>
+<data name="Emote.SeemsReasonable.MakesSense" xml:space="preserve">
+  <value>Логично.</value>
+  <comment>Makes sense.</comment>
+</data>
+<data name="EmoteName.Imokay" xml:space="preserve">
+  <value>я в порядке</value>
+  <comment>i'm okay</comment>
+</data>
+<data name="Emote.ImOkay.ImOkay" xml:space="preserve">
+  <value>Я в порядке.</value>
+  <comment>I'm okay.</comment>
+</data>
+<data name="Emote.ImOkay.ImAlright" xml:space="preserve">
+  <value>Со мной всё хорошо.</value>
+  <comment>I'm alright.</comment>
+</data>
+<data name="Emote.ImOkay.ImFine" xml:space="preserve">
+  <value>Всё нормально.</value>
+  <comment>I'm fine.</comment>
+</data>
+<data name="EmoteName.Careful" xml:space="preserve">
+  <value>осторожно</value>
+  <comment>careful</comment>
+</data>
+<data name="Emote.Careful.Careful" xml:space="preserve">
+  <value>Осторожно.</value>
+  <comment>Careful.</comment>
+</data>
+<data name="Emote.Careful.BeCareful" xml:space="preserve">
+  <value>Осторожнее.</value>
+  <comment>Be careful.</comment>
+</data>
+<data name="EmoteName.Thankyousir" xml:space="preserve">
+  <value>спасибо, сэр</value>
+  <comment>thank you sir</comment>
+</data>
+<data name="Emote.ThankYouSir.ThankYou" xml:space="preserve">
+  <value>Спасибо, сэр.</value>
+  <comment>Thank you, sir.</comment>
+</data>
+<data name="Emote.ThankYouSir.Thanks" xml:space="preserve">
+  <value>Благодарю, сэр.</value>
+  <comment>Thanks, sir.</comment>
+</data>
+<data name="EmoteName.Thankyoumaam" xml:space="preserve">
+  <value>спасибо, мэм</value>
+  <comment>thank you ma'am</comment>
+</data>
+<data name="Emote.ThankYouMaam.ThankYou" xml:space="preserve">
+  <value>Спасибо, мэм.</value>
+  <comment>Thank you, ma'am.</comment>
+</data>
+<data name="Emote.ThankYouMaam.Thanks" xml:space="preserve">
+  <value>Благодарю, мэм.</value>
+  <comment>Thanks, ma'am.</comment>
+</data>
+<data name="EmoteName.Woah" xml:space="preserve">
+  <value>ого</value>
+  <comment>woah</comment>
+</data>
+<data name="Emote.Woah.Whoa" xml:space="preserve">
+  <value>Ого.</value>
+  <comment>Whoa.</comment>
+</data>
+<data name="Emote.Woah.Wow" xml:space="preserve">
+  <value>Ух ты.</value>
+  <comment>Wow.</comment>
+</data>
+<data name="Emote.Woah.NoWay" xml:space="preserve">
+  <value>Не может быть.</value>
+  <comment>No way.</comment>
+</data>
+<data name="EmoteName.Hellyeah" xml:space="preserve">
+  <value>о да</value>
+  <comment>hell yeah</comment>
+</data>
+<data name="Emote.HellYeah.HellYeah" xml:space="preserve">
+  <value>О ДА!</value>
+  <comment>HELL YEAH!</comment>
+</data>
+<data name="Emote.HellYeah.HellYes" xml:space="preserve">
+  <value>ДА, ЧЁРТ ВОЗЬМИ!</value>
+  <comment>HELL YES!</comment>
+</data>
+<data name="Emote.HellYeah.ThatsWhatImTalkingAbout" xml:space="preserve">
+  <value>ВОТ ЭТО Я ПОНИМАЮ!</value>
+  <comment>THAT'S WHAT I'M TALKING ABOUT!</comment>
 </data>
 <data name="GhostEvent.VehicleCrash.Title" xml:space="preserve">
   <value>КРУШЕНИЕ ТЕХНИКИ</value>
@@ -88791,6 +90687,70 @@ The file is looked up beside this language file first, then under the game's Con
   <value>ослабляет подавление под огнём и ускоряет шаг; большая доза усыпляет пациента</value>
   <comment>blunts suppression under fire and quickens the step; a heavy dose puts the patient under</comment>
 </data>
+<data name="Reagent.Meal.Hearty.1.Name" xml:space="preserve">
+  <value>Сытная еда</value>
+  <comment>Hearty meal</comment>
+</data>
+<data name="Reagent.Meal.Hearty.2.Name" xml:space="preserve">
+  <value>Сытная еда</value>
+  <comment>Hearty meal</comment>
+</data>
+<data name="Reagent.Meal.Hearty.3.Name" xml:space="preserve">
+  <value>Сытная еда</value>
+  <comment>Hearty meal</comment>
+</data>
+<data name="Reagent.Meal.Fresh.1.Name" xml:space="preserve">
+  <value>Свежая еда</value>
+  <comment>Fresh meal</comment>
+</data>
+<data name="Reagent.Meal.Fresh.2.Name" xml:space="preserve">
+  <value>Свежая еда</value>
+  <comment>Fresh meal</comment>
+</data>
+<data name="Reagent.Meal.Fresh.3.Name" xml:space="preserve">
+  <value>Свежая еда</value>
+  <comment>Fresh meal</comment>
+</data>
+<data name="Reagent.Meal.Hot.1.Name" xml:space="preserve">
+  <value>Горячая еда</value>
+  <comment>Hot meal</comment>
+</data>
+<data name="Reagent.Meal.Hot.2.Name" xml:space="preserve">
+  <value>Горячая еда</value>
+  <comment>Hot meal</comment>
+</data>
+<data name="Reagent.Meal.Hot.3.Name" xml:space="preserve">
+  <value>Горячая еда</value>
+  <comment>Hot meal</comment>
+</data>
+<data name="Reagent.Meal.Steady.1.Name" xml:space="preserve">
+  <value>Успокаивающая еда</value>
+  <comment>Steady meal</comment>
+</data>
+<data name="Reagent.Meal.Steady.2.Name" xml:space="preserve">
+  <value>Успокаивающая еда</value>
+  <comment>Steady meal</comment>
+</data>
+<data name="Reagent.Meal.Steady.3.Name" xml:space="preserve">
+  <value>Успокаивающая еда</value>
+  <comment>Steady meal</comment>
+</data>
+<data name="Reagent.Meal.TopTable.3.Name" xml:space="preserve">
+  <value>Изысканная еда</value>
+  <comment>Top table meal</comment>
+</data>
+<data name="Reagent.Meal.Raw.1.Name" xml:space="preserve">
+  <value>Сырая еда</value>
+  <comment>Raw food</comment>
+</data>
+<data name="Reagent.Meal.Raw.2.Name" xml:space="preserve">
+  <value>Сырая еда</value>
+  <comment>Raw food</comment>
+</data>
+<data name="Reagent.Meal.Raw.3.Name" xml:space="preserve">
+  <value>Сырая еда</value>
+  <comment>Raw food</comment>
+</data>
 <data name="Condition.Fracture.DisplayName" xml:space="preserve">
   <value>перелом</value>
   <comment>fracture</comment>
@@ -89419,9 +91379,9 @@ The file is looked up beside this language file first, then under the game's Con
   <value>держите стопку и кликните по земле. ничто не строится инструментами; инструменты лишь разбирают вещи и чинят их.</value>
   <comment>hold the stack and click the ground. no tool builds anything; tools only take things apart and mend them</comment>
 </data>
-<data name="Guide.Topic.Galley" xml:space="preserve">
-  <value>еду готовят четырьмя способами: вручную, нарезая на столе, в приборе или реакцией. на каждой странице еды сказано, из чего она делается и во что идёт. микроволновка, переработчик и мясорубка — тоже конструкции.</value>
-  <comment>food is made four ways: by hand, sliced on a table, in an appliance, or by a reaction. every food page says what makes it and what it goes into. the microwave, the processor and the gibber are structures too</comment>
+<data name="Guide.Topic.Galley.Learned" xml:space="preserve">
+  <value>готовьте в переносной посуде: кастрюля или сковорода на плите, решётка на гриле, форма в духовке, корзина во фритюрнице, чаша для заморозки в мороженице. ингредиенты кладите в любом порядке. изучаемый рецепт получается только у тех, кто его изучил</value>
+  <comment>cook in a container you carry: a pot or pan on the stovetop, a grate on the grill, an oven dish in the oven, a basket in the fryer, a freezing bowl in the mixer. add ingredients in any order. a learned recipe cooks only for those who have learned it</comment>
 </data>
 <data name="Guide.Topic.Weapons" xml:space="preserve">
   <value>крепления оружия перечисляют модули, положенные только ему. у оружия без списка крепления не указаны, хотя любой модуль к нему подойдёт. его магазины — те, что сделаны для него; на страницах модулей и магазинов указано, к какому оружию они подходят.</value>
@@ -89475,9 +91435,9 @@ The file is looked up beside this language file first, then under the game's Con
   <value>листы и доски — стопки, которые тратит рецепт; группа объединяет все стопки, считающиеся одним материалом.</value>
   <comment>sheets and planks are the stacks a recipe spends; a family groups every stack that counts as the same material</comment>
 </data>
-<data name="Guide.Section.Galley.Recipes" xml:space="preserve">
-  <value>микроволновка готовит первый рецепт из списка, который точно совпадает с загрузкой, поэтому более крупный рецепт стоит выше и побеждает в загрузке, которой подходят два. загрузка, не подходящая ни к одному рецепту, сгорает.</value>
-  <comment>the microwave cooks the first recipe in this list that its load matches exactly, so a bigger recipe comes first and wins a load that fits two. a load that matches no recipe burns</comment>
+<data name="Guide.Section.Galley.Recipes.Learned" xml:space="preserve">
+  <value>поставьте посуду на прибор, задайте нагрев через alt+клик и снимите блюдо, пока не сгорело. изучаемый рецепт сгорает у всех, кто его не изучил. разделочной доске и миске нагрев не нужен: alt+клик собирает блюдо, которое вы изучили</value>
+  <comment>place the container on its station, set the row's heat with alt+click and lift the dish off before it burns. a learned recipe burns for anyone who has not learned it. a cutting board or prep bowl needs no heat: alt+click assembles a dish you have learned</comment>
 </data>
 <data name="Guide.Section.Galley.Kitchenware" xml:space="preserve">
   <value>инструменты, которые нужны ручной готовке, например скалка и ножи, а также коробки, в которых приходят ингредиенты. нож или любое другое лезвие нарезает еду на столе.</value>
@@ -89783,6 +91743,14 @@ The file is looked up beside this language file first, then under the game's Con
   <value>Медик коммандос</value>
   <comment>East commando squad corpsman</comment>
 </data>
+<data name="Loadout.East.Engineer.Leader.Name" xml:space="preserve">
+  <value>Сержант инженеров</value>
+  <comment>East engineer squad leader</comment>
+</data>
+<data name="Loadout.East.Engineer.Corpsman.Name" xml:space="preserve">
+  <value>Медик инженеров</value>
+  <comment>East engineer corpsman</comment>
+</data>
 <data name="Loadout.Ert.Marine.Leader.Name" xml:space="preserve">
   <value>Командир морпехов</value>
   <comment>Marine Team Leader</comment>
@@ -89810,6 +91778,22 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="Loadout.Ert.Quartermaster.Name" xml:space="preserve">
   <value>Квартирмейстер</value>
   <comment>Quartermaster</comment>
+</data>
+<data name="Loadout.ChiefEngineer.Name" xml:space="preserve">
+  <value>Главный инженер</value>
+  <comment>Chief Engineer</comment>
+</data>
+<data name="Loadout.Anomaly.ChiefEngineer.Name" xml:space="preserve">
+  <value>Главный инженер</value>
+  <comment>Chief Engineer</comment>
+</data>
+<data name="Loadout.Commander.Name" xml:space="preserve">
+  <value>Командир</value>
+  <comment>Commander</comment>
+</data>
+<data name="Loadout.Anomaly.Commander.Name" xml:space="preserve">
+  <value>Командир</value>
+  <comment>Commander</comment>
 </data>
 <data name="RoleClass.Rifleman.Name" xml:space="preserve">
   <value>Стрелок</value>
@@ -89974,6 +91958,22 @@ The file is looked up beside this language file first, then under the game's Con
 <data name="RoleClass.FireFighter.Name" xml:space="preserve">
   <value>Пожарный</value>
   <comment>Fire Fighter</comment>
+</data>
+<data name="RoleClass.ChiefEngineer.Name" xml:space="preserve">
+  <value>Главный инженер</value>
+  <comment>Chief Engineer</comment>
+</data>
+<data name="RoleClass.Commander.Name" xml:space="preserve">
+  <value>Командир</value>
+  <comment>Commander</comment>
+</data>
+<data name="RecipeSet.Chef.Name" xml:space="preserve">
+  <value>шеф-повар</value>
+  <comment>chef</comment>
+</data>
+<data name="RecipeSet.Pizza.Name" xml:space="preserve">
+  <value>мастер пиццы</value>
+  <comment>pizza chef</comment>
 </data>
 <data name="Intro.CAPE.Title" xml:space="preserve">
   <value>CAPE RIVER</value>
